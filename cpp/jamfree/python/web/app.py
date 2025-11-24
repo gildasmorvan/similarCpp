@@ -13,6 +13,8 @@ from flask_cors import CORS
 import json
 import os
 from pathlib import Path
+import math
+from routing import RoutingEngine
 
 # Try to import jamfree (may not be built yet)
 try:
@@ -399,8 +401,9 @@ def start_simulation():
     # Build road graph for routing
     print("Building road graph...")
     try:
-        simulation_state['road_graph'] = build_road_graph(simulation_state['network'])
-        print(f"Road graph built: {len(simulation_state['road_graph'])} nodes")
+        # Use new RoutingEngine
+        simulation_state['routing_engine'] = RoutingEngine(simulation_state['network'].roads)
+        print(f"Routing engine initialized with {len(simulation_state['network'].roads)} roads")
     except Exception as e:
         print(f"Error building road graph: {e}")
         import traceback
@@ -429,6 +432,8 @@ def start_simulation():
     mobil = jamfree.MOBIL(politeness=simulation_state['config']['politeness'])
     simulation_state['models'] = {'default_idm': default_idm, 'mobil': mobil}
     simulation_state['vehicle_models'] = {}  # Per-vehicle IDM models
+    simulation_state['vehicle_routes'] = {}  # Per-vehicle routes
+    simulation_state['vehicle_destinations'] = {} # Per-vehicle destinations
     
     # Initialize spatial index if enabled
     use_spatial = simulation_state['config'].get('use_spatial_index', True)
@@ -459,13 +464,32 @@ def start_simulation():
         # Create simulator
         simulation_state['adaptive_simulator'] = jamfree.AdaptiveSimulator(adaptive_config)
         
-        # Register all lanes
+        # Register all lanes with specific modes based on geometry
+        micro_count = 0
+        macro_count = 0
+        
         for road in network.roads:
+            length = road.get_length()
+            # Threshold for short lanes/crossings (e.g. 100m)
+            is_short = length < 100.0 
+            
             for lane_idx in range(road.get_num_lanes()):
                 lane = road.get_lane(lane_idx)
-                # Mark short roads as critical (likely intersections)
-                is_critical = road.get_length() < 50
-                simulation_state['adaptive_simulator'].register_lane(lane, is_critical)
+                lane_id = lane.get_id()
+                
+                # Register lane (is_critical=True for short lanes)
+                simulation_state['adaptive_simulator'].register_lane(lane, is_short)
+                
+                if is_short:
+                    # Force microscopic for short lanes and crossings
+                    simulation_state['adaptive_simulator'].force_microscopic(lane_id)
+                    micro_count += 1
+                else:
+                    # Force macroscopic for long lanes
+                    simulation_state['adaptive_simulator'].force_macroscopic(lane_id)
+                    macro_count += 1
+                    
+        print(f"    Mode assignment: {micro_count} Micro (short/crossing), {macro_count} Macro (long)")
         
         print(f"    Registered {sum(r.get_num_lanes() for r in network.roads)} lanes")
         print(f"    Threshold: {adaptive_threshold} vehicles per lane")
@@ -485,53 +509,73 @@ def start_simulation():
     import random
     
     count = 0
+    count = 0
+    routing_engine = simulation_state['routing_engine']
+    
     for i in range(num_vehicles):
-        # Try to find a valid spot
-        for _ in range(10):
-            road = random.choice(roads)
-            if road.get_num_lanes() > 0:
-                lane_idx = random.randint(0, road.get_num_lanes() - 1)
-                lane = road.get_lane(lane_idx)
-                
-                # Random position
-                pos = random.uniform(0, road.get_length())
-                
-                # Create vehicle
-                v_id = f"v_{i}"
-                vehicle = jamfree.Vehicle(v_id)
-                vehicle.set_current_lane(lane)
-                vehicle.set_lane_position(pos)
-                
-                # Use lane speed limit as desired speed
-                lane_speed_limit = lane.get_speed_limit()  # Already in m/s
-                vehicle.set_speed(random.uniform(0, lane_speed_limit * 0.8))
-                
-                # Create per-vehicle IDM with lane speed limit (use lookup if enabled)
-                vehicle_idm = IDMClass(
-                    desired_speed=lane_speed_limit,
-                    time_headway=simulation_state['config']['time_headway'],
-                    min_gap=2.0,
-                    max_accel=1.0,
-                    comfortable_decel=1.5,
-                    accel_exponent=4.0
-                )
-                simulation_state['vehicle_models'][v_id] = vehicle_idm
-                
-                # Add to lane
-                lane.add_vehicle(vehicle)
-                
-                # Add to spatial index if enabled
-                if simulation_state['spatial_index'] is not None:
-                    lane_id = lane.get_id()
-                    if lane_id not in simulation_state['spatial_index']:
-                        if hasattr(jamfree, 'SpatialIndex'):
-                            simulation_state['spatial_index'][lane_id] = jamfree.SpatialIndex()
-                    if lane_id in simulation_state['spatial_index']:
-                        simulation_state['spatial_index'][lane_id].add_vehicle(vehicle)
-                
-                simulation_state['vehicles'].append(vehicle)
-                count += 1
-                break
+        # Assign random OD
+        start_road_id, end_road_id = routing_engine.get_random_od()
+        
+        if not start_road_id:
+            continue
+            
+        # Get path
+        path = routing_engine.get_shortest_path(start_road_id, end_road_id)
+        if not path:
+            continue
+            
+        # Get start road
+        road = routing_engine.roads[start_road_id]
+        
+        if road.get_num_lanes() > 0:
+            lane_idx = random.randint(0, road.get_num_lanes() - 1)
+            lane = road.get_lane(lane_idx)
+            
+            # Random position
+            pos = random.uniform(0, min(50, road.get_length())) # Start near beginning
+            
+            # Create vehicle
+            v_id = f"v_{i}"
+            vehicle = jamfree.Vehicle(v_id)
+            vehicle.set_current_lane(lane)
+            vehicle.set_lane_position(pos)
+            
+            # Use lane speed limit as desired speed
+            lane_speed_limit = lane.get_speed_limit()  # Already in m/s
+            vehicle.set_speed(random.uniform(0, lane_speed_limit * 0.8))
+            
+            # Create per-vehicle IDM with lane speed limit (use lookup if enabled)
+            vehicle_idm = IDMClass(
+                desired_speed=lane_speed_limit,
+                time_headway=simulation_state['config']['time_headway'],
+                min_gap=2.0,
+                max_accel=1.0,
+                comfortable_decel=1.5,
+                accel_exponent=4.0
+            )
+            simulation_state['vehicle_models'][v_id] = vehicle_idm
+            
+            # Store route
+            simulation_state['vehicle_routes'][v_id] = {
+                'path': path,
+                'current_index': 0,
+                'destination': end_road_id
+            }
+            
+            # Add to lane
+            lane.add_vehicle(vehicle)
+            
+            # Add to spatial index if enabled
+            if simulation_state['spatial_index'] is not None:
+                lane_id = lane.get_id()
+                if lane_id not in simulation_state['spatial_index']:
+                    if hasattr(jamfree, 'SpatialIndex'):
+                        simulation_state['spatial_index'][lane_id] = jamfree.SpatialIndex()
+                if lane_id in simulation_state['spatial_index']:
+                    simulation_state['spatial_index'][lane_id].add_vehicle(vehicle)
+            
+            simulation_state['vehicles'].append(vehicle)
+            count += 1
     
     print(f"Initialized {count} vehicles")
     return jsonify({'status': 'started', 'vehicle_count': len(simulation_state['vehicles'])})
@@ -556,7 +600,8 @@ def simulation_step():
     
     default_idm = simulation_state['models']['default_idm']
     vehicle_models = simulation_state.get('vehicle_models', {})
-    road_graph = simulation_state.get('road_graph', {})
+    vehicle_routes = simulation_state.get('vehicle_routes', {})
+    routing_engine = simulation_state.get('routing_engine')
     spatial_indices = simulation_state.get('spatial_index', {})
     
     # Pre-compute network center for coordinate conversion
@@ -568,6 +613,45 @@ def simulation_step():
     if spatial_indices:
         for lane_id, index in spatial_indices.items():
             index.update()
+            
+    # Handle mandatory lane changes for routing (pre-update)
+    if routing_engine:
+        for vehicle in simulation_state['vehicles']:
+            v_id = vehicle.get_id()
+            route_info = vehicle_routes.get(v_id)
+            
+            if route_info:
+                path = route_info['path']
+                current_idx = route_info['current_index']
+                
+                # Check if approaching end of road
+                lane = vehicle.get_current_lane()
+                if lane:
+                    dist_to_end = lane.get_length() - vehicle.get_lane_position()
+                    
+                    # Lookahead distance (e.g., 100m)
+                    if dist_to_end < 100.0 and current_idx + 1 < len(path):
+                        current_road_id = path[current_idx]
+                        next_road_id = path[current_idx + 1]
+                        
+                        target_lane_idx = routing_engine.get_target_lane_index(
+                            current_road_id, next_road_id, lane.get_index()
+                        )
+                        
+                        if target_lane_idx != lane.get_index():
+                            # Need to change lane
+                            # For now, force switch if close to ensures routing works
+                            # In a real simulation, we would use MOBIL with a mandatory term
+                            
+                            if dist_to_end < 60.0:
+                                current_road = routing_engine.roads.get(current_road_id)
+                                if current_road:
+                                    target_lane = current_road.get_lane(target_lane_idx)
+                                    if target_lane:
+                                        lane.remove_vehicle(vehicle)
+                                        target_lane.add_vehicle(vehicle)
+                                        vehicle.set_current_lane(target_lane)
+                                        # Keep same lane position
     
     # Check if using Adaptive Hybrid Simulator
     adaptive_sim = simulation_state.get('adaptive_simulator')
@@ -728,42 +812,80 @@ def simulation_step():
                     vehicles_data.append(result)
     
     # Handle road transitions (must be done sequentially to avoid race conditions)
-    import random
+    # Handle road transitions and routing
     for vehicle in simulation_state['vehicles']:
         lane = vehicle.get_current_lane()
         if lane and vehicle.get_lane_position() > lane.get_length():
-            # Try to move to next road
-            current_road = lane.get_parent_road()
-            next_roads = road_graph.get(current_road.get_id(), [])
+            v_id = vehicle.get_id()
+            route_info = vehicle_routes.get(v_id)
             
-            if next_roads:
-                # Pick a random next road (simple routing)
-                next_road = random.choice(next_roads)
+            if route_info and routing_engine:
+                # Get next road in path
+                path = route_info['path']
+                current_idx = route_info['current_index']
                 
-                # Pick a lane (try to keep same index, or closest valid)
-                next_lane_idx = min(lane.get_index(), next_road.get_num_lanes() - 1)
-                next_lane = next_road.get_lane(next_lane_idx)
-                
-                # Move vehicle
-                lane.remove_vehicle(vehicle)
-                next_lane.add_vehicle(vehicle)
-                vehicle.set_current_lane(next_lane)
-                vehicle.set_lane_position(0)
-                
-                # Update IDM for new lane speed limit
-                lane_speed_limit = next_lane.get_speed_limit()
-                vehicle_idm = jamfree.IDM(
-                    desired_speed=lane_speed_limit,
-                    time_headway=simulation_state['config']['time_headway'],
-                    min_gap=2.0,
-                    max_accel=1.0,
-                    comfortable_decel=1.5,
-                    accel_exponent=4.0
-                )
-                vehicle_models[vehicle.get_id()] = vehicle_idm
+                if current_idx + 1 < len(path):
+                    next_road_id = path[current_idx + 1]
+                    next_road = routing_engine.roads.get(next_road_id)
+                    
+                    if next_road:
+                        # Move to next road
+                        # Pick a lane (try to keep same index, or closest valid)
+                        next_lane_idx = min(lane.get_index(), next_road.get_num_lanes() - 1)
+                        next_lane = next_road.get_lane(next_lane_idx)
+                        
+                        # Move vehicle
+                        lane.remove_vehicle(vehicle)
+                        next_lane.add_vehicle(vehicle)
+                        vehicle.set_current_lane(next_lane)
+                        vehicle.set_lane_position(0)
+                        
+                        # Update route index
+                        route_info['current_index'] += 1
+                        
+                        # Update IDM for new lane speed limit
+                        lane_speed_limit = next_lane.get_speed_limit()
+                        
+                        # Update existing IDM model if possible, or create new one
+                        if v_id in vehicle_models:
+                            vehicle_models[v_id].set_desired_speed(lane_speed_limit)
+                        
+                    else:
+                        # Road not found (shouldn't happen)
+                        vehicle.set_lane_position(lane.get_length())
+                        vehicle.set_speed(0)
+                else:
+                    # Destination reached!
+                    # Respawn at a new random location with new route
+                    start_road_id, end_road_id = routing_engine.get_random_od()
+                    if start_road_id:
+                        new_path = routing_engine.get_shortest_path(start_road_id, end_road_id)
+                        if new_path:
+                            # Remove from old lane
+                            lane.remove_vehicle(vehicle)
+                            
+                            # Add to new start lane
+                            new_start_road = routing_engine.roads[start_road_id]
+                            new_lane = new_start_road.get_lane(0)
+                            new_lane.add_vehicle(vehicle)
+                            vehicle.set_current_lane(new_lane)
+                            vehicle.set_lane_position(0)
+                            vehicle.set_speed(new_lane.get_speed_limit() * 0.5)
+                            
+                            # Update route info
+                            vehicle_routes[v_id] = {
+                                'path': new_path,
+                                'current_index': 0,
+                                'destination': end_road_id
+                            }
+                            
+                            # Update speed limit
+                            if v_id in vehicle_models:
+                                vehicle_models[v_id].set_desired_speed(new_lane.get_speed_limit())
             else:
-                # Dead end - wrap around to start of same lane
-                vehicle.set_lane_position(0)
+                # No route info - just stop at end
+                vehicle.set_lane_position(lane.get_length())
+                vehicle.set_speed(0)
     
     simulation_state['step'] += 1
     
@@ -811,6 +933,59 @@ def simulation_step():
             }
         },
         'lane_modes': lane_modes if lane_modes else None
+    })
+
+@app.route('/api/simulation/sync_traffic', methods=['POST'])
+def sync_traffic():
+    """Sync simulation with real-time traffic data."""
+    if not simulation_state['running']:
+        return jsonify({'error': 'Simulation not running'}), 400
+        
+    aggregator = simulation_state.get('traffic_aggregator')
+    if not aggregator:
+        return jsonify({'error': 'Traffic aggregator not configured'}), 400
+        
+    network = simulation_state['network']
+    routing_engine = simulation_state.get('routing_engine')
+    
+    if not routing_engine:
+        return jsonify({'error': 'Routing engine not ready'}), 400
+        
+    # Get center for projection
+    center_lat = (network.min_lat + network.max_lat) / 2.0
+    center_lon = (network.min_lon + network.max_lon) / 2.0
+    
+    # Fetch data
+    # Use network bounds + margin
+    radius = 5000 # 5km default
+    traffic_data = aggregator.get_all_traffic(center_lat, center_lon, radius)
+    
+    updated_count = 0
+    
+    for source, items in traffic_data.items():
+        for item in items:
+            if item.location and item.speed > 0:
+                lat, lon = item.location
+                
+                # Convert to meters
+                p = jamfree.OSMParser.lat_lon_to_meters(lat, lon, center_lat, center_lon)
+                
+                # Find nearest road
+                road = routing_engine.find_nearest_road(p.x, p.y, max_distance=50.0)
+                
+                if road:
+                    # Update speed limit for all lanes
+                    # Convert km/h to m/s
+                    speed_ms = item.speed / 3.6
+                    
+                    for i in range(road.get_num_lanes()):
+                        lane = road.get_lane(i)
+                        lane.set_speed_limit(speed_ms)
+                    updated_count += 1
+                    
+    return jsonify({
+        'status': 'synced',
+        'updated_roads': updated_count
     })
 
 @app.route('/api/data/sources')

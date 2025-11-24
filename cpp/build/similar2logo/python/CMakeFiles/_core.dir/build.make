@@ -156,6 +156,76 @@ similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/reaction/Reaction.cpp.s: 
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_core.dir/__/src/kernel/reaction/Reaction.cpp.s"
 	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/reaction/Reaction.cpp -o CMakeFiles/_core.dir/__/src/kernel/reaction/Reaction.cpp.s
 
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o: similar2logo/python/CMakeFiles/_core.dir/flags.make
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o: /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangePosition.cpp
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o: similar2logo/python/CMakeFiles/_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o -MF CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o.d -o CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o -c /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangePosition.cpp
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangePosition.cpp > CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.i
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangePosition.cpp -o CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.s
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o: similar2logo/python/CMakeFiles/_core.dir/flags.make
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o: /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeDirection.cpp
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o: similar2logo/python/CMakeFiles/_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o -MF CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o.d -o CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o -c /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeDirection.cpp
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeDirection.cpp > CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.i
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeDirection.cpp -o CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.s
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o: similar2logo/python/CMakeFiles/_core.dir/flags.make
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o: /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeSpeed.cpp
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o: similar2logo/python/CMakeFiles/_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o -MF CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o.d -o CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o -c /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeSpeed.cpp
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeSpeed.cpp > CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.i
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeSpeed.cpp -o CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.s
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o: similar2logo/python/CMakeFiles/_core.dir/flags.make
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o: /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/Stop.cpp
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o: similar2logo/python/CMakeFiles/_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o -MF CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o.d -o CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o -c /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/Stop.cpp
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/Stop.cpp > CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.i
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/Stop.cpp -o CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.s
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o: similar2logo/python/CMakeFiles/_core.dir/flags.make
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o: /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/EmitPheromone.cpp
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o: similar2logo/python/CMakeFiles/_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o -MF CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o.d -o CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o -c /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/EmitPheromone.cpp
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/EmitPheromone.cpp > CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.i
+
+similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/EmitPheromone.cpp -o CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.s
+
 # Object files for target _core
 _core_OBJECTS = \
 "CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o" \
@@ -163,7 +233,12 @@ _core_OBJECTS = \
 "CMakeFiles/_core.dir/__/src/kernel/model/LogoSimulationModel.cpp.o" \
 "CMakeFiles/_core.dir/__/src/kernel/tools/FastMath.cpp.o" \
 "CMakeFiles/_core.dir/__/src/kernel/environment/Environment.cpp.o" \
-"CMakeFiles/_core.dir/__/src/kernel/reaction/Reaction.cpp.o"
+"CMakeFiles/_core.dir/__/src/kernel/reaction/Reaction.cpp.o" \
+"CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o" \
+"CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o" \
+"CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o" \
+"CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o" \
+"CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o"
 
 # External object files for target _core
 _core_EXTERNAL_OBJECTS =
@@ -174,9 +249,14 @@ _core_EXTERNAL_OBJECTS =
 /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/tools/FastMath.cpp.o
 /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/environment/Environment.cpp.o
 /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/reaction/Reaction.cpp.o
+/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o
+/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o
+/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o
+/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o
+/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o
 /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/build.make
 /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so: similar2logo/python/CMakeFiles/_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared module /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared module /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so"
 	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/_core.dir/link.txt --verbose=$(VERBOSE)
 	cd /Users/morvan/Antigravity/similar/cpp/build/similar2logo/python && /usr/bin/strip -x /Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so
 

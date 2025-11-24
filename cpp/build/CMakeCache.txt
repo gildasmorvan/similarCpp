@@ -434,6 +434,8 @@ _Python3_INCLUDE_DIR:INTERNAL=/opt/homebrew/opt/python@3.14/Frameworks/Python.fr
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;0;64;<none>;cpython-314-darwin;abi3;/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/lib/python3.14;/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/lib/python3.14;/opt/homebrew/lib/python3.14/site-packages;/opt/homebrew/lib/python3.14/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=ff51e67373f329cbcbee6a4ac96f4784
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python3_LIBRARY_RELEASE:INTERNAL=/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/lib/libpython3.14.dylib
 //NumPy reason failure

@@ -513,6 +513,8 @@
 
                 // Update lane colors based on mode
                 if (data.lane_modes) {
+                    let microCount = 0, macroCount = 0, transCount = 0;
+
                     for (const [laneId, mode] of Object.entries(data.lane_modes)) {
                         const polyline = roadLayers.get(laneId);
                         if (polyline) {
@@ -522,15 +524,23 @@
                             if (mode === 'MICROSCOPIC') {
                                 color = '#22c55e'; // Green
                                 weight = 3;
+                                microCount++;
                             } else if (mode === 'MACROSCOPIC') {
                                 color = '#3b82f6'; // Blue
                                 weight = 5; // Thicker for macro
+                                macroCount++;
                             } else if (mode === 'TRANSITIONING') {
                                 color = '#f59e0b'; // Orange
+                                transCount++;
                             }
 
                             polyline.setStyle({ color: color, weight: weight });
                         }
+                    }
+
+                    // Log mode distribution (only on step 1 to avoid spam)
+                    if (data.step === 1) {
+                        console.log(`🎯 Lane Modes: ${microCount} Micro (green), ${macroCount} Macro (blue), ${transCount} Transitioning (orange)`);
                     }
                 }
 
@@ -558,7 +568,7 @@
                         marker.addTo(vehicleLayer);
                     }
                 });
-                ```
+
             } catch (error) {
                 console.error('Simulation step failed:', error);
             }
@@ -594,7 +604,7 @@
                 } else {
                     document.getElementById('network-info').style.display = 'block';
                     document.getElementById('network-details').innerHTML =
-                        `${ data.roads } roads downloaded`;
+                        `${data.roads} roads downloaded`;
 
                     // Draw roads
                     if (data.geometry) {

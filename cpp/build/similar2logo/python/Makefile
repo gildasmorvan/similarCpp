@@ -223,6 +223,126 @@ __/src/kernel/environment/Environment.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/environment/Environment.cpp.s
 .PHONY : __/src/kernel/environment/Environment.cpp.s
 
+__/src/kernel/influences/ChangeDirection.o: __/src/kernel/influences/ChangeDirection.cpp.o
+.PHONY : __/src/kernel/influences/ChangeDirection.o
+
+# target to build an object file
+__/src/kernel/influences/ChangeDirection.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.o
+.PHONY : __/src/kernel/influences/ChangeDirection.cpp.o
+
+__/src/kernel/influences/ChangeDirection.i: __/src/kernel/influences/ChangeDirection.cpp.i
+.PHONY : __/src/kernel/influences/ChangeDirection.i
+
+# target to preprocess a source file
+__/src/kernel/influences/ChangeDirection.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.i
+.PHONY : __/src/kernel/influences/ChangeDirection.cpp.i
+
+__/src/kernel/influences/ChangeDirection.s: __/src/kernel/influences/ChangeDirection.cpp.s
+.PHONY : __/src/kernel/influences/ChangeDirection.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/ChangeDirection.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeDirection.cpp.s
+.PHONY : __/src/kernel/influences/ChangeDirection.cpp.s
+
+__/src/kernel/influences/ChangePosition.o: __/src/kernel/influences/ChangePosition.cpp.o
+.PHONY : __/src/kernel/influences/ChangePosition.o
+
+# target to build an object file
+__/src/kernel/influences/ChangePosition.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.o
+.PHONY : __/src/kernel/influences/ChangePosition.cpp.o
+
+__/src/kernel/influences/ChangePosition.i: __/src/kernel/influences/ChangePosition.cpp.i
+.PHONY : __/src/kernel/influences/ChangePosition.i
+
+# target to preprocess a source file
+__/src/kernel/influences/ChangePosition.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.i
+.PHONY : __/src/kernel/influences/ChangePosition.cpp.i
+
+__/src/kernel/influences/ChangePosition.s: __/src/kernel/influences/ChangePosition.cpp.s
+.PHONY : __/src/kernel/influences/ChangePosition.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/ChangePosition.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangePosition.cpp.s
+.PHONY : __/src/kernel/influences/ChangePosition.cpp.s
+
+__/src/kernel/influences/ChangeSpeed.o: __/src/kernel/influences/ChangeSpeed.cpp.o
+.PHONY : __/src/kernel/influences/ChangeSpeed.o
+
+# target to build an object file
+__/src/kernel/influences/ChangeSpeed.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.o
+.PHONY : __/src/kernel/influences/ChangeSpeed.cpp.o
+
+__/src/kernel/influences/ChangeSpeed.i: __/src/kernel/influences/ChangeSpeed.cpp.i
+.PHONY : __/src/kernel/influences/ChangeSpeed.i
+
+# target to preprocess a source file
+__/src/kernel/influences/ChangeSpeed.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.i
+.PHONY : __/src/kernel/influences/ChangeSpeed.cpp.i
+
+__/src/kernel/influences/ChangeSpeed.s: __/src/kernel/influences/ChangeSpeed.cpp.s
+.PHONY : __/src/kernel/influences/ChangeSpeed.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/ChangeSpeed.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.s
+.PHONY : __/src/kernel/influences/ChangeSpeed.cpp.s
+
+__/src/kernel/influences/EmitPheromone.o: __/src/kernel/influences/EmitPheromone.cpp.o
+.PHONY : __/src/kernel/influences/EmitPheromone.o
+
+# target to build an object file
+__/src/kernel/influences/EmitPheromone.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.o
+.PHONY : __/src/kernel/influences/EmitPheromone.cpp.o
+
+__/src/kernel/influences/EmitPheromone.i: __/src/kernel/influences/EmitPheromone.cpp.i
+.PHONY : __/src/kernel/influences/EmitPheromone.i
+
+# target to preprocess a source file
+__/src/kernel/influences/EmitPheromone.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.i
+.PHONY : __/src/kernel/influences/EmitPheromone.cpp.i
+
+__/src/kernel/influences/EmitPheromone.s: __/src/kernel/influences/EmitPheromone.cpp.s
+.PHONY : __/src/kernel/influences/EmitPheromone.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/EmitPheromone.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.s
+.PHONY : __/src/kernel/influences/EmitPheromone.cpp.s
+
+__/src/kernel/influences/Stop.o: __/src/kernel/influences/Stop.cpp.o
+.PHONY : __/src/kernel/influences/Stop.o
+
+# target to build an object file
+__/src/kernel/influences/Stop.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.o
+.PHONY : __/src/kernel/influences/Stop.cpp.o
+
+__/src/kernel/influences/Stop.i: __/src/kernel/influences/Stop.cpp.i
+.PHONY : __/src/kernel/influences/Stop.i
+
+# target to preprocess a source file
+__/src/kernel/influences/Stop.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.i
+.PHONY : __/src/kernel/influences/Stop.cpp.i
+
+__/src/kernel/influences/Stop.s: __/src/kernel/influences/Stop.cpp.s
+.PHONY : __/src/kernel/influences/Stop.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/Stop.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/Stop.cpp.s
+.PHONY : __/src/kernel/influences/Stop.cpp.s
+
 __/src/kernel/model/LogoSimulationModel.o: __/src/kernel/model/LogoSimulationModel.cpp.o
 .PHONY : __/src/kernel/model/LogoSimulationModel.o
 
@@ -338,6 +458,21 @@ help:
 	@echo "... __/src/kernel/environment/Environment.o"
 	@echo "... __/src/kernel/environment/Environment.i"
 	@echo "... __/src/kernel/environment/Environment.s"
+	@echo "... __/src/kernel/influences/ChangeDirection.o"
+	@echo "... __/src/kernel/influences/ChangeDirection.i"
+	@echo "... __/src/kernel/influences/ChangeDirection.s"
+	@echo "... __/src/kernel/influences/ChangePosition.o"
+	@echo "... __/src/kernel/influences/ChangePosition.i"
+	@echo "... __/src/kernel/influences/ChangePosition.s"
+	@echo "... __/src/kernel/influences/ChangeSpeed.o"
+	@echo "... __/src/kernel/influences/ChangeSpeed.i"
+	@echo "... __/src/kernel/influences/ChangeSpeed.s"
+	@echo "... __/src/kernel/influences/EmitPheromone.o"
+	@echo "... __/src/kernel/influences/EmitPheromone.i"
+	@echo "... __/src/kernel/influences/EmitPheromone.s"
+	@echo "... __/src/kernel/influences/Stop.o"
+	@echo "... __/src/kernel/influences/Stop.i"
+	@echo "... __/src/kernel/influences/Stop.s"
 	@echo "... __/src/kernel/model/LogoSimulationModel.o"
 	@echo "... __/src/kernel/model/LogoSimulationModel.i"
 	@echo "... __/src/kernel/model/LogoSimulationModel.s"

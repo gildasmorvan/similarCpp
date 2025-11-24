@@ -903,8 +903,9 @@ def simulation_step():
         speedup = baseline_time / max(step_time, 0.1)
         simulation_state['performance_stats']['speedup_factor'] = speedup
     
-    # Collect lane mode information if using adaptive simulator
+    # Collect lane mode information and density if using adaptive simulator
     lane_modes = {}
+    lane_densities = {}
     if adaptive_sim:
         for road in network.roads:
             for lane_idx in range(road.get_num_lanes()):
@@ -914,6 +915,12 @@ def simulation_step():
                 # Convert enum to string
                 mode_str = str(mode).split('.')[-1] if mode else 'UNKNOWN'
                 lane_modes[lane_id] = mode_str
+                
+                # Get density for this lane
+                lane_state = adaptive_sim.get_lane_state(lane_id)
+                if lane_state:
+                    density = lane_state.current_density
+                    lane_densities[lane_id] = density
     
     return jsonify({
         'step': simulation_state['step'],
@@ -932,7 +939,8 @@ def simulation_step():
                 'gpu_metal': use_gpu and metal_compute is not None,
             }
         },
-        'lane_modes': lane_modes if lane_modes else None
+        'lane_modes': lane_modes if lane_modes else None,
+        'lane_densities': lane_densities if lane_densities else None
     })
 
 @app.route('/api/simulation/sync_traffic', methods=['POST'])

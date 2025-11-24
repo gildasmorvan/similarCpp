@@ -66,6 +66,21 @@ public:
   };
 
   /**
+   * @brief Stored vehicle data for micro-macro transitions.
+   *
+   * Preserves individual vehicle properties during macroscopic simulation
+   * to allow perfect reconstruction when switching back to microscopic.
+   */
+  struct VehicleData {
+    std::string id;
+    double position;     // Lane position (m)
+    double speed;        // Speed (m/s)
+    double acceleration; // Acceleration (m/s²)
+    double length;       // Vehicle length (m)
+    // Can add more: route, destination, driver characteristics, etc.
+  };
+
+  /**
    * @brief Lane simulation state.
    */
   struct LaneState {
@@ -78,6 +93,9 @@ public:
     // Macroscopic state
     std::unique_ptr<macroscopic::models::LWR> lwr_model;
 
+    // Vehicle data preservation (stored during macro mode)
+    std::vector<VehicleData> stored_vehicle_data;
+
     // Metrics
     double current_density;
     double avg_speed;
@@ -88,6 +106,7 @@ public:
     // Transition state
     bool is_critical_area;
     int frames_since_transition;
+    bool force_mode; // If true, don't auto-switch
   };
 
   /**

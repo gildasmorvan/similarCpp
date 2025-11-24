@@ -511,7 +511,7 @@
                     document.getElementById('macro-lanes').textContent = data.performance.macro_lanes || 0;
                 }
 
-                // Update lane colors based on mode
+                // Update lane colors based on mode and density
                 if (data.lane_modes) {
                     let microCount = 0, macroCount = 0, transCount = 0;
 
@@ -526,7 +526,31 @@
                                 weight = 3;
                                 microCount++;
                             } else if (mode === 'MACROSCOPIC') {
-                                color = '#3b82f6'; // Blue
+                                // Color based on density
+                                let density = 0;
+                                if (data.lane_densities && data.lane_densities[laneId] !== undefined) {
+                                    density = data.lane_densities[laneId];
+                                }
+
+                                // Density gradient: 0 (light blue) -> 0.15 (dark red)
+                                // Normalize density to 0-1 range
+                                const normalizedDensity = Math.min(density / 0.15, 1.0);
+
+                                // Color gradient from light blue to yellow to red
+                                if (normalizedDensity < 0.3) {
+                                    // Low density: light blue to cyan
+                                    const t = normalizedDensity / 0.3;
+                                    color = `rgb(${Math.round(100 + t * 55)}, ${Math.round(200 + t * 55)}, 255)`;
+                                } else if (normalizedDensity < 0.6) {
+                                    // Medium density: cyan to yellow
+                                    const t = (normalizedDensity - 0.3) / 0.3;
+                                    color = `rgb(${Math.round(155 + t * 100)}, ${Math.round(255 - t * 55)}, ${Math.round(255 - t * 255)})`;
+                                } else {
+                                    // High density: yellow to red
+                                    const t = (normalizedDensity - 0.6) / 0.4;
+                                    color = `rgb(255, ${Math.round(200 - t * 200)}, 0)`;
+                                }
+
                                 weight = 5; // Thicker for macro
                                 macroCount++;
                             } else if (mode === 'TRANSITIONING') {
@@ -540,7 +564,7 @@
 
                     // Log mode distribution (only on step 1 to avoid spam)
                     if (data.step === 1) {
-                        console.log(`🎯 Lane Modes: ${microCount} Micro (green), ${macroCount} Macro (blue), ${transCount} Transitioning (orange)`);
+                        console.log(`🎯 Lane Modes: ${microCount} Micro (green), ${macroCount} Macro (density gradient), ${transCount} Transitioning (orange)`);
                     }
                 }
 

@@ -20,6 +20,7 @@ events:
     names:
       - "uname"
     candidate_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -43,9 +44,10 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/uname"
       - "/Users/morvan/.antigravity/antigravity/bin/uname"
       - "/opt/homebrew/bin/uname"
       - "/opt/homebrew/sbin/uname"
@@ -54,6 +56,7 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -78,8 +81,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -111,6 +114,7 @@ events:
       - "make"
       - "smake"
     candidate_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -134,9 +138,10 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/gmake"
       - "/Users/morvan/.antigravity/antigravity/bin/gmake"
       - "/opt/homebrew/bin/gmake"
       - "/opt/homebrew/sbin/gmake"
@@ -160,8 +165,9 @@ events:
       - "/opt/homebrew/anaconda3/bin/gmake"
       - "/Applications/Docker.app/Contents/Resources/bin/gmake"
       - "/Users/morvan/.local/bin/gmake"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/gmake"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/gmake"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/gmake"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/make"
       - "/Users/morvan/.antigravity/antigravity/bin/make"
       - "/opt/homebrew/bin/make"
       - "/opt/homebrew/sbin/make"
@@ -170,6 +176,7 @@ events:
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -194,8 +201,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -225,6 +232,7 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -248,9 +256,10 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/c++"
       - "/Users/morvan/.antigravity/antigravity/bin/c++"
       - "/opt/homebrew/bin/c++"
       - "/opt/homebrew/sbin/c++"
@@ -259,6 +268,7 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -283,8 +293,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -315,6 +325,7 @@ events:
     found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -339,8 +350,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -428,6 +439,7 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -450,11 +462,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -479,8 +492,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -505,6 +518,7 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -527,11 +541,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -556,8 +571,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -582,6 +597,7 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -604,11 +620,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -633,8 +650,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -659,6 +676,7 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -681,11 +699,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -710,8 +729,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -736,6 +755,7 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -758,11 +778,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -787,8 +808,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -813,6 +834,7 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -835,11 +857,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -864,8 +887,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -890,6 +913,7 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -912,10 +936,11 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/objcopy"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/objcopy"
       - "/Users/morvan/.antigravity/antigravity/bin/objcopy"
       - "/opt/homebrew/bin/objcopy"
       - "/opt/homebrew/sbin/objcopy"
@@ -938,11 +963,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/objcopy"
       - "/Applications/Docker.app/Contents/Resources/bin/objcopy"
       - "/Users/morvan/.local/bin/objcopy"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/objcopy"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/objcopy"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/objcopy"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -967,8 +993,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -993,6 +1019,7 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1015,10 +1042,11 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/readelf"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/readelf"
       - "/Users/morvan/.antigravity/antigravity/bin/readelf"
       - "/opt/homebrew/bin/readelf"
       - "/opt/homebrew/sbin/readelf"
@@ -1041,11 +1069,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/readelf"
       - "/Applications/Docker.app/Contents/Resources/bin/readelf"
       - "/Users/morvan/.local/bin/readelf"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/readelf"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/readelf"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/readelf"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1070,8 +1099,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -1096,6 +1125,7 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1118,10 +1148,11 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/dlltool"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/dlltool"
       - "/Users/morvan/.antigravity/antigravity/bin/dlltool"
       - "/opt/homebrew/bin/dlltool"
       - "/opt/homebrew/sbin/dlltool"
@@ -1144,11 +1175,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/dlltool"
       - "/Applications/Docker.app/Contents/Resources/bin/dlltool"
       - "/Users/morvan/.local/bin/dlltool"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/dlltool"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/dlltool"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/dlltool"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1173,8 +1205,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -1199,6 +1231,7 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1221,10 +1254,11 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/addr2line"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/addr2line"
       - "/Users/morvan/.antigravity/antigravity/bin/addr2line"
       - "/opt/homebrew/bin/addr2line"
       - "/opt/homebrew/sbin/addr2line"
@@ -1247,11 +1281,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/addr2line"
       - "/Applications/Docker.app/Contents/Resources/bin/addr2line"
       - "/Users/morvan/.local/bin/addr2line"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/addr2line"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/addr2line"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/addr2line"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1276,8 +1311,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -1302,6 +1337,7 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1324,10 +1360,11 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "/usr/bin/tapi"
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/tapi"
       - "/Users/morvan/.antigravity/antigravity/bin/tapi"
       - "/opt/homebrew/bin/tapi"
       - "/opt/homebrew/sbin/tapi"
@@ -1350,11 +1387,12 @@ events:
       - "/opt/homebrew/anaconda3/bin/tapi"
       - "/Applications/Docker.app/Contents/Resources/bin/tapi"
       - "/Users/morvan/.local/bin/tapi"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/tapi"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1379,8 +1417,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -1404,6 +1442,7 @@ events:
     names:
       - "install_name_tool"
     candidate_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/"
       - "/Users/morvan/.antigravity/antigravity/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1427,9 +1466,10 @@ events:
       - "/opt/homebrew/anaconda3/bin/"
       - "/Applications/Docker.app/Contents/Resources/bin/"
       - "/Users/morvan/.local/bin/"
-      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts/"
+      - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts/"
     searched_directories:
+      - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin/install_name_tool"
       - "/Users/morvan/.antigravity/antigravity/bin/install_name_tool"
       - "/opt/homebrew/bin/install_name_tool"
       - "/opt/homebrew/sbin/install_name_tool"
@@ -1438,6 +1478,7 @@ events:
     found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
+        - "/Users/morvan/Antigravity/similar/cpp/jamfree/python/web/venv/bin"
         - "/Users/morvan/.antigravity/antigravity/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1462,8 +1503,8 @@ events:
         - "/opt/homebrew/anaconda3/bin/"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
-        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/morvan/.antigravity/extensions/vscjava.vscode-java-debug-0.58.3-universal/bundled/scripts/noConfigScripts"
+        - "/Users/morvan/.antigravity/extensions/ms-python.debugpy-2025.14.1-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/opt/homebrew/sbin"
         - "/Applications/Docker.app/Contents/Resources/bin/"
         - "/Users/morvan/.local/bin"
@@ -1477,8 +1518,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04"
-      binary: "/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04"
+      source: "/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ"
+      binary: "/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1491,19 +1532,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04'
+        Change Dir: '/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1c61c/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1c61c.dir/build.make CMakeFiles/cmTC_1c61c.dir/build
-        Building CXX object CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5097c/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5097c.dir/build.make CMakeFiles/cmTC_5097c.dir/build
+        Building CXX object CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 17.0.0 (clang-1700.4.4.1)
         Target: arm64-apple-darwin25.1.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 17.0.0 (clang-1700.4.4.1) default target arm64-apple-darwin25.1.0
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -1517,13 +1558,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_1c61c
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c61c.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_5097c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5097c.dir/link.txt --verbose=1
         Apple clang version 17.0.0 (clang-1700.4.4.1)
         Target: arm64-apple-darwin25.1.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_1c61c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5097c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1230.1
         BUILD 16:18:08 Oct 17 2025
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -1536,7 +1577,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1c61c
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_5097c
         
       exitCode: 0
   -
@@ -1582,19 +1623,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04']
+        ignore line: [Change Dir: '/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1c61c/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_1c61c.dir/build.make CMakeFiles/cmTC_1c61c.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5097c/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_5097c.dir/build.make CMakeFiles/cmTC_5097c.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 17.0.0 (clang-1700.4.4.1)]
         ignore line: [Target: arm64-apple-darwin25.1.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04 -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-hRPT04 -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=26.1 -fvisibility-inlines-hidden-static-local-var -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +zcm -target-feature +zcz -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ -target-linker-version 1230.1 -v -fcoverage-compilation-dir=/Users/morvan/Antigravity/similar/cpp/jamfree/build/CMakeFiles/CMakeScratch/TryCompile-neOkaQ -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17 -dependency-file CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 17.0.0 (clang-1700.4.4.1) default target arm64-apple-darwin25.1.0]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -1608,13 +1649,13 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_1c61c]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c61c.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_5097c]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5097c.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 17.0.0 (clang-1700.4.4.1)]
         ignore line: [Target: arm64-apple-darwin25.1.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_1c61c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 26.1 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_5097c -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1631,12 +1672,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1c61c] ==> ignore
+          arg [cmTC_5097c] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_1c61c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_5097c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/lib/darwin/libclang_rt.osx.a]

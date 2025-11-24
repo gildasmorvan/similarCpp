@@ -18,6 +18,7 @@ void AdaptiveSimulator::registerLane(
   state.last_update_time_ms = 0.0;
   state.is_critical_area = is_critical || isCriticalArea(lane);
   state.frames_since_transition = 0;
+  state.force_mode = false;
 
   // Get existing vehicles
   state.vehicles = lane->getVehicles();
@@ -58,6 +59,11 @@ void AdaptiveSimulator::update(double dt, const microscopic::models::IDM &idm) {
 }
 
 bool AdaptiveSimulator::shouldSwitchMode(LaneState &state) {
+  // Don't switch if forced mode
+  if (state.force_mode) {
+    return false;
+  }
+
   // Never switch critical areas if configured
   if (state.is_critical_area && m_config.force_micro_intersections) {
     return false;
@@ -70,7 +76,16 @@ bool AdaptiveSimulator::shouldSwitchMode(LaneState &state) {
 
   // Check density-based switching
   if (state.mode == SimulationMode::MICROSCOPIC) {
-    // Switch to macro if density too high
+    // For long roads, switch to macro if density is high
+    // For short roads/crossings, stay in micro
+    auto parent_road = state.lane->getParentRoad();
+    bool is_long_road = parent_road && parent_road->getLength() >= 100.0;
+
+    if (!is_long_road) {
+      return false; // Short roads always stay micro
+    }
+
+    // Switch to macro if density too high on long roads
     bool high_density = state.current_density > m_config.micro_to_macro_density;
     bool too_many_vehicles =
         state.vehicle_count > m_config.micro_to_macro_count;
@@ -95,6 +110,21 @@ void AdaptiveSimulator::transitionToMacro(LaneState &state) {
             << ": Transitioning to MACROSCOPIC (density="
             << state.current_density << ", vehicles=" << state.vehicle_count
             << ")" << std::endl;
+
+  // Store vehicle data for later reconstruction
+  state.stored_vehicle_data.clear();
+  for (const auto &vehicle : state.vehicles) {
+    VehicleData vdata;
+    vdata.id = vehicle->getId();
+    vdata.position = vehicle->getLanePosition();
+    vdata.speed = vehicle->getSpeed();
+    vdata.acceleration = vehicle->getAcceleration();
+    vdata.length = vehicle->getLength();
+    state.stored_vehicle_data.push_back(vdata);
+  }
+
+  std::cout << "  Stored " << state.stored_vehicle_data.size()
+            << " vehicle data records" << std::endl;
 
   // Create LWR model
   state.lwr_model = std::make_unique<macroscopic::models::LWR>(
@@ -128,33 +158,73 @@ void AdaptiveSimulator::transitionToMicro(LaneState &state) {
     return;
   }
 
-  // Generate vehicles from macroscopic density
-  int num_cells = state.lwr_model->getNumCells();
-  double cell_length = state.lwr_model->getCellLength();
+  // Try to restore vehicles from stored data first
+  if (!state.stored_vehicle_data.empty()) {
+    std::cout << "  Restoring " << state.stored_vehicle_data.size()
+              << " vehicles from stored data" << std::endl;
 
-  int vehicle_id = 0;
-  for (int i = 0; i < num_cells; ++i) {
-    double density = state.lwr_model->getDensity(i);
-    double speed = state.lwr_model->getSpeed(i);
+    // Get current macroscopic speeds for each position
+    int num_cells = state.lwr_model->getNumCells();
+    double cell_length = state.lwr_model->getCellLength();
 
-    // Calculate number of vehicles in this cell
-    int num_vehicles_in_cell = static_cast<int>(density * cell_length + 0.5);
+    for (const auto &vdata : state.stored_vehicle_data) {
+      auto vehicle = std::make_shared<kernel::model::Vehicle>(vdata.id);
 
-    // Create vehicles
-    for (int j = 0; j < num_vehicles_in_cell; ++j) {
-      auto vehicle = std::make_shared<kernel::model::Vehicle>(
-          state.lane->getId() + "_v" + std::to_string(vehicle_id++));
-
-      // Position within cell
-      double position =
-          i * cell_length + (j + 0.5) * cell_length / num_vehicles_in_cell;
-
+      // Restore position
       vehicle->setCurrentLane(state.lane);
-      vehicle->setLanePosition(position);
-      vehicle->setSpeed(speed);
+      vehicle->setLanePosition(vdata.position);
+
+      // Update speed from macroscopic model (traffic may have evolved)
+      int cell_index = static_cast<int>(vdata.position / cell_length);
+      if (cell_index >= 0 && cell_index < num_cells) {
+        double macro_speed = state.lwr_model->getSpeed(cell_index);
+        // Blend stored speed with macro speed
+        double blended_speed = 0.7 * macro_speed + 0.3 * vdata.speed;
+        vehicle->setSpeed(blended_speed);
+      } else {
+        vehicle->setSpeed(vdata.speed);
+      }
+
+      // Restore other properties
+      // (length is set by constructor, but we could override if needed)
 
       state.lane->addVehicle(vehicle);
       state.vehicles.push_back(vehicle);
+    }
+
+    state.stored_vehicle_data.clear();
+
+  } else {
+    // Fallback: Generate vehicles from macroscopic density
+    std::cout << "  Generating vehicles from macroscopic density" << std::endl;
+
+    int num_cells = state.lwr_model->getNumCells();
+    double cell_length = state.lwr_model->getCellLength();
+
+    int vehicle_id = 0;
+    for (int i = 0; i < num_cells; ++i) {
+      double density = state.lwr_model->getDensity(i);
+      double speed = state.lwr_model->getSpeed(i);
+
+      // Calculate number of vehicles in this cell
+      int num_vehicles_in_cell = static_cast<int>(density * cell_length + 0.5);
+
+      // Create vehicles
+      for (int j = 0; j < num_vehicles_in_cell; ++j) {
+        auto vehicle = std::make_shared<kernel::model::Vehicle>(
+            state.lane->getId() + "_v" + std::to_string(vehicle_id++));
+
+        // Position within cell
+        double position =
+            i * cell_length + (j + 0.5) * cell_length / num_vehicles_in_cell;
+
+        vehicle->setCurrentLane(state.lane);
+        vehicle->setLanePosition(position);
+        vehicle->setSpeed(speed);
+
+        state.lane->addVehicle(vehicle);
+        state.vehicles.push_back(vehicle);
+      }
     }
   }
 
@@ -313,7 +383,8 @@ void AdaptiveSimulator::forceMicroscopic(const std::string &lane_id) {
     if (it->second.mode == SimulationMode::MACROSCOPIC) {
       transitionToMicro(it->second);
     }
-    it->second.is_critical_area = true; // Prevent auto-switch
+    it->second.force_mode = true; // Prevent auto-switch
+    it->second.mode = SimulationMode::MICROSCOPIC;
   }
 }
 
@@ -323,12 +394,15 @@ void AdaptiveSimulator::forceMacroscopic(const std::string &lane_id) {
     if (it->second.mode == SimulationMode::MICROSCOPIC) {
       transitionToMacro(it->second);
     }
+    it->second.force_mode = true; // Prevent auto-switch
+    it->second.mode = SimulationMode::MACROSCOPIC;
   }
 }
 
 void AdaptiveSimulator::allowAutomatic(const std::string &lane_id) {
   auto it = m_lane_states.find(lane_id);
   if (it != m_lane_states.end()) {
+    it->second.force_mode = false;
     it->second.is_critical_area = isCriticalArea(it->second.lane);
   }
 }

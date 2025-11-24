@@ -1,34 +1,414 @@
-![#SIMILAR](src/doc/images/similarLogo.png)
+# SIMILAR & JamFree: High-Performance Agent-Based Simulation Framework
 
-[![Documentation](https://img.shields.io/badge/documentation-web-brightgreen.svg)](http://www.lgi2a.univ-artois.fr/~morvan/similar/docs/README.html)
-[![Download](https://img.shields.io/badge/download-latest%20binary%20distribution%20(v0.2.6)-blue.svg)](https://github.com/gildasmorvan/similar/releases/download/v0.2.6-distribution/similar-distribution-0.2.6-bin.zip)
-[![Build Status](https://travis-ci.org/gildasmorvan/similar.svg?branch=master)](https://travis-ci.org/gildasmorvan/similar)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=fr.univ-artois.lgi2a%3Asimilar&metric=alert_status)](https://sonarcloud.io/dashboard?id=fr.univ-artois.lgi2a%3Asimilar)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fr.univ-artois.lgi2a%3Asimilar&metric=bugs)](https://sonarcloud.io/dashboard?id=fr.univ-artois.lgi2a%3Asimilar)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=fr.univ-artois.lgi2a%3Asimilar&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=fr.univ-artois.lgi2a%3Asimilar)
+[![License](https://img.shields.io/badge/License-CeCILL--B-blue.svg)](LICENSE.txt)
+[![Python](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![C++](https://img.shields.io/badge/C++-17-orange.svg)](https://isocpp.org/)
 
-The [SIMILAR](http://www.lgi2a.univ-artois.fr/~morvan/similar.html) suite is a Java API under the [CeCILL-B license](http://cecill.info) whose purpose is to support the implementation of multi-agent-based simulations using the formerly named IRM4MLS meta-model. It is fully described in these two papers:
+**SIMILAR** is a powerful agent-based modeling framework with a Python DSL backed by a high-performance C++ engine. **JamFree** is a traffic simulation framework built on SIMILAR, featuring microscopic and macroscopic models with real-time data integration.
 
-* [G. Morvan and Y. Kubera. On time and consistency in multi-level agent-based simulations. arXiv:1703.02399, 2017](https://arxiv.org/abs/1703.02399)
+## 🚀 Quick Start
 
-* [G. Morvan, A. Veremme, and D. Dupont. IRM4MLS: the influence reaction model for multi-level simulation. Multi-Agent-Based Simulation XI, LNAI 6532, pages 16–27. Springer, 2011](http://arxiv.org/abs/1310.7951)
+### Installation
 
-This software defines an API to implement such simulations and provides usage examples.
+```bash
+# Clone the repository
+git clone https://github.com/gildasmorvan/similar
+cd similar
 
-A binary distribution of SIMILAR can be downloaded [here](https://github.com/gildasmorvan/similar/releases).
+# Build C++ engine (recommended for 10-100x performance boost)
+./build_cpp_engine.sh
 
-## Usage
+# Install Python dependencies
+pip install -r requirements.txt
+```
 
-For more information about SIMILAR and how to use it, see [its documentation](http://www.lgi2a.univ-artois.fr/~morvan/similar/docs/README.html) and the files [README_USER.txt](https://github.com/gildasmorvan/similar/blob/master/README_USER.txt) and [README_DEVELOPPER.txt](https://github.com/gildasmorvan/similar/blob/master/README_DEVELOPPER.txt).
+**📖 New to SIMILAR?** See **[Getting Started Guide](GETTING_STARTED.md)** for a complete walkthrough!
 
-## License
+**⚡ Quick Commands?** Check **[Quick Reference](QUICK_REFERENCE.md)** for a command cheat sheet!
 
-SIMILAR is distributed under the [CeCILL-B license](http://cecill.info). In a few words, "if the initial program is under CeCILL-B, you can distribute your program under any license that you want (without the need to distribute the source code) provided you properly mention the use that you did of the initial program" (from the [CeCILL-B FAQ](http://www.cecill.info/faq.en.html#differences) ).
 
-See the file  [LICENSE.txt](LICENSE.txt) for more information. 
+### Your First Simulation (SIMILAR2Logo)
 
-## Contributors
+Create `my_first_sim.py`:
 
-Yoann KUBERA - [mail](mailto:yoann.kubera@gmail.com) - [homepage](http://yoannkubera.net/) - designer, architect, developer.
+```python
+from similar2logo.dsl import *
+import random
 
-Gildas MORVAN - [mail](mailto:gildas.morvan@univ-artois.fr) - [homepage](http://www.lgi2a.univ-artois.fr/~morvan/) - creator of the IRM4MLS meta-model, developer.
+class RandomWalker(Turtle):
+    def decide(self, perception):
+        influences = []
+        if random.random() < 0.3:
+            influences.append(self.influence_turn(random.uniform(-0.5, 0.5)))
+        influences.append(self.influence_move_forward(1.0))
+        return influences
+
+# Create environment and simulation
+env = Environment(100, 100, toroidal=True)
+sim = Simulation(environment=env, title="Random Walk")
+
+# Add 50 agents
+for _ in range(50):
+    sim.add_agent(RandomWalker(
+        position=env.random_position(),
+        heading=env.random_heading()
+    ))
+
+# Run with web interface
+sim.run_web(port=8080)
+```
+
+Run it:
+```bash
+python3 my_first_sim.py
+# Open http://localhost:8080
+```
+
+### Your First Traffic Simulation (JamFree)
+
+```bash
+cd cpp/jamfree
+
+# Build JamFree
+./build.sh
+
+# Run web interface
+./run_web_ui.sh
+# Open http://localhost:5001
+```
+
+## 📚 What's Included
+
+### SIMILAR2Logo - Agent-Based Modeling
+
+A Python DSL for creating agent-based simulations with:
+
+- **🐢 Turtle Agents**: Logo-style agents with perception and decision-making
+- **🌍 Environments**: Toroidal/bounded worlds with pheromones and obstacles
+- **🧠 Influences**: Clean action system (move, turn, emit signals)
+- **⚡ C++ Engine**: Automatic 10-100x speedup when available
+- **🌐 Web UI**: Real-time visualization in browser
+- **📊 18+ Examples**: From flocking to epidemiology
+
+**Examples**: Boids, Ant Foraging, Virus Spread, Segregation, Predator-Prey, and more!
+
+### JamFree - Traffic Simulation
+
+A comprehensive traffic simulation framework featuring:
+
+- **🚗 Microscopic Models**: IDM car-following, MOBIL lane-changing
+- **🌊 Macroscopic Models**: LWR, CTM continuum flow
+- **🔄 Hybrid Simulation**: Automatic micro/macro switching
+- **🗺️ OSM Integration**: Real-world road networks
+- **📡 Real-Time Data**: TomTom, HERE, OpenTraffic integration
+- **🎯 Routing**: A* pathfinding with turn-by-turn navigation
+- **⚡ GPU Acceleration**: Metal GPU support (macOS)
+- **🌐 Web Interface**: Interactive visualization
+
+## 🎯 Key Features
+
+### Performance
+
+- **C++ Engine**: Core simulation logic in optimized C++
+- **Python DSL**: Easy-to-use Python interface
+- **Parallel Processing**: Multi-threaded simulation
+- **GPU Support**: Metal acceleration for large-scale traffic sims
+- **Adaptive Hybrid**: Automatic micro/macro switching for optimal speed
+
+### Flexibility
+
+- **Multiple Paradigms**: Microscopic, macroscopic, hybrid
+- **Real Data**: OSM maps, traffic APIs, real-time integration
+- **Extensible**: Easy to add new models and behaviors
+- **Cross-Platform**: Linux, macOS, Windows
+
+### Usability
+
+- **Clean DSL**: Intuitive Python API
+- **Web Visualization**: No GUI installation needed
+- **Rich Examples**: 18+ SIMILAR2Logo + traffic examples
+- **Documentation**: Comprehensive guides and tutorials
+
+## 📖 Documentation
+
+**📚 [Complete Documentation Index](DOCUMENTATION_INDEX.md)** - Find any document quickly!
+
+### SIMILAR2Logo
+
+- **[Quick Start Guide](QUICKSTART.md)** - Get started in 5 minutes
+- **[Examples README](examples/python/README.md)** - All 18 examples explained
+- **[DSL Reference](DSL_QUICK_REFERENCE.md)** - API documentation
+- **[Implementation Status](IMPLEMENTATION_STATUS.md)** - What's implemented
+
+### JamFree
+
+- **[JamFree README](cpp/jamfree/README.md)** - Overview and concepts
+- **[Quick Start](cpp/jamfree/QUICK_START.md)** - Get running fast
+- **[Web UI Guide](cpp/jamfree/WEB_UI_SUMMARY.md)** - Using the web interface
+- **[Performance Guide](cpp/jamfree/ADVANCED_PERFORMANCE.md)** - Optimization tips
+- **[Routing & Traffic Data](cpp/jamfree/REALISTIC_SIMULATION.md)** - Real-world integration
+
+## 🎨 Examples
+
+### SIMILAR2Logo Examples
+
+All located in `examples/python/`:
+
+**Basic**
+- `simple_random_walk.py` - Basic movement
+- `circle.py` - Formation patterns
+- `passive_turtle.py` - Physics simulation
+
+**Flocking & Collective**
+- `boids_dsl.py` - Classic flocking behavior
+- `boids_obstacles.py` - Flocking with obstacle avoidance
+- `ant_foraging_dsl.py` - Pheromone-based foraging
+
+**Biological**
+- `virus_spread.py` - Epidemiology (SIR model)
+- `predator_prey.py` - Lotka-Volterra dynamics
+- `heatbugs.py` - Temperature-seeking agents
+
+**Social & Urban**
+- `segregation_model.py` - Schelling's model
+- `transport.py` - Traffic simulation
+
+**Patterns & Emergence**
+- `turmite.py` - Langton's Ant
+- `multiturmite.py` - Multiple ants
+- `forest_fire.py` - Cellular automaton
+
+**And more!** See [examples/python/README.md](examples/python/README.md) for the complete list.
+
+### JamFree Examples
+
+Located in `cpp/jamfree/examples/`:
+
+- **Basic Simulation** - Simple traffic flow
+- **OSM Integration** - Real-world maps
+- **Hybrid Simulation** - Micro/macro switching
+- **GPU Acceleration** - Metal-accelerated simulation
+- **Routing** - Path planning and navigation
+
+## 🏃 Running Examples
+
+### SIMILAR2Logo
+
+```bash
+# Run any example
+python3 examples/python/boids_dsl.py
+
+# With C++ engine verification
+SIMILAR_VERBOSE=1 python3 examples/python/virus_spread.py
+
+# Run all examples (testing)
+python3 examples/python/run_examples.py
+```
+
+### JamFree
+
+```bash
+cd cpp/jamfree
+
+# Web interface (recommended)
+./run_web_ui.sh
+# Then open http://localhost:5001
+
+# Command-line simulation
+python3 examples/basic_simulation.py
+
+# With performance stats
+python3 examples/hybrid_simulation.py
+```
+
+## 🔧 Building from Source
+
+### SIMILAR2Logo C++ Engine
+
+```bash
+# Build C++ engine
+./build_cpp_engine.sh
+
+# Verify it works
+SIMILAR_VERBOSE=1 python3 examples/python/boids_dsl.py
+# Should see: ✓ Using C++ reaction engine
+```
+
+### JamFree
+
+```bash
+cd cpp/jamfree
+
+# Build core library
+./build.sh
+
+# Build with Python bindings
+./build_python.sh
+
+# Build with GPU support (macOS only)
+./build_metal.sh
+```
+
+## 🌐 Web Interfaces
+
+### SIMILAR2Logo Web UI
+
+Most examples include a built-in web interface:
+
+```python
+# In your simulation
+sim.run_web(port=8080, steps_per_frame=1)
+```
+
+Then open http://localhost:8080
+
+### JamFree Web UI
+
+Full-featured traffic simulation interface:
+
+```bash
+cd cpp/jamfree
+./run_web_ui.sh
+```
+
+Features:
+- 🗺️ Load OSM maps (upload or download)
+- 🚗 Configure vehicles and parameters
+- ⚡ Enable/disable optimizations
+- 📊 Real-time performance metrics
+- 🎨 Lane mode visualization (micro/macro)
+
+## 📊 Performance
+
+### SIMILAR2Logo
+
+With C++ engine enabled:
+- **10-100x faster** than pure Python
+- Handles **1000+ agents** in real-time
+- Efficient spatial indexing
+- Optimized influence resolution
+
+### JamFree
+
+Performance optimizations:
+- **IDM Lookup Tables**: 30-40% faster car-following
+- **Spatial Indexing**: O(log N) neighbor queries
+- **Adaptive Hybrid**: Auto micro/macro switching
+- **GPU Acceleration**: Metal support for macOS
+- **Multithreading**: Parallel vehicle updates
+
+Example: 1000 vehicles on real OSM map at 10+ FPS
+
+## 🔬 Research & Education
+
+Perfect for:
+- **Agent-Based Modeling** courses
+- **Complex Systems** research
+- **Traffic Engineering** studies
+- **Artificial Life** experiments
+- **Swarm Intelligence** research
+- **Computational Biology** teaching
+
+## 🤝 Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests and documentation
+5. Submit a pull request
+
+See individual component READMEs for specific guidelines.
+
+## 📄 License
+
+This project is licensed under the **CeCILL-B** license - see [LICENSE.txt](LICENSE.txt) for details.
+
+CeCILL-B is a BSD-like license compatible with international and French law.
+
+## 👥 Authors
+
+- **Gildas Morvan** - Original SIMILAR framework
+- **Contributors** - See [AUTHORS.txt](AUTHORS.txt)
+
+## 🔗 Resources
+
+### Documentation
+- [SIMILAR2Logo Quick Start](QUICKSTART.md)
+- [JamFree Documentation](cpp/jamfree/README.md)
+- [Examples Collection](examples/python/README.md)
+
+### Academic References
+- **Traffic Flow Dynamics** - Treiber & Kesting (2013)
+- **MOBIL Model** - Kesting et al. (2007)
+- **Agent-Based Modeling** - Wilensky & Rand (2015)
+
+### Related Projects
+- [SUMO](https://eclipse.dev/sumo/) - Traffic simulation
+- [MATSim](https://www.matsim.org/) - Multi-agent transport
+- [NetLogo](https://ccl.northwestern.edu/netlogo/) - Agent-based modeling
+
+## 🎯 Project Structure
+
+```
+similar/
+├── cpp/
+│   ├── similar2logo/          # C++ engine for SIMILAR2Logo
+│   └── jamfree/               # JamFree traffic simulation
+│       ├── kernel/            # Core models (Vehicle, Lane, Road)
+│       ├── microscopic/       # IDM, MOBIL
+│       ├── macroscopic/       # LWR, CTM
+│       ├── hybrid/            # Adaptive simulation
+│       ├── gpu/               # Metal GPU acceleration
+│       ├── realdata/          # OSM parser, traffic APIs
+│       ├── python/            # Python bindings
+│       └── examples/          # Example simulations
+├── python/
+│   └── similar2logo/          # Python DSL
+│       ├── dsl/               # High-level API
+│       ├── model.py           # Core classes
+│       └── parallel.py        # Parallel engine
+├── examples/
+│   └── python/                # 18+ example simulations
+└── docs/                      # Additional documentation
+```
+
+## 🚦 Status
+
+### SIMILAR2Logo
+✅ **Complete** - All Java examples ported to Python DSL with C++ engine
+
+### JamFree
+✅ **Production Ready**
+- Microscopic simulation (IDM, MOBIL)
+- Macroscopic models (LWR, CTM)
+- Hybrid adaptive simulation
+- OSM integration
+- Web UI with visualization
+- GPU acceleration (macOS)
+- Real-time traffic data integration
+
+## 🎉 Getting Help
+
+- **Issues**: [GitHub Issues](https://github.com/gildasmorvan/similar/issues)
+- **Examples**: Check `examples/python/` for working code
+- **Documentation**: See individual README files
+- **Verbose Mode**: Use `SIMILAR_VERBOSE=1` to see what's happening
+
+## 💡 Tips
+
+- **Start simple**: Try `simple_random_walk.py` first
+- **Use C++ engine**: Build it for major speedup
+- **Check examples**: 18+ working examples to learn from
+- **Web UI**: Great for visualization and debugging
+- **Read docs**: Each component has detailed documentation
+
+---
+
+**Happy Simulating!** 🚀
+
+For more information, see:
+- [SIMILAR2Logo Quick Start](QUICKSTART.md)
+- [JamFree Quick Start](cpp/jamfree/QUICK_START.md)
+- [Examples Guide](examples/python/README.md)

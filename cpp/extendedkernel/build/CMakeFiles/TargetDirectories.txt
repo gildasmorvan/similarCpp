@@ -1,0 +1,7 @@
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/extendedkernel.dir
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/edit_cache.dir
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/rebuild_cache.dir
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/list_install_components.dir
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/install.dir
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/install/local.dir
+/Users/morvan/Antigravity/similar/cpp/extendedkernel/build/CMakeFiles/install/strip.dir

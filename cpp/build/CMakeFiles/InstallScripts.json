@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/morvan/Antigravity/similar/cpp/build/cmake_install.cmake",
+		"/Users/morvan/Antigravity/similar/cpp/build/similar2logo/python/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

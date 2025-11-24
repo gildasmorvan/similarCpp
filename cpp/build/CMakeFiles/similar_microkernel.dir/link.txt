@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsimilar_microkernel.a CMakeFiles/similar_microkernel.dir/microkernel/src/engine/MultiThreadedSimulationEngine.cpp.o CMakeFiles/similar_microkernel.dir/microkernel/src/engine/SequentialSimulationEngine.cpp.o CMakeFiles/similar_microkernel.dir/microkernel/src/libs/AbstractAgent.cpp.o CMakeFiles/similar_microkernel.dir/microkernel/src/libs/AbstractPerceivedData.cpp.o CMakeFiles/similar_microkernel.dir/microkernel/src/libs/generic/EmptyPerceivedData.cpp.o CMakeFiles/similar_microkernel.dir/microkernel/src/main.cpp.o
+/usr/bin/ranlib libsimilar_microkernel.a

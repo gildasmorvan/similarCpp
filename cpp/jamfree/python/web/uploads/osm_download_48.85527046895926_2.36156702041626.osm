@@ -1,0 +1,3776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.62.8 e802775f">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2025-11-22T14:30:09Z"/>
+
+  <way id="3127158">
+    <nd ref="256589459"/>
+    <nd ref="2358813288"/>
+    <nd ref="7072397118"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="4039159">
+    <nd ref="361086"/>
+    <nd ref="6383863298"/>
+    <nd ref="710907215"/>
+    <nd ref="2250943370"/>
+    <nd ref="2250943366"/>
+    <nd ref="2250943364"/>
+    <nd ref="256587669"/>
+    <nd ref="6482772841"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="4039379">
+    <nd ref="702932776"/>
+    <nd ref="2400234179"/>
+    <nd ref="7710726167"/>
+    <nd ref="148943357"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Gambetta"/>
+    <tag k="name:etymology:wikidata" v="Q295090"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="920"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="4039512">
+    <nd ref="256589459"/>
+    <nd ref="2358813278"/>
+    <nd ref="706744224"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Martin"/>
+    <tag k="name:etymology:wikidata" v="Q1478999"/>
+    <tag k="name:zh" v="圣马丁大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="4039974">
+    <nd ref="153512631"/>
+    <nd ref="367916864"/>
+    <nd ref="6092407611"/>
+    <nd ref="5528037260"/>
+    <nd ref="367918448"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:backward" v="2"/>
+    <tag k="lanes:forward" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Ledru-Rollin"/>
+    <tag k="name:etymology:wikidata" v="Q1382222"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="600"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="4039995">
+    <nd ref="153512631"/>
+    <nd ref="6066233396"/>
+    <nd ref="12373040001"/>
+    <nd ref="5528037309"/>
+    <nd ref="2069524357"/>
+    <nd ref="367918343"/>
+    <tag k="bicycle:lanes:forward" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lanes:backward" v="2"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Roquette"/>
+    <tag k="name:etymology:wikidata" v="Q3413209"/>
+    <tag k="psv:lanes:forward" v="yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="13423722">
+    <nd ref="123495722"/>
+    <nd ref="9804908311"/>
+    <nd ref="2385215316"/>
+    <nd ref="1927853691"/>
+    <nd ref="208359407"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:width" v="ARCore"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="1.6"/>
+  </way>
+  <way id="13423887">
+    <nd ref="11068720774"/>
+    <nd ref="8128660056"/>
+    <nd ref="123497816"/>
+    <nd ref="8128660053"/>
+    <nd ref="2907989659"/>
+    <nd ref="691418826"/>
+    <nd ref="6808875103"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Charonne"/>
+    <tag k="name:etymology:wikidata" v="Q728591"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:left" v="lane"/>
+    <tag k="parking:left:orientation" v="parallel"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="16876646">
+    <nd ref="651065159"/>
+    <nd ref="6369005092"/>
+    <nd ref="94137695"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary_link"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q41300"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="17264368">
+    <nd ref="94141096"/>
+    <nd ref="573458022"/>
+    <nd ref="2510489333"/>
+    <nd ref="152737125"/>
+    <nd ref="573458019"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="17264452">
+    <nd ref="11907450994"/>
+    <nd ref="11907450993"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="22715942">
+    <nd ref="5528037738"/>
+    <nd ref="152739331"/>
+    <nd ref="2480667894"/>
+    <nd ref="573453736"/>
+    <nd ref="2480667895"/>
+    <nd ref="2510489332"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="24660608">
+    <nd ref="367917324"/>
+    <nd ref="8895505763"/>
+    <nd ref="1789061420"/>
+    <nd ref="5528037310"/>
+    <nd ref="650854445"/>
+    <nd ref="1789061432"/>
+    <nd ref="430789"/>
+    <nd ref="1789062102"/>
+    <nd ref="1789061644"/>
+    <nd ref="430788"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="24721137">
+    <nd ref="10089762252"/>
+    <nd ref="6210867744"/>
+    <nd ref="6227595169"/>
+    <nd ref="13078378138"/>
+    <nd ref="6227595170"/>
+    <nd ref="10244782457"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="highway" v="primary_link"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="29873622">
+    <nd ref="30183255"/>
+    <nd ref="1789061701"/>
+    <nd ref="1326727505"/>
+    <nd ref="5528037240"/>
+    <nd ref="30183344"/>
+    <nd ref="5894702613"/>
+    <nd ref="5894702606"/>
+    <nd ref="25034620"/>
+    <nd ref="11065114062"/>
+    <nd ref="5894702610"/>
+    <nd ref="153515015"/>
+    <nd ref="12279462017"/>
+    <nd ref="5894702608"/>
+    <nd ref="367903104"/>
+    <nd ref="2385215134"/>
+    <nd ref="25034619"/>
+    <nd ref="6389583850"/>
+    <nd ref="11065114135"/>
+    <nd ref="2665180182"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="32695939">
+    <nd ref="621326844"/>
+    <nd ref="5939231955"/>
+    <nd ref="8895505766"/>
+    <nd ref="12373037900"/>
+    <nd ref="8895505770"/>
+    <nd ref="30183255"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="34491585">
+    <nd ref="11486190886"/>
+    <nd ref="12164926928"/>
+    <nd ref="152801981"/>
+    <nd ref="2907989660"/>
+    <nd ref="2907989663"/>
+    <nd ref="123498923"/>
+    <nd ref="9904558901"/>
+    <nd ref="1300079997"/>
+    <nd ref="2907989666"/>
+    <nd ref="2385215175"/>
+    <nd ref="123498361"/>
+    <nd ref="560860387"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Charonne"/>
+    <tag k="name:etymology:wikidata" v="Q728591"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="lane"/>
+    <tag k="parking:both:orientation" v="parallel"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source:width" v="ARCore"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="7"/>
+  </way>
+  <way id="34491704">
+    <nd ref="431394908"/>
+    <nd ref="5749702237"/>
+    <nd ref="5749702260"/>
+    <nd ref="643357264"/>
+    <nd ref="2250942961"/>
+    <nd ref="11507233962"/>
+    <nd ref="9535612439"/>
+    <nd ref="9127340548"/>
+    <nd ref="2250942981"/>
+    <nd ref="17809166"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="34678498">
+    <nd ref="439855014"/>
+    <nd ref="2518138079"/>
+    <nd ref="11907450990"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="35992596">
+    <nd ref="332476877"/>
+    <nd ref="6388979718"/>
+    <nd ref="2358812957"/>
+    <nd ref="2878817143"/>
+    <nd ref="711007603"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="shared_lane"/>
+    <tag k="cycleway:right:lane" v="pictogram"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:forward" v="left|left|right"/>
+  </way>
+  <way id="35992597">
+    <nd ref="420670204"/>
+    <nd ref="7115012428"/>
+    <nd ref="420670205"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:backward" v="left|right|right"/>
+  </way>
+  <way id="37601096">
+    <nd ref="338489577"/>
+    <nd ref="11102103269"/>
+    <nd ref="2688735476"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q41300"/>
+    <tag k="name:zh" v="圣殿路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="41114133">
+    <nd ref="208359407"/>
+    <nd ref="2385215099"/>
+    <nd ref="13271104926"/>
+    <nd ref="6838648980"/>
+    <nd ref="195399361"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="41311213">
+    <nd ref="94149088"/>
+    <nd ref="9901902674"/>
+    <nd ref="9901902673"/>
+    <nd ref="9901902693"/>
+    <nd ref="2250943071"/>
+    <nd ref="25034650"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="43958991">
+    <nd ref="94149921"/>
+    <nd ref="3403646372"/>
+    <tag k="cycleway:right" v="shared_lane"/>
+    <tag k="cycleway:right:lane" v="pictogram"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="43958996">
+    <nd ref="96149590"/>
+    <nd ref="3403646370"/>
+    <nd ref="5614766852"/>
+    <nd ref="123482362"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Belleville"/>
+    <tag k="name:etymology:wikidata" v="Q815949"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="surface" v="sett"/>
+  </way>
+  <way id="44145488">
+    <nd ref="560860390"/>
+    <nd ref="687891786"/>
+    <nd ref="2385215191"/>
+    <nd ref="11280191030"/>
+    <nd ref="560860385"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Philippe Auguste"/>
+    <tag k="name:etymology:wikidata" v="Q34428"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="44145489">
+    <nd ref="2385215085"/>
+    <nd ref="687891785"/>
+    <nd ref="123496677"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Philippe Auguste"/>
+    <tag k="name:etymology:wikidata" v="Q34428"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="49292042">
+    <nd ref="94149921"/>
+    <nd ref="2878817116"/>
+    <nd ref="7508676443"/>
+    <nd ref="96149590"/>
+    <tag k="highway" v="primary_link"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="51111535">
+    <nd ref="256589504"/>
+    <nd ref="175016228"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Magenta"/>
+    <tag k="name:etymology:wikidata" v="Q681430"/>
+    <tag k="name:zh" v="马真塔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="53272976">
+    <nd ref="123482362"/>
+    <nd ref="123482363"/>
+    <nd ref="1789061466"/>
+    <nd ref="654572261"/>
+    <nd ref="123482364"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxspeed:type" v="sign"/>
+    <tag k="name" v="Boulevard de Belleville"/>
+    <tag k="name:etymology:wikidata" v="Q815949"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="54952893">
+    <nd ref="10089762252"/>
+    <nd ref="10244782462"/>
+    <nd ref="1789062132"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="54960848">
+    <nd ref="690201734"/>
+    <nd ref="1298884223"/>
+    <nd ref="2385215252"/>
+    <nd ref="9647364365"/>
+    <nd ref="691455661"/>
+    <nd ref="10082790950"/>
+    <nd ref="10082790951"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="64750311">
+    <nd ref="12430002078"/>
+    <nd ref="175042385"/>
+    <nd ref="12372995048"/>
+    <nd ref="3889759557"/>
+    <nd ref="6350240630"/>
+    <nd ref="94137693"/>
+    <nd ref="3889430059"/>
+    <nd ref="707827618"/>
+    <nd ref="2878817149"/>
+    <nd ref="256419629"/>
+    <nd ref="6278354889"/>
+    <nd ref="11891078151"/>
+    <nd ref="11891078152"/>
+    <nd ref="2688735464"/>
+    <nd ref="1757741905"/>
+    <nd ref="6350495041"/>
+    <nd ref="1757741909"/>
+    <nd ref="651065159"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="83268802">
+    <nd ref="94140737"/>
+    <nd ref="2480667891"/>
+    <nd ref="6434308311"/>
+    <nd ref="439855012"/>
+    <nd ref="94139049"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="114730070">
+    <nd ref="1298884223"/>
+    <nd ref="2385215088"/>
+    <nd ref="258676368"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="114871469">
+    <nd ref="10244782457"/>
+    <nd ref="10132102035"/>
+    <nd ref="690200701"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="114871480">
+    <nd ref="690200701"/>
+    <nd ref="10082790947"/>
+    <nd ref="13078378136"/>
+    <nd ref="123479648"/>
+    <nd ref="13100452344"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="highway" v="primary_link"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="114871489">
+    <nd ref="10244782469"/>
+    <nd ref="433217829"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="114871494">
+    <nd ref="123479648"/>
+    <nd ref="10089762252"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right:lane" v="pictogram"/>
+  </way>
+  <way id="116388712">
+    <nd ref="573458019"/>
+    <nd ref="178889521"/>
+    <nd ref="7185377884"/>
+    <nd ref="94139728"/>
+    <nd ref="3682989035"/>
+    <nd ref="3682989038"/>
+    <nd ref="1301125067"/>
+    <nd ref="11907450997"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard des Filles du Calvaire"/>
+    <tag k="name:etymology:wikidata" v="Q33500094"/>
+    <tag k="name:zh" v="加略山女儿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="123319398">
+    <nd ref="11843458179"/>
+    <nd ref="11102103271"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="7"/>
+    <tag k="lanes:backward" v="4"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="123486075">
+    <nd ref="11253108232"/>
+    <nd ref="1498968381"/>
+    <nd ref="8809461"/>
+    <nd ref="2481605886"/>
+    <nd ref="6434308312"/>
+    <nd ref="2641063806"/>
+    <nd ref="2641022389"/>
+    <nd ref="573458028"/>
+    <nd ref="2284436604"/>
+    <nd ref="2481605887"/>
+    <nd ref="11069305486"/>
+    <nd ref="178888368"/>
+    <nd ref="697813609"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="123487813">
+    <nd ref="1588595435"/>
+    <nd ref="1584084616"/>
+    <nd ref="2480667899"/>
+    <nd ref="2480667896"/>
+    <nd ref="2480667897"/>
+    <nd ref="178888782"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="138265437">
+    <nd ref="123489768"/>
+    <nd ref="10244782467"/>
+    <nd ref="123479648"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right:lane" v="pictogram"/>
+  </way>
+  <way id="138265439">
+    <nd ref="1789062132"/>
+    <nd ref="2880591792"/>
+    <nd ref="2385215172"/>
+    <nd ref="258676368"/>
+    <nd ref="1298883436"/>
+    <nd ref="2385215258"/>
+    <nd ref="6193036296"/>
+    <nd ref="123488806"/>
+    <nd ref="2385215348"/>
+    <nd ref="2385215212"/>
+    <nd ref="9804908309"/>
+    <nd ref="123488801"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="destination" v="Nation"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="138276412">
+    <nd ref="123495721"/>
+    <nd ref="1789062056"/>
+    <nd ref="260550930"/>
+    <nd ref="123495720"/>
+    <nd ref="1789061692"/>
+    <nd ref="1989733930"/>
+    <nd ref="123495120"/>
+    <nd ref="1789061516"/>
+    <nd ref="6657226459"/>
+    <nd ref="6657226458"/>
+    <nd ref="3403646373"/>
+    <nd ref="123495119"/>
+    <nd ref="1789061952"/>
+    <nd ref="123482369"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="yes"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="1"/>
+  </way>
+  <way id="156382084">
+    <nd ref="697813609"/>
+    <nd ref="5528037520"/>
+    <nd ref="573458027"/>
+    <nd ref="2481605888"/>
+    <nd ref="8284254422"/>
+    <nd ref="2641063805"/>
+    <nd ref="5528716164"/>
+    <nd ref="1588595435"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="156382086">
+    <nd ref="430788"/>
+    <nd ref="1789061437"/>
+    <nd ref="11507233960"/>
+    <nd ref="6335382140"/>
+    <nd ref="5528037255"/>
+    <nd ref="5749702239"/>
+    <nd ref="5773573552"/>
+    <nd ref="5528037256"/>
+    <nd ref="6335382141"/>
+    <nd ref="151361754"/>
+    <nd ref="12650232112"/>
+    <nd ref="6335382143"/>
+    <nd ref="151361175"/>
+    <nd ref="5528037315"/>
+    <nd ref="6335382142"/>
+    <nd ref="11507233961"/>
+    <nd ref="5528037316"/>
+    <nd ref="12927598589"/>
+    <nd ref="6335361970"/>
+    <nd ref="11065317357"/>
+    <nd ref="256413458"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="164379452">
+    <nd ref="25034650"/>
+    <nd ref="2250943064"/>
+    <nd ref="34777850"/>
+    <nd ref="8422147577"/>
+    <nd ref="2250943015"/>
+    <nd ref="25034653"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="168404431">
+    <nd ref="175033386"/>
+    <nd ref="2688735473"/>
+    <nd ref="94137695"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="bicycle:lanes" v="yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q41300"/>
+    <tag k="name:zh" v="圣殿路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="psv:lanes" v="yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="170809561">
+    <nd ref="338489577"/>
+    <nd ref="332476877"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="170809562">
+    <nd ref="17809163"/>
+    <nd ref="431394904"/>
+    <nd ref="13100452321"/>
+    <nd ref="2250943230"/>
+    <nd ref="431394161"/>
+    <nd ref="367967"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="170809563">
+    <nd ref="367967"/>
+    <nd ref="2250943219"/>
+    <nd ref="151357427"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="172654731">
+    <nd ref="175016228"/>
+    <nd ref="361084"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Magenta"/>
+    <tag k="name:etymology:wikidata" v="Q681430"/>
+    <tag k="name:zh" v="马真塔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="191714997">
+    <nd ref="195399361"/>
+    <nd ref="2385215235"/>
+    <nd ref="690201734"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="14"/>
+  </way>
+  <way id="191714998">
+    <nd ref="691304751"/>
+    <nd ref="1927863503"/>
+    <nd ref="1806069305"/>
+    <nd ref="1806069303"/>
+    <nd ref="1806069301"/>
+    <nd ref="1806069298"/>
+    <nd ref="1806069297"/>
+    <nd ref="1806069296"/>
+    <nd ref="1806069294"/>
+    <nd ref="367917324"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="junction" v="circular"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Léon Blum"/>
+    <tag k="name:etymology:wikidata" v="Q18434"/>
+    <tag k="note" v="not a roundabout, entering traffic has priority; pas un giratoire"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="231549025">
+    <nd ref="13100452341"/>
+    <nd ref="2250942977"/>
+    <nd ref="260550361"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="231549028">
+    <nd ref="123479611"/>
+    <nd ref="1789061511"/>
+    <nd ref="3403646371"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxspeed:type" v="sign"/>
+    <tag k="name" v="Boulevard de Belleville"/>
+    <tag k="name:etymology:wikidata" v="Q815949"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="252086452">
+    <nd ref="123498923"/>
+    <nd ref="9904558902"/>
+    <nd ref="123497816"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Charonne"/>
+    <tag k="name:etymology:wikidata" v="Q728591"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="255109299">
+    <nd ref="130099806"/>
+    <nd ref="5528037267"/>
+    <nd ref="4962470529"/>
+    <nd ref="5528037270"/>
+    <nd ref="5528037265"/>
+    <nd ref="252682718"/>
+    <nd ref="130099800"/>
+    <nd ref="5528037263"/>
+    <nd ref="4939731972"/>
+    <nd ref="12656248192"/>
+    <nd ref="5528037274"/>
+    <nd ref="244455587"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Ledru-Rollin"/>
+    <tag k="name:etymology:wikidata" v="Q1382222"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="600"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="307919389">
+    <nd ref="148944071"/>
+    <nd ref="2400234181"/>
+    <nd ref="4945774682"/>
+    <nd ref="2400234180"/>
+    <nd ref="148943020"/>
+    <nd ref="4966841798"/>
+    <nd ref="3129363084"/>
+    <nd ref="6316349264"/>
+    <nd ref="148942796"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Gambetta"/>
+    <tag k="name:etymology:wikidata" v="Q295090"/>
+    <tag k="oneway" v="no"/>
+    <tag k="oneway:bus" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source:maxspeed" v="signalisation, proximité école"/>
+    <tag k="source:oneway" v="https://mairie20.paris.fr/pages/nouveaux-amenagement-de-l-avenue-gambetta-plan-de-circulation-et-mobilite-douce-15444#les-amenagements-entre-pere-lachaise-et-gambetta"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="920"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="368899834">
+    <nd ref="3727403419"/>
+    <nd ref="5404238951"/>
+    <nd ref="3764626720"/>
+    <nd ref="5164007209"/>
+    <nd ref="175016228"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="511300387">
+    <nd ref="13087430783"/>
+    <nd ref="13087430784"/>
+    <nd ref="151358862"/>
+    <nd ref="2250943182"/>
+    <nd ref="25034664"/>
+    <nd ref="5116936565"/>
+    <nd ref="2250943176"/>
+    <nd ref="505081271"/>
+    <nd ref="9901902678"/>
+    <nd ref="2250943150"/>
+    <nd ref="704766"/>
+    <nd ref="505081268"/>
+    <nd ref="256586524"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="529387721">
+    <nd ref="94143743"/>
+    <nd ref="2250943145"/>
+    <nd ref="9535609215"/>
+    <nd ref="9535609216"/>
+    <nd ref="500347569"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="529387722">
+    <nd ref="94143743"/>
+    <nd ref="2250943124"/>
+    <nd ref="94144565"/>
+    <nd ref="9535612419"/>
+    <nd ref="9535612420"/>
+    <nd ref="11507233963"/>
+    <nd ref="9535612428"/>
+    <nd ref="9535612427"/>
+    <nd ref="2250943057"/>
+    <nd ref="9300602212"/>
+    <nd ref="603010627"/>
+    <nd ref="9300602214"/>
+    <nd ref="2250943029"/>
+    <nd ref="9535612429"/>
+    <nd ref="9535612430"/>
+    <nd ref="9535612436"/>
+    <nd ref="9535612435"/>
+    <nd ref="2250942986"/>
+    <nd ref="17809166"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="584389017">
+    <nd ref="433217829"/>
+    <nd ref="10082790953"/>
+    <nd ref="1789062126"/>
+    <nd ref="5586019254"/>
+    <nd ref="123495721"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="yes"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="596046282">
+    <nd ref="12168025945"/>
+    <nd ref="11065114205"/>
+    <nd ref="1759389853"/>
+    <nd ref="11065114208"/>
+    <nd ref="560860385"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Philippe Auguste"/>
+    <tag k="name:etymology:wikidata" v="Q34428"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="540"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="597992937">
+    <nd ref="151357427"/>
+    <nd ref="6335361976"/>
+    <nd ref="9844189691"/>
+    <nd ref="11065317406"/>
+    <nd ref="151357502"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="661091204">
+    <nd ref="94137695"/>
+    <nd ref="11891078164"/>
+    <nd ref="2688735468"/>
+    <nd ref="256419687"/>
+    <nd ref="2875110259"/>
+    <nd ref="5526534455"/>
+    <nd ref="6223434725"/>
+    <nd ref="175036928"/>
+    <nd ref="6189297330"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de Turbigo"/>
+    <tag k="name:zh" v="图尔比戈路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="BMO Arrêté n o 2018 P 11503"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="668206659">
+    <nd ref="8144008774"/>
+    <nd ref="123479610"/>
+    <nd ref="1789061721"/>
+    <nd ref="94153139"/>
+    <nd ref="1789061726"/>
+    <nd ref="1789061997"/>
+    <nd ref="94149717"/>
+    <nd ref="1789061709"/>
+    <nd ref="11374124892"/>
+    <nd ref="1789061548"/>
+    <nd ref="8376891393"/>
+    <nd ref="60913509"/>
+    <nd ref="1789061771"/>
+    <nd ref="881330235"/>
+    <nd ref="12259176257"/>
+    <nd ref="12259176260"/>
+    <nd ref="123479611"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Belleville"/>
+    <tag k="name:etymology:wikidata" v="Q815949"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:left" v="lane"/>
+    <tag k="parking:left:orientation" v="parallel"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre;mise à jour : 2010"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="7"/>
+  </way>
+  <way id="668207162">
+    <nd ref="3403646372"/>
+    <nd ref="123489765"/>
+    <nd ref="6848401548"/>
+    <nd ref="3403646367"/>
+    <nd ref="3403646375"/>
+    <nd ref="1789061424"/>
+    <nd ref="1290869753"/>
+    <nd ref="123479621"/>
+    <nd ref="123479622"/>
+    <nd ref="1789061715"/>
+    <nd ref="418065636"/>
+    <nd ref="123489766"/>
+    <nd ref="1789062115"/>
+    <nd ref="123489767"/>
+    <nd ref="5586019253"/>
+    <nd ref="6287061379"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="yes"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="674502119">
+    <nd ref="1789062136"/>
+    <nd ref="123489768"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="683635970">
+    <nd ref="94139897"/>
+    <nd ref="5528716161"/>
+    <nd ref="94139827"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard des Filles du Calvaire"/>
+    <tag k="name:etymology:wikidata" v="Q33500094"/>
+    <tag k="name:zh" v="加略山女儿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="688709933">
+    <nd ref="123488801"/>
+    <nd ref="9804908308"/>
+    <nd ref="560860390"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Charonne"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="690933459">
+    <nd ref="9844189694"/>
+    <nd ref="94144498"/>
+    <nd ref="2250943343"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="738141504">
+    <nd ref="6911532023"/>
+    <nd ref="256589864"/>
+    <nd ref="2688735475"/>
+    <nd ref="332476877"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q41300"/>
+    <tag k="name:zh" v="圣殿路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="744678347">
+    <nd ref="560860387"/>
+    <nd ref="9804908310"/>
+    <nd ref="123495722"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Charonne"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="757328920">
+    <nd ref="7072397118"/>
+    <nd ref="3727403419"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="761265876">
+    <nd ref="7112415811"/>
+    <nd ref="10281984726"/>
+    <nd ref="10281984727"/>
+    <nd ref="10281984728"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="psv:lanes:backward" v="designated|yes|yes"/>
+    <tag k="psv:lanes:forward" v="designated|yes|yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:backward" v="left|through|through"/>
+    <tag k="turn:lanes:forward" v="left|right|right"/>
+  </way>
+  <way id="761265877">
+    <nd ref="367979"/>
+    <nd ref="7112415811"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:backward" v="left|through|through"/>
+  </way>
+  <way id="761265881">
+    <nd ref="420670205"/>
+    <nd ref="7112415810"/>
+    <nd ref="367979"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:backward" v="left|right|right"/>
+  </way>
+  <way id="799108267">
+    <nd ref="260550361"/>
+    <nd ref="2250942972"/>
+    <nd ref="10082790972"/>
+    <nd ref="10082790971"/>
+    <nd ref="6316315215"/>
+    <nd ref="148945385"/>
+    <nd ref="25034654"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="799108269">
+    <nd ref="25034653"/>
+    <nd ref="13100452338"/>
+    <nd ref="2250943006"/>
+    <nd ref="13100452340"/>
+    <nd ref="13100452341"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="813115783">
+    <nd ref="5749702259"/>
+    <nd ref="431394165"/>
+    <nd ref="12927598588"/>
+    <nd ref="11065317364"/>
+    <nd ref="5749702262"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:backward" v="2"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:backward" v="through|right"/>
+  </way>
+  <way id="813115784">
+    <nd ref="256413458"/>
+    <nd ref="5749702259"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="813143369">
+    <nd ref="94139049"/>
+    <nd ref="2250943152"/>
+    <nd ref="11907450991"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="860156624">
+    <nd ref="11102103270"/>
+    <nd ref="338489577"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="7"/>
+    <tag k="lanes:backward" v="4"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="879265866">
+    <nd ref="367918448"/>
+    <nd ref="4939675717"/>
+    <nd ref="5528037266"/>
+    <nd ref="130099806"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Ledru-Rollin"/>
+    <tag k="name:etymology:wikidata" v="Q1382222"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="600"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="879320959">
+    <nd ref="5749702262"/>
+    <nd ref="431394908"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:forward" v="left|through"/>
+  </way>
+  <way id="879320960">
+    <nd ref="8180049447"/>
+    <nd ref="11507233964"/>
+    <nd ref="6989152763"/>
+    <nd ref="2250943361"/>
+    <nd ref="367979"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:forward" v="left;through|through;right"/>
+  </way>
+  <way id="908151166">
+    <nd ref="148943357"/>
+    <nd ref="6193078389"/>
+    <nd ref="4945774681"/>
+    <nd ref="4963220335"/>
+    <nd ref="2621009106"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Gambetta"/>
+    <tag k="name:etymology:wikidata" v="Q295090"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="920"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="929882671">
+    <nd ref="3403646371"/>
+    <nd ref="94149921"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxspeed:type" v="sign"/>
+    <tag k="name" v="Boulevard de Belleville"/>
+    <tag k="name:etymology:wikidata" v="Q815949"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre ; mise à jour : 2010"/>
+    <tag k="surface" v="paving_stones"/>
+  </way>
+  <way id="987662465">
+    <nd ref="5528037733"/>
+    <nd ref="11139966076"/>
+    <nd ref="573453733"/>
+    <nd ref="11139966072"/>
+    <nd ref="1588601898"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1030132479">
+    <nd ref="123482369"/>
+    <nd ref="96149590"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="surface" v="sett"/>
+  </way>
+  <way id="1068271777">
+    <nd ref="621326844"/>
+    <nd ref="12520804465"/>
+    <nd ref="1806069286"/>
+    <nd ref="1806069287"/>
+    <nd ref="1806069288"/>
+    <nd ref="1806069290"/>
+    <nd ref="367917176"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="junction" v="circular"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Léon Blum"/>
+    <tag k="name:etymology:wikidata" v="Q18434"/>
+    <tag k="note" v="not a roundabout, entering traffic has priority; pas un giratoire"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1068271778">
+    <nd ref="367917324"/>
+    <nd ref="1806069292"/>
+    <nd ref="1806069291"/>
+    <nd ref="12520804461"/>
+    <nd ref="1806069289"/>
+    <nd ref="9875456256"/>
+    <nd ref="9875456255"/>
+    <nd ref="9875456254"/>
+    <nd ref="367918343"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="junction" v="circular"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Léon Blum"/>
+    <tag k="name:etymology:wikidata" v="Q18434"/>
+    <tag k="note" v="not a roundabout, entering traffic has priority; pas un giratoire"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1068271779">
+    <nd ref="367917176"/>
+    <nd ref="1927863500"/>
+    <nd ref="1806069293"/>
+    <nd ref="1806069295"/>
+    <nd ref="367917318"/>
+    <nd ref="1806069299"/>
+    <nd ref="1806069300"/>
+    <nd ref="1806069302"/>
+    <nd ref="1806069304"/>
+    <nd ref="691304751"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="junction" v="circular"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Léon Blum"/>
+    <tag k="name:etymology:wikidata" v="Q18434"/>
+    <tag k="note" v="not a roundabout, entering traffic has priority; pas un giratoire"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1068271780">
+    <nd ref="367918343"/>
+    <nd ref="1806069285"/>
+    <nd ref="1806069284"/>
+    <nd ref="691304784"/>
+    <nd ref="12520804464"/>
+    <nd ref="1927877867"/>
+    <nd ref="1806069282"/>
+    <nd ref="1806069283"/>
+    <nd ref="621326844"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="junction" v="circular"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Léon Blum"/>
+    <tag k="name:etymology:wikidata" v="Q18434"/>
+    <tag k="note" v="not a roundabout, entering traffic has priority; pas un giratoire"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1092900033">
+    <nd ref="6482772841"/>
+    <nd ref="9844189694"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1092900034">
+    <nd ref="2250943343"/>
+    <nd ref="17809163"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1101830267">
+    <nd ref="6287061379"/>
+    <nd ref="10082790945"/>
+    <nd ref="1789062136"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="yes"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1101830270">
+    <nd ref="10082790951"/>
+    <nd ref="6193066251"/>
+    <nd ref="10244782475"/>
+    <nd ref="10244782457"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1102621240">
+    <nd ref="13100452344"/>
+    <nd ref="13100452355"/>
+    <nd ref="10089762252"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1108503802">
+    <nd ref="148942796"/>
+    <nd ref="702932776"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Gambetta"/>
+    <tag k="name:etymology:wikidata" v="Q295090"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source:maxspeed" v="signalisation, proximité école"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="920"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="1120130201">
+    <nd ref="10244782459"/>
+    <nd ref="10244782458"/>
+    <nd ref="1789061480"/>
+    <nd ref="10244782460"/>
+    <nd ref="690200701"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="highway" v="primary_link"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1120130202">
+    <nd ref="10244782457"/>
+    <nd ref="10244782456"/>
+    <nd ref="10247961693"/>
+    <nd ref="10244782459"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="highway" v="primary_link"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1120130203">
+    <nd ref="2621009106"/>
+    <nd ref="10244782459"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Gambetta"/>
+    <tag k="name:etymology:wikidata" v="Q295090"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="traffic:hourly" v="920"/>
+    <tag k="traffic:hourly:source" v="Open Data Paris 2019 : Comptage routier - Données trafic issues des capteurs permanents"/>
+  </way>
+  <way id="1124382378">
+    <nd ref="10281984728"/>
+    <nd ref="10281984729"/>
+    <nd ref="361086"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="oneway" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1137557386">
+    <nd ref="25034654"/>
+    <nd ref="11734666501"/>
+    <nd ref="8093151325"/>
+    <nd ref="11067035841"/>
+    <nd ref="10089762248"/>
+    <nd ref="13100452344"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1153316425">
+    <nd ref="256586524"/>
+    <nd ref="9901902671"/>
+    <nd ref="13100452328"/>
+    <nd ref="9901902677"/>
+    <nd ref="11037610017"/>
+    <nd ref="94149088"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1165954372">
+    <nd ref="651065159"/>
+    <nd ref="6350495042"/>
+    <nd ref="6911532023"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q41300"/>
+    <tag k="name:zh" v="圣殿路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1196435324">
+    <nd ref="2688735476"/>
+    <nd ref="175033386"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q41300"/>
+    <tag k="name:zh" v="圣殿路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1196435325">
+    <nd ref="11102103271"/>
+    <nd ref="2358813008"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="7"/>
+    <tag k="lanes:backward" v="4"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1211840094">
+    <nd ref="711007603"/>
+    <nd ref="420670204"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="foot" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="6"/>
+    <tag k="lanes:backward" v="3"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes:forward" v="left|left|right"/>
+  </way>
+  <way id="1251223796">
+    <nd ref="560860390"/>
+    <nd ref="123496677"/>
+    <nd ref="11068720774"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Charonne"/>
+    <tag k="name:etymology:wikidata" v="Q728591"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:left" v="lane"/>
+    <tag k="parking:left:orientation" v="parallel"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1273950109">
+    <nd ref="2510489332"/>
+    <nd ref="94141096"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1273950110">
+    <nd ref="1588601898"/>
+    <nd ref="5528037465"/>
+    <nd ref="11139966070"/>
+    <nd ref="2641063804"/>
+    <nd ref="227073732"/>
+    <nd ref="5528037738"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1273950111">
+    <nd ref="178888782"/>
+    <nd ref="573452387"/>
+    <nd ref="5528037733"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Beaumarchais"/>
+    <tag k="name:etymology:wikidata" v="Q70326"/>
+    <tag k="name:zh" v="博马舍大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1275533901">
+    <nd ref="256589459"/>
+    <nd ref="11843458179"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="7"/>
+    <tag k="lanes:backward" v="4"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314821">
+    <nd ref="2358812874"/>
+    <nd ref="12373040004"/>
+    <nd ref="7112415788"/>
+    <nd ref="8891708084"/>
+    <nd ref="2688735461"/>
+    <nd ref="420670204"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="track"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314822">
+    <nd ref="11907450990"/>
+    <nd ref="2358812874"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314823">
+    <nd ref="11907450991"/>
+    <nd ref="439855014"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314824">
+    <nd ref="9241723112"/>
+    <nd ref="2250943050"/>
+    <nd ref="9241723113"/>
+    <nd ref="94140737"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314825">
+    <nd ref="11907450992"/>
+    <nd ref="5614766847"/>
+    <nd ref="9241723112"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314826">
+    <nd ref="11907450993"/>
+    <nd ref="94143863"/>
+    <nd ref="5808370558"/>
+    <nd ref="11907450992"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314827">
+    <nd ref="94139827"/>
+    <nd ref="338479724"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314828">
+    <nd ref="338479724"/>
+    <nd ref="7629169889"/>
+    <nd ref="11907450994"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Temple"/>
+    <tag k="name:etymology:wikidata" v="Q3280072"/>
+    <tag k="name:zh" v="圣殿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314829">
+    <nd ref="11907450995"/>
+    <nd ref="6429948062"/>
+    <nd ref="94139897"/>
+    <tag k="busway" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard des Filles du Calvaire"/>
+    <tag k="name:etymology:wikidata" v="Q33500094"/>
+    <tag k="name:zh" v="加略山女儿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314830">
+    <nd ref="11907450996"/>
+    <nd ref="3682989033"/>
+    <nd ref="2480667893"/>
+    <nd ref="11907450995"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard des Filles du Calvaire"/>
+    <tag k="name:etymology:wikidata" v="Q33500094"/>
+    <tag k="name:zh" v="加略山女儿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1283314831">
+    <nd ref="11907450997"/>
+    <nd ref="2480667892"/>
+    <nd ref="11907450996"/>
+    <tag k="busway:both" v="lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard des Filles du Calvaire"/>
+    <tag k="name:etymology:wikidata" v="Q33500094"/>
+    <tag k="name:zh" v="加略山女儿大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1331618959">
+    <nd ref="2358813008"/>
+    <nd ref="11102103270"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="7"/>
+    <tag k="lanes:backward" v="4"/>
+    <tag k="lanes:forward" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place de la République"/>
+    <tag k="name:de" v="Platz der Republik"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:fr" v="Place de la République"/>
+    <tag k="name:zh" v="共和广场"/>
+    <tag k="oneway" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1422347598">
+    <nd ref="123496677"/>
+    <nd ref="11065166058"/>
+    <nd ref="560860387"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Philippe Auguste"/>
+    <tag k="name:etymology:wikidata" v="Q34428"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="no"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1422347599">
+    <nd ref="560860385"/>
+    <nd ref="11280191031"/>
+    <nd ref="2385215085"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Philippe Auguste"/>
+    <tag k="name:etymology:wikidata" v="Q34428"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1423075491">
+    <nd ref="690200701"/>
+    <nd ref="10244782469"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Ménilmontant"/>
+    <tag k="name:etymology:wikidata" v="Q2701404"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2011"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1425286405">
+    <nd ref="151357502"/>
+    <nd ref="13087430783"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue de la République"/>
+    <tag k="name:etymology:wikidata" v="Q7270"/>
+    <tag k="name:zh" v="共和大道"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1427136646">
+    <nd ref="12679532106"/>
+    <nd ref="2250943195"/>
+    <nd ref="94145390"/>
+    <nd ref="2250943217"/>
+    <nd ref="8180049447"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1427136647">
+    <nd ref="500347569"/>
+    <nd ref="13293832014"/>
+    <nd ref="12679532106"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes:backward" v="1"/>
+    <tag k="lanes:forward" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Voltaire"/>
+    <tag k="name:etymology:wikidata" v="Q9068"/>
+    <tag k="name:zh" v="伏尔泰大道"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <node id="244455587" lat="48.8532731" lon="2.3772848"/>
+  <node id="5528037274" lat="48.8534219" lon="2.3773735"/>
+  <node id="12656248192" lat="48.8537774" lon="2.3775807"/>
+  <node id="8809461" lat="48.8542528" lon="2.3688648"/>
+  <node id="94141096" lat="48.8601004" lon="2.3674655"/>
+  <node id="152739331" lat="48.8594854" lon="2.3676106"/>
+  <node id="178888368" lat="48.8557750" lon="2.3685101"/>
+  <node id="178888782" lat="48.8575873" lon="2.3680679"/>
+  <node id="227073732" lat="48.8592518" lon="2.3676730"/>
+  <node id="573452387" lat="48.8576598" lon="2.3680506"/>
+  <node id="573453733" lat="48.8579160" lon="2.3679812"/>
+  <node id="573453736" lat="48.8598738" lon="2.3675160"/>
+  <node id="573458022" lat="48.8602490" lon="2.3674314"/>
+  <node id="573458027" lat="48.8560246" lon="2.3684419"/>
+  <node id="573458028" lat="48.8548148" lon="2.3687336"/>
+  <node id="697813609" lat="48.8558253" lon="2.3684984"/>
+  <node id="1498968381" lat="48.8541640" lon="2.3688961"/>
+  <node id="1584084616" lat="48.8570137" lon="2.3682055"/>
+  <node id="1588595435" lat="48.8569394" lon="2.3682244"/>
+  <node id="1588601898" lat="48.8585562" lon="2.3678345"/>
+  <node id="2284436604" lat="48.8549511" lon="2.3687021"/>
+  <node id="2480667894" lat="48.8597658" lon="2.3675423"/>
+  <node id="2480667895" lat="48.8598933" lon="2.3675112"/>
+  <node id="2480667896" lat="48.8572304" lon="2.3681545"/>
+  <node id="2480667897" lat="48.8573796" lon="2.3681183"/>
+  <node id="2480667899" lat="48.8571418" lon="2.3681754"/>
+  <node id="2481605886" lat="48.8543265" lon="2.3688476"/>
+  <node id="2481605887" lat="48.8553833" lon="2.3686014"/>
+  <node id="2481605888" lat="48.8561589" lon="2.3684098"/>
+  <node id="2510489332" lat="48.8600370" lon="2.3674803"/>
+  <node id="2641022389" lat="48.8546035" lon="2.3687831"/>
+  <node id="2641063804" lat="48.8588245" lon="2.3677710"/>
+  <node id="2641063805" lat="48.8566086" lon="2.3683024"/>
+  <node id="2641063806" lat="48.8544593" lon="2.3688167"/>
+  <node id="5528037465" lat="48.8586165" lon="2.3678178"/>
+  <node id="5528037520" lat="48.8559430" lon="2.3684648"/>
+  <node id="5528037733" lat="48.8577232" lon="2.3680332"/>
+  <node id="5528037738" lat="48.8593891" lon="2.3676342"/>
+  <node id="5528716164" lat="48.8568863" lon="2.3682360"/>
+  <node id="6434308312" lat="48.8544350" lon="2.3688224"/>
+  <node id="8284254422" lat="48.8564544" lon="2.3683392"/>
+  <node id="11069305486" lat="48.8557101" lon="2.3685253"/>
+  <node id="11139966070" lat="48.8587837" lon="2.3677801"/>
+  <node id="11139966072" lat="48.8584632" lon="2.3678557"/>
+  <node id="11139966076" lat="48.8578373" lon="2.3680016"/>
+  <node id="11253108232" lat="48.8540242" lon="2.3689521"/>
+  <node id="367979" lat="48.8667247" lon="2.3651418"/>
+  <node id="94137693" lat="48.8658418" lon="2.3608948"/>
+  <node id="94137695" lat="48.8668414" lon="2.3619044"/>
+  <node id="94139049" lat="48.8652571" lon="2.3654431"/>
+  <node id="94140737" lat="48.8646740" lon="2.3657985"/>
+  <node id="175036928" lat="48.8664388" lon="2.3602960"/>
+  <node id="175042385" lat="48.8653993" lon="2.3604390"/>
+  <node id="256419629" lat="48.8664096" lon="2.3614956"/>
+  <node id="256419687" lat="48.8666623" lon="2.3612751"/>
+  <node id="420670204" lat="48.8665303" lon="2.3648093"/>
+  <node id="420670205" lat="48.8666172" lon="2.3649954"/>
+  <node id="439855012" lat="48.8649241" lon="2.3656493"/>
+  <node id="439855014" lat="48.8658648" lon="2.3650601"/>
+  <node id="651065159" lat="48.8667342" lon="2.3619861"/>
+  <node id="707827618" lat="48.8660723" lon="2.3611350"/>
+  <node id="711007603" lat="48.8665958" lon="2.3646914"/>
+  <node id="1757741905" lat="48.8666296" lon="2.3617936"/>
+  <node id="1757741909" lat="48.8667004" lon="2.3619183"/>
+  <node id="2250943152" lat="48.8653705" lon="2.3653774"/>
+  <node id="2250943361" lat="48.8666040" lon="2.3653403"/>
+  <node id="2358812874" lat="48.8663138" lon="2.3648000"/>
+  <node id="2480667891" lat="48.8647912" lon="2.3657247"/>
+  <node id="2518138079" lat="48.8659814" lon="2.3649917"/>
+  <node id="2688735461" lat="48.8664006" lon="2.3647708"/>
+  <node id="2688735464" lat="48.8665722" lon="2.3617090"/>
+  <node id="2688735468" lat="48.8667295" lon="2.3615419"/>
+  <node id="2688735473" lat="48.8668788" lon="2.3620275"/>
+  <node id="2875110259" lat="48.8666124" lon="2.3610824"/>
+  <node id="2878817143" lat="48.8667697" lon="2.3643508"/>
+  <node id="2878817149" lat="48.8661630" lon="2.3612333"/>
+  <node id="3889430059" lat="48.8658879" lon="2.3609411"/>
+  <node id="3889759557" lat="48.8657525" lon="2.3608056"/>
+  <node id="5526534455" lat="48.8664660" lon="2.3604358"/>
+  <node id="6189297330" lat="48.8664173" lon="2.3602080"/>
+  <node id="6223434725" lat="48.8664540" lon="2.3603719"/>
+  <node id="6278354889" lat="48.8664959" lon="2.3616100"/>
+  <node id="6350240630" lat="48.8657746" lon="2.3608264"/>
+  <node id="6350495041" lat="48.8666660" lon="2.3618529"/>
+  <node id="6350495042" lat="48.8667633" lon="2.3620653"/>
+  <node id="6369005092" lat="48.8668091" lon="2.3619265"/>
+  <node id="6434308311" lat="48.8649113" lon="2.3656565"/>
+  <node id="6911532023" lat="48.8668947" lon="2.3624092"/>
+  <node id="6989152763" lat="48.8665802" lon="2.3653800"/>
+  <node id="7112415788" lat="48.8663656" lon="2.3647753"/>
+  <node id="7112415810" lat="48.8666422" lon="2.3650293"/>
+  <node id="7112415811" lat="48.8667686" lon="2.3651987"/>
+  <node id="7115012428" lat="48.8665795" lon="2.3649435"/>
+  <node id="8891708084" lat="48.8663738" lon="2.3647742"/>
+  <node id="10281984726" lat="48.8668118" lon="2.3652548"/>
+  <node id="10281984727" lat="48.8668440" lon="2.3652953"/>
+  <node id="11507233964" lat="48.8663936" lon="2.3656962"/>
+  <node id="11891078151" lat="48.8665390" lon="2.3616660"/>
+  <node id="11891078152" lat="48.8665593" lon="2.3616921"/>
+  <node id="11891078164" lat="48.8667488" lon="2.3616090"/>
+  <node id="11907450990" lat="48.8661227" lon="2.3649116"/>
+  <node id="11907450991" lat="48.8654972" lon="2.3652935"/>
+  <node id="12372995048" lat="48.8657379" lon="2.3607906"/>
+  <node id="12373040004" lat="48.8663413" lon="2.3647869"/>
+  <node id="12430002078" lat="48.8651867" lon="2.3602308"/>
+  <node id="367967" lat="48.8661980" lon="2.3696404"/>
+  <node id="17809163" lat="48.8663310" lon="2.3688858"/>
+  <node id="17809166" lat="48.8637626" lon="2.3701149"/>
+  <node id="94139728" lat="48.8613550" lon="2.3671652"/>
+  <node id="94139827" lat="48.8631027" lon="2.3667404"/>
+  <node id="94139897" lat="48.8624630" lon="2.3668914"/>
+  <node id="94143743" lat="48.8651764" lon="2.3677434"/>
+  <node id="94143863" lat="48.8637244" lon="2.3663736"/>
+  <node id="94144498" lat="48.8664665" lon="2.3681911"/>
+  <node id="94144565" lat="48.8650550" lon="2.3679453"/>
+  <node id="94145390" lat="48.8660184" lon="2.3663300"/>
+  <node id="151357427" lat="48.8661189" lon="2.3700870"/>
+  <node id="151357502" lat="48.8659979" lon="2.3707114"/>
+  <node id="151358862" lat="48.8658357" lon="2.3715638"/>
+  <node id="152737125" lat="48.8606498" lon="2.3673344"/>
+  <node id="178889521" lat="48.8609603" lon="2.3672613"/>
+  <node id="256587669" lat="48.8666302" lon="2.3673384"/>
+  <node id="338479724" lat="48.8632285" lon="2.3666688"/>
+  <node id="431394161" lat="48.8662153" lon="2.3695385"/>
+  <node id="431394904" lat="48.8663167" lon="2.3689638"/>
+  <node id="431394908" lat="48.8628206" lon="2.3716926"/>
+  <node id="500347569" lat="48.8655263" lon="2.3671576"/>
+  <node id="573458019" lat="48.8608232" lon="2.3672947"/>
+  <node id="603010627" lat="48.8644042" lon="2.3690386"/>
+  <node id="643357264" lat="48.8630496" lon="2.3713057"/>
+  <node id="1301125067" lat="48.8616241" lon="2.3670997"/>
+  <node id="2250942961" lat="48.8631740" lon="2.3710935"/>
+  <node id="2250942981" lat="48.8637086" lon="2.3702070"/>
+  <node id="2250942986" lat="48.8638325" lon="2.3699952"/>
+  <node id="2250943029" lat="48.8643140" lon="2.3691872"/>
+  <node id="2250943050" lat="48.8644668" lon="2.3659175"/>
+  <node id="2250943057" lat="48.8645069" lon="2.3688666"/>
+  <node id="2250943124" lat="48.8650711" lon="2.3679167"/>
+  <node id="2250943145" lat="48.8652732" lon="2.3675807"/>
+  <node id="2250943182" lat="48.8657187" lon="2.3721847"/>
+  <node id="2250943195" lat="48.8659305" lon="2.3664766"/>
+  <node id="2250943217" lat="48.8660905" lon="2.3662100"/>
+  <node id="2250943219" lat="48.8661537" lon="2.3699046"/>
+  <node id="2250943230" lat="48.8662320" lon="2.3694506"/>
+  <node id="2250943343" lat="48.8663940" lon="2.3685446"/>
+  <node id="2250943364" lat="48.8666578" lon="2.3671954"/>
+  <node id="2250943366" lat="48.8667352" lon="2.3667964"/>
+  <node id="2250943370" lat="48.8667633" lon="2.3666512"/>
+  <node id="2480667892" lat="48.8620074" lon="2.3670041"/>
+  <node id="2480667893" lat="48.8621854" lon="2.3669572"/>
+  <node id="2510489333" lat="48.8605601" lon="2.3673565"/>
+  <node id="3682989033" lat="48.8620940" lon="2.3669822"/>
+  <node id="3682989035" lat="48.8615409" lon="2.3671199"/>
+  <node id="3682989038" lat="48.8615743" lon="2.3671118"/>
+  <node id="5528716161" lat="48.8629381" lon="2.3667787"/>
+  <node id="5614766847" lat="48.8642847" lon="2.3660322"/>
+  <node id="5749702237" lat="48.8628427" lon="2.3716541"/>
+  <node id="5749702260" lat="48.8629352" lon="2.3714930"/>
+  <node id="5749702262" lat="48.8625903" lon="2.3720759"/>
+  <node id="5808370558" lat="48.8637853" lon="2.3663347"/>
+  <node id="6335361976" lat="48.8660861" lon="2.3702656"/>
+  <node id="6429948062" lat="48.8623817" lon="2.3669139"/>
+  <node id="6482772841" lat="48.8665593" lon="2.3677044"/>
+  <node id="7185377884" lat="48.8610771" lon="2.3672329"/>
+  <node id="7629169889" lat="48.8632523" lon="2.3666536"/>
+  <node id="8180049447" lat="48.8662550" lon="2.3659311"/>
+  <node id="9127340548" lat="48.8636977" lon="2.3702288"/>
+  <node id="9241723112" lat="48.8644190" lon="2.3659481"/>
+  <node id="9241723113" lat="48.8644845" lon="2.3659055"/>
+  <node id="9300602212" lat="48.8644547" lon="2.3689540"/>
+  <node id="9300602214" lat="48.8643696" lon="2.3690967"/>
+  <node id="9535609215" lat="48.8652890" lon="2.3675540"/>
+  <node id="9535609216" lat="48.8653096" lon="2.3675193"/>
+  <node id="9535612419" lat="48.8650522" lon="2.3679500"/>
+  <node id="9535612420" lat="48.8650386" lon="2.3679729"/>
+  <node id="9535612427" lat="48.8645173" lon="2.3688489"/>
+  <node id="9535612428" lat="48.8645345" lon="2.3688201"/>
+  <node id="9535612429" lat="48.8643006" lon="2.3692124"/>
+  <node id="9535612430" lat="48.8642809" lon="2.3692455"/>
+  <node id="9535612435" lat="48.8638501" lon="2.3699681"/>
+  <node id="9535612436" lat="48.8638679" lon="2.3699383"/>
+  <node id="9535612439" lat="48.8636806" lon="2.3702569"/>
+  <node id="9844189691" lat="48.8660826" lon="2.3702820"/>
+  <node id="9844189694" lat="48.8664930" lon="2.3680497"/>
+  <node id="11065317364" lat="48.8625681" lon="2.3721143"/>
+  <node id="11065317406" lat="48.8660405" lon="2.3705215"/>
+  <node id="11507233962" lat="48.8636433" lon="2.3703184"/>
+  <node id="11507233963" lat="48.8649334" lon="2.3681496"/>
+  <node id="11907450992" lat="48.8638814" lon="2.3662761"/>
+  <node id="11907450993" lat="48.8635360" lon="2.3664848"/>
+  <node id="11907450994" lat="48.8633090" lon="2.3666195"/>
+  <node id="11907450995" lat="48.8623537" lon="2.3669208"/>
+  <node id="11907450996" lat="48.8620337" lon="2.3669974"/>
+  <node id="11907450997" lat="48.8618262" lon="2.3670505"/>
+  <node id="12679532106" lat="48.8656124" lon="2.3670096"/>
+  <node id="13087430783" lat="48.8659670" lon="2.3708611"/>
+  <node id="13087430784" lat="48.8659120" lon="2.3711382"/>
+  <node id="13100452321" lat="48.8662682" lon="2.3692418"/>
+  <node id="13293832014" lat="48.8655727" lon="2.3670776"/>
+  <node id="430788" lat="48.8597509" lon="2.3768495"/>
+  <node id="430789" lat="48.8587156" lon="2.3785840"/>
+  <node id="130099800" lat="48.8545491" lon="2.3780311"/>
+  <node id="130099806" lat="48.8557065" lon="2.3787055"/>
+  <node id="252682718" lat="48.8547443" lon="2.3781359"/>
+  <node id="1789061432" lat="48.8586502" lon="2.3786976"/>
+  <node id="1789061437" lat="48.8598183" lon="2.3767358"/>
+  <node id="1789061644" lat="48.8596566" lon="2.3770080"/>
+  <node id="1789062102" lat="48.8587853" lon="2.3784676"/>
+  <node id="4939675717" lat="48.8561200" lon="2.3789324"/>
+  <node id="4939731972" lat="48.8542477" lon="2.3778548"/>
+  <node id="4962470529" lat="48.8553588" lon="2.3784915"/>
+  <node id="5528037263" lat="48.8543465" lon="2.3779125"/>
+  <node id="5528037265" lat="48.8548168" lon="2.3781780"/>
+  <node id="5528037266" lat="48.8559181" lon="2.3788173"/>
+  <node id="5528037267" lat="48.8555200" lon="2.3785909"/>
+  <node id="5528037270" lat="48.8550446" lon="2.3783080"/>
+  <node id="11507233960" lat="48.8599122" lon="2.3765767"/>
+  <node id="25034619" lat="48.8553323" lon="2.3842633"/>
+  <node id="25034620" lat="48.8561907" lon="2.3828195"/>
+  <node id="30183255" lat="48.8573512" lon="2.3808768"/>
+  <node id="30183344" lat="48.8565470" lon="2.3822274"/>
+  <node id="153512631" lat="48.8574500" lon="2.3796975"/>
+  <node id="153515015" lat="48.8558945" lon="2.3833164"/>
+  <node id="367903104" lat="48.8555206" lon="2.3839433"/>
+  <node id="367916864" lat="48.8572500" lon="2.3795879"/>
+  <node id="367917176" lat="48.8578139" lon="2.3805281"/>
+  <node id="367917318" lat="48.8579032" lon="2.3804681"/>
+  <node id="367917324" lat="48.8578463" lon="2.3800467"/>
+  <node id="367918343" lat="48.8576763" lon="2.3801134"/>
+  <node id="367918448" lat="48.8566185" lon="2.3792263"/>
+  <node id="621326844" lat="48.8576603" lon="2.3804162"/>
+  <node id="650854445" lat="48.8583556" lon="2.3791916"/>
+  <node id="691304751" lat="48.8579579" lon="2.3803040"/>
+  <node id="691304784" lat="48.8576334" lon="2.3802595"/>
+  <node id="1326727505" lat="48.8566651" lon="2.3820209"/>
+  <node id="1789061420" lat="48.8579268" lon="2.3799289"/>
+  <node id="1789061701" lat="48.8572745" lon="2.3810041"/>
+  <node id="1806069282" lat="48.8576424" lon="2.3803664"/>
+  <node id="1806069283" lat="48.8576582" lon="2.3804150"/>
+  <node id="1806069284" lat="48.8576405" lon="2.3802064"/>
+  <node id="1806069285" lat="48.8576551" lon="2.3801569"/>
+  <node id="1806069286" lat="48.8577080" lon="2.3804911"/>
+  <node id="1806069287" lat="48.8577283" lon="2.3805076"/>
+  <node id="1806069288" lat="48.8577559" lon="2.3805222"/>
+  <node id="1806069289" lat="48.8577679" lon="2.3800381"/>
+  <node id="1806069290" lat="48.8577847" lon="2.3805291"/>
+  <node id="1806069291" lat="48.8577942" lon="2.3800345"/>
+  <node id="1806069292" lat="48.8578206" lon="2.3800374"/>
+  <node id="1806069293" lat="48.8578616" lon="2.3805085"/>
+  <node id="1806069294" lat="48.8578688" lon="2.3800608"/>
+  <node id="1806069295" lat="48.8578834" lon="2.3804907"/>
+  <node id="1806069296" lat="48.8578896" lon="2.3800798"/>
+  <node id="1806069297" lat="48.8579084" lon="2.3801033"/>
+  <node id="1806069298" lat="48.8579246" lon="2.3801308"/>
+  <node id="1806069299" lat="48.8579205" lon="2.3804411"/>
+  <node id="1806069300" lat="48.8579349" lon="2.3804105"/>
+  <node id="1806069301" lat="48.8579380" lon="2.3801616"/>
+  <node id="1806069302" lat="48.8579461" lon="2.3803769"/>
+  <node id="1806069303" lat="48.8579482" lon="2.3801951"/>
+  <node id="1806069304" lat="48.8579538" lon="2.3803412"/>
+  <node id="1806069305" lat="48.8579550" lon="2.3802305"/>
+  <node id="1927863500" lat="48.8578382" lon="2.3805211"/>
+  <node id="1927863503" lat="48.8579583" lon="2.3802671"/>
+  <node id="1927877867" lat="48.8576340" lon="2.3803137"/>
+  <node id="2069524357" lat="48.8576494" lon="2.3800457"/>
+  <node id="2385215134" lat="48.8553959" lon="2.3841536"/>
+  <node id="2665180182" lat="48.8547012" lon="2.3853213"/>
+  <node id="5528037240" lat="48.8565715" lon="2.3821865"/>
+  <node id="5528037260" lat="48.8566580" lon="2.3792492"/>
+  <node id="5528037309" lat="48.8576273" lon="2.3799868"/>
+  <node id="5528037310" lat="48.8582049" lon="2.3794433"/>
+  <node id="5894702606" lat="48.8562483" lon="2.3827269"/>
+  <node id="5894702608" lat="48.8558716" lon="2.3833577"/>
+  <node id="5894702610" lat="48.8561125" lon="2.3829546"/>
+  <node id="5894702613" lat="48.8562703" lon="2.3826905"/>
+  <node id="5939231955" lat="48.8575966" lon="2.3804750"/>
+  <node id="6066233396" lat="48.8575326" lon="2.3797535"/>
+  <node id="6092407611" lat="48.8571879" lon="2.3795528"/>
+  <node id="6389583850" lat="48.8553196" lon="2.3842839"/>
+  <node id="8895505763" lat="48.8579029" lon="2.3799636"/>
+  <node id="8895505766" lat="48.8575745" lon="2.3804907"/>
+  <node id="8895505770" lat="48.8574768" lon="2.3806671"/>
+  <node id="9875456254" lat="48.8576959" lon="2.3800863"/>
+  <node id="9875456255" lat="48.8577180" lon="2.3800643"/>
+  <node id="9875456256" lat="48.8577422" lon="2.3800481"/>
+  <node id="11065114062" lat="48.8561419" lon="2.3829048"/>
+  <node id="11065114135" lat="48.8547759" lon="2.3851964"/>
+  <node id="12279462017" lat="48.8558796" lon="2.3833435"/>
+  <node id="12373037900" lat="48.8575495" lon="2.3805332"/>
+  <node id="12373040001" lat="48.8576084" lon="2.3799389"/>
+  <node id="12520804461" lat="48.8577776" lon="2.3800368"/>
+  <node id="12520804464" lat="48.8576337" lon="2.3802840"/>
+  <node id="12520804465" lat="48.8576838" lon="2.3804599"/>
+  <node id="704766" lat="48.8652885" lon="2.3744427"/>
+  <node id="25034650" lat="48.8645947" lon="2.3780418"/>
+  <node id="25034664" lat="48.8656748" lon="2.3724182"/>
+  <node id="94149088" lat="48.8651468" lon="2.3751778"/>
+  <node id="151361175" lat="48.8609866" lon="2.3747721"/>
+  <node id="151361754" lat="48.8606816" lon="2.3752716"/>
+  <node id="256413458" lat="48.8620778" lon="2.3729443"/>
+  <node id="256586524" lat="48.8652355" lon="2.3747328"/>
+  <node id="431394165" lat="48.8623541" lon="2.3724845"/>
+  <node id="505081268" lat="48.8652644" lon="2.3745740"/>
+  <node id="505081271" lat="48.8653954" lon="2.3739014"/>
+  <node id="2250943064" lat="48.8645546" lon="2.3782608"/>
+  <node id="2250943071" lat="48.8646464" lon="2.3777546"/>
+  <node id="2250943150" lat="48.8653193" lon="2.3742953"/>
+  <node id="2250943176" lat="48.8656089" lon="2.3727678"/>
+  <node id="5116936565" lat="48.8656603" lon="2.3724949"/>
+  <node id="5528037255" lat="48.8604479" lon="2.3756867"/>
+  <node id="5528037256" lat="48.8606246" lon="2.3753686"/>
+  <node id="5528037315" lat="48.8610890" lon="2.3746009"/>
+  <node id="5528037316" lat="48.8616040" lon="2.3737364"/>
+  <node id="5749702239" lat="48.8605123" lon="2.3755661"/>
+  <node id="5749702259" lat="48.8622984" lon="2.3725767"/>
+  <node id="5773573552" lat="48.8605556" lon="2.3754899"/>
+  <node id="6335361970" lat="48.8620061" lon="2.3730615"/>
+  <node id="6335382140" lat="48.8604199" lon="2.3757255"/>
+  <node id="6335382141" lat="48.8606531" lon="2.3753201"/>
+  <node id="6335382142" lat="48.8611448" lon="2.3745071"/>
+  <node id="6335382143" lat="48.8608836" lon="2.3749408"/>
+  <node id="9901902671" lat="48.8652226" lon="2.3748038"/>
+  <node id="9901902673" lat="48.8650268" lon="2.3757650"/>
+  <node id="9901902674" lat="48.8650869" lon="2.3754326"/>
+  <node id="9901902677" lat="48.8652078" lon="2.3748901"/>
+  <node id="9901902678" lat="48.8653294" lon="2.3742382"/>
+  <node id="9901902693" lat="48.8650134" lon="2.3758235"/>
+  <node id="11037610017" lat="48.8651643" lon="2.3751045"/>
+  <node id="11065317357" lat="48.8620203" lon="2.3730374"/>
+  <node id="11507233961" lat="48.8612623" lon="2.3743099"/>
+  <node id="12650232112" lat="48.8608354" lon="2.3750197"/>
+  <node id="12927598588" lat="48.8623981" lon="2.3724084"/>
+  <node id="12927598589" lat="48.8619871" lon="2.3730938"/>
+  <node id="13100452328" lat="48.8652172" lon="2.3748354"/>
+  <node id="25034653" lat="48.8640055" lon="2.3811529"/>
+  <node id="34777850" lat="48.8641782" lon="2.3802310"/>
+  <node id="123479621" lat="48.8656025" lon="2.3841762"/>
+  <node id="123479622" lat="48.8652533" lon="2.3845797"/>
+  <node id="123489765" lat="48.8665504" lon="2.3831205"/>
+  <node id="123489766" lat="48.8648446" lon="2.3850425"/>
+  <node id="123495119" lat="48.8663659" lon="2.3836628"/>
+  <node id="123495120" lat="48.8660328" lon="2.3840078"/>
+  <node id="123495720" lat="48.8651526" lon="2.3850128"/>
+  <node id="148945385" lat="48.8632782" lon="2.3850021"/>
+  <node id="260550361" lat="48.8635931" lon="2.3833721"/>
+  <node id="418065636" lat="48.8650607" lon="2.3847995"/>
+  <node id="1290869753" lat="48.8658786" lon="2.3838715"/>
+  <node id="1789061424" lat="48.8659817" lon="2.3837583"/>
+  <node id="1789061516" lat="48.8660824" lon="2.3839559"/>
+  <node id="1789061692" lat="48.8652002" lon="2.3849576"/>
+  <node id="1789061715" lat="48.8650943" lon="2.3847603"/>
+  <node id="1789061952" lat="48.8668682" lon="2.3834196"/>
+  <node id="1989733930" lat="48.8652973" lon="2.3848456"/>
+  <node id="2250942972" lat="48.8635714" lon="2.3834831"/>
+  <node id="2250942977" lat="48.8636101" lon="2.3832821"/>
+  <node id="2250943006" lat="48.8639706" lon="2.3813285"/>
+  <node id="2250943015" lat="48.8640313" lon="2.3810181"/>
+  <node id="3403646367" lat="48.8662885" lon="2.3834112"/>
+  <node id="3403646372" lat="48.8668972" lon="2.3829154"/>
+  <node id="3403646373" lat="48.8663180" lon="2.3836966"/>
+  <node id="3403646375" lat="48.8662199" lon="2.3834917"/>
+  <node id="6316315215" lat="48.8633047" lon="2.3848651"/>
+  <node id="6657226458" lat="48.8662849" lon="2.3837284"/>
+  <node id="6657226459" lat="48.8662467" lon="2.3837683"/>
+  <node id="6848401548" lat="48.8664831" lon="2.3831832"/>
+  <node id="8422147577" lat="48.8640482" lon="2.3809366"/>
+  <node id="10082790971" lat="48.8633075" lon="2.3848498"/>
+  <node id="10082790972" lat="48.8633207" lon="2.3847812"/>
+  <node id="13100452338" lat="48.8639809" lon="2.3812767"/>
+  <node id="13100452340" lat="48.8639587" lon="2.3813931"/>
+  <node id="13100452341" lat="48.8638047" lon="2.3822735"/>
+  <node id="361084" lat="48.8685611" lon="2.3630587"/>
+  <node id="361086" lat="48.8669672" lon="2.3655855"/>
+  <node id="175016228" lat="48.8684669" lon="2.3629955"/>
+  <node id="175033386" lat="48.8671948" lon="2.3628642"/>
+  <node id="256589459" lat="48.8679492" lon="2.3623580"/>
+  <node id="256589504" lat="48.8686293" lon="2.3628595"/>
+  <node id="256589864" lat="48.8671431" lon="2.3630607"/>
+  <node id="332476877" lat="48.8673141" lon="2.3634261"/>
+  <node id="338489577" lat="48.8673827" lon="2.3633179"/>
+  <node id="706744224" lat="48.8681406" lon="2.3611480"/>
+  <node id="710907215" lat="48.8669382" lon="2.3657352"/>
+  <node id="2358812957" lat="48.8671161" lon="2.3637418"/>
+  <node id="2358813008" lat="48.8674718" lon="2.3631740"/>
+  <node id="2358813278" lat="48.8679809" lon="2.3621662"/>
+  <node id="2358813288" lat="48.8680731" lon="2.3625108"/>
+  <node id="2688735475" lat="48.8672038" lon="2.3632145"/>
+  <node id="2688735476" lat="48.8672833" lon="2.3630912"/>
+  <node id="3727403419" lat="48.8683533" lon="2.3628564"/>
+  <node id="3764626720" lat="48.8684215" lon="2.3629392"/>
+  <node id="5164007209" lat="48.8684462" lon="2.3629702"/>
+  <node id="5404238951" lat="48.8683822" lon="2.3628919"/>
+  <node id="6383863298" lat="48.8669486" lon="2.3656851"/>
+  <node id="6388979718" lat="48.8671324" lon="2.3637142"/>
+  <node id="7072397118" lat="48.8682943" lon="2.3627821"/>
+  <node id="10281984728" lat="48.8669772" lon="2.3654864"/>
+  <node id="10281984729" lat="48.8669763" lon="2.3655387"/>
+  <node id="11102103269" lat="48.8673063" lon="2.3631436"/>
+  <node id="11102103270" lat="48.8674417" lon="2.3632226"/>
+  <node id="11102103271" lat="48.8675133" lon="2.3631029"/>
+  <node id="11843458179" lat="48.8679109" lon="2.3624235"/>
+  <node id="94153139" lat="48.8707462" lon="2.3781575"/>
+  <node id="123479610" lat="48.8709394" lon="2.3779157"/>
+  <node id="1789061721" lat="48.8707817" lon="2.3781099"/>
+  <node id="1789061726" lat="48.8706863" lon="2.3782317"/>
+  <node id="8144008774" lat="48.8711621" lon="2.3776866"/>
+  <node id="60913509" lat="48.8688974" lon="2.3805038"/>
+  <node id="94149717" lat="48.8700208" lon="2.3791043"/>
+  <node id="94149921" lat="48.8670053" lon="2.3828597"/>
+  <node id="96149590" lat="48.8671068" lon="2.3832861"/>
+  <node id="123479611" lat="48.8672626" lon="2.3827022"/>
+  <node id="123482362" lat="48.8674056" lon="2.3828715"/>
+  <node id="123482363" lat="48.8676699" lon="2.3824950"/>
+  <node id="123482364" lat="48.8690492" lon="2.3806546"/>
+  <node id="123482369" lat="48.8670053" lon="2.3833537"/>
+  <node id="654572261" lat="48.8690046" lon="2.3807017"/>
+  <node id="881330235" lat="48.8682569" lon="2.3813807"/>
+  <node id="1789061466" lat="48.8689466" lon="2.3807671"/>
+  <node id="1789061511" lat="48.8672455" lon="2.3827127"/>
+  <node id="1789061548" lat="48.8689977" lon="2.3803722"/>
+  <node id="1789061709" lat="48.8699651" lon="2.3791740"/>
+  <node id="1789061771" lat="48.8688390" lon="2.3805794"/>
+  <node id="1789061997" lat="48.8700651" lon="2.3790427"/>
+  <node id="2878817116" lat="48.8670564" lon="2.3830685"/>
+  <node id="3403646370" lat="48.8671907" lon="2.3831891"/>
+  <node id="3403646371" lat="48.8670924" lon="2.3828067"/>
+  <node id="5614766852" lat="48.8673543" lon="2.3829487"/>
+  <node id="7508676443" lat="48.8670776" lon="2.3831548"/>
+  <node id="8376891393" lat="48.8689331" lon="2.3804571"/>
+  <node id="11374124892" lat="48.8692902" lon="2.3800101"/>
+  <node id="12259176257" lat="48.8682210" lon="2.3814284"/>
+  <node id="12259176260" lat="48.8679342" lon="2.3818096"/>
+  <node id="123488801" lat="48.8584296" lon="2.3894203"/>
+  <node id="123488806" lat="48.8598315" lon="2.3887552"/>
+  <node id="123495722" lat="48.8585477" lon="2.3896646"/>
+  <node id="123496677" lat="48.8582633" lon="2.3898851"/>
+  <node id="123498361" lat="48.8584006" lon="2.3900359"/>
+  <node id="195399361" lat="48.8598889" lon="2.3890049"/>
+  <node id="208359407" lat="48.8595465" lon="2.3891623"/>
+  <node id="560860385" lat="48.8579688" lon="2.3899634"/>
+  <node id="560860387" lat="48.8584578" lon="2.3898461"/>
+  <node id="560860390" lat="48.8583367" lon="2.3896567"/>
+  <node id="687891785" lat="48.8582339" lon="2.3898915"/>
+  <node id="687891786" lat="48.8582997" lon="2.3896830"/>
+  <node id="690201734" lat="48.8602457" lon="2.3888281"/>
+  <node id="1300079997" lat="48.8578106" lon="2.3919871"/>
+  <node id="1759389853" lat="48.8557622" lon="2.3913328"/>
+  <node id="1927853691" lat="48.8586987" lon="2.3895707"/>
+  <node id="2385215085" lat="48.8581805" lon="2.3899073"/>
+  <node id="2385215099" lat="48.8597044" lon="2.3890877"/>
+  <node id="2385215175" lat="48.8583528" lon="2.3901909"/>
+  <node id="2385215191" lat="48.8581926" lon="2.3897750"/>
+  <node id="2385215212" lat="48.8585884" lon="2.3893282"/>
+  <node id="2385215235" lat="48.8600808" lon="2.3889118"/>
+  <node id="2385215258" lat="48.8599783" lon="2.3886816"/>
+  <node id="2385215316" lat="48.8586512" lon="2.3895957"/>
+  <node id="2385215348" lat="48.8596711" lon="2.3888288"/>
+  <node id="2907989666" lat="48.8578383" lon="2.3918889"/>
+  <node id="6193036296" lat="48.8599524" lon="2.3886941"/>
+  <node id="6838648980" lat="48.8597476" lon="2.3890689"/>
+  <node id="8128660056" lat="48.8576220" lon="2.3920195"/>
+  <node id="9804908308" lat="48.8584038" lon="2.3894687"/>
+  <node id="9804908309" lat="48.8584717" lon="2.3893829"/>
+  <node id="9804908310" lat="48.8584929" lon="2.3897436"/>
+  <node id="9804908311" lat="48.8585974" lon="2.3896249"/>
+  <node id="11065114205" lat="48.8556418" lon="2.3914031"/>
+  <node id="11065114208" lat="48.8558734" lon="2.3912635"/>
+  <node id="11065166058" lat="48.8583615" lon="2.3898677"/>
+  <node id="11068720774" lat="48.8581768" lon="2.3900718"/>
+  <node id="11280191030" lat="48.8580579" lon="2.3898643"/>
+  <node id="11280191031" lat="48.8580945" lon="2.3899180"/>
+  <node id="13271104926" lat="48.8597212" lon="2.3890804"/>
+  <node id="123497816" lat="48.8575863" lon="2.3921483"/>
+  <node id="123498923" lat="48.8577134" lon="2.3922853"/>
+  <node id="152801981" lat="48.8566354" lon="2.3943564"/>
+  <node id="691418826" lat="48.8565698" lon="2.3941009"/>
+  <node id="2907989659" lat="48.8569825" lon="2.3933081"/>
+  <node id="2907989660" lat="48.8571222" lon="2.3934124"/>
+  <node id="2907989663" lat="48.8576575" lon="2.3923895"/>
+  <node id="6808875103" lat="48.8565424" lon="2.3941406"/>
+  <node id="8128660053" lat="48.8575335" lon="2.3922495"/>
+  <node id="9904558901" lat="48.8577548" lon="2.3921945"/>
+  <node id="9904558902" lat="48.8576416" lon="2.3922072"/>
+  <node id="11486190886" lat="48.8565569" lon="2.3944695"/>
+  <node id="12164926928" lat="48.8565974" lon="2.3944195"/>
+  <node id="12168025945" lat="48.8540409" lon="2.3924032"/>
+  <node id="25034654" lat="48.8631627" lon="2.3856002"/>
+  <node id="123479648" lat="48.8629320" lon="2.3872487"/>
+  <node id="123489767" lat="48.8640427" lon="2.3859762"/>
+  <node id="123489768" lat="48.8630690" lon="2.3871055"/>
+  <node id="123495721" lat="48.8641627" lon="2.3861398"/>
+  <node id="148942796" lat="48.8639560" lon="2.3916417"/>
+  <node id="148943357" lat="48.8631763" lon="2.3885830"/>
+  <node id="258676368" lat="48.8609703" lon="2.3882022"/>
+  <node id="260550930" lat="48.8645599" lon="2.3856851"/>
+  <node id="433217829" lat="48.8631643" lon="2.3872833"/>
+  <node id="690200701" lat="48.8629791" lon="2.3874585"/>
+  <node id="691455661" lat="48.8625829" lon="2.3876970"/>
+  <node id="702932776" lat="48.8638213" lon="2.3911144"/>
+  <node id="1298883436" lat="48.8606910" lon="2.3883372"/>
+  <node id="1298884223" lat="48.8610200" lon="2.3884477"/>
+  <node id="1789061480" lat="48.8630107" lon="2.3876827"/>
+  <node id="1789062056" lat="48.8642253" lon="2.3860760"/>
+  <node id="1789062115" lat="48.8640883" lon="2.3859234"/>
+  <node id="1789062126" lat="48.8632036" lon="2.3872416"/>
+  <node id="1789062132" lat="48.8626058" lon="2.3874293"/>
+  <node id="1789062136" lat="48.8631325" lon="2.3870350"/>
+  <node id="2385215088" lat="48.8609928" lon="2.3883132"/>
+  <node id="2385215172" lat="48.8610157" lon="2.3881803"/>
+  <node id="2385215252" lat="48.8610777" lon="2.3884202"/>
+  <node id="2400234179" lat="48.8634355" lon="2.3896167"/>
+  <node id="2621009106" lat="48.8630493" lon="2.3880053"/>
+  <node id="2880591792" lat="48.8619471" lon="2.3877448"/>
+  <node id="3129363084" lat="48.8640017" lon="2.3918205"/>
+  <node id="4945774681" lat="48.8631111" lon="2.3882889"/>
+  <node id="4963220335" lat="48.8630854" lon="2.3881739"/>
+  <node id="4966841798" lat="48.8640457" lon="2.3919928"/>
+  <node id="5586019253" lat="48.8639781" lon="2.3860479"/>
+  <node id="5586019254" lat="48.8640970" lon="2.3862127"/>
+  <node id="6193066251" lat="48.8626895" lon="2.3876450"/>
+  <node id="6193078389" lat="48.8631509" lon="2.3884593"/>
+  <node id="6210867744" lat="48.8628162" lon="2.3873828"/>
+  <node id="6227595169" lat="48.8628209" lon="2.3874205"/>
+  <node id="6227595170" lat="48.8628370" lon="2.3874967"/>
+  <node id="6287061379" lat="48.8631716" lon="2.3869923"/>
+  <node id="6316349264" lat="48.8639853" lon="2.3917598"/>
+  <node id="7710726167" lat="48.8632847" lon="2.3890314"/>
+  <node id="8093151325" lat="48.8631471" lon="2.3856846"/>
+  <node id="9647364365" lat="48.8624004" lon="2.3877847"/>
+  <node id="10082790945" lat="48.8631476" lon="2.3870194"/>
+  <node id="10082790947" lat="48.8629560" lon="2.3873492"/>
+  <node id="10082790950" lat="48.8626451" lon="2.3876662"/>
+  <node id="10082790951" lat="48.8626640" lon="2.3876589"/>
+  <node id="10082790953" lat="48.8631840" lon="2.3872624"/>
+  <node id="10089762248" lat="48.8629219" lon="2.3868703"/>
+  <node id="10089762252" lat="48.8628240" lon="2.3873338"/>
+  <node id="10132102035" lat="48.8629437" lon="2.3874956"/>
+  <node id="10244782456" lat="48.8629110" lon="2.3876572"/>
+  <node id="10244782457" lat="48.8628590" lon="2.3875535"/>
+  <node id="10244782458" lat="48.8630142" lon="2.3877499"/>
+  <node id="10244782459" lat="48.8630303" lon="2.3879209"/>
+  <node id="10244782460" lat="48.8630041" lon="2.3876072"/>
+  <node id="10244782462" lat="48.8627655" lon="2.3873678"/>
+  <node id="10244782467" lat="48.8629730" lon="2.3872127"/>
+  <node id="10244782469" lat="48.8630093" lon="2.3874245"/>
+  <node id="10244782475" lat="48.8628102" lon="2.3875842"/>
+  <node id="10247961693" lat="48.8629426" lon="2.3877342"/>
+  <node id="11067035841" lat="48.8629291" lon="2.3868198"/>
+  <node id="11734666501" lat="48.8631543" lon="2.3856457"/>
+  <node id="13078378136" lat="48.8629494" lon="2.3873189"/>
+  <node id="13078378138" lat="48.8628319" lon="2.3874724"/>
+  <node id="13100452344" lat="48.8628543" lon="2.3870806"/>
+  <node id="13100452355" lat="48.8628452" lon="2.3872408"/>
+  <node id="148943020" lat="48.8641129" lon="2.3922558"/>
+  <node id="148944071" lat="48.8646879" lon="2.3945071"/>
+  <node id="2400234180" lat="48.8641412" lon="2.3923663"/>
+  <node id="2400234181" lat="48.8645101" lon="2.3938113"/>
+  <node id="4945774682" lat="48.8641663" lon="2.3924651"/>
+
+</osm>

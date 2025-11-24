@@ -1,0 +1,4 @@
+/Users/morvan/Antigravity/similar/cpp/microkernel/build/CMakeFiles/microkernel.dir
+/Users/morvan/Antigravity/similar/cpp/microkernel/build/CMakeFiles/similar_test.dir
+/Users/morvan/Antigravity/similar/cpp/microkernel/build/CMakeFiles/edit_cache.dir
+/Users/morvan/Antigravity/similar/cpp/microkernel/build/CMakeFiles/rebuild_cache.dir

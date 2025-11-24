@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/minimal_web_server.dir/extendedkernel/examples/minimal_web_server.cpp.o -o minimal_web_server

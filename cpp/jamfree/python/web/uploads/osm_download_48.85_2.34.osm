@@ -1,0 +1,2909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.62.8 e802775f">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2025-11-22T14:09:42Z"/>
+
+  <way id="4039152">
+    <nd ref="11070910848"/>
+    <nd ref="11070910849"/>
+    <nd ref="6220939835"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Pont Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q26269675"/>
+    <tag k="name:zh" v="圣米歇尔桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039255">
+    <nd ref="470142"/>
+    <nd ref="25188950"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Conti"/>
+    <tag k="name:ru" v="набережная Конти"/>
+    <tag k="name:zh" v="孔蒂堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039366">
+    <nd ref="25554694"/>
+    <nd ref="7559552839"/>
+    <nd ref="7559552840"/>
+    <nd ref="676890492"/>
+    <nd ref="1924241863"/>
+    <nd ref="557366294"/>
+    <nd ref="676860056"/>
+    <nd ref="4619165930"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place du Châtelet"/>
+    <tag k="name:zh" v="沙特莱广场"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039439">
+    <nd ref="470137"/>
+    <nd ref="5526475270"/>
+    <nd ref="1756735710"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="4039550">
+    <nd ref="368120"/>
+    <nd ref="677104497"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:fr" v="Rue de la Cité"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039626">
+    <nd ref="676821350"/>
+    <nd ref="25554694"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="busway:right" v="track"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Gesvres"/>
+    <tag k="name:etymology:wikidata" v="Q3426770"/>
+    <tag k="name:zh" v="热夫尔堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039655">
+    <nd ref="644160"/>
+    <nd ref="1513497237"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Pont Notre-Dame"/>
+    <tag k="name:etymology:wikidata" v="Q2981"/>
+    <tag k="name:zh" v="圣母桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="wikidata" v="Q1061959"/>
+    <tag k="wikipedia" v="fr:Pont Notre-Dame"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039666">
+    <nd ref="11070910848"/>
+    <nd ref="11876395627"/>
+    <nd ref="635779423"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai des Grands Augustins"/>
+    <tag k="name:etymology:wikidata" v="Q3001716"/>
+    <tag k="name:ru" v="набережная Гран Огюстен"/>
+    <tag k="name:zh" v="奥斯定堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039813">
+    <nd ref="677151951"/>
+    <nd ref="212531357"/>
+    <tag k="cycleway:right" v="shared_lane"/>
+    <tag k="cycleway:right:lane" v="pictogram"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4039875">
+    <nd ref="212523881"/>
+    <nd ref="3671214959"/>
+    <nd ref="3671214960"/>
+    <nd ref="25095800"/>
+    <nd ref="3671214961"/>
+    <nd ref="25095799"/>
+    <nd ref="1109828929"/>
+    <nd ref="6288229328"/>
+    <nd ref="3671214963"/>
+    <nd ref="7274644380"/>
+    <nd ref="361062"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Montebello"/>
+    <tag k="name:etymology:wikidata" v="Q273032"/>
+    <tag k="name:ru" v="набережная Монтбело"/>
+    <tag k="name:zh" v="蒙特贝洛堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4040038">
+    <nd ref="367510"/>
+    <nd ref="7052150890"/>
+    <nd ref="7052150891"/>
+    <nd ref="2519852971"/>
+    <nd ref="6022914783"/>
+    <nd ref="25095618"/>
+    <nd ref="25095617"/>
+    <nd ref="6310561987"/>
+    <nd ref="11070910848"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:ru" v="набережная Сан-Мишель"/>
+    <tag k="name:zh" v="圣米歇尔堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="4040099">
+    <nd ref="12966545618"/>
+    <nd ref="12966545617"/>
+    <nd ref="12966545616"/>
+    <nd ref="9601909078"/>
+    <nd ref="6335319278"/>
+    <nd ref="4503171489"/>
+    <nd ref="2165221545"/>
+    <nd ref="644160"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="cycleway:right:width" v="3"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Martin"/>
+    <tag k="name:etymology:wikidata" v="Q656302"/>
+    <tag k="name:zh" v="圣马丁路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:lanes" v="3"/>
+  </way>
+  <way id="4261465">
+    <nd ref="4842846123"/>
+    <nd ref="25554716"/>
+    <nd ref="4505164273"/>
+    <nd ref="2165221554"/>
+    <nd ref="25554696"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Coutellerie"/>
+    <tag k="name:etymology:wikidata" v="Q1436188"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="14155058">
+    <nd ref="2880767496"/>
+    <nd ref="626937838"/>
+    <nd ref="2165221552"/>
+    <nd ref="25554697"/>
+    <nd ref="25554696"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="20104465">
+    <nd ref="7494611888"/>
+    <nd ref="12419677570"/>
+    <nd ref="3335200909"/>
+    <nd ref="6283077129"/>
+    <nd ref="470132"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Jacques"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="20104606">
+    <nd ref="212531359"/>
+    <nd ref="12334635217"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Petit-Pont"/>
+    <tag k="name:zh" v="小桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="21821064">
+    <nd ref="338664822"/>
+    <nd ref="676758863"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Palais"/>
+    <tag k="name:etymology:wikidata" v="Q143080"/>
+    <tag k="name:zh" v="宫殿大道"/>
+    <tag k="note" v="Voies de bus+vélo dans les 2 sens"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:zone30"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="21886208">
+    <nd ref="25095614"/>
+    <nd ref="3797266702"/>
+    <nd ref="1109781668"/>
+    <nd ref="9525592482"/>
+    <nd ref="9525592481"/>
+    <nd ref="6263794049"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="name:ru" v="улица Лагранж"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="parking:left" v="street_side"/>
+    <tag k="parking:left:orientation" v="parallel"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="22715945">
+    <nd ref="25554524"/>
+    <nd ref="2168591590"/>
+    <nd ref="25554525"/>
+    <nd ref="2168591594"/>
+    <nd ref="25207379"/>
+    <nd ref="8981647402"/>
+    <nd ref="8981647403"/>
+    <nd ref="8981647407"/>
+    <nd ref="8981647404"/>
+    <nd ref="680443050"/>
+    <nd ref="2878817127"/>
+    <nd ref="25554675"/>
+    <nd ref="11070301701"/>
+    <nd ref="25554674"/>
+    <nd ref="2200326715"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Sébastopol"/>
+    <tag k="name:etymology:wikidata" v="Q815216"/>
+    <tag k="name:zh" v="塞瓦斯托波尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="23738286">
+    <nd ref="367510"/>
+    <nd ref="2519852968"/>
+    <nd ref="482156678"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place du Petit Pont"/>
+    <tag k="name:etymology:wikidata" v="Q1323635"/>
+    <tag k="name:ru" v="площадь Пети Пон"/>
+    <tag k="note" v="[lapinos03] Piste cyclable d'après plan officiel 2008/02 - à vérifier sur place"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="25344944">
+    <nd ref="276194265"/>
+    <nd ref="3761982460"/>
+    <nd ref="12373040016"/>
+    <nd ref="5061770266"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lanes" v="2"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Pont Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q26269675"/>
+    <tag k="name:zh" v="圣米歇尔桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:zone30"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="34322389">
+    <nd ref="2399876970"/>
+    <nd ref="7658231805"/>
+    <nd ref="25095611"/>
+    <nd ref="4831305447"/>
+    <nd ref="2399876971"/>
+    <nd ref="25095610"/>
+    <nd ref="3671214962"/>
+    <nd ref="361062"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="name:ru" v="улица Лагранж"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="34679625">
+    <nd ref="25095620"/>
+    <nd ref="4831305446"/>
+    <nd ref="12373039902"/>
+    <nd ref="1109569909"/>
+    <nd ref="12334635218"/>
+    <nd ref="367510"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Montebello"/>
+    <tag k="name:etymology:wikidata" v="Q273032"/>
+    <tag k="name:ru" v="набережная Монтбело"/>
+    <tag k="name:zh" v="蒙特贝洛堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes" v="left|through|through"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="39371291">
+    <nd ref="4616996334"/>
+    <nd ref="7508676445"/>
+    <nd ref="697183823"/>
+    <nd ref="3376283552"/>
+    <nd ref="6282960235"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Sébastopol"/>
+    <tag k="name:etymology:wikidata" v="Q815216"/>
+    <tag k="name:zh" v="塞瓦斯托波尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="40067720">
+    <nd ref="25095625"/>
+    <nd ref="2927812430"/>
+    <nd ref="4843132800"/>
+    <nd ref="3335201908"/>
+    <nd ref="25095624"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue du Petit Pont"/>
+    <tag k="name:etymology:wikidata" v="Q1323635"/>
+    <tag k="name:ru" v="улица Пети Пон"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2008"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="41739090">
+    <nd ref="12966545618"/>
+    <nd ref="368133"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="41739091">
+    <nd ref="368133"/>
+    <nd ref="1055820698"/>
+    <nd ref="2165221563"/>
+    <nd ref="2875175580"/>
+    <nd ref="676872598"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="53578234">
+    <nd ref="5059182780"/>
+    <nd ref="676821309"/>
+    <nd ref="2468304196"/>
+    <nd ref="2880573972"/>
+    <nd ref="676821311"/>
+    <nd ref="4879118831"/>
+    <nd ref="676821315"/>
+    <nd ref="6321683987"/>
+    <nd ref="676821316"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="track"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de la Mégisserie"/>
+    <tag k="name:etymology:wikidata" v="Q3332813"/>
+    <tag k="name:zh" v="制革厂堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="53583655">
+    <nd ref="2883229672"/>
+    <nd ref="2211556527"/>
+    <nd ref="676890545"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="60184375">
+    <nd ref="2211556499"/>
+    <nd ref="5601413781"/>
+    <nd ref="676872460"/>
+    <nd ref="2880573970"/>
+    <nd ref="3980067636"/>
+    <nd ref="2165221543"/>
+    <nd ref="12966545612"/>
+    <nd ref="644160"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Gesvres"/>
+    <tag k="name:etymology:wikidata" v="Q3426770"/>
+    <tag k="name:zh" v="热夫尔堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="turn:lanes" v="left;through|through|through;right|none"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="66320306">
+    <nd ref="367506"/>
+    <nd ref="9599363055"/>
+    <nd ref="3335200988"/>
+    <nd ref="25095604"/>
+    <nd ref="2887958205"/>
+    <nd ref="2418577618"/>
+    <nd ref="25095606"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:zh" v="圣米歇尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="68881721">
+    <nd ref="676890491"/>
+    <nd ref="11033269488"/>
+    <nd ref="676821350"/>
+    <tag k="busway:right" v="track"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="5"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de la Mégisserie"/>
+    <tag k="name:etymology:wikidata" v="Q3332813"/>
+    <tag k="name:zh" v="制革厂堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="public_transport:version" v="2"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="102440303">
+    <nd ref="324579210"/>
+    <nd ref="4185965146"/>
+    <nd ref="470131"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:zh" v="圣米歇尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="123324289">
+    <nd ref="15644057"/>
+    <nd ref="1841311669"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Sébastopol"/>
+    <tag k="name:etymology:wikidata" v="Q815216"/>
+    <tag k="name:zh" v="塞瓦斯托波尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="123332686">
+    <nd ref="470132"/>
+    <nd ref="10918255379"/>
+    <nd ref="6221274835"/>
+    <nd ref="6221274836"/>
+    <nd ref="25031285"/>
+    <nd ref="25031308"/>
+    <nd ref="6157194069"/>
+    <nd ref="25031311"/>
+    <nd ref="2574527273"/>
+    <nd ref="2574527270"/>
+    <nd ref="25031316"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxspeed:type" v="sign"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="123461253">
+    <nd ref="676758863"/>
+    <nd ref="2303421399"/>
+    <nd ref="6413849015"/>
+    <nd ref="5536182718"/>
+    <nd ref="6413849016"/>
+    <nd ref="15643088"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard du Palais"/>
+    <tag k="name:etymology:wikidata" v="Q143080"/>
+    <tag k="name:ru" v="бульвар Пале"/>
+    <tag k="name:zh" v="宫殿大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:zone30"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="138031419">
+    <nd ref="1513497237"/>
+    <nd ref="368120"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Pont Notre-Dame"/>
+    <tag k="name:etymology:wikidata" v="Q2981"/>
+    <tag k="name:zh" v="圣母桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="lane"/>
+    <tag k="wikidata" v="Q1061959"/>
+    <tag k="wikipedia" v="fr:Pont Notre-Dame"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="164011888">
+    <nd ref="1756735710"/>
+    <nd ref="25095614"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2012"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="193751718">
+    <nd ref="1841311669"/>
+    <nd ref="2168591558"/>
+    <nd ref="25554524"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Sébastopol"/>
+    <tag k="name:etymology:wikidata" v="Q815216"/>
+    <tag k="name:zh" v="塞瓦斯托波尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="204056319">
+    <nd ref="4886258761"/>
+    <nd ref="25031248"/>
+    <nd ref="25031257"/>
+    <nd ref="12419677573"/>
+    <nd ref="3335200907"/>
+    <nd ref="470132"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxspeed:type" v="sign"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="204056329">
+    <nd ref="24983568"/>
+    <nd ref="2496113389"/>
+    <nd ref="243545956"/>
+    <nd ref="6291704562"/>
+    <nd ref="2496113387"/>
+    <nd ref="11042480192"/>
+    <nd ref="367505"/>
+    <nd ref="24972424"/>
+    <nd ref="11042473123"/>
+    <nd ref="24972423"/>
+    <nd ref="6291704535"/>
+    <nd ref="3335200933"/>
+    <nd ref="4964831512"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:left" v="lane"/>
+    <tag k="parking:left:orientation" v="parallel"/>
+    <tag k="parking:left:staggered" v="yes"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="bing;survey"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="208079553">
+    <nd ref="6190019965"/>
+    <nd ref="2876214410"/>
+    <nd ref="6291704555"/>
+    <nd ref="9975523700"/>
+    <nd ref="2904713502"/>
+    <nd ref="470142"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai des Grands Augustins"/>
+    <tag k="name:etymology:wikidata" v="Q3001716"/>
+    <tag k="name:ru" v="набережная Гран Огюстен"/>
+    <tag k="name:zh" v="奥斯定堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="284302748">
+    <nd ref="644160"/>
+    <nd ref="4503161885"/>
+    <nd ref="4503161886"/>
+    <nd ref="697177871"/>
+    <nd ref="4877380021"/>
+    <nd ref="247642735"/>
+    <nd ref="12747638323"/>
+    <nd ref="3657895198"/>
+    <nd ref="361068"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Gesvres"/>
+    <tag k="name:etymology:wikidata" v="Q3426770"/>
+    <tag k="name:zh" v="热夫尔堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="290820396">
+    <nd ref="27308711"/>
+    <nd ref="2519852970"/>
+    <nd ref="6828320899"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="lane"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="352839550">
+    <nd ref="676821316"/>
+    <nd ref="11162777723"/>
+    <nd ref="6321678968"/>
+    <nd ref="2211556523"/>
+    <nd ref="676821348"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de la Mégisserie"/>
+    <tag k="name:etymology:wikidata" v="Q3332813"/>
+    <tag k="name:zh" v="制革厂堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="413069094">
+    <nd ref="470131"/>
+    <nd ref="2432408156"/>
+    <nd ref="6386935376"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:zh" v="圣米歇尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="467280505">
+    <nd ref="676872598"/>
+    <nd ref="2887958202"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2017"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="517156289">
+    <nd ref="368190"/>
+    <nd ref="683598766"/>
+    <nd ref="5059182774"/>
+    <nd ref="5059182775"/>
+    <nd ref="5059182779"/>
+    <nd ref="5088842635"/>
+    <nd ref="12311914070"/>
+    <nd ref="12311914076"/>
+    <nd ref="5059182776"/>
+    <nd ref="5059182777"/>
+    <nd ref="5059182780"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="track"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai du Louvre"/>
+    <tag k="name:etymology:wikidata" v="Q1075988"/>
+    <tag k="name:ru" v="Луврская набережная"/>
+    <tag k="name:zh" v="卢浮堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="517156355">
+    <nd ref="25554694"/>
+    <nd ref="25670856"/>
+    <nd ref="2165221547"/>
+    <nd ref="2211556499"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Gesvres"/>
+    <tag k="name:etymology:wikidata" v="Q3426770"/>
+    <tag k="name:zh" v="热夫尔堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="545617466">
+    <nd ref="7029884396"/>
+    <nd ref="687066197"/>
+    <nd ref="25554425"/>
+    <nd ref="9738485775"/>
+    <nd ref="1376133927"/>
+    <nd ref="2200150713"/>
+    <nd ref="368190"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de l'Amiral de Coligny"/>
+    <tag k="name:etymology:wikidata" v="Q204975"/>
+    <tag k="name:ru" v="улица Амираль де Колиньи"/>
+    <tag k="name:zh" v="科利尼海军上将街"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="surface" v="sett"/>
+  </way>
+  <way id="589489443">
+    <nd ref="25031319"/>
+    <nd ref="3027567342"/>
+    <nd ref="6287132621"/>
+    <nd ref="2458000928"/>
+    <nd ref="470133"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Jacques"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="lane"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="601952770">
+    <nd ref="5143667124"/>
+    <nd ref="6335319276"/>
+    <nd ref="25670833"/>
+    <nd ref="2165221559"/>
+    <nd ref="676890491"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de la Mégisserie"/>
+    <tag k="name:etymology:wikidata" v="Q3332813"/>
+    <tag k="name:zh" v="制革厂堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="625387390">
+    <nd ref="25031316"/>
+    <nd ref="235806764"/>
+    <nd ref="6291071032"/>
+    <nd ref="5526475271"/>
+    <nd ref="470137"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="vehicle:lanes" v="yes|yes|no"/>
+  </way>
+  <way id="625387391">
+    <nd ref="11037394543"/>
+    <nd ref="7009789968"/>
+    <nd ref="4886258761"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="659754525">
+    <nd ref="470132"/>
+    <nd ref="3335200905"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="shared_lane"/>
+    <tag k="cycleway:right:lane" v="pictogram"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Jacques"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="668237354">
+    <nd ref="4964831512"/>
+    <nd ref="367506"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="bing;survey"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="668878770">
+    <nd ref="25095612"/>
+    <nd ref="544522111"/>
+    <nd ref="2399876970"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="name:ru" v="улица Лагранж"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="674945572">
+    <nd ref="4619165930"/>
+    <nd ref="6335319277"/>
+    <nd ref="2165221579"/>
+    <nd ref="676890545"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place du Châtelet"/>
+    <tag k="name:zh" v="沙特莱广场"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="674945573">
+    <nd ref="676890545"/>
+    <nd ref="6394060995"/>
+    <nd ref="4616996334"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="bicycle:lanes" v="yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Sébastopol"/>
+    <tag k="name:etymology:wikidata" v="Q815216"/>
+    <tag k="name:zh" v="塞瓦斯托波尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|designated"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="678644176">
+    <nd ref="361062"/>
+    <nd ref="25095620"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de Montebello"/>
+    <tag k="name:etymology:wikidata" v="Q273032"/>
+    <tag k="name:ru" v="набережная Монтбело"/>
+    <tag k="name:zh" v="蒙特贝洛堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="682020604">
+    <nd ref="6386935376"/>
+    <nd ref="367506"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:zh" v="圣米歇尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="682714785">
+    <nd ref="2887958202"/>
+    <nd ref="2883229672"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="683979636">
+    <nd ref="470130"/>
+    <nd ref="1765824640"/>
+    <nd ref="541421450"/>
+    <nd ref="2887958203"/>
+    <nd ref="9576131899"/>
+    <nd ref="4612427992"/>
+    <nd ref="9576131902"/>
+    <nd ref="4185965143"/>
+    <nd ref="324579210"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:zh" v="圣米歇尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:maxspeed" v="sign"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="688388695">
+    <nd ref="635779423"/>
+    <nd ref="2875175582"/>
+    <nd ref="25183526"/>
+    <nd ref="11793838048"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai des Grands Augustins"/>
+    <tag k="name:etymology:wikidata" v="Q3001716"/>
+    <tag k="name:ru" v="набережная Гран Огюстен"/>
+    <tag k="name:zh" v="奥斯定堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="698217134">
+    <nd ref="25095624"/>
+    <nd ref="25095622"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Jacques"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="744835294">
+    <nd ref="212531357"/>
+    <nd ref="7494611887"/>
+    <nd ref="12264617053"/>
+    <nd ref="212531359"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="cycleway:right:width" v="3"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="layer" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Petit-Pont - Cardinal Lustiger"/>
+    <tag k="name:etymology:wikidata" v="Q168509"/>
+    <tag k="name:ru" v="Пети Пон"/>
+    <tag k="name:zh" v="吕斯蒂热枢机小桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="ref:FR:FANTOIR" v="751057347C;751047347Y"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source" v="survey 2015"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="lane"/>
+    <tag k="wikidata" v="Q1323635"/>
+    <tag k="wikipedia" v="fr:Petit-Pont-Cardinal-Lustiger"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="754298045">
+    <nd ref="7046960610"/>
+    <nd ref="2303421398"/>
+    <nd ref="677151951"/>
+    <tag k="cycleway" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="754883372">
+    <nd ref="6282960235"/>
+    <nd ref="15644057"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard de Sébastopol"/>
+    <tag k="name:etymology:wikidata" v="Q815216"/>
+    <tag k="name:zh" v="塞瓦斯托波尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="791076374">
+    <nd ref="6220939835"/>
+    <nd ref="276194265"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Pont Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q26269675"/>
+    <tag k="name:zh" v="圣米歇尔桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="803340504">
+    <nd ref="2165221534"/>
+    <nd ref="8747889792"/>
+    <nd ref="27308711"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="809893107">
+    <nd ref="25095606"/>
+    <nd ref="11876395630"/>
+    <nd ref="6310561995"/>
+    <nd ref="25095608"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q1329076"/>
+    <tag k="name:zh" v="圣米歇尔大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="809893926">
+    <nd ref="3335200905"/>
+    <nd ref="6221279474"/>
+    <nd ref="10129328575"/>
+    <nd ref="3027567345"/>
+    <nd ref="25031319"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="cycleway:right:lane" v="advisory"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Jacques"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="837342549">
+    <nd ref="5061770266"/>
+    <nd ref="338664822"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Pont Saint-Michel"/>
+    <tag k="name:etymology:wikidata" v="Q26269675"/>
+    <tag k="name:zh" v="圣米歇尔桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="ref:FR:FANTOIR" v="751018709S"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:zone30"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="wikidata" v="Q1329076"/>
+    <tag k="wikipedia" v="fr:Pont Saint-Michel"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="865084962">
+    <nd ref="15643088"/>
+    <nd ref="677151953"/>
+    <nd ref="677151955"/>
+    <nd ref="1978091880"/>
+    <nd ref="6413849014"/>
+    <nd ref="2875175581"/>
+    <nd ref="8615812357"/>
+    <nd ref="4704242138"/>
+    <nd ref="8615812356"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:both" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="motor_vehicle:conditional" v="no @ (Sep 08-May 25 Tu-Fr 08:00-19:00)"/>
+    <tag k="name" v="Boulevard du Palais"/>
+    <tag k="name:etymology:wikidata" v="Q143080"/>
+    <tag k="name:ru" v="бульвар Пале"/>
+    <tag k="name:zh" v="宫殿大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:zone30"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1064739953">
+    <nd ref="5273168652"/>
+    <nd ref="7029884396"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de l'Amiral de Coligny"/>
+    <tag k="name:etymology:wikidata" v="Q204975"/>
+    <tag k="name:ru" v="улица Амираль де Колиньи"/>
+    <tag k="name:zh" v="科利尼海军上将街"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="surface" v="sett"/>
+  </way>
+  <way id="1088885343">
+    <nd ref="21305936"/>
+    <nd ref="3761982457"/>
+    <nd ref="6190019965"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai des Grands Augustins"/>
+    <tag k="name:etymology:wikidata" v="Q3001716"/>
+    <tag k="name:ru" v="набережная Гран Огюстен"/>
+    <tag k="name:zh" v="奥斯定堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1092869497">
+    <nd ref="212543400"/>
+    <nd ref="25095612"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="name:ru" v="улица Лагранж"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="1115002322">
+    <nd ref="2066708518"/>
+    <nd ref="677174965"/>
+    <nd ref="4843132801"/>
+    <nd ref="7046960610"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="lane"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1153389179">
+    <nd ref="676821348"/>
+    <nd ref="5143667124"/>
+    <tag k="bicycle:lanes" v="yes|yes|yes|designated"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lanes:psv" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai de la Mégisserie"/>
+    <tag k="name:etymology:wikidata" v="Q3332813"/>
+    <tag k="name:zh" v="制革厂堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="psv:lanes" v="yes|yes|yes|designated"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="sidewalk:right:surface" v="paving_stones"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1168839729">
+    <nd ref="6263794049"/>
+    <nd ref="11782219278"/>
+    <nd ref="212543400"/>
+    <tag k="cycleway:left" v="lane"/>
+    <tag k="cycleway:left:lane" v="exclusive"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Lagrange"/>
+    <tag k="name:etymology:wikidata" v="Q80222"/>
+    <tag k="name:ru" v="улица Лагранж"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="parking:left" v="on_kerb"/>
+    <tag k="parking:left:orientation" v="perpendicular"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="BMO arrêté n°2010-088"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:maxspeed" v="FR:30"/>
+  </way>
+  <way id="1174880994">
+    <nd ref="482156678"/>
+    <nd ref="25095625"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place du Petit Pont"/>
+    <tag k="name:etymology:wikidata" v="Q1323635"/>
+    <tag k="name:ru" v="площадь Пети Пон"/>
+    <tag k="note" v="[lapinos03] Piste cyclable d'après plan officiel 2008/02 - à vérifier sur place"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1188170506">
+    <nd ref="11033269489"/>
+    <nd ref="11033266868"/>
+    <nd ref="25554694"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Pont au Change"/>
+    <tag k="name:zh" v="兑换桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="sett"/>
+    <tag k="width" v="5"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1188170507">
+    <nd ref="11033269490"/>
+    <nd ref="11033308487"/>
+    <nd ref="11033269489"/>
+    <tag k="bridge" v="yes"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="layer" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Pont au Change"/>
+    <tag k="name:zh" v="兑换桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="sett"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1188170511">
+    <nd ref="8615812356"/>
+    <nd ref="11066794443"/>
+    <nd ref="11033269490"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="maxweight:signed" v="no"/>
+    <tag k="name" v="Pont au Change"/>
+    <tag k="name:zh" v="兑换桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="shoulder" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="sett"/>
+    <tag k="width" v="5"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1188653754">
+    <nd ref="367506"/>
+    <nd ref="11037394543"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="3"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Boulevard Saint-Germain"/>
+    <tag k="name:etymology:wikidata" v="Q255910"/>
+    <tag k="name:ru" v="бульвар Сен-Жермен"/>
+    <tag k="name:zh" v="圣日耳曼大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1211589013">
+    <nd ref="6828320899"/>
+    <nd ref="4458138098"/>
+    <nd ref="5921503332"/>
+    <nd ref="2066708518"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="both"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="lane"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1270196782">
+    <nd ref="11793838048"/>
+    <nd ref="3761982458"/>
+    <nd ref="21305936"/>
+    <tag k="bicycle:backward" v="use_sidepath"/>
+    <tag k="cycleway:both" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Quai des Grands Augustins"/>
+    <tag k="name:etymology:wikidata" v="Q3001716"/>
+    <tag k="name:ru" v="набережная Гран Огюстен"/>
+    <tag k="name:zh" v="奥斯定堤岸"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:left" v="street_side"/>
+    <tag k="parking:left:orientation" v="parallel"/>
+    <tag k="parking:right" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1279326374">
+    <nd ref="25095608"/>
+    <nd ref="11876395616"/>
+    <nd ref="5435849237"/>
+    <nd ref="11876395618"/>
+    <nd ref="11876395617"/>
+    <nd ref="11070910848"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="primary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Saint-Michel"/>
+    <tag k="name:zh" v="圣米歇尔广场"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:left:surface" v="asphalt"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1396245118">
+    <nd ref="25095622"/>
+    <nd ref="7494611888"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="separate"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue Saint-Jacques"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="smoothness" v="intermediate"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="was:cycleway:right" v="share_busway"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <way id="1396245119">
+    <nd ref="12334635217"/>
+    <nd ref="367510"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Petit-Pont"/>
+    <tag k="name:zh" v="小桥"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1411187696">
+    <nd ref="25554696"/>
+    <nd ref="12966545618"/>
+    <tag k="bicycle" v="yes"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="4"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Avenue Victoria"/>
+    <tag k="name:etymology:wikidata" v="Q9439"/>
+    <tag k="name:zh" v="维多利亚大道"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris après avis du préfet de police"/>
+    <tag k="operator:authority:related_law" v="IV de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="operator:url" v="https://cdn.paris.fr/paris/2020/02/26/5bf469a311d0beb9911e92d113781550.ai"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source" v="Bing"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1411187697">
+    <nd ref="677104497"/>
+    <nd ref="2165221534"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="separate"/>
+    <tag k="enforcement:operator" v="Police nationale"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de la Cité"/>
+    <tag k="name:etymology:wikidata" v="Q190063"/>
+    <tag k="name:ru" v="улица Сите"/>
+    <tag k="name:zh" v="西岱路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="operator" v="Ville de Paris"/>
+    <tag k="operator:authority" v="Maire de Paris dans le respect des prescriptions prises par le préfet de police"/>
+    <tag k="operator:authority:related_law" v="III de l'article L. 2512-14 du code général des collectivités territoriales"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="sidewalk:left" v="separate"/>
+    <tag k="sidewalk:right" v="yes"/>
+    <tag k="smoothness" v="good"/>
+    <tag k="source:maxspeed" v="FR:urban"/>
+    <tag k="source:operator:authority" v="https://www.legifrance.gouv.fr/loda/id/LEGIARTI000035244298/#LEGIARTI000035244298"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="zone:traffic" v="FR:urban"/>
+  </way>
+  <node id="24983568" lat="48.8524745" lon="2.3387535"/>
+  <node id="243545956" lat="48.8523571" lon="2.3392548"/>
+  <node id="2496113389" lat="48.8524265" lon="2.3389515"/>
+  <node id="367505" lat="48.8521030" lon="2.3402953"/>
+  <node id="367506" lat="48.8513977" lon="2.3431724"/>
+  <node id="470130" lat="48.8488358" lon="2.3417553"/>
+  <node id="470131" lat="48.8506264" lon="2.3428034"/>
+  <node id="470132" lat="48.8508423" lon="2.3455155"/>
+  <node id="470133" lat="48.8495998" lon="2.3448304"/>
+  <node id="24972423" lat="48.8516792" lon="2.3420305"/>
+  <node id="24972424" lat="48.8518287" lon="2.3414433"/>
+  <node id="25031248" lat="48.8510869" lon="2.3444781"/>
+  <node id="25031257" lat="48.8509748" lon="2.3449502"/>
+  <node id="25031319" lat="48.8502349" lon="2.3451879"/>
+  <node id="25095604" lat="48.8518427" lon="2.3433796"/>
+  <node id="25095606" lat="48.8527586" lon="2.3438219"/>
+  <node id="25095608" lat="48.8534059" lon="2.3441247"/>
+  <node id="25095617" lat="48.8533342" lon="2.3459126"/>
+  <node id="25095622" lat="48.8513927" lon="2.3458171"/>
+  <node id="324579210" lat="48.8503076" lon="2.3426437"/>
+  <node id="541421450" lat="48.8489211" lon="2.3418060"/>
+  <node id="1765824640" lat="48.8488620" lon="2.3417710"/>
+  <node id="2418577618" lat="48.8526969" lon="2.3437924"/>
+  <node id="2432408156" lat="48.8512533" lon="2.3431034"/>
+  <node id="2458000928" lat="48.8496870" lon="2.3448795"/>
+  <node id="2496113387" lat="48.8522029" lon="2.3398992"/>
+  <node id="2887958203" lat="48.8496734" lon="2.3422649"/>
+  <node id="2887958205" lat="48.8519291" lon="2.3434219"/>
+  <node id="3027567342" lat="48.8501758" lon="2.3451546"/>
+  <node id="3027567345" lat="48.8502962" lon="2.3452285"/>
+  <node id="3335200905" lat="48.8507755" lon="2.3454775"/>
+  <node id="3335200907" lat="48.8508749" lon="2.3453828"/>
+  <node id="3335200909" lat="48.8509961" lon="2.3455998"/>
+  <node id="3335200933" lat="48.8514416" lon="2.3429952"/>
+  <node id="3335200988" lat="48.8517626" lon="2.3433408"/>
+  <node id="4185965143" lat="48.8501668" lon="2.3425633"/>
+  <node id="4185965146" lat="48.8504256" lon="2.3427069"/>
+  <node id="4612427992" lat="48.8499147" lon="2.3424120"/>
+  <node id="4886258761" lat="48.8512231" lon="2.3439075"/>
+  <node id="4964831512" lat="48.8514121" lon="2.3431150"/>
+  <node id="5435849237" lat="48.8536178" lon="2.3442305"/>
+  <node id="6220939835" lat="48.8538084" lon="2.3443857"/>
+  <node id="6221274835" lat="48.8508078" lon="2.3456721"/>
+  <node id="6221274836" lat="48.8507461" lon="2.3459370"/>
+  <node id="6221279474" lat="48.8507036" lon="2.3454412"/>
+  <node id="6283077129" lat="48.8509380" lon="2.3455680"/>
+  <node id="6287132621" lat="48.8497300" lon="2.3449037"/>
+  <node id="6291704535" lat="48.8514593" lon="2.3429236"/>
+  <node id="6291704562" lat="48.8522106" lon="2.3398714"/>
+  <node id="6310561987" lat="48.8536987" lon="2.3445590"/>
+  <node id="6310561995" lat="48.8533280" lon="2.3440886"/>
+  <node id="6386935376" lat="48.8513432" lon="2.3431452"/>
+  <node id="7009789968" lat="48.8513123" lon="2.3435505"/>
+  <node id="7494611888" lat="48.8510639" lon="2.3456369"/>
+  <node id="9576131899" lat="48.8497737" lon="2.3423261"/>
+  <node id="9576131902" lat="48.8500044" lon="2.3424658"/>
+  <node id="9599363055" lat="48.8515931" lon="2.3432626"/>
+  <node id="10129328575" lat="48.8504492" lon="2.3453124"/>
+  <node id="10918255379" lat="48.8508125" lon="2.3456517"/>
+  <node id="11037394543" lat="48.8513173" lon="2.3435306"/>
+  <node id="11042473123" lat="48.8516980" lon="2.3419567"/>
+  <node id="11042480192" lat="48.8521910" lon="2.3399448"/>
+  <node id="11070910848" lat="48.8537679" lon="2.3443404"/>
+  <node id="11070910849" lat="48.8537833" lon="2.3443558"/>
+  <node id="11876395616" lat="48.8535447" lon="2.3441973"/>
+  <node id="11876395617" lat="48.8536716" lon="2.3442550"/>
+  <node id="11876395618" lat="48.8536674" lon="2.3442531"/>
+  <node id="11876395630" lat="48.8530947" lon="2.3439960"/>
+  <node id="12419677570" lat="48.8510302" lon="2.3456185"/>
+  <node id="12419677573" lat="48.8508868" lon="2.3453311"/>
+  <node id="361062" lat="48.8523487" lon="2.3482382"/>
+  <node id="367510" lat="48.8530729" lon="2.3468007"/>
+  <node id="470137" lat="48.8499851" lon="2.3490085"/>
+  <node id="25031285" lat="48.8506265" lon="2.3464294"/>
+  <node id="25031308" lat="48.8504099" lon="2.3473064"/>
+  <node id="25031311" lat="48.8503468" lon="2.3475535"/>
+  <node id="25031316" lat="48.8502017" lon="2.3481297"/>
+  <node id="25095610" lat="48.8521542" lon="2.3481218"/>
+  <node id="25095611" lat="48.8517825" lon="2.3478310"/>
+  <node id="25095612" lat="48.8513442" lon="2.3479561"/>
+  <node id="25095614" lat="48.8503715" lon="2.3486898"/>
+  <node id="25095618" lat="48.8532466" lon="2.3462483"/>
+  <node id="25095620" lat="48.8526411" lon="2.3476317"/>
+  <node id="25095624" lat="48.8521760" lon="2.3462784"/>
+  <node id="25095625" lat="48.8527633" lon="2.3466149"/>
+  <node id="25095799" lat="48.8519364" lon="2.3491991"/>
+  <node id="25095800" lat="48.8517753" lon="2.3495522"/>
+  <node id="212523881" lat="48.8514343" lon="2.3504210"/>
+  <node id="212531357" lat="48.8534759" lon="2.3470489"/>
+  <node id="212531359" lat="48.8531428" lon="2.3468608"/>
+  <node id="212543400" lat="48.8513149" lon="2.3479806"/>
+  <node id="235806764" lat="48.8501320" lon="2.3484114"/>
+  <node id="482156678" lat="48.8528336" lon="2.3466559"/>
+  <node id="544522111" lat="48.8515948" lon="2.3477640"/>
+  <node id="677151951" lat="48.8535923" lon="2.3471139"/>
+  <node id="1109569909" lat="48.8529960" lon="2.3469301"/>
+  <node id="1109781668" lat="48.8504816" lon="2.3486018"/>
+  <node id="1109828929" lat="48.8522488" lon="2.3484898"/>
+  <node id="1756735710" lat="48.8502707" lon="2.3487733"/>
+  <node id="2303421398" lat="48.8536701" lon="2.3471554"/>
+  <node id="2399876970" lat="48.8516851" lon="2.3476942"/>
+  <node id="2399876971" lat="48.8519445" lon="2.3479717"/>
+  <node id="2519852968" lat="48.8529809" lon="2.3467438"/>
+  <node id="2519852971" lat="48.8531362" lon="2.3466477"/>
+  <node id="2574527270" lat="48.8502317" lon="2.3480124"/>
+  <node id="2574527273" lat="48.8502789" lon="2.3478228"/>
+  <node id="2927812430" lat="48.8527417" lon="2.3466025"/>
+  <node id="3335201908" lat="48.8522158" lon="2.3463036"/>
+  <node id="3671214959" lat="48.8514633" lon="2.3503475"/>
+  <node id="3671214960" lat="48.8517378" lon="2.3496414"/>
+  <node id="3671214961" lat="48.8519063" lon="2.3492686"/>
+  <node id="3671214962" lat="48.8522734" lon="2.3481921"/>
+  <node id="3671214963" lat="48.8523007" lon="2.3483608"/>
+  <node id="3797266702" lat="48.8504619" lon="2.3486179"/>
+  <node id="4831305446" lat="48.8529041" lon="2.3471108"/>
+  <node id="4831305447" lat="48.8518988" lon="2.3479356"/>
+  <node id="4843132800" lat="48.8524881" lon="2.3464556"/>
+  <node id="5526475270" lat="48.8501845" lon="2.3488443"/>
+  <node id="5526475271" lat="48.8500494" lon="2.3487445"/>
+  <node id="6022914783" lat="48.8531897" lon="2.3464585"/>
+  <node id="6157194069" lat="48.8503716" lon="2.3474562"/>
+  <node id="6263794049" lat="48.8510424" lon="2.3481995"/>
+  <node id="6288229328" lat="48.8522747" lon="2.3484247"/>
+  <node id="6291071032" lat="48.8500658" lon="2.3486716"/>
+  <node id="7046960610" lat="48.8537152" lon="2.3471803"/>
+  <node id="7052150890" lat="48.8531094" lon="2.3467203"/>
+  <node id="7052150891" lat="48.8531284" lon="2.3466744"/>
+  <node id="7274644380" lat="48.8523159" lon="2.3483209"/>
+  <node id="7494611887" lat="48.8531874" lon="2.3468851"/>
+  <node id="7658231805" lat="48.8517292" lon="2.3477659"/>
+  <node id="9525592481" lat="48.8508459" lon="2.3483424"/>
+  <node id="9525592482" lat="48.8507356" lon="2.3483960"/>
+  <node id="11782219278" lat="48.8510536" lon="2.3481914"/>
+  <node id="12264617053" lat="48.8531645" lon="2.3468726"/>
+  <node id="12334635217" lat="48.8531138" lon="2.3468365"/>
+  <node id="12334635218" lat="48.8530206" lon="2.3468937"/>
+  <node id="12373039902" lat="48.8529513" lon="2.3470179"/>
+  <node id="368190" lat="48.8589898" lon="2.3398480"/>
+  <node id="470142" lat="48.8561313" lon="2.3404015"/>
+  <node id="15643088" lat="48.8553326" lon="2.3458912"/>
+  <node id="21305936" lat="48.8546205" lon="2.3425388"/>
+  <node id="25183526" lat="48.8542965" lon="2.3431850"/>
+  <node id="25188950" lat="48.8564302" lon="2.3399176"/>
+  <node id="25554425" lat="48.8595024" lon="2.3401151"/>
+  <node id="276194265" lat="48.8538458" lon="2.3444300"/>
+  <node id="338664822" lat="48.8542668" lon="2.3448485"/>
+  <node id="635779423" lat="48.8539320" lon="2.3439247"/>
+  <node id="676758863" lat="48.8543358" lon="2.3449201"/>
+  <node id="676821309" lat="48.8583945" lon="2.3427901"/>
+  <node id="676821311" lat="48.8582382" lon="2.3433672"/>
+  <node id="676821315" lat="48.8579631" lon="2.3443842"/>
+  <node id="676821316" lat="48.8576865" lon="2.3454202"/>
+  <node id="676821348" lat="48.8575675" lon="2.3458282"/>
+  <node id="677151953" lat="48.8553592" lon="2.3459147"/>
+  <node id="677151955" lat="48.8554737" lon="2.3460118"/>
+  <node id="683598766" lat="48.8589774" lon="2.3399130"/>
+  <node id="687066197" lat="48.8599268" lon="2.3403363"/>
+  <node id="1376133927" lat="48.8592040" lon="2.3399596"/>
+  <node id="1978091880" lat="48.8555721" lon="2.3460851"/>
+  <node id="2200150713" lat="48.8591839" lon="2.3399496"/>
+  <node id="2211556523" lat="48.8575877" lon="2.3457613"/>
+  <node id="2303421399" lat="48.8544187" lon="2.3449997"/>
+  <node id="2468304196" lat="48.8583818" lon="2.3428375"/>
+  <node id="2875175582" lat="48.8540992" lon="2.3435821"/>
+  <node id="2876214410" lat="48.8558312" lon="2.3407964"/>
+  <node id="2880573972" lat="48.8582925" lon="2.3431677"/>
+  <node id="2904713502" lat="48.8560118" lon="2.3405520"/>
+  <node id="3761982457" lat="48.8552203" lon="2.3416542"/>
+  <node id="3761982458" lat="48.8545759" lon="2.3426202"/>
+  <node id="3761982460" lat="48.8538542" lon="2.3444383"/>
+  <node id="4879118831" lat="48.8582255" lon="2.3434105"/>
+  <node id="5059182774" lat="48.8586899" lon="2.3414027"/>
+  <node id="5059182775" lat="48.8586617" lon="2.3415657"/>
+  <node id="5059182776" lat="48.8585465" lon="2.3421985"/>
+  <node id="5059182777" lat="48.8585372" lon="2.3422416"/>
+  <node id="5059182779" lat="48.8586555" lon="2.3416031"/>
+  <node id="5059182780" lat="48.8584826" lon="2.3424643"/>
+  <node id="5061770266" lat="48.8542522" lon="2.3448326"/>
+  <node id="5088842635" lat="48.8586539" lon="2.3416118"/>
+  <node id="5273168652" lat="48.8601747" lon="2.3404655"/>
+  <node id="5536182718" lat="48.8552697" lon="2.3458357"/>
+  <node id="6190019965" lat="48.8552790" lon="2.3415674"/>
+  <node id="6291704555" lat="48.8559693" lon="2.3406063"/>
+  <node id="6321678968" lat="48.8576193" lon="2.3456514"/>
+  <node id="6321683987" lat="48.8577167" lon="2.3453065"/>
+  <node id="6413849014" lat="48.8556030" lon="2.3461056"/>
+  <node id="6413849015" lat="48.8552493" lon="2.3458175"/>
+  <node id="6413849016" lat="48.8552950" lon="2.3458580"/>
+  <node id="7029884396" lat="48.8599622" lon="2.3403548"/>
+  <node id="9738485775" lat="48.8592293" lon="2.3399728"/>
+  <node id="9975523700" lat="48.8559880" lon="2.3405803"/>
+  <node id="11162777723" lat="48.8576293" lon="2.3456168"/>
+  <node id="11793838048" lat="48.8543163" lon="2.3431449"/>
+  <node id="11876395627" lat="48.8538464" lon="2.3441155"/>
+  <node id="12311914070" lat="48.8586297" lon="2.3417430"/>
+  <node id="12311914076" lat="48.8585521" lon="2.3421693"/>
+  <node id="12373040016" lat="48.8542346" lon="2.3448151"/>
+  <node id="361068" lat="48.8560699" lon="2.3507047"/>
+  <node id="368120" lat="48.8557133" lon="2.3483752"/>
+  <node id="368133" lat="48.8573196" lon="2.3492488"/>
+  <node id="644160" lat="48.8567171" lon="2.3489550"/>
+  <node id="15644057" lat="48.8585119" lon="2.3482157"/>
+  <node id="25207379" lat="48.8600657" lon="2.3490979"/>
+  <node id="25554524" lat="48.8587317" lon="2.3483496"/>
+  <node id="25554525" lat="48.8595159" lon="2.3487895"/>
+  <node id="25554694" lat="48.8571857" lon="2.3472935"/>
+  <node id="25554696" lat="48.8572365" lon="2.3495508"/>
+  <node id="25554697" lat="48.8571727" lon="2.3497829"/>
+  <node id="25554716" lat="48.8573072" lon="2.3499691"/>
+  <node id="25670833" lat="48.8573510" lon="2.3466883"/>
+  <node id="25670856" lat="48.8571068" lon="2.3475984"/>
+  <node id="27308711" lat="48.8546935" lon="2.3477572"/>
+  <node id="247642735" lat="48.8561388" lon="2.3505013"/>
+  <node id="557366294" lat="48.8573181" lon="2.3475347"/>
+  <node id="626937838" lat="48.8571310" lon="2.3499284"/>
+  <node id="676821350" lat="48.8572394" lon="2.3471199"/>
+  <node id="676860056" lat="48.8573570" lon="2.3475686"/>
+  <node id="676872460" lat="48.8569211" lon="2.3482430"/>
+  <node id="676872598" lat="48.8574947" lon="2.3486120"/>
+  <node id="676890491" lat="48.8572927" lon="2.3469263"/>
+  <node id="676890492" lat="48.8572424" lon="2.3474329"/>
+  <node id="676890545" lat="48.8577244" lon="2.3477767"/>
+  <node id="677104497" lat="48.8556619" lon="2.3483370"/>
+  <node id="677174965" lat="48.8540144" lon="2.3473547"/>
+  <node id="697177871" lat="48.8565204" lon="2.3494889"/>
+  <node id="697183823" lat="48.8584021" lon="2.3481549"/>
+  <node id="1055820698" lat="48.8573353" lon="2.3491886"/>
+  <node id="1513497237" lat="48.8566290" lon="2.3489043"/>
+  <node id="1841311669" lat="48.8585429" lon="2.3482333"/>
+  <node id="1924241863" lat="48.8572826" lon="2.3474941"/>
+  <node id="2066708518" lat="48.8540695" lon="2.3473873"/>
+  <node id="2165221534" lat="48.8555958" lon="2.3482964"/>
+  <node id="2165221543" lat="48.8567689" lon="2.3487701"/>
+  <node id="2165221545" lat="48.8568133" lon="2.3490103"/>
+  <node id="2165221547" lat="48.8570940" lon="2.3476431"/>
+  <node id="2165221552" lat="48.8571433" lon="2.3498850"/>
+  <node id="2165221554" lat="48.8572779" lon="2.3498025"/>
+  <node id="2165221559" lat="48.8573429" lon="2.3467222"/>
+  <node id="2165221563" lat="48.8573648" lon="2.3490846"/>
+  <node id="2165221579" lat="48.8576268" lon="2.3477222"/>
+  <node id="2168591558" lat="48.8586450" lon="2.3482985"/>
+  <node id="2168591590" lat="48.8594668" lon="2.3487620"/>
+  <node id="2168591594" lat="48.8599923" lon="2.3490568"/>
+  <node id="2211556499" lat="48.8569764" lon="2.3480500"/>
+  <node id="2211556527" lat="48.8576803" lon="2.3479308"/>
+  <node id="2519852970" lat="48.8542638" lon="2.3475006"/>
+  <node id="2875175580" lat="48.8574170" lon="2.3488946"/>
+  <node id="2875175581" lat="48.8558032" lon="2.3462383"/>
+  <node id="2880573970" lat="48.8568724" lon="2.3484169"/>
+  <node id="2880767496" lat="48.8570903" lon="2.3500703"/>
+  <node id="2883229672" lat="48.8576537" lon="2.3480340"/>
+  <node id="2887958202" lat="48.8575622" lon="2.3483665"/>
+  <node id="3376283552" lat="48.8584340" lon="2.3481726"/>
+  <node id="3657895198" lat="48.8561145" lon="2.3505661"/>
+  <node id="3980067636" lat="48.8567805" lon="2.3487308"/>
+  <node id="4458138098" lat="48.8541568" lon="2.3474392"/>
+  <node id="4503161885" lat="48.8565760" lon="2.3493360"/>
+  <node id="4503161886" lat="48.8565603" lon="2.3493795"/>
+  <node id="4503171489" lat="48.8568398" lon="2.3490256"/>
+  <node id="4505164273" lat="48.8572848" lon="2.3498454"/>
+  <node id="4616996334" lat="48.8580983" lon="2.3479898"/>
+  <node id="4619165930" lat="48.8575378" lon="2.3476743"/>
+  <node id="4704242138" lat="48.8561150" lon="2.3464450"/>
+  <node id="4842846123" lat="48.8573501" lon="2.3502062"/>
+  <node id="4843132801" lat="48.8539819" lon="2.3473346"/>
+  <node id="4877380021" lat="48.8562103" lon="2.3503118"/>
+  <node id="5143667124" lat="48.8574535" lon="2.3462811"/>
+  <node id="5601413781" lat="48.8569291" lon="2.3482152"/>
+  <node id="5921503332" lat="48.8541369" lon="2.3474273"/>
+  <node id="6282960235" lat="48.8584753" lon="2.3481964"/>
+  <node id="6335319276" lat="48.8573605" lon="2.3466505"/>
+  <node id="6335319277" lat="48.8575659" lon="2.3476894"/>
+  <node id="6335319278" lat="48.8568756" lon="2.3490462"/>
+  <node id="6394060995" lat="48.8578486" lon="2.3478438"/>
+  <node id="6828320899" lat="48.8542268" lon="2.3474794"/>
+  <node id="7508676445" lat="48.8582979" lon="2.3481010"/>
+  <node id="7559552839" lat="48.8571990" lon="2.3473357"/>
+  <node id="7559552840" lat="48.8572085" lon="2.3473611"/>
+  <node id="8615812356" lat="48.8561977" lon="2.3464808"/>
+  <node id="8615812357" lat="48.8560868" lon="2.3464263"/>
+  <node id="8747889792" lat="48.8549555" lon="2.3479052"/>
+  <node id="9601909078" lat="48.8571617" lon="2.3492107"/>
+  <node id="11033266868" lat="48.8571261" lon="2.3471645"/>
+  <node id="11033269488" lat="48.8572596" lon="2.3470465"/>
+  <node id="11033269489" lat="48.8571152" lon="2.3471399"/>
+  <node id="11033269490" lat="48.8562416" lon="2.3465959"/>
+  <node id="11033308487" lat="48.8571063" lon="2.3471344"/>
+  <node id="11066794443" lat="48.8562364" lon="2.3465822"/>
+  <node id="12747638323" lat="48.8561248" lon="2.3505386"/>
+  <node id="12966545612" lat="48.8567418" lon="2.3488661"/>
+  <node id="12966545616" lat="48.8572225" lon="2.3492791"/>
+  <node id="12966545617" lat="48.8572530" lon="2.3493608"/>
+  <node id="12966545618" lat="48.8572679" lon="2.3494368"/>
+  <node id="25554674" lat="48.8619230" lon="2.3501399"/>
+  <node id="25554675" lat="48.8612171" lon="2.3497438"/>
+  <node id="680443050" lat="48.8608903" lon="2.3495605"/>
+  <node id="2200326715" lat="48.8619498" lon="2.3501549"/>
+  <node id="2878817127" lat="48.8610357" lon="2.3496421"/>
+  <node id="8981647402" lat="48.8604885" lon="2.3493351"/>
+  <node id="8981647403" lat="48.8605028" lon="2.3493431"/>
+  <node id="8981647404" lat="48.8605893" lon="2.3493919"/>
+  <node id="8981647407" lat="48.8605389" lon="2.3493634"/>
+  <node id="11070301701" lat="48.8618875" lon="2.3501199"/>
+
+</osm>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JamFree - Traffic Simulation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            grid-template-rows: 60px 1fr;
+            height: 100vh;
+            gap: 0;
+        }
+
+        header {
+            grid-column: 1 / -1;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .status {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .panel {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .panel h2 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 6px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button.secondary {
+            background: #6b7280;
+        }
+
+        button:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        input[type="file"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 2px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+            background: #f3f4f6;
+        }
+
+        .info-box {
+            background: #f0f9ff;
+            border-left: 4px solid #667eea;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .data-source {
+            background: #f9fafb;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .data-source h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #374151;
+        }
+
+        .data-source p {
+            font-size: 12px;
+            color: #6b7280;
+            margin: 3px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .badge.commercial {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge.open {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge.government {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .stat {
+            background: #f9fafb;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🚗 JamFree Traffic Simulation</h1>
+            <div class="status">
+                <div class="status-indicator"></div>
+                <span id="status-text">Ready</span>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <!-- Network Loading -->
+            <div class="panel">
+                <h2>📍 Load Network</h2>
+                <label>Upload OSM File</label>
+                <input type="file" id="osm-file" accept=".osm">
+                <button onclick="uploadOSM()">Upload</button>
+
+                <div style="margin: 15px 0; text-align: center; color: #6b7280;">or</div>
+
+                <label>Download from OSM</label>
+                <button onclick="showDownloadDialog()">Download Area</button>
+
+                <div class="info-box" id="network-info" style="display: none;">
+                    <strong>Network Loaded</strong><br>
+                    <span id="network-details"></span>
+                </div>
+            </div>
+
+            <!-- Simulation Control -->
+            <div class="panel">
+                <h2>⚙️ Simulation</h2>
+
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-value" id="step-count">0</div>
+                        <div class="stat-label">Steps</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="vehicle-count">0</div>
+                        <div class="stat-label">Vehicles</div>
+                    </div>
+                </div>
+
+                <div class="stats" style="margin-top: 5px;">
+                    <div class="stat" style="background: #f0fdf4;">
+                        <div class="stat-value" id="speedup-factor" style="color: #15803d;">1.0x</div>
+                        <div class="stat-label">Speedup</div>
+                    </div>
+                    <div class="stat" style="background: #eff6ff;">
+                        <div class="stat-value" id="macro-lanes" style="color: #1d4ed8;">0</div>
+                        <div class="stat-label">Macro Lanes</div>
+                    </div>
+                </div>
+
+                <label>Number of Vehicles</label>
+                <input type="number" id="num-vehicles" value="200" min="1" max="5000">
+
+                <label>Desired Speed (km/h)</label>
+                <input type="number" id="desired-speed" value="120" min="30" max="200">
+
+                <div
+                    style="margin: 15px 0; padding: 10px; background: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    <label style="margin-top: 0;">
+                        <input type="checkbox" id="use-adaptive" checked style="width: auto; margin-right: 8px;">
+                        Adaptive Hybrid Simulation
+                    </label>
+
+                    <div id="adaptive-controls" style="margin-top: 10px;">
+                        <label style="font-size: 12px;">Switching Threshold (veh/lane)</label>
+                        <input type="number" id="adaptive-threshold" value="50" min="10" max="200">
+                        <div style="font-size: 11px; color: #64748b; margin-top: 4px;">
+                            Lanes with > N vehicles switch to Macroscopic mode (blue).
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    style="margin: 15px 0; padding: 10px; background: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0;">
+                    <label style="margin-top: 0;">
+                        <input type="checkbox" id="use-gpu" style="width: auto; margin-right: 8px;">
+                        Enable Metal GPU 🚀
+                    </label>
+                    <div style="font-size: 11px; color: #64748b; margin-top: 4px;">
+                        Accelerates simulation using Apple Metal (macOS only).
+                    </div>
+                </div>
+
+                <button onclick="startSimulation()" id="start-btn">▶️ Start</button>
+                <button onclick="stopSimulation()" id="stop-btn" class="secondary" disabled>⏸️ Stop</button>
+            </div>
+
+            <!-- Data Sources -->
+            <div class="panel">
+                <h2>📊 Real Data Sources</h2>
+                <div id="data-sources-list">
+                    Loading...
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div id="map"></div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        // Initialize map
+        const map = L.map('map').setView([48.8566, 2.3522], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const vehicleLayer = L.layerGroup().addTo(map);
+        const roadLayer = L.layerGroup().addTo(map);
+        const roadLayers = new Map(); // Map<lane_id, L.Polyline>
+
+        let simulationInterval = null;
+
+        // Toggle adaptive controls
+        document.getElementById('use-adaptive').addEventListener('change', (e) => {
+            document.getElementById('adaptive-controls').style.display = e.target.checked ? 'block' : 'none';
+        });
+
+        // Load data sources
+        async function loadDataSources() {
+            const response = await fetch('/api/data/sources');
+            const data = await response.json();
+
+            const container = document.getElementById('data-sources-list');
+            container.innerHTML = data.sources.map(source => `
+                <div class="data-source">
+                    <h3>${source.name}</h3>
+                    <div>
+                        <span class="badge ${source.type}">${source.type}</span>
+                    </div>
+                    <p>Coverage: ${source.coverage}</p>
+                    <p>Features: ${source.features.join(', ')}</p>
+                </div>
+            `).join('');
+        }
+
+        // Draw roads on map
+        function drawRoads(geometry) {
+            roadLayer.clearLayers();
+            roadLayers.clear();
+
+            if (!geometry) return;
+
+            geometry.forEach(lane => {
+                const points = lane.points;
+                const polyline = L.polyline(points, {
+                    color: '#94a3b8', // Default grey
+                    weight: 3,
+                    opacity: 0.6
+                }).addTo(roadLayer);
+
+                roadLayers.set(lane.id, polyline);
+            });
+        }
+
+        // Upload OSM file
+        async function uploadOSM() {
+            const fileInput = document.getElementById('osm-file');
+            if (!fileInput.files[0]) {
+                alert('Please select a file');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            try {
+                const response = await fetch('/api/osm/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    document.getElementById('network-info').style.display = 'block';
+                    document.getElementById('network-details').innerHTML =
+                        `${data.roads} roads loaded`;
+
+                    // Draw roads
+                    if (data.geometry) {
+                        drawRoads(data.geometry);
+                    }
+
+                    // Center map on network
+                    if (data.bounds) {
+                        const bounds = [
+                            [data.bounds.min_lat, data.bounds.min_lon],
+                            [data.bounds.max_lat, data.bounds.max_lon]
+                        ];
+                        map.fitBounds(bounds);
+                    }
+                }
+            } catch (error) {
+                alert('Upload failed: ' + error);
+            }
+        }
+
+        // Start simulation
+        async function startSimulation() {
+            try {
+                const numVehicles = parseInt(document.getElementById('num-vehicles').value);
+                const desiredSpeed = parseInt(document.getElementById('desired-speed').value);
+                const useAdaptive = document.getElementById('use-adaptive').checked;
+                const adaptiveThreshold = parseInt(document.getElementById('adaptive-threshold').value);
+
+                // Update config first
+                await fetch('/api/config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        num_vehicles: numVehicles,
+                        desired_speed: desiredSpeed,
+                        use_adaptive_hybrid: useAdaptive,
+                        adaptive_threshold: adaptiveThreshold
+                    })
+                });
+
+                const response = await fetch('/api/simulation/start', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                    return;
+                }
+
+                document.getElementById('start-btn').disabled = true;
+                document.getElementById('stop-btn').disabled = false;
+                document.getElementById('status-text').textContent = 'Running';
+
+                // Start simulation loop
+                simulationInterval = setInterval(simulationStep, 100);
+            } catch (error) {
+                alert('Failed to start: ' + error);
+            }
+        }
+
+        // Stop simulation
+        async function stopSimulation() {
+            clearInterval(simulationInterval);
+
+            await fetch('/api/simulation/stop', { method: 'POST' });
+
+            document.getElementById('start-btn').disabled = false;
+            document.getElementById('stop-btn').disabled = true;
+            document.getElementById('status-text').textContent = 'Stopped';
+        }
+
+        // Simulation step
+        async function simulationStep() {
+            try {
+                const response = await fetch('/api/simulation/step', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+
+                document.getElementById('step-count').textContent = data.step;
+                document.getElementById('vehicle-count').textContent = data.vehicles.length;
+
+                // Update performance stats
+                if (data.performance) {
+                    document.getElementById('speedup-factor').textContent = data.performance.speedup_factor.toFixed(2) + 'x';
+                    document.getElementById('macro-lanes').textContent = data.performance.macro_lanes || 0;
+                }
+
+                // Update lane colors based on mode
+                if (data.lane_modes) {
+                    for (const [laneId, mode] of Object.entries(data.lane_modes)) {
+                        const polyline = roadLayers.get(laneId);
+                        if (polyline) {
+                            let color = '#94a3b8'; // Default
+                            let weight = 3;
+
+                            if (mode === 'MICROSCOPIC') {
+                                color = '#22c55e'; // Green
+                                weight = 3;
+                            } else if (mode === 'MACROSCOPIC') {
+                                color = '#3b82f6'; // Blue
+                                weight = 5; // Thicker for macro
+                            } else if (mode === 'TRANSITIONING') {
+                                color = '#f59e0b'; // Orange
+                            }
+
+                            polyline.setStyle({ color: color, weight: weight });
+                        }
+                    }
+                }
+
+                // Update vehicle positions on map
+                vehicleLayer.clearLayers();
+
+                data.vehicles.forEach(v => {
+                    if (v.lat && v.lon) {
+                        // Create marker
+                        const marker = L.circleMarker([v.lat, v.lon], {
+                            radius: 4,
+                            fillColor: '#ef4444',
+                            color: '#fff',
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 0.8
+                        });
+
+                        // Add popup with info
+                        marker.bindPopup(`
+                            <b>Vehicle ${v.id}</b><br>
+                            Speed: ${v.speed.toFixed(1)} km/h
+                        `);
+
+                        marker.addTo(vehicleLayer);
+                    }
+                });
+            } catch (error) {
+                console.error('Simulation step failed:', error);
+            }
+        }
+
+        // Show download dialog
+        function showDownloadDialog() {
+            const bounds = map.getBounds();
+            const bbox = [
+                bounds.getSouth(),
+                bounds.getWest(),
+                bounds.getNorth(),
+                bounds.getEast()
+            ];
+
+            if (confirm(`Download OSM data for current map view?\n\nBounds: ${bbox.map(x => x.toFixed(4)).join(', ')}`)) {
+                downloadOSM(bbox);
+            }
+        }
+
+        // Download OSM data
+        async function downloadOSM(bbox) {
+            document.getElementById('status-text').textContent = 'Downloading...';
+
+            try {
+                const response = await fetch('/api/osm/download', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ bbox })
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    document.getElementById('network-info').style.display = 'block';
+                    document.getElementById('network-details').innerHTML =
+                        `${data.roads} roads downloaded`;
+
+                    // Draw roads
+                    if (data.geometry) {
+                        drawRoads(data.geometry);
+                    }
+                }
+
+                document.getElementById('status-text').textContent = 'Ready';
+            } catch (error) {
+                alert('Download failed: ' + error);
+                document.getElementById('status-text').textContent = 'Error';
+            }
+        }
+
+        // Initialize
+        loadDataSources();
+    </script>
+</body>
+
+</html>

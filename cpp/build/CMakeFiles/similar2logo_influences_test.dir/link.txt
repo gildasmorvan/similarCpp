@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/similar2logo_influences_test.dir/similar2logo/tests/influences_test.cpp.o -o similar2logo_influences_test  libsimilar2logo.a libsimilar_microkernel.a

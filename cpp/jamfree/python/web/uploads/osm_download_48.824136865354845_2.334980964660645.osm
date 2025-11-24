@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.62.8 e802775f">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2025-11-22T14:16:46Z"/>
+
+  <way id="39363570">
+    <nd ref="12188946318"/>
+    <nd ref="471617386"/>
+    <nd ref="4747660430"/>
+    <nd ref="12405584778"/>
+    <nd ref="494003050"/>
+    <nd ref="13056281409"/>
+    <nd ref="10792379005"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="10"/>
+  </way>
+  <way id="56123402">
+    <nd ref="100292096"/>
+    <nd ref="5021673916"/>
+    <nd ref="6287132660"/>
+    <nd ref="4759071770"/>
+    <nd ref="471617379"/>
+    <tag k="busway:right" v="lane"/>
+    <tag k="cycleway:left" v="no"/>
+    <tag k="cycleway:right" v="share_busway"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue de Tolbiac"/>
+    <tag k="name:etymology:wikidata" v="Q264737"/>
+    <tag k="oneway" v="no"/>
+    <tag k="parking:both" v="street_side"/>
+    <tag k="parking:both:orientation" v="parallel"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="smoothness" v="excellent"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="666204394">
+    <nd ref="7720637405"/>
+    <nd ref="12783830436"/>
+    <nd ref="7232455909"/>
+    <nd ref="250349330"/>
+    <nd ref="6139365463"/>
+    <nd ref="10792379007"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxheight" v="default"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="685725928">
+    <nd ref="10792379005"/>
+    <nd ref="10792359104"/>
+    <nd ref="494003057"/>
+    <nd ref="471617390"/>
+    <nd ref="6188235951"/>
+    <nd ref="1912916968"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Coluche"/>
+    <tag k="name:etymology:wikidata" v="Q2190"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="sidewalk:right:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="10.8"/>
+  </way>
+  <way id="826967880">
+    <nd ref="249662085"/>
+    <nd ref="2521663537"/>
+    <nd ref="6287132642"/>
+    <nd ref="249662175"/>
+    <nd ref="4747660431"/>
+    <nd ref="10159819124"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="shared_lane"/>
+    <tag k="cycleway:right:lane" v="pictogram"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1110574162">
+    <nd ref="10159819124"/>
+    <nd ref="4759071769"/>
+    <nd ref="7720637405"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="track"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="2"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1151937347">
+    <nd ref="1808731751"/>
+    <nd ref="249662085"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="sidewalk" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1160391194">
+    <nd ref="1912916968"/>
+    <nd ref="10939853037"/>
+    <nd ref="471617379"/>
+    <tag k="cycleway:both" v="no"/>
+    <tag k="dual_carriageway" v="yes"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lane_markings" v="no"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Place Coluche"/>
+    <tag k="name:etymology:wikidata" v="Q2190"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:left" v="no"/>
+    <tag k="sidewalk:right" v="separate"/>
+    <tag k="sidewalk:right:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="10.8"/>
+  </way>
+  <way id="1160391195">
+    <nd ref="6291070988"/>
+    <nd ref="11025933486"/>
+    <nd ref="250549782"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxheight" v="default"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1160391196">
+    <nd ref="10792379007"/>
+    <nd ref="9196115466"/>
+    <nd ref="6291070988"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="lane"/>
+    <tag k="cycleway:right:lane" v="exclusive"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxheight" v="default"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+  </way>
+  <way id="1317006475">
+    <nd ref="250549782"/>
+    <nd ref="11025933483"/>
+    <nd ref="6291070989"/>
+    <nd ref="12188946317"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="parking:both" v="no"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="10"/>
+  </way>
+  <way id="1317006476">
+    <nd ref="12188946317"/>
+    <nd ref="1716744860"/>
+    <nd ref="12188946318"/>
+    <tag k="busway:left" v="opposite_lane"/>
+    <tag k="cycleway:left" v="share_busway"/>
+    <tag k="cycleway:left:oneway" v="-1"/>
+    <tag k="cycleway:right" v="no"/>
+    <tag k="highway" v="secondary"/>
+    <tag k="lanes" v="1"/>
+    <tag k="lit" v="yes"/>
+    <tag k="maxspeed" v="30"/>
+    <tag k="name" v="Rue d'Alésia"/>
+    <tag k="name:etymology:wikidata" v="Q131386"/>
+    <tag k="name:zh" v="阿莱西亚路"/>
+    <tag k="oneway" v="yes"/>
+    <tag k="oneway:bicycle" v="no"/>
+    <tag k="oneway:psv" v="no"/>
+    <tag k="parking:left" v="no"/>
+    <tag k="parking:right" v="street_side"/>
+    <tag k="parking:right:orientation" v="parallel"/>
+    <tag k="sidewalk:both" v="separate"/>
+    <tag k="sidewalk:both:surface" v="asphalt"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="10"/>
+  </way>
+  <node id="249662085" lat="48.8274313" lon="2.3351116"/>
+  <node id="249662175" lat="48.8273727" lon="2.3355134"/>
+  <node id="250349330" lat="48.8272003" lon="2.3367100"/>
+  <node id="250549782" lat="48.8269153" lon="2.3386333"/>
+  <node id="1716744860" lat="48.8267905" lon="2.3394824"/>
+  <node id="1808731751" lat="48.8274532" lon="2.3349672"/>
+  <node id="2521663537" lat="48.8274178" lon="2.3352000"/>
+  <node id="4747660431" lat="48.8273659" lon="2.3355597"/>
+  <node id="4759071769" lat="48.8273286" lon="2.3358155"/>
+  <node id="6139365463" lat="48.8271839" lon="2.3368204"/>
+  <node id="6287132642" lat="48.8274083" lon="2.3352693"/>
+  <node id="6291070988" lat="48.8269518" lon="2.3383868"/>
+  <node id="6291070989" lat="48.8268865" lon="2.3388290"/>
+  <node id="7232455909" lat="48.8272196" lon="2.3365770"/>
+  <node id="7720637405" lat="48.8272612" lon="2.3362771"/>
+  <node id="9196115466" lat="48.8269770" lon="2.3382167"/>
+  <node id="10159819124" lat="48.8273393" lon="2.3357424"/>
+  <node id="10792379007" lat="48.8270245" lon="2.3378963"/>
+  <node id="11025933483" lat="48.8268960" lon="2.3387642"/>
+  <node id="11025933486" lat="48.8269427" lon="2.3384489"/>
+  <node id="12188946317" lat="48.8268338" lon="2.3391879"/>
+  <node id="12783830436" lat="48.8272373" lon="2.3364494"/>
+  <node id="100292096" lat="48.8261143" lon="2.3440471"/>
+  <node id="471617379" lat="48.8263814" lon="2.3421815"/>
+  <node id="471617386" lat="48.8265379" lon="2.3412013"/>
+  <node id="471617390" lat="48.8264202" lon="2.3417955"/>
+  <node id="494003050" lat="48.8265087" lon="2.3413975"/>
+  <node id="494003057" lat="48.8264392" lon="2.3417006"/>
+  <node id="1912916968" lat="48.8263912" lon="2.3420014"/>
+  <node id="4747660430" lat="48.8265279" lon="2.3412693"/>
+  <node id="4759071770" lat="48.8263630" lon="2.3423097"/>
+  <node id="5021673916" lat="48.8261296" lon="2.3439411"/>
+  <node id="6188235951" lat="48.8264044" lon="2.3419078"/>
+  <node id="6287132660" lat="48.8261410" lon="2.3438607"/>
+  <node id="10792359104" lat="48.8264660" lon="2.3416201"/>
+  <node id="10792379005" lat="48.8264816" lon="2.3415842"/>
+  <node id="10939853037" lat="48.8263844" lon="2.3420935"/>
+  <node id="12188946318" lat="48.8267476" lon="2.3397745"/>
+  <node id="12405584778" lat="48.8265126" lon="2.3413735"/>
+  <node id="13056281409" lat="48.8265035" lon="2.3414331"/>
+
+</osm>

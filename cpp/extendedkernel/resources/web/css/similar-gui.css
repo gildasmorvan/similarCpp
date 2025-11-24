@@ -1,0 +1,20 @@
+.form-group {
+	margin-bottom: 3px;
+}
+
+canvas{
+	height: 100%;
+	width: auto;
+}
+
+:fullscreen {
+  background-color: white;
+}
+
+#simulation-title{
+	text-align:center;
+}
+
+#exitSimulation{
+    margin-left: 30px;
+}

@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/agents/LogoAgent.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/agents/LogoAgent.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/environment/Environment.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/environment/Environment.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/AgentPositionUpdate.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/AgentPositionUpdate.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangeAcceleration.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangeAcceleration.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangeDirection.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangeDirection.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangePosition.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangePosition.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangeSpeed.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/ChangeSpeed.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/DropMark.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/DropMark.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/EmitPheromone.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/EmitPheromone.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/PheromoneFieldUpdate.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/PheromoneFieldUpdate.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/RemoveMark.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/RemoveMark.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/RemoveMarks.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/RemoveMarks.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/Stop.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/influences/Stop.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/model/LogoSimulationModel.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/model/LogoSimulationModel.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/reaction/Reaction.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/reaction/Reaction.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/tools/FastMath.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/kernel/tools/FastMath.cpp.o.d"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/similar2logo_compilation_unit.cpp.o"
+  "CMakeFiles/similar2logo.dir/similar2logo/src/similar2logo_compilation_unit.cpp.o.d"
+  "libsimilar2logo.a"
+  "libsimilar2logo.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/similar2logo.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

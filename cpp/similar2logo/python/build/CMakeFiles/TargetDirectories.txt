@@ -1,0 +1,7 @@
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/_core.dir
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/edit_cache.dir
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/rebuild_cache.dir
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/list_install_components.dir
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/install.dir
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/install/local.dir
+/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build/CMakeFiles/install/strip.dir

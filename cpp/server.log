@@ -1,0 +1,12 @@
+============================================================
+JamFree Web UI
+============================================================
+
+JamFree available: True
+
+Starting server on http://localhost:5001
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+Address already in use
+Port 5001 is in use by another program. Either identify and stop that program, or start the server with a different port.

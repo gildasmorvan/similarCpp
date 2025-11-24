@@ -250,6 +250,25 @@ def test_optimization_toggle() -> bool:
         )
         if response.status_code == 200:
             print_success("Multithreading re-enabled")
+
+        # Test toggling GPU
+        print_info("Testing GPU toggle...")
+        response = requests.post(
+            f"{BASE_URL}/api/config",
+            json={'use_gpu': True},
+            timeout=5
+        )
+        if response.status_code == 200:
+            print_success("GPU enabled")
+            
+        # Disable GPU
+        response = requests.post(
+            f"{BASE_URL}/api/config",
+            json={'use_gpu': False},
+            timeout=5
+        )
+        if response.status_code == 200:
+            print_success("GPU disabled")
         
         return True
     except Exception as e:
@@ -284,22 +303,22 @@ def test_gpu_availability() -> bool:
     
     try:
         # Try to import GPU module
-        import sys
-        sys.path.insert(0, '/Users/morvan/Antigravity/similar/cpp/jamfree/python/jamfree')
+        import jamfree
         
-        try:
-            import _jamfree
-            # Check if MetalCompute is available
-            if hasattr(_jamfree, 'MetalCompute'):
-                print_success("GPU acceleration (Metal) is available")
-                return True
-            else:
-                print_info("GPU acceleration not yet integrated in Python bindings")
-                print_info("C++ implementation exists, Python bindings pending")
-                return True  # Not a failure, just not implemented yet
-        except ImportError as e:
-            print_info(f"JamFree module import failed: {e}")
+        # Check if MetalCompute is available
+        if hasattr(jamfree, 'MetalCompute'):
+            print_success("GPU acceleration (Metal) is available")
+            if hasattr(jamfree, 'is_metal_available'):
+                available = jamfree.is_metal_available()
+                status = "supported" if available else "not supported on this hardware"
+                print_info(f"Metal runtime check: {status}")
             return True
+        else:
+            print_info("GPU acceleration not found in jamfree package")
+            return True  # Not a failure, just not implemented yet
+    except ImportError as e:
+        print_info(f"JamFree module import failed: {e}")
+        return True
     except Exception as e:
         print_info(f"GPU check failed: {e}")
         return True  # Not a critical failure

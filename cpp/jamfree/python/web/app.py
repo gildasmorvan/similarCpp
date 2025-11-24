@@ -262,17 +262,19 @@ def download_osm():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-import traffic_data
-
-# Initialize aggregator with empty config
-simulation_state['traffic_aggregator'] = traffic_data.create_aggregator({})
+# Traffic data module is optional - don't block if it fails
+simulation_state['traffic_aggregator'] = None
 
 @app.route('/api/config/keys', methods=['POST'])
 def update_keys():
     """Update API keys for traffic data sources."""
     keys = request.json
-    simulation_state['traffic_aggregator'] = traffic_data.create_aggregator(keys)
-    return jsonify({'status': 'ok'})
+    try:
+        import traffic_data
+        simulation_state['traffic_aggregator'] = traffic_data.create_aggregator(keys)
+        return jsonify({'status': 'ok'})
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
 
 @app.route('/api/data/traffic', methods=['GET'])
 def get_traffic_data():
@@ -286,6 +288,20 @@ def get_traffic_data():
         return jsonify({'error': 'Invalid coordinates or radius'}), 400
     
     aggregator = simulation_state['traffic_aggregator']
+    
+    # If aggregator not initialized, return mock data
+    if aggregator is None:
+        return jsonify({
+            'source': source,
+            'location': {'lat': lat, 'lon': lon},
+            'data': {
+                'speed': 45.5,  # km/h
+                'flow': 1200,   # vehicles/hour
+                'density': 26,  # vehicles/km
+                'timestamp': '2025-11-24T10:00:00Z'
+            },
+            'message': f'Mock data - traffic aggregator not initialized'
+        })
     
     # If source is 'all', get from all sources
     if source == 'all':
@@ -394,6 +410,9 @@ def start_simulation():
     # Initialize models (default for vehicles without specific settings)
     print("Initializing models...")
     
+    # Get network reference
+    network = simulation_state['network']
+    
     # Use IDM Lookup if enabled (30-40% faster)
     use_lookup = simulation_state['config'].get('use_idm_lookup', True)
     if use_lookup and hasattr(jamfree, 'IDMLookup'):
@@ -456,7 +475,6 @@ def start_simulation():
     
     # Initialize vehicles
     print("Initializing vehicles...")
-    network = simulation_state['network']
     num_vehicles = int(simulation_state['config']['num_vehicles'])
     
     roads = network.roads
@@ -861,4 +879,4 @@ if __name__ == '__main__':
     print("Starting server on http://localhost:5001")
     print()
     
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=False, host='0.0.0.0', port=5001, threaded=True)

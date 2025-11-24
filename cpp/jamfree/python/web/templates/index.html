@@ -446,6 +446,7 @@
                 const numVehicles = parseInt(document.getElementById('num-vehicles').value);
                 const desiredSpeed = parseInt(document.getElementById('desired-speed').value);
                 const useAdaptive = document.getElementById('use-adaptive').checked;
+                const useGpu = document.getElementById('use-gpu').checked;
                 const adaptiveThreshold = parseInt(document.getElementById('adaptive-threshold').value);
 
                 // Update config first
@@ -456,6 +457,7 @@
                         num_vehicles: numVehicles,
                         desired_speed: desiredSpeed,
                         use_adaptive_hybrid: useAdaptive,
+                        use_gpu: useGpu,
                         adaptive_threshold: adaptiveThreshold
                     })
                 });

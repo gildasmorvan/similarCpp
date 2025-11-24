@@ -558,6 +558,7 @@
                         marker.addTo(vehicleLayer);
                     }
                 });
+                ```
             } catch (error) {
                 console.error('Simulation step failed:', error);
             }
@@ -573,9 +574,7 @@
                 bounds.getEast()
             ];
 
-            if (confirm(`Download OSM data for current map view?\n\nBounds: ${bbox.map(x => x.toFixed(4)).join(', ')}`)) {
-                downloadOSM(bbox);
-            }
+            downloadOSM(bbox);
         }
 
         // Download OSM data
@@ -595,7 +594,7 @@
                 } else {
                     document.getElementById('network-info').style.display = 'block';
                     document.getElementById('network-details').innerHTML =
-                        `${data.roads} roads downloaded`;
+                        `${ data.roads } roads downloaded`;
 
                     // Draw roads
                     if (data.geometry) {

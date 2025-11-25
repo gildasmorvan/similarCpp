@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.1.2/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.2/CMakeSystem.cmake"
+  "/Users/morvan/Antigravity/similar/cpp/jamfree/CMakeLists.txt"
   "/Users/morvan/Antigravity/similar/cpp/similar2logo/python/CMakeLists.txt"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -73,6 +74,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "similar2logo/python/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "jamfree/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -89,4 +91,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/minimal_web_server.dir/DependInfo.cmake"
   "CMakeFiles/similar2logo_influences_test.dir/DependInfo.cmake"
   "similar2logo/python/CMakeFiles/_core.dir/DependInfo.cmake"
+  "jamfree/CMakeFiles/jamfree.dir/DependInfo.cmake"
+  "jamfree/CMakeFiles/highway_example.dir/DependInfo.cmake"
+  "jamfree/CMakeFiles/lane_changing_example.dir/DependInfo.cmake"
+  "jamfree/CMakeFiles/complete_simulation_example.dir/DependInfo.cmake"
   )

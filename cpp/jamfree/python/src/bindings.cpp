@@ -509,6 +509,24 @@ PYBIND11_MODULE(_jamfree, m) {
                ", speedup=" + std::to_string(s.speedup_factor) + "x)";
       });
 
+  // AdaptiveSimulator::LaneState
+  py::class_<AdaptiveSimulator::LaneState>(m, "AdaptiveSimulatorLaneState")
+      .def_readonly("current_density",
+                    &AdaptiveSimulator::LaneState::current_density,
+                    "Current density (vehicles/m)")
+      .def_readonly("avg_speed", &AdaptiveSimulator::LaneState::avg_speed,
+                    "Average speed (m/s)")
+      .def_readonly("flow", &AdaptiveSimulator::LaneState::flow,
+                    "Flow (vehicles/s)")
+      .def_readonly("vehicle_count",
+                    &AdaptiveSimulator::LaneState::vehicle_count,
+                    "Number of vehicles")
+      .def("__repr__", [](const AdaptiveSimulator::LaneState &s) {
+        return "LaneState(density=" + std::to_string(s.current_density) +
+               ", speed=" + std::to_string(s.avg_speed) +
+               ", vehicles=" + std::to_string(s.vehicle_count) + ")";
+      });
+
   // AdaptiveSimulator
   py::class_<AdaptiveSimulator>(m, "AdaptiveSimulator")
       .def(py::init<>(), "Create adaptive hybrid simulator with default config")
@@ -521,6 +539,9 @@ PYBIND11_MODULE(_jamfree, m) {
            "Update all lanes for one time step")
       .def("get_mode", &AdaptiveSimulator::getMode, py::arg("lane_id"),
            "Get current simulation mode for a lane")
+      .def("get_lane_state", &AdaptiveSimulator::getLaneState,
+           py::arg("lane_id"), "Get lane state with metrics",
+           py::return_value_policy::reference)
       .def("get_statistics", &AdaptiveSimulator::getStatistics,
            "Get overall statistics")
       .def("force_microscopic", &AdaptiveSimulator::forceMicroscopic,

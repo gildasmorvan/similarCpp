@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/morvan/Antigravity/similar/cpp/build/similar2logo/python/cmake_install.cmake")
+  include("/Users/morvan/Antigravity/similar/cpp/build/jamfree/cmake_install.cmake")
 
 endif()
 

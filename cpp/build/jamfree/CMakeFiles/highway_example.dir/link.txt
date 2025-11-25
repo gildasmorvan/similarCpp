@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/highway_example.dir/examples/highway_example.cpp.o -o ../bin/highway_example  libjamfree.a ../libsimilar_extendedkernel.a ../libsimilar_microkernel.a

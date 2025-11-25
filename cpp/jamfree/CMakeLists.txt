@@ -5,40 +5,76 @@ project(JamFree VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Include directories
+# Include directories - add SIMILAR kernel includes
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/../microkernel/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../extendedkernel/include
 )
 
-# Source files
-set(JAMFREE_SOURCES
+# Kernel source files
+set(JAMFREE_KERNEL_SOURCES
     kernel/src/model/Lane.cpp
+    kernel/src/agents/VehicleAgent.cpp
+    kernel/src/simulation/SimulationEngine.cpp
+)
+
+# Microscopic source files
+set(JAMFREE_MICROSCOPIC_SOURCES
+    microscopic/src/agents/VehiclePerceivedDataMicro.cpp
+    microscopic/src/agents/VehiclePublicLocalStateMicro.cpp
+    microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp
+    microscopic/src/perception/VehiclePerceptionModelMicro.cpp
+    microscopic/src/decision/VehicleDecisionModelMicro.cpp
+    microscopic/src/reaction/MicroscopicReactionModel.cpp
+)
+
+# JamFree library
+add_library(jamfree STATIC
+    ${JAMFREE_KERNEL_SOURCES}
+    ${JAMFREE_MICROSCOPIC_SOURCES}
+)
+
+# Link against SIMILAR libraries
+target_link_libraries(jamfree 
+    similar_extendedkernel 
+    similar_microkernel
 )
 
 # Example executables
-add_executable(highway_example
-    examples/highway_example.cpp
-    ${JAMFREE_SOURCES}
-)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/highway_example.cpp")
+    add_executable(highway_example
+        examples/highway_example.cpp
+    )
+    target_link_libraries(highway_example jamfree similar_extendedkernel similar_microkernel)
+    
+    set_target_properties(highway_example PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    )
+endif()
 
-add_executable(lane_changing_example
-    examples/lane_changing_example.cpp
-    ${JAMFREE_SOURCES}
-)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/lane_changing_example.cpp")
+    add_executable(lane_changing_example
+        examples/lane_changing_example.cpp
+    )
+    target_link_libraries(lane_changing_example jamfree similar_extendedkernel similar_microkernel)
+    
+    set_target_properties(lane_changing_example PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    )
+endif()
 
-# Set output directory
-set_target_properties(highway_example PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
-)
-
-set_target_properties(lane_changing_example PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
-)
-
-# Installation
-install(TARGETS highway_example lane_changing_example
-    RUNTIME DESTINATION bin
-)
+# Complete simulation example
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/complete_simulation_example.cpp")
+    add_executable(complete_simulation_example
+        examples/complete_simulation_example.cpp
+    )
+    target_link_libraries(complete_simulation_example jamfree similar_extendedkernel similar_microkernel)
+    
+    set_target_properties(complete_simulation_example PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    )
+endif()
 
 # Install headers
 install(DIRECTORY kernel/include/

@@ -12,3 +12,4 @@ kernel/src/model/Lane.cpp
 python/jamfree/__init__.py
 python/src/bindings.cpp
 realdata/src/OSMParser.cpp
+tests/test_mobil.py

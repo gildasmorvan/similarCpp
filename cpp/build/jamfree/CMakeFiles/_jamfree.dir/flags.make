@@ -6,7 +6,7 @@ CXX_DEFINES = -D_jamfree_EXPORTS
 
 CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/microkernel/include -I/Users/morvan/Antigravity/similar/cpp/extendedkernel/include -I/Users/morvan/Antigravity/similar/cpp/extendedkernel/third_party -I/Users/morvan/Antigravity/similar/cpp/jamfree -I/Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include -I/Users/morvan/Antigravity/similar/cpp/jamfree/../extendedkernel/include -isystem /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14 -isystem /opt/homebrew/include
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -flto
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -Wall -Wextra -Wpedantic -O3 -DNDEBUG -march=native -flto
 
-CXX_FLAGS = -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -flto
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -fPIC -fvisibility=hidden -Wall -Wextra -Wpedantic -O3 -DNDEBUG -march=native -flto
 

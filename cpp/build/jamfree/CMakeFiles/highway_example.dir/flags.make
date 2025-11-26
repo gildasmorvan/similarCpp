@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/microkernel/include -I/Users/morvan/Antigravity/similar/cpp/extendedkernel/include -I/Users/morvan/Antigravity/similar/cpp/extendedkernel/third_party -I/Users/morvan/Antigravity/similar/cpp/jamfree -I/Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include -I/Users/morvan/Antigravity/similar/cpp/jamfree/../extendedkernel/include
 
-CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -O3 -DNDEBUG -march=native
 
-CXX_FLAGS = -std=gnu++17 -arch arm64
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -arch arm64 -Wall -Wextra -Wpedantic -O3 -DNDEBUG -march=native
 

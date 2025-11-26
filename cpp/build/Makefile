@@ -421,6 +421,19 @@ _jamfree/fast:
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/_jamfree.dir/build.make jamfree/CMakeFiles/_jamfree.dir/build
 .PHONY : _jamfree/fast
 
+#=============================================================================
+# Target rules for targets named jamfree_basic_test
+
+# Build rule for target.
+jamfree_basic_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 jamfree_basic_test
+.PHONY : jamfree_basic_test
+
+# fast build rule for target.
+jamfree_basic_test/fast:
+	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree_basic_test.dir/build.make jamfree/CMakeFiles/jamfree_basic_test.dir/build
+.PHONY : jamfree_basic_test/fast
+
 extendedkernel/examples/extendedlibs_demo.o: extendedkernel/examples/extendedlibs_demo.cpp.o
 .PHONY : extendedkernel/examples/extendedlibs_demo.o
 
@@ -1545,6 +1558,7 @@ help:
 	@echo "... highway_simulation"
 	@echo "... improved_ecosystem"
 	@echo "... jamfree"
+	@echo "... jamfree_basic_test"
 	@echo "... lane_changing_example"
 	@echo "... minimal_web_server"
 	@echo "... predator_prey"

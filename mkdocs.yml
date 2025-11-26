@@ -17,18 +17,14 @@ theme:
 
 plugins:
   - search
-  - macros
 
 markdown_extensions:
   - pymdownx.highlight
-  - pymdownx.superfscripts
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.tabbed
   - toc:
       permalink: true
-  - pymdownx.arithmatex:
-      generic: true
 
 nav:
   - Home: index.md

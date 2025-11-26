@@ -245,6 +245,20 @@ _jamfree/fast:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/_jamfree.dir/build.make jamfree/CMakeFiles/_jamfree.dir/build
 .PHONY : _jamfree/fast
 
+# Convenience name for target.
+jamfree/CMakeFiles/jamfree_basic_test.dir/rule:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 jamfree/CMakeFiles/jamfree_basic_test.dir/rule
+.PHONY : jamfree/CMakeFiles/jamfree_basic_test.dir/rule
+
+# Convenience name for target.
+jamfree_basic_test: jamfree/CMakeFiles/jamfree_basic_test.dir/rule
+.PHONY : jamfree_basic_test
+
+# fast build rule for target.
+jamfree_basic_test/fast:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree_basic_test.dir/build.make jamfree/CMakeFiles/jamfree_basic_test.dir/build
+.PHONY : jamfree_basic_test/fast
+
 examples/complete_simulation_example.o: examples/complete_simulation_example.cpp.o
 .PHONY : examples/complete_simulation_example.o
 
@@ -701,6 +715,30 @@ realdata/src/OSMParser.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.s
 .PHONY : realdata/src/OSMParser.cpp.s
 
+tests/basic_jamfree_tests.o: tests/basic_jamfree_tests.cpp.o
+.PHONY : tests/basic_jamfree_tests.o
+
+# target to build an object file
+tests/basic_jamfree_tests.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree_basic_test.dir/build.make jamfree/CMakeFiles/jamfree_basic_test.dir/tests/basic_jamfree_tests.cpp.o
+.PHONY : tests/basic_jamfree_tests.cpp.o
+
+tests/basic_jamfree_tests.i: tests/basic_jamfree_tests.cpp.i
+.PHONY : tests/basic_jamfree_tests.i
+
+# target to preprocess a source file
+tests/basic_jamfree_tests.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree_basic_test.dir/build.make jamfree/CMakeFiles/jamfree_basic_test.dir/tests/basic_jamfree_tests.cpp.i
+.PHONY : tests/basic_jamfree_tests.cpp.i
+
+tests/basic_jamfree_tests.s: tests/basic_jamfree_tests.cpp.s
+.PHONY : tests/basic_jamfree_tests.s
+
+# target to generate assembly for a file
+tests/basic_jamfree_tests.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree_basic_test.dir/build.make jamfree/CMakeFiles/jamfree_basic_test.dir/tests/basic_jamfree_tests.cpp.s
+.PHONY : tests/basic_jamfree_tests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -718,6 +756,7 @@ help:
 	@echo "... highway_example"
 	@echo "... highway_simulation"
 	@echo "... jamfree"
+	@echo "... jamfree_basic_test"
 	@echo "... lane_changing_example"
 	@echo "... examples/complete_simulation_example.o"
 	@echo "... examples/complete_simulation_example.i"
@@ -776,6 +815,9 @@ help:
 	@echo "... realdata/src/OSMParser.o"
 	@echo "... realdata/src/OSMParser.i"
 	@echo "... realdata/src/OSMParser.s"
+	@echo "... tests/basic_jamfree_tests.o"
+	@echo "... tests/basic_jamfree_tests.i"
+	@echo "... tests/basic_jamfree_tests.s"
 .PHONY : help
 
 

@@ -1,6 +1,6 @@
 """SIMILAR2Logo Python Package - Agent-Based Modeling Framework"""
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 __author__ = "SIMILAR Team"
 
 # Try to import C++ core, but don't fail if not available

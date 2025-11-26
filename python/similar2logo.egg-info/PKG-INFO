@@ -1,11 +1,16 @@
 Metadata-Version: 2.4
 Name: similar2logo
-Version: 0.1.0
+Version: 1.0.0
 Summary: Python bindings for SIMILAR2Logo multi-agent simulation framework
 Home-page: https://github.com/gildasmorvan/similar
 Author: SIMILAR Team
-Author-email: similar@example.com
-Classifier: Development Status :: 3 - Alpha
+Author-email: SIMILAR Team <similar@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/gildasmorvan/similar
+Project-URL: Documentation, https://github.com/gildasmorvan/similar#readme
+Project-URL: Repository, https://github.com/gildasmorvan/similar
+Project-URL: Issues, https://github.com/gildasmorvan/similar/issues
+Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Science/Research
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Classifier: License :: OSI Approved :: MIT License
@@ -14,6 +19,8 @@ Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE.txt
@@ -31,17 +38,20 @@ Requires-Dist: pytest>=7.0.0; extra == "dev"
 Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
 Requires-Dist: black>=23.0.0; extra == "dev"
 Requires-Dist: mypy>=1.0.0; extra == "dev"
+Requires-Dist: build>=0.10.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: matplotlib>=3.5.0; extra == "all"
+Requires-Dist: pytest>=7.0.0; extra == "all"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "all"
+Requires-Dist: black>=23.0.0; extra == "all"
+Requires-Dist: mypy>=1.0.0; extra == "all"
+Requires-Dist: build>=0.10.0; extra == "all"
+Requires-Dist: twine>=4.0.0; extra == "all"
 Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
 Dynamic: home-page
 Dynamic: license-file
-Dynamic: provides-extra
-Dynamic: requires-dist
 Dynamic: requires-python
-Dynamic: summary
 
 # SIMILAR & JamFree: High-Performance Agent-Based Simulation Framework
 

@@ -22,10 +22,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake"
   "/opt/homebrew/share/cmake/Modules/CheckCXXCompilerFlag.cmake"
   "/opt/homebrew/share/cmake/Modules/CheckCXXSourceCompiles.cmake"
-  "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake"
+  "/opt/homebrew/share/cmake/Modules/CheckIncludeFileCXX.cmake"
   "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-C.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/AppleClang-CXX.cmake"
@@ -99,4 +98,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "jamfree/CMakeFiles/complete_simulation_example.dir/DependInfo.cmake"
   "jamfree/CMakeFiles/highway_simulation.dir/DependInfo.cmake"
   "jamfree/CMakeFiles/_jamfree.dir/DependInfo.cmake"
+  "jamfree/CMakeFiles/jamfree_basic_test.dir/DependInfo.cmake"
   )

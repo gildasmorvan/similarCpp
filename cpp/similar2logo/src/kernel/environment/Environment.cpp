@@ -1,6 +1,6 @@
 #include "kernel/environment/Environment.h"
-#include "kernel/model/environment/Pheromone.h"
 #include "kernel/model/environment/Mark.h"
+#include "kernel/model/environment/Pheromone.h"
 #include "kernel/model/environment/TurtlePLSInLogo.h"
 #include "kernel/tools/MathUtil.h"
 #include <algorithm>
@@ -14,6 +14,10 @@ using namespace fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
     environment; // for Pheromone
 namespace tools = fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools;
 
+// Static empty set for out-of-bounds queries
+const std::unordered_set<std::shared_ptr<TurtlePLSInLogo>>
+    Environment::s_empty_turtle_set;
+
 static std::mt19937 rng{std::random_device{}()};
 
 Environment::Environment(int w, int h, bool tor)
@@ -22,6 +26,12 @@ Environment::Environment(int w, int h, bool tor)
   m_marks.resize(w);
   for (int x = 0; x < w; ++x) {
     m_marks[x].resize(h);
+  }
+
+  // Initialize turtle spatial index
+  m_turtles_in_patches.resize(w);
+  for (int x = 0; x < w; ++x) {
+    m_turtles_in_patches[x].resize(h);
   }
 }
 
@@ -173,31 +183,78 @@ double Environment::get_direction(const tools::Point2D &from,
 }
 
 // mark handling ------------------------------------------------------
-void Environment::add_mark(int x, int y, std::shared_ptr<model::environment::SimpleMark> mark) {
+void Environment::add_mark(
+    int x, int y, std::shared_ptr<model::environment::SimpleMark> mark) {
   if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
     m_marks[x][y].insert(mark);
   }
 }
 
-void Environment::remove_mark(int x, int y, std::shared_ptr<model::environment::SimpleMark> mark) {
+void Environment::remove_mark(
+    int x, int y, std::shared_ptr<model::environment::SimpleMark> mark) {
   if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
     m_marks[x][y].erase(mark);
   }
 }
 
 // turtle access ------------------------------------------------------
-const std::vector<std::shared_ptr<model::environment::TurtlePLSInLogo>> &Environment::get_turtles() const {
+const std::vector<std::shared_ptr<model::environment::TurtlePLSInLogo>> &
+Environment::get_turtles() const {
   return m_turtles;
 }
 
-void Environment::add_turtle(std::shared_ptr<model::environment::TurtlePLSInLogo> turtle) {
+void Environment::add_turtle(
+    std::shared_ptr<model::environment::TurtlePLSInLogo> turtle) {
   m_turtles.push_back(turtle);
+
+  // Add to spatial index
+  tools::Point2D loc = turtle->getLocation();
+  int x = static_cast<int>(std::floor(loc.x));
+  int y = static_cast<int>(std::floor(loc.y));
+
+  if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
+    m_turtles_in_patches[x][y].insert(turtle);
+  }
 }
 
-void Environment::remove_turtle(std::shared_ptr<model::environment::TurtlePLSInLogo> turtle) {
+void Environment::remove_turtle(
+    std::shared_ptr<model::environment::TurtlePLSInLogo> turtle) {
+  // Remove from main list
   auto it = std::find(m_turtles.begin(), m_turtles.end(), turtle);
   if (it != m_turtles.end()) {
     m_turtles.erase(it);
+  }
+
+  // Remove from spatial index
+  tools::Point2D loc = turtle->getLocation();
+  int x = static_cast<int>(std::floor(loc.x));
+  int y = static_cast<int>(std::floor(loc.y));
+
+  if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
+    m_turtles_in_patches[x][y].erase(turtle);
+  }
+}
+
+// Spatial indexing methods
+const std::unordered_set<std::shared_ptr<model::environment::TurtlePLSInLogo>> &
+Environment::get_turtles_at(int x, int y) const {
+  if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
+    return m_turtles_in_patches[x][y];
+  }
+  return s_empty_turtle_set;
+}
+
+void Environment::update_turtle_patch(
+    std::shared_ptr<model::environment::TurtlePLSInLogo> turtle, int old_x,
+    int old_y, int new_x, int new_y) {
+  // Remove from old patch
+  if (old_x >= 0 && old_x < m_width && old_y >= 0 && old_y < m_height) {
+    m_turtles_in_patches[old_x][old_y].erase(turtle);
+  }
+
+  // Add to new patch
+  if (new_x >= 0 && new_x < m_width && new_y >= 0 && new_y < m_height) {
+    m_turtles_in_patches[new_x][new_y].insert(turtle);
   }
 }
 

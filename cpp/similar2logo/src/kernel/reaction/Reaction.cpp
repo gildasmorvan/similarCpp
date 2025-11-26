@@ -15,19 +15,19 @@
 // Higher-level behaviors (marks, full natural/system influences, Java
 // multi-level coordination) are handled in the full extended kernel.
 
-#include "kernel/reaction/Reaction.h"
+#include "kernel/influences/AgentPositionUpdate.h"
+#include "kernel/influences/ChangeAcceleration.h"
 #include "kernel/influences/ChangeDirection.h"
 #include "kernel/influences/ChangePosition.h"
 #include "kernel/influences/ChangeSpeed.h"
-#include "kernel/influences/ChangeAcceleration.h"
-#include "kernel/influences/EmitPheromone.h"
-#include "kernel/influences/Stop.h"
 #include "kernel/influences/DropMark.h"
+#include "kernel/influences/EmitPheromone.h"
+#include "kernel/influences/PheromoneFieldUpdate.h"
 #include "kernel/influences/RemoveMark.h"
 #include "kernel/influences/RemoveMarks.h"
-#include "kernel/influences/AgentPositionUpdate.h"
-#include "kernel/influences/PheromoneFieldUpdate.h"
+#include "kernel/influences/Stop.h"
 #include "kernel/model/environment/TurtlePLSInLogo.h"
+#include "kernel/reaction/Reaction.h"
 #include "kernel/tools/MathUtil.h"
 #include <algorithm>
 #include <cmath>
@@ -51,8 +51,12 @@ void Reaction::apply(const std::vector<std::shared_ptr<IInfluence>> &influences,
     if (auto cp = std::dynamic_pointer_cast<ChangePosition>(influence)) {
       auto target = cp->getTarget();
       if (target) {
-        double newX = target->getLocation().x + cp->getDx();
-        double newY = target->getLocation().y + cp->getDy();
+        Point2D oldLoc = target->getLocation();
+        int old_x = static_cast<int>(std::floor(oldLoc.x));
+        int old_y = static_cast<int>(std::floor(oldLoc.y));
+
+        double newX = oldLoc.x + cp->getDx();
+        double newY = oldLoc.y + cp->getDy();
 
         if (env.toroidal()) {
           newX = std::fmod(newX, env.width());
@@ -65,7 +69,16 @@ void Reaction::apply(const std::vector<std::shared_ptr<IInfluence>> &influences,
           newX = std::max(0.0, std::min(newX, (double)env.width() - 1));
           newY = std::max(0.0, std::min(newY, (double)env.height() - 1));
         }
+
+        int new_x = static_cast<int>(std::floor(newX));
+        int new_y = static_cast<int>(std::floor(newY));
+
         target->setLocation(Point2D(newX, newY));
+
+        // Update spatial index if patch changed
+        if (old_x != new_x || old_y != new_y) {
+          env.update_turtle_patch(target, old_x, old_y, new_x, new_y);
+        }
       }
     }
     // ChangeDirection
@@ -116,7 +129,8 @@ void Reaction::apply(const std::vector<std::shared_ptr<IInfluence>> &influences,
                         current + ep->getValue());
     }
     // ChangeAcceleration
-    else if (auto ca = std::dynamic_pointer_cast<ChangeAcceleration>(influence)) {
+    else if (auto ca =
+                 std::dynamic_pointer_cast<ChangeAcceleration>(influence)) {
       auto target = ca->getTarget();
       if (target) {
         double newAccel = target->getAcceleration() + ca->getDa();
@@ -150,35 +164,69 @@ void Reaction::apply(const std::vector<std::shared_ptr<IInfluence>> &influences,
       }
     }
     // AgentPositionUpdate (natural influence)
-    else if (auto apu = std::dynamic_pointer_cast<AgentPositionUpdate>(influence)) {
+    else if (auto apu =
+                 std::dynamic_pointer_cast<AgentPositionUpdate>(influence)) {
       // Update all turtles based on their speed and acceleration
       // This is a system-level influence that affects all turtles
+      // Need to collect turtles to remove to avoid iterator invalidation
+      std::vector<std::shared_ptr<TurtlePLSInLogo>> turtlesToRemove;
+
       for (auto &turtle : env.get_turtles()) {
-        // Update speed based on acceleration
-        double newSpeed = turtle->getSpeed() + turtle->getAcceleration() * dt;
-        if (newSpeed < 0) newSpeed = 0;  // No negative speed
+        Point2D oldLoc = turtle->getLocation();
+        int old_x = static_cast<int>(std::floor(oldLoc.x));
+        int old_y = static_cast<int>(std::floor(oldLoc.y));
+
+        // Update speed based on acceleration (Java: speed += acceleration, NO
+        // dt multiplier)
+        double newSpeed = turtle->getSpeed() + turtle->getAcceleration();
+        if (newSpeed < 0)
+          newSpeed = 0; // No negative speed
         turtle->setSpeed(newSpeed);
 
         // Calculate movement
         double dx = std::cos(turtle->getHeading()) * newSpeed * dt;
         double dy = std::sin(turtle->getHeading()) * newSpeed * dt;
 
-        double newX = turtle->getLocation().x + dx;
-        double newY = turtle->getLocation().y + dy;
+        double newX = oldLoc.x + dx;
+        double newY = oldLoc.y + dy;
 
-        // Apply toroidal wrapping if enabled
-        if (env.toroidal()) {
+        // Check out-of-bounds for non-toroidal environments
+        if (!env.toroidal()) {
+          if (newX < 0 || newX >= env.width() || newY < 0 ||
+              newY >= env.height()) {
+            // Mark turtle for removal
+            turtlesToRemove.push_back(turtle);
+            continue;
+          }
+        } else {
+          // Apply toroidal wrapping
           newX = std::fmod(newX, env.width());
-          if (newX < 0) newX += env.width();
+          if (newX < 0)
+            newX += env.width();
           newY = std::fmod(newY, env.height());
-          if (newY < 0) newY += env.height();
+          if (newY < 0)
+            newY += env.height();
         }
 
+        int new_x = static_cast<int>(std::floor(newX));
+        int new_y = static_cast<int>(std::floor(newY));
+
         turtle->setLocation(Point2D(newX, newY));
+
+        // Update spatial index if patch changed
+        if (old_x != new_x || old_y != new_y) {
+          env.update_turtle_patch(turtle, old_x, old_y, new_x, new_y);
+        }
+      }
+
+      // Remove out-of-bounds turtles
+      for (auto &turtle : turtlesToRemove) {
+        env.remove_turtle(turtle);
       }
     }
     // PheromoneFieldUpdate (natural influence)
-    else if (auto pfu = std::dynamic_pointer_cast<PheromoneFieldUpdate>(influence)) {
+    else if (auto pfu =
+                 std::dynamic_pointer_cast<PheromoneFieldUpdate>(influence)) {
       // Run pheromone diffusion and evaporation
       env.diffuse_and_evaporate(dt);
     }

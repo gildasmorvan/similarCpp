@@ -86,6 +86,21 @@ def custom_setup(sim):
     # Store simulation reference for direct turtle access
     sim.environment._simulation = sim
 
+    # Generate trees based on density
+    for x in range(params.grid_size):
+        for y in range(params.grid_size):
+            if random.random() * 100 < params.initial_tree_density:
+                # Trees in first column start burning
+                is_burning = (x == 0)
+
+                tree = Tree(
+                    burning=is_burning,
+                    position=Point2D(x, y),
+                    heading=0
+                )
+                tree._environment = sim.environment
+                sim.turtles.append(tree)
+
     # Create position-to-turtle mapping for efficient neighbor lookup
     sim.environment.position_to_tree = {}
     for turtle in sim.turtles:
@@ -109,21 +124,6 @@ def custom_setup(sim):
             'marks': []  # Empty - no marks used
         }
     sim._build_perception = optimized_build_perception
-    
-    # Generate trees based on density
-    for x in range(params.grid_size):
-        for y in range(params.grid_size):
-            if random.random() * 100 < params.initial_tree_density:
-                # Trees in first column start burning
-                is_burning = (x == 0)
-                
-                tree = Tree(
-                    burning=is_burning,
-                    position=Point2D(x, y),
-                    heading=0
-                )
-                tree._environment = sim.environment
-                sim.turtles.append(tree)
 
 def main():
     """Run simulation in console mode"""

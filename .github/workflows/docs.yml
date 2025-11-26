@@ -30,7 +30,7 @@ jobs:
     - name: Install documentation dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install mkdocs mkdocs-material mkdocs-macros-plugin
+        pip install mkdocs mkdocs-material
 
     - name: Check if mkdocs.yml exists
       run: |
@@ -63,18 +63,14 @@ jobs:
 
         plugins:
           - search
-          - macros
 
         markdown_extensions:
           - pymdownx.highlight
-          - pymdownx.superfscripts
           - pymdownx.inlinehilite
           - pymdownx.snippets
           - pymdownx.tabbed
           - toc:
               permalink: true
-          - pymdownx.arithmatex:
-              generic: true
 
         nav:
           - Home: index.md

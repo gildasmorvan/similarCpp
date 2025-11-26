@@ -1,0 +1,4 @@
+/Users/morvan/Antigravity/similar/release-build/microkernel/CMakeFiles/microkernel.dir
+/Users/morvan/Antigravity/similar/release-build/microkernel/CMakeFiles/similar_test.dir
+/Users/morvan/Antigravity/similar/release-build/microkernel/CMakeFiles/edit_cache.dir
+/Users/morvan/Antigravity/similar/release-build/microkernel/CMakeFiles/rebuild_cache.dir

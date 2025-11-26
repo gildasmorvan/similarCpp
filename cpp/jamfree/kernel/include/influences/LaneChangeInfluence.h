@@ -2,7 +2,7 @@
 #define JAMFREE_KERNEL_INFLUENCES_LANE_CHANGE_INFLUENCE_H
 
 #include "../../../../microkernel/include/influences/RegularInfluence.h"
-#include "../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
+#include "../../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
 #include <memory>
 
 namespace jamfree {
@@ -35,7 +35,8 @@ public:
       std::shared_ptr<
           jamfree::microscopic::agents::VehiclePublicLocalStateMicro>
           target)
-      : RegularInfluence(CATEGORY, CATEGORY, timeLowerBound, timeUpperBound),
+      : RegularInfluence(CATEGORY, target->getLevel(), timeLowerBound,
+                         timeUpperBound),
         m_direction(direction), m_target(target) {}
 
   Direction getDirection() const { return m_direction; }

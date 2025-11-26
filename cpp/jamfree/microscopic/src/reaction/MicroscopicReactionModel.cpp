@@ -1,7 +1,8 @@
 #include "../../include/reaction/MicroscopicReactionModel.h"
-#include "../../../kernel/include/simulation/SimulationEngine.h"
 #include "../../../kernel/include/agents/VehicleAgent.h"
 #include "../../../kernel/include/model/Lane.h"
+#include "../../../kernel/include/model/Road.h"
+#include "../../../kernel/include/simulation/SimulationEngine.h"
 #include <algorithm>
 #include <iostream>
 #include <unordered_map>
@@ -12,8 +13,8 @@ namespace reaction {
 
 using jamfree::kernel::agents::LevelIdentifier;
 using jamfree::kernel::agents::VehicleAgent;
-using jamfree::microscopic::agents::VehiclePublicLocalStateMicro;
 using jamfree::kernel::model::Lane;
+using jamfree::microscopic::agents::VehiclePublicLocalStateMicro;
 
 MicroscopicReactionModel::MicroscopicReactionModel(double dt) : m_dt(dt) {}
 
@@ -68,9 +69,8 @@ void MicroscopicReactionModel::applyAccelerationChanges(
     }
 
     auto publicStateBase = agent->getPublicLocalState(microLevel);
-    auto publicState =
-        std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
-            publicStateBase);
+    auto publicState = std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
+        publicStateBase);
     if (!publicState) {
       std::cerr
           << "[MicroscopicReactionModel] Invalid public state type for agent "
@@ -106,9 +106,8 @@ void MicroscopicReactionModel::applyLaneChanges(
     }
 
     auto publicStateBase = agent->getPublicLocalState(microLevel);
-    auto publicState =
-        std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
-            publicStateBase);
+    auto publicState = std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
+        publicStateBase);
     if (!publicState) {
       std::cerr
           << "[MicroscopicReactionModel] Invalid public state type for agent "
@@ -161,9 +160,8 @@ void MicroscopicReactionModel::updatePhysics() {
     }
 
     auto publicStateBase = agentPtr->getPublicLocalState(microLevel);
-    auto publicState =
-        std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
-            publicStateBase);
+    auto publicState = std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
+        publicStateBase);
     if (!publicState || !publicState->isActive()) {
       continue;
     }
@@ -210,9 +208,8 @@ void MicroscopicReactionModel::validateStates() {
     }
 
     auto publicStateBase = agentPtr->getPublicLocalState(microLevel);
-    auto publicState =
-        std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
-            publicStateBase);
+    auto publicState = std::dynamic_pointer_cast<VehiclePublicLocalStateMicro>(
+        publicStateBase);
     if (!publicState || !publicState->isActive()) {
       continue;
     }

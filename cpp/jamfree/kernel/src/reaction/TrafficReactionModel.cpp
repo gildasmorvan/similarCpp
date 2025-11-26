@@ -3,6 +3,7 @@
 #include "../../include/influences/AccelerationInfluence.h"
 #include "../../include/influences/LaneChangeInfluence.h"
 #include "../../include/influences/PositionUpdateInfluence.h"
+#include "../../include/model/Road.h"
 #include <iostream>
 
 namespace jamfree {

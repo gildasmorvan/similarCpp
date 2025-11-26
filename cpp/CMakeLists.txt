@@ -1,8 +1,37 @@
 cmake_minimum_required(VERSION 3.10)
-project(SIMILAR_CPP)
+project(SIMILAR_CPP VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Set version
+set(PROJECT_VERSION_MAJOR 1)
+set(PROJECT_VERSION_MINOR 0)
+set(PROJECT_VERSION_PATCH 0)
+set(PROJECT_VERSION "${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
+
+# Build type configuration
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build." FORCE)
+  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+endif()
+
+# Compiler flags for different build types
+if(MSVC)
+  add_compile_options(/W4)
+  if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    add_compile_options(/O2 /DNDEBUG)
+  elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_options(/Od /DDEBUG)
+  endif()
+else()
+  add_compile_options(-Wall -Wextra -Wpedantic)
+  if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    add_compile_options(-O3 -DNDEBUG -march=native)
+  elseif(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_options(-O0 -g -DDEBUG)
+  endif()
+endif()
 
 # Include directories
 include_directories(microkernel/include)

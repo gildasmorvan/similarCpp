@@ -2,7 +2,7 @@
 #define JAMFREE_KERNEL_INFLUENCES_ACCELERATION_INFLUENCE_H
 
 #include "../../../../microkernel/include/influences/RegularInfluence.h"
-#include "../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
+#include "../../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
 #include <memory>
 
 namespace jamfree {
@@ -33,7 +33,8 @@ public:
       std::shared_ptr<
           jamfree::microscopic::agents::VehiclePublicLocalStateMicro>
           target)
-      : RegularInfluence(CATEGORY, CATEGORY, timeLowerBound, timeUpperBound),
+      : RegularInfluence(CATEGORY, target->getLevel(), timeLowerBound,
+                         timeUpperBound),
         m_acceleration(acceleration), m_target(target) {}
 
   double getAcceleration() const { return m_acceleration; }

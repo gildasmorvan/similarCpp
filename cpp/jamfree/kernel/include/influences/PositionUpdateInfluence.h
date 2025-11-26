@@ -36,7 +36,8 @@ public:
       std::shared_ptr<
           jamfree::microscopic::agents::VehiclePublicLocalStateMicro>
           target)
-      : RegularInfluence(CATEGORY, CATEGORY, timeLowerBound, timeUpperBound),
+      : RegularInfluence(CATEGORY, target->getLevel(), timeLowerBound,
+                         timeUpperBound),
         m_x(x), m_y(y), m_heading(heading), m_target(target) {}
 
   double getX() const { return m_x; }

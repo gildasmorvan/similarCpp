@@ -788,51 +788,53 @@ CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../../microkernel/include/influences/RegularInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../../microkernel/include/influences/AbstractInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../../microkernel/include/influences/IInfluence.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/VehiclePublicLocalStateMicro.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/Interfaces.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/IAgtDecisionModel.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/IGlobalState.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/ILocalStateOfAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../AgentCategory.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../ILocalState.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/IPerceivedData.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/influences/InfluencesMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/VehiclePublicLocalStateMicro.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/Interfaces.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/IAgtDecisionModel.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/IGlobalState.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/ILocalStateOfAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../AgentCategory.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../ILocalState.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/IPerceivedData.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/agents/../SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/influences/InfluencesMap.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/influences/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/influences/IInfluence.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/IAgtPerceptionModel.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/IPublicLocalDynamicState.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../agents/ILocalStateOfAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/ILocalStateOfEnvironment.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/../ILocalState.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../influences/IInfluence.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/AgentCategory.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../AgentCategory.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../dynamicstate/IPublicDynamicStateMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../influences/InfluencesMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IGlobalState.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/ILocalStateOfAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IPerceivedData.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/influences/IInfluence.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/influences/InfluencesMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/model/Lane.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/../../../kernel/include/model/Point2D.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/influences/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/IAgtPerceptionModel.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/IPublicLocalDynamicState.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../agents/ILocalStateOfAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/ILocalStateOfEnvironment.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/../ILocalState.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/AgentCategory.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../AgentCategory.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../dynamicstate/IPublicDynamicStateMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../influences/InfluencesMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IGlobalState.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/ILocalStateOfAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IPerceivedData.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/agents/../../../../microkernel/include/influences/InfluencesMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/model/Lane.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/../../../kernel/include/model/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/LaneChangeInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/PositionUpdateInfluence.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/influences/../../../microscopic/include/agents/VehiclePublicLocalStateMicro.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/model/Road.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/model/Lane.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/../../include/model/Point2D.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \

@@ -48,4 +48,5 @@ nav:
       - Boids DSL: RUNNING_BOIDS_DSL.md
       - Segregation: SEGREGATION_FIX.md
   - Documentation Index: DOCUMENTATION_INDEX.md
+  - GitHub Pages Setup: docs/GITHUB_PAGES_SETUP.md
   - Contributing: CONTRIBUTING.md

@@ -803,8 +803,15 @@ CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cp
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/ILocalStateOfEnvironment.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/../ILocalState.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/AgentCategory.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/LevelIdentifier.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/IAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/../AgentCategory.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/../SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/../dynamicstate/IPublicDynamicStateMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/../influences/InfluencesMap.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/IGlobalState.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/ILocalStateOfAgent.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../../../kernel/include/agents/../../../../microkernel/include/agents/IPerceivedData.h \
@@ -822,4 +829,7 @@ CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cp
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../agents/../../include/../../kernel/include/tools/MathTools.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../agents/../../include/MOBIL.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../agents/../../include/../../kernel/include/model/Lane.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../agents/VehiclePublicLocalStateMicro.h
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../include/perception/../agents/VehiclePublicLocalStateMicro.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../../kernel/include/model/Road.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../../kernel/include/model/Lane.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/../../../kernel/include/model/Point2D.h

@@ -8,9 +8,11 @@ const std::string ChangeLane::CATEGORY = "ChangeLane";
 
 ChangeLane::ChangeLane(kernel::agents::SimulationTimeStamp timeLowerBound,
                        kernel::agents::SimulationTimeStamp timeUpperBound,
-                       Direction direction)
-    : RegularInfluence(timeLowerBound, timeUpperBound, CATEGORY),
-      m_direction(direction) {}
+                       const std::string &ownerId, Direction direction)
+    : RegularInfluence(
+          CATEGORY, kernel::agents::LevelIdentifier("Microscopic"),
+          timeLowerBound, timeUpperBound),
+      m_ownerId(ownerId), m_direction(direction) {}
 
 } // namespace influences
 } // namespace microscopic

@@ -1,5 +1,7 @@
 #include "kernel/environment/Environment.h"
 #include "kernel/model/environment/Pheromone.h"
+#include "kernel/model/environment/Mark.h"
+#include "kernel/model/environment/TurtlePLSInLogo.h"
 #include "kernel/tools/MathUtil.h"
 #include <algorithm>
 #include <cmath>
@@ -15,7 +17,13 @@ namespace tools = fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools;
 static std::mt19937 rng{std::random_device{}()};
 
 Environment::Environment(int w, int h, bool tor)
-    : m_width(w), m_height(h), m_toroidal(tor) {}
+    : m_width(w), m_height(h), m_toroidal(tor) {
+  // Initialize marks grid
+  m_marks.resize(w);
+  for (int x = 0; x < w; ++x) {
+    m_marks[x].resize(h);
+  }
+}
 
 Pheromone &Environment::add_pheromone(const std::string &id, double diffusion,
                                       double evaporation, double default_val,
@@ -162,6 +170,35 @@ double Environment::get_direction(const tools::Point2D &from,
       dy = dy > 0 ? dy - m_height : dy + m_height;
   }
   return std::atan2(dx, -dy);
+}
+
+// mark handling ------------------------------------------------------
+void Environment::add_mark(int x, int y, std::shared_ptr<model::environment::SimpleMark> mark) {
+  if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
+    m_marks[x][y].insert(mark);
+  }
+}
+
+void Environment::remove_mark(int x, int y, std::shared_ptr<model::environment::SimpleMark> mark) {
+  if (x >= 0 && x < m_width && y >= 0 && y < m_height) {
+    m_marks[x][y].erase(mark);
+  }
+}
+
+// turtle access ------------------------------------------------------
+const std::vector<std::shared_ptr<model::environment::TurtlePLSInLogo>> &Environment::get_turtles() const {
+  return m_turtles;
+}
+
+void Environment::add_turtle(std::shared_ptr<model::environment::TurtlePLSInLogo> turtle) {
+  m_turtles.push_back(turtle);
+}
+
+void Environment::remove_turtle(std::shared_ptr<model::environment::TurtlePLSInLogo> turtle) {
+  auto it = std::find(m_turtles.begin(), m_turtles.end(), turtle);
+  if (it != m_turtles.end()) {
+    m_turtles.erase(it);
+  }
 }
 
 } // namespace

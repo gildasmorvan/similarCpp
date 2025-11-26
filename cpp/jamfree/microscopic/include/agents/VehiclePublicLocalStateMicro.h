@@ -28,17 +28,27 @@ public:
    * @brief Clone this state.
    * @return Cloned state
    */
-  std::shared_ptr<kernel::agents::ILocalState> clone() const override;
+  std::shared_ptr<kernel::agents::ILocalState> clone() const;
 
   /**
    * @brief Gets the category of the agent owning this local state.
    */
-  kernel::AgentCategory getCategoryOfAgent() const override;
+  kernel::agents::AgentCategory getCategoryOfAgent() const override;
 
   /**
    * @brief Checks if an agent is the owner of a local state.
    */
   bool isOwnedBy(const kernel::agents::IAgent &agent) const override;
+
+  /**
+   * @brief Gets the level for which this local state was defined.
+   */
+  kernel::agents::LevelIdentifier getLevel() const override;
+
+  /**
+   * @brief Gets the owner ID.
+   */
+  std::string getOwnerId() const { return m_ownerId; }
 
   // Position and orientation
   const kernel::model::Point2D &getPosition() const { return m_position; }
@@ -82,6 +92,7 @@ public:
 
 private:
   std::string m_ownerId;
+  kernel::agents::LevelIdentifier m_level;
 
   // Position and orientation
   kernel::model::Point2D m_position;

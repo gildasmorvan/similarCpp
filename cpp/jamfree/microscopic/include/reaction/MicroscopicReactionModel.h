@@ -1,12 +1,20 @@
 #ifndef JAMFREE_MICROSCOPIC_REACTION_MICROSCOPIC_REACTION_MODEL_H
 #define JAMFREE_MICROSCOPIC_REACTION_MICROSCOPIC_REACTION_MODEL_H
 
-#include "../../kernel/include/agents/Interfaces.h"
-#include "../include/agents/VehiclePublicLocalStateMicro.h"
-#include "../include/influences/ChangeAcceleration.h"
-#include "../include/influences/ChangeLane.h"
+#include "../../../kernel/include/agents/Interfaces.h"
+#include "../agents/VehiclePublicLocalStateMicro.h"
+#include "../influences/ChangeAcceleration.h"
+#include "../influences/ChangeLane.h"
 #include <memory>
 #include <vector>
+
+namespace jamfree {
+namespace kernel {
+namespace simulation {
+class SimulationEngine;
+}
+} // namespace kernel
+} // namespace jamfree
 
 namespace jamfree {
 namespace microscopic {
@@ -30,6 +38,14 @@ public:
    * @param dt Time step for physics integration (seconds)
    */
   explicit MicroscopicReactionModel(double dt = 0.1);
+
+  /**
+   * @brief Attach the simulation engine used to look up vehicle agents.
+   *
+   * This must be called before running reactions so that influences can be
+   * mapped back to the corresponding vehicle public states.
+   */
+  void setSimulationEngine(kernel::simulation::SimulationEngine *engine);
 
   /**
    * @brief React to influences and update states.
@@ -56,6 +72,8 @@ public:
 
 private:
   double m_dt; // Time step for physics integration
+  kernel::simulation::SimulationEngine *
+      m_engine = nullptr; // Non-owning pointer to simulation engine
 
   /**
    * @brief Apply acceleration changes.

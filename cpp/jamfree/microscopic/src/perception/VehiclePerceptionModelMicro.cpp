@@ -1,4 +1,5 @@
 #include "../../include/perception/VehiclePerceptionModelMicro.h"
+#include "../../../kernel/include/model/Road.h"
 #include <algorithm>
 #include <limits>
 
@@ -100,18 +101,18 @@ void VehiclePerceptionModelMicro::perceiveAdjacentLanes(
   // Left lane (index - 1)
   if (currentLaneIndex > 0) {
     auto leftLane = parentRoad->getLane(currentLaneIndex - 1);
-    perceivedData.setLeftLane(leftLane);
+    perceivedData.setLeftLane(leftLane.get());
 
     // Find leader and follower in left lane
     auto [leftLeader, gapToLeftLeader] =
-        findLeader(leftLane, position, m_perception_range);
+        findLeader(leftLane.get(), position, m_perception_range);
     if (leftLeader) {
       perceivedData.setLeftLeader(leftLeader);
       perceivedData.setGapToLeftLeader(gapToLeftLeader);
     }
 
     auto [leftFollower, gapToLeftFollower] =
-        findFollower(leftLane, position, m_perception_range);
+        findFollower(leftLane.get(), position, m_perception_range);
     if (leftFollower) {
       perceivedData.setLeftFollower(leftFollower);
       perceivedData.setGapToLeftFollower(gapToLeftFollower);
@@ -121,18 +122,18 @@ void VehiclePerceptionModelMicro::perceiveAdjacentLanes(
   // Right lane (index + 1)
   if (currentLaneIndex < parentRoad->getNumLanes() - 1) {
     auto rightLane = parentRoad->getLane(currentLaneIndex + 1);
-    perceivedData.setRightLane(rightLane);
+    perceivedData.setRightLane(rightLane.get());
 
     // Find leader and follower in right lane
     auto [rightLeader, gapToRightLeader] =
-        findLeader(rightLane, position, m_perception_range);
+        findLeader(rightLane.get(), position, m_perception_range);
     if (rightLeader) {
       perceivedData.setRightLeader(rightLeader);
       perceivedData.setGapToRightLeader(gapToRightLeader);
     }
 
     auto [rightFollower, gapToRightFollower] =
-        findFollower(rightLane, position, m_perception_range);
+        findFollower(rightLane.get(), position, m_perception_range);
     if (rightFollower) {
       perceivedData.setRightFollower(rightFollower);
       perceivedData.setGapToRightFollower(gapToRightFollower);

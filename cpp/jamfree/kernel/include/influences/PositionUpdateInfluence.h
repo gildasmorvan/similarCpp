@@ -2,7 +2,7 @@
 #define JAMFREE_KERNEL_INFLUENCES_POSITION_UPDATE_INFLUENCE_H
 
 #include "../../../../microkernel/include/influences/RegularInfluence.h"
-#include "../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
+#include "../../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
 #include <memory>
 
 namespace jamfree {

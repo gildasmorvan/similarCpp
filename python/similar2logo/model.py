@@ -63,8 +63,16 @@ class Turtle:
         if HAS_CPP_CORE:
             from ._core import Point2D as CppPoint2D
             cpp_pos = CppPoint2D(self._position.x, self._position.y)
-            self._pls = TurtlePLS(cpp_pos, self._heading, self._pen_down, self._color)
-            self._pls.set_speed(self._speed)
+            # Match C++ TurtlePLSInLogo constructor:
+            # (location, heading, speed, acceleration, pen_down, color)
+            self._pls = TurtlePLS(
+                cpp_pos,
+                self._heading,
+                self._speed,
+                self.acceleration,
+                self._pen_down,
+                self._color,
+            )
     
     @property
     def position(self):
@@ -291,15 +299,27 @@ class Turtle:
     def influence_drop_mark(self, content, category: str = "default") -> DropMark:
         """
         Create an influence to drop a mark.
-        
+
         Args:
             content: Content of the mark
             category: Category of the mark
-        
+
         Returns:
             DropMark influence
         """
         return DropMark(self, self.position, content, category)
+
+    def influence_remove_mark(self, mark_content) -> RemoveMark:
+        """
+        Create an influence to remove a mark by content.
+
+        Args:
+            mark_content: Content of the mark to remove
+
+        Returns:
+            RemoveMark influence
+        """
+        return RemoveMark(self, mark_content)
     
     # ========================================================================
     # Helper Methods for Common Behaviors
@@ -445,7 +465,7 @@ class LogoSimulation:
                     influences_map.add_all(turtle_influences)
         
         # Phase 3: Reaction - Process influences
-        
+
         # 3a. Regular Reactions (Movement, Pheromones, etc.)
         self.reaction_model.make_regular_reaction(
             self.current_step,
@@ -453,11 +473,42 @@ class LogoSimulation:
             self.environment,
             influences_map
         )
-        
-        # 3b. System Reactions (Add/Remove Agents)
+
+        # 3b. Natural Reactions (Physics, Agent Position Updates)
+        # Generate AgentPositionUpdate influences for physics simulation
+        natural_influences = []
+        for turtle in self.turtles:
+            # Calculate new position based on current speed and heading
+            dx = math.cos(turtle.heading) * turtle.speed
+            dy = math.sin(turtle.heading) * turtle.speed
+
+            new_position = Point2D(
+                turtle.position.x + dx,
+                turtle.position.y + dy
+            )
+
+            # Apply toroidal wrapping if enabled
+            if self.environment.toroidal:
+                new_position.x = new_position.x % self.environment.width
+                if new_position.x < 0:
+                    new_position.x += self.environment.width
+                new_position.y = new_position.y % self.environment.height
+                if new_position.y < 0:
+                    new_position.y += self.environment.height
+
+            natural_influences.append(AgentPositionUpdate(turtle, new_position))
+
+        self.reaction_model.make_natural_reaction(
+            self.current_step,
+            self.current_step + 1,
+            self.environment,
+            natural_influences
+        )
+
+        # 3c. System Reactions (Add/Remove Agents)
         # Extract system influences
         system_influences = influences_map.get_all_system()
-        
+
         if system_influences:
             self.reaction_model.make_system_reaction(
                 self.current_step,
@@ -496,12 +547,13 @@ class LogoSimulation:
         for pheromone_id in self.environment.pheromones:
             pheromones[pheromone_id] = self.environment.get_pheromone_value(x, y, pheromone_id)
         
-        # Get nearby marks
+        # Get marks at current position (exact location)
         marks = []
         if hasattr(self.environment, 'marks'):
             for mark_id, mark in self.environment.marks.items():
-                distance = turtle.position.distance(mark['position'])
-                if distance < 5.0:  # Within perception radius
+                # Check if mark is at the exact turtle position (within 1 unit)
+                if (abs(turtle.position.x - mark['position'].x) < 1.0 and
+                    abs(turtle.position.y - mark['position'].y) < 1.0):
                     marks.append(mark)
         
         # Get nearby turtles using spatial index (O(1) instead of O(N))
@@ -544,7 +596,19 @@ class LogoSimulation:
                 # Convert grid to simple list of lists or similar for JSON
                 # To save bandwidth, we could only send non-zero values, but for local dev full grid is fine
                 pheromones[pid] = grid
-        
+
+        # Extract marks
+        marks = []
+        if hasattr(self.environment, 'marks'):
+            for mark_id, mark in self.environment.marks.items():
+                marks.append({
+                    'id': mark_id,
+                    'position': [mark['position'].x, mark['position'].y],
+                    'content': mark['content'],
+                    'category': mark['category'],
+                    'color': 'gray'  # Default color for marks
+                })
+
         return {
             'step': self.current_step,
             'num_turtles': len(self.turtles),
@@ -561,7 +625,8 @@ class LogoSimulation:
                 'width': self.environment.width,
                 'height': self.environment.height
             },
-            'pheromones': pheromones
+            'pheromones': pheromones,
+            'marks': marks
         }
     
     def reset(self):

@@ -1,4 +1,5 @@
 #include "../../include/reaction/TrafficReactionModel.h"
+#include "../../../kernel/include/model/Vehicle.h"
 #include "../../include/influences/AccelerationInfluence.h"
 #include "../../include/influences/LaneChangeInfluence.h"
 #include "../../include/influences/PositionUpdateInfluence.h"
@@ -82,40 +83,44 @@ void TrafficReactionModel::applyInfluences(
                 auto targetLane = road->getLane(targetIndex);
                 if (targetLane) {
                   // Move vehicle
-                  currentLane->removeVehicle(
-                      target); // Need to cast target to Vehicle*?
-                  // Wait, target is VehiclePublicLocalStateMicro.
-                  // Lane stores Vehicle*.
-                  // We can't easily convert PLS to Vehicle* unless we have a
-                  // map or the PLS holds a pointer to the Vehicle.
-                  // VehiclePublicLocalStateMicro doesn't seem to hold Vehicle*.
+                  auto pls = std::dynamic_pointer_cast<
+                      microscopic::agents::VehiclePublicLocalStateMicro>(
+                      target);
+                  if (pls) {
+                    std::string vehicleId = pls->getOwnerId();
+                    std::shared_ptr<model::Vehicle> vehicleToMove = nullptr;
 
-                  // Issue: The PLS is a representation of the state. The actual
-                  // Vehicle object is in the environment/simulation. However,
-                  // in JamFree, VehicleAgent IS the vehicle (it inherits
-                  // ExtendedAgent). The Lane holds pointers to Vehicle (the
-                  // model class). VehiclePublicLocalStateMicro holds pointers
-                  // to Lane.
+                    // Find vehicle in current lane
+                    for (const auto &v : currentLane->getVehicles()) {
+                      if (v->getId() == vehicleId) {
+                        vehicleToMove = v;
+                        break;
+                      }
+                    }
 
-                  // We need to be careful here.
-                  // The influence updates the PLS.
-                  // The consistency between PLS and the actual Environment
-                  // Model (Lane/Vehicle classes) needs to be maintained. In
-                  // SIMILAR, the Level updates the Environment State. So we
-                  // should update the Lane/Vehicle objects here.
+                    if (vehicleToMove) {
+                      currentLane->removeVehicle(vehicleToMove);
+                      targetLane->addVehicle(vehicleToMove);
+                      vehicleToMove->setCurrentLane(
+                          std::shared_ptr<model::Lane>(
+                              targetLane, [](model::Lane *) {
+                              })); // Non-owning shared_ptr for now, or fix
+                                   // ownership
+                      // Ideally Vehicle should hold weak_ptr or shared_ptr to
+                      // Lane if Lane holds shared_ptr to Vehicle (circular
+                      // dependency). In Vehicle.h: std::shared_ptr<Lane>
+                      // m_current_lane; In Lane.h:
+                      // std::vector<std::shared_ptr<Vehicle>> m_vehicles; This
+                      // is a circular dependency if both are strong refs.
+                      // Usually one should be weak.
+                      // Assuming Vehicle holds weak or we are careful.
+                      // Vehicle.h says: m_current_lane is shared_ptr.
 
-                  // But we only have the PLS.
-                  // We need a way to get the Vehicle object from the PLS or the
-                  // ID. Or the influence should carry the Vehicle*?
-                  // AccelerationInfluence carries PLS.
-
-                  // Let's assume for now we just update the PLS lane pointer.
-                  // The actual Lane object update (remove/add vehicle) might
-                  // need to happen elsewhere or we need access to it.
-
-                  target->setCurrentLane(targetLane);
-                  target->setLaneIndex(targetIndex);
-                  // Position stays same along lane
+                      // Update PLS
+                      target->setCurrentLane(targetLane);
+                      target->setLaneIndex(targetIndex);
+                    }
+                  }
                 }
               }
             }

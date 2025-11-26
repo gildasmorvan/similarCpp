@@ -73,6 +73,12 @@ target_link_libraries(minimal_web_server Threads::Threads)
 add_executable(similar2logo_influences_test similar2logo/tests/influences_test.cpp)
 target_link_libraries(similar2logo_influences_test similar2logo similar_microkernel)
 
+add_executable(similar2logo_core_test similar2logo/tests/core_tests.cpp)
+target_link_libraries(similar2logo_core_test similar2logo similar_microkernel)
+
+add_executable(similar2logo_extended_test similar2logo/tests/extended_kernel_tests.cpp)
+target_link_libraries(similar2logo_extended_test similar_extendedkernel similar_microkernel)
+
 # Python bindings (optional)
 option(BUILD_PYTHON_BINDINGS "Build Python bindings" OFF)
 if(BUILD_PYTHON_BINDINGS)

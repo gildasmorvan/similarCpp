@@ -38,6 +38,16 @@ from ._jamfree import (
     # Utility functions
     kmh_to_ms,
     ms_to_kmh,
+
+    # Multithreaded Engine
+    ISimulationEngine,
+    MultithreadedSimulationEngine,
+    ISimulationModel,
+    TrafficSimulationModel,
+    SimulationTimeStamp,
+    VehicleAgent,
+    VehiclePublicLocalStateMicro,
+    VehiclePrivateLocalStateMicro,
 )
 
 __version__ = '0.1.0'
@@ -70,6 +80,15 @@ __all__ = [
     # Utils
     'kmh_to_ms',
     'ms_to_kmh',
+    # Multithreaded Engine
+    'ISimulationEngine',
+    'MultithreadedSimulationEngine',
+    'ISimulationModel',
+    'TrafficSimulationModel',
+    'SimulationTimeStamp',
+    'VehicleAgent',
+    'VehiclePublicLocalStateMicro',
+    'VehiclePrivateLocalStateMicro',
     # Metal GPU
     'MetalCompute',
     'GPUVehicleState',

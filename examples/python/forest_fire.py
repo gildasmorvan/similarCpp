@@ -7,7 +7,7 @@ based on a propagation probability.
 """
 
 from similar2logo.dsl import Simulation, Turtle
-from similar2logo.influences import EmitPheromone, SystemInfluenceRemoveAgent
+from similar2logo.influences import SystemInfluenceRemoveAgent
 from similar2logo.tools import Point2D
 from dataclasses import dataclass
 import random, math
@@ -15,10 +15,10 @@ import random, math
 @dataclass
 class FireParams:
     """Simulation parameters for the Forest Fire example"""
-    initial_tree_density: float = 50.0  # Percentage (reduced from 70)
-    fire_propagation_proba: float = 0.58
+    initial_tree_density: float = 70.0  # Percentage (matches Java implementation)
+    fire_propagation_proba: float = 0.1  # Matches Java implementation
     combustion_speed: float = 0.1
-    grid_size: int = 50  # Reduced from 100 for better performance
+    grid_size: int = 50
 
 class Tree(Turtle):
     """A tree agent that can burn and spread fire"""
@@ -33,66 +33,65 @@ class Tree(Turtle):
     def decide(self, perception):
         """Decide whether to burn, spread fire, or die"""
         influences = []
-        
+
         # Get parameters from environment
         params = perception['environment'].params
-        
+
         if self.burning:
             # Update burn status
             self.burned += params.combustion_speed
-            
+
             # Change color as burning progresses
             if self.burned < 0.5:
                 self.color = "orange"
             else:
                 self.color = "black"
-            
-            # Spread fire to neighbors
+
+            # Spread fire to neighbors directly (like Java implementation)
             # Check 8-connected neighbors (Moore neighborhood)
             for dx in [-1, 0, 1]:
                 for dy in [-1, 0, 1]:
                     if dx == 0 and dy == 0:
                         continue
-                    
-                    # Probabilistic fire spread
-                    if random.random() < params.fire_propagation_proba:
-                        neighbor_x = self.position.x + dx
-                        neighbor_y = self.position.y + dy
-                        
-                        # Emit fire pheromone at neighbor location
-                        influences.append(
-                            EmitPheromone(
-                                agent=self,
-                                pheromone_id="fire",
-                                position=Point2D(neighbor_x, neighbor_y),
-                                amount=1.0
-                            )
-                        )
-            
+
+                    neighbor_x = int(self.position.x + dx)
+                    neighbor_y = int(self.position.y + dy)
+
+                    # Check bounds
+                    if (0 <= neighbor_x < params.grid_size and
+                        0 <= neighbor_y < params.grid_size):
+
+                        # Look up neighbor directly using position mapping
+                        neighbor_pos = (neighbor_x, neighbor_y)
+                        neighbor = self._environment.position_to_tree.get(neighbor_pos)
+                        if (neighbor is not None and
+                            not neighbor.burning and
+                            random.random() < params.fire_propagation_proba):
+                            # Ignite neighbor directly
+                            neighbor.burning = True
+                            neighbor.color = "red"
+
             # If fully burned, remove from simulation
             if self.burned >= 1.0:
                 influences.append(SystemInfluenceRemoveAgent(agent=self))
-        
-        else:
-            # Check if there's fire nearby (via pheromone)
-            fire_level = perception['pheromones'].get('fire', 0.0)
-            
-            if fire_level > 0:
-                # Ignite!
-                self.burning = True
-                self.color = "red"
-        
+
         return influences
 
 def custom_setup(sim):
     """Setup function to initialize the forest"""
     params = FireParams()
-    
-    # Add fire pheromone (fast evaporation, no diffusion)
-    sim.environment.add_pheromone("fire", evaporation_coef=1.0, diffusion_coef=0.0)
-    
+
     # Store params in environment for agents to access
     sim.environment.params = params
+    # Store simulation reference for direct turtle access
+    sim.environment._simulation = sim
+
+    # Create position-to-turtle mapping for efficient neighbor lookup
+    sim.environment.position_to_tree = {}
+    for turtle in sim.turtles:
+        if isinstance(turtle, Tree):
+            pos_key = (int(turtle.position.x), int(turtle.position.y))
+            sim.environment.position_to_tree[pos_key] = turtle
     
     # Generate trees based on density
     for x in range(params.grid_size):

@@ -30,17 +30,22 @@ public:
    * @brief Clone this state.
    * @return Cloned state
    */
-  std::shared_ptr<kernel::agents::ILocalState> clone() const override;
+  std::shared_ptr<kernel::agents::ILocalState> clone() const;
 
   /**
    * @brief Gets the category of the agent owning this local state.
    */
-  kernel::AgentCategory getCategoryOfAgent() const override;
+  kernel::agents::AgentCategory getCategoryOfAgent() const override;
 
   /**
    * @brief Checks if an agent is the owner of a local state.
    */
   bool isOwnedBy(const kernel::agents::IAgent &agent) const override;
+
+  /**
+   * @brief Gets the level for which this local state was defined.
+   */
+  kernel::agents::LevelIdentifier getLevel() const override;
 
   // IDM parameters
   double getDesiredSpeed() const { return m_desired_speed; }
@@ -101,6 +106,7 @@ public:
 
 private:
   std::string m_ownerId;
+  kernel::agents::LevelIdentifier m_level;
 
   // IDM parameters
   double m_desired_speed;            // m/s

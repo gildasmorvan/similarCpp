@@ -8,9 +8,12 @@ const std::string ChangeAcceleration::CATEGORY = "ChangeAcceleration";
 
 ChangeAcceleration::ChangeAcceleration(
     kernel::agents::SimulationTimeStamp timeLowerBound,
-    kernel::agents::SimulationTimeStamp timeUpperBound, double acceleration)
-    : RegularInfluence(timeLowerBound, timeUpperBound, CATEGORY),
-      m_acceleration(acceleration) {}
+    kernel::agents::SimulationTimeStamp timeUpperBound,
+    const std::string &ownerId, double acceleration)
+    : RegularInfluence(
+          CATEGORY, kernel::agents::LevelIdentifier("Microscopic"),
+          timeLowerBound, timeUpperBound),
+      m_ownerId(ownerId), m_acceleration(acceleration) {}
 
 } // namespace influences
 } // namespace microscopic

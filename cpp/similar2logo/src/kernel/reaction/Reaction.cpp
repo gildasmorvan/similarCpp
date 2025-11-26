@@ -1,9 +1,32 @@
+// C++ Reaction implementation for Similar2Logo.
+// This implementation is intentionally simpler than the full Java
+// LogoDefaultReactionModel and focuses on:
+// - Basic turtle kinematics (position, heading, speed)
+// - Pheromone emission and field dynamics
+// Higher-level behaviors (marks, natural influences, system influences) are
+// handled in the extended kernel / Java-compatible layer.
+
+#include "kernel/reaction/Reaction.h"
+// C++ Reaction implementation for Similar2Logo.
+// This implementation focuses on:
+// - Basic turtle kinematics (position, heading, speed)
+// - Pheromone emission and field dynamics
+//
+// Higher-level behaviors (marks, full natural/system influences, Java
+// multi-level coordination) are handled in the full extended kernel.
+
 #include "kernel/reaction/Reaction.h"
 #include "kernel/influences/ChangeDirection.h"
 #include "kernel/influences/ChangePosition.h"
 #include "kernel/influences/ChangeSpeed.h"
+#include "kernel/influences/ChangeAcceleration.h"
 #include "kernel/influences/EmitPheromone.h"
 #include "kernel/influences/Stop.h"
+#include "kernel/influences/DropMark.h"
+#include "kernel/influences/RemoveMark.h"
+#include "kernel/influences/RemoveMarks.h"
+#include "kernel/influences/AgentPositionUpdate.h"
+#include "kernel/influences/PheromoneFieldUpdate.h"
 #include "kernel/model/environment/TurtlePLSInLogo.h"
 #include "kernel/tools/MathUtil.h"
 #include <algorithm>
@@ -92,8 +115,76 @@ void Reaction::apply(const std::vector<std::shared_ptr<IInfluence>> &influences,
       env.set_pheromone(x, y, ep->getPheromoneIdentifier(),
                         current + ep->getValue());
     }
+    // ChangeAcceleration
+    else if (auto ca = std::dynamic_pointer_cast<ChangeAcceleration>(influence)) {
+      auto target = ca->getTarget();
+      if (target) {
+        double newAccel = target->getAcceleration() + ca->getDa();
+        target->setAcceleration(newAccel);
+      }
+    }
+    // DropMark
+    else if (auto dm = std::dynamic_pointer_cast<DropMark>(influence)) {
+      auto mark = dm->getMark();
+      if (mark) {
+        int x = static_cast<int>(std::floor(mark->getLocation().x));
+        int y = static_cast<int>(std::floor(mark->getLocation().y));
+        env.add_mark(x, y, mark);
+      }
+    }
+    // RemoveMark
+    else if (auto rm = std::dynamic_pointer_cast<RemoveMark>(influence)) {
+      auto mark = rm->getMark();
+      if (mark) {
+        int x = static_cast<int>(std::floor(mark->getLocation().x));
+        int y = static_cast<int>(std::floor(mark->getLocation().y));
+        env.remove_mark(x, y, mark);
+      }
+    }
+    // RemoveMarks
+    else if (auto rms = std::dynamic_pointer_cast<RemoveMarks>(influence)) {
+      for (const auto &mark : rms->getMarks()) {
+        int x = static_cast<int>(std::floor(mark->getLocation().x));
+        int y = static_cast<int>(std::floor(mark->getLocation().y));
+        env.remove_mark(x, y, mark);
+      }
+    }
+    // AgentPositionUpdate (natural influence)
+    else if (auto apu = std::dynamic_pointer_cast<AgentPositionUpdate>(influence)) {
+      // Update all turtles based on their speed and acceleration
+      // This is a system-level influence that affects all turtles
+      for (auto &turtle : env.get_turtles()) {
+        // Update speed based on acceleration
+        double newSpeed = turtle->getSpeed() + turtle->getAcceleration() * dt;
+        if (newSpeed < 0) newSpeed = 0;  // No negative speed
+        turtle->setSpeed(newSpeed);
+
+        // Calculate movement
+        double dx = std::cos(turtle->getHeading()) * newSpeed * dt;
+        double dy = std::sin(turtle->getHeading()) * newSpeed * dt;
+
+        double newX = turtle->getLocation().x + dx;
+        double newY = turtle->getLocation().y + dy;
+
+        // Apply toroidal wrapping if enabled
+        if (env.toroidal()) {
+          newX = std::fmod(newX, env.width());
+          if (newX < 0) newX += env.width();
+          newY = std::fmod(newY, env.height());
+          if (newY < 0) newY += env.height();
+        }
+
+        turtle->setLocation(Point2D(newX, newY));
+      }
+    }
+    // PheromoneFieldUpdate (natural influence)
+    else if (auto pfu = std::dynamic_pointer_cast<PheromoneFieldUpdate>(influence)) {
+      // Run pheromone diffusion and evaporation
+      env.diffuse_and_evaporate(dt);
+    }
   }
 
+  // Natural pheromone dynamics
   env.diffuse_and_evaporate(dt);
 }
 

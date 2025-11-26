@@ -60,9 +60,9 @@ bool ForwardAccelerationDMS::manageDecision(
     acceleration = std::min(0.0, acceleration);
   }
 
-  // Create and emit ChangeAcceleration influence
+  // Create and emit ChangeAcceleration influence targeting this vehicle
   auto influence = std::make_shared<influences::ChangeAcceleration>(
-      timeLowerBound, timeUpperBound, acceleration);
+      timeLowerBound, timeUpperBound, publicState.getOwnerId(), acceleration);
   producedInfluences.add(influence);
 
   return true; // Always handles the situation

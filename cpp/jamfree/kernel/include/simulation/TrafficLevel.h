@@ -29,6 +29,10 @@ public:
   virtual ~TrafficLevel() = default;
 
   // ILevel implementation
+  fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp getNextTime(
+      const fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &currentTime) override;
+
   void makeRegularReaction(
       const fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
           &transitoryTimeMin,

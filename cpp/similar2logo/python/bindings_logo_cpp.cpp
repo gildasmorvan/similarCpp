@@ -125,10 +125,11 @@ PYBIND11_MODULE(_core, m) {
   py::class_<model::environment::TurtlePLSInLogo,
              std::shared_ptr<model::environment::TurtlePLSInLogo>>(env_module,
                                                                    "TurtlePLS")
-      .def(
-          py::init<const tools::Point2D &, double, bool, const std::string &>(),
-          py::arg("location"), py::arg("heading"), py::arg("pen_down"),
-          py::arg("color"))
+      .def(py::init<const tools::Point2D &, double, double, double, bool,
+                    const std::string &>(),
+           py::arg("location"), py::arg("heading"),
+           py::arg("speed") = 1.0, py::arg("acceleration") = 0.0,
+           py::arg("pen_down") = false, py::arg("color") = "blue")
       .def("get_location", &model::environment::TurtlePLSInLogo::getLocation)
       .def("set_location", &model::environment::TurtlePLSInLogo::setLocation)
       .def("get_heading", &model::environment::TurtlePLSInLogo::getHeading)

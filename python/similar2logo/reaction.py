@@ -12,7 +12,7 @@ import math
 from typing import List
 from .influences import *
 from .environment import Environment
-from .tools import MathUtil
+from .tools import MathUtil, Point2D
 
 try:
     from ._core.reaction import Reaction as CppReaction
@@ -48,10 +48,11 @@ class LogoReactionModel:
             environment: The simulation environment
             influences: Map of influences to process
         """
-        # Try C++ reaction first
+        # Try C++ reaction first when appropriate.
         # Check if we have C++ reaction and if environment is C++ compatible
         # (Environment inherits from CppEnvironment when available)
         cpp_used = False
+        has_cpp_candidates = False
         if HAS_CPP_REACTION:
             try:
                 from ._core.environment import Environment as CppEnvironment
@@ -62,8 +63,11 @@ class LogoReactionModel:
             if is_cpp_env:
                 cpp_influences = []
                 for influence in influences.get_all_regular():
+                    # Low-level C++ influences (e.g., ChangePosition from _core)
+                    # expose a getTarget method; high-level DSL influences do not.
                     if hasattr(influence, 'getTarget'):
                         cpp_influences.append(influence)
+                has_cpp_candidates = bool(cpp_influences)
                 
                 if cpp_influences:
                     dt = float(time_max - time_min)
@@ -78,8 +82,11 @@ class LogoReactionModel:
                             print("✓ Using C++ reaction engine for optimal performance")
                         self._cpp_success_shown = True
 
-        # Warn if falling back to Python (only once)
-        if not cpp_used and not self._cpp_fallback_warned:
+        # Warn if falling back to Python (only once), but only when we actually
+        # had C++-compatible influences that could not be processed.
+        # DSL-only simulations that never emit low-level C++ influences should
+        # quietly use the Python reaction model.
+        if has_cpp_candidates and not cpp_used and not self._cpp_fallback_warned:
             import warnings
             if not HAS_CPP_REACTION:
                 warnings.warn(
@@ -92,8 +99,8 @@ class LogoReactionModel:
             else:
                 warnings.warn(
                     "⚠️  Using Python reaction fallback. "
-                    "C++ reaction is available but not being used for this simulation. "
-                    "This may indicate a configuration issue.",
+                    "C++ reaction is available but could not be used for some "
+                    "low-level influences.",
                     RuntimeWarning,
                     stacklevel=2
                 )
@@ -114,7 +121,24 @@ class LogoReactionModel:
         if dt > 0 and hasattr(environment, 'pheromone_grids') and environment.pheromone_grids:
             self._pheromone_diffusion(environment, dt)
             self._pheromone_evaporation(environment, dt)
-    
+
+    def make_natural_reaction(self, time_min: int, time_max: int,
+                             environment: Environment,
+                             influences: List):
+        """
+        Process natural influences (physics, environment dynamics).
+
+        Args:
+            time_min: Start of time step
+            time_max: End of time step
+            environment: The simulation environment
+            influences: List of natural influences
+        """
+        for influence in influences:
+            if isinstance(influence, AgentPositionUpdate):
+                # Update agent position based on dynamics
+                influence.agent.position = influence.new_position
+
     def make_system_reaction(self, time_min: int, time_max: int,
                             environment: Environment,
                             influences: List,
@@ -133,14 +157,10 @@ class LogoReactionModel:
             if isinstance(influence, SystemInfluenceAddAgent):
                 if influence.agent not in turtles:
                     turtles.append(influence.agent)
-            
+
             elif isinstance(influence, SystemInfluenceRemoveAgent):
                 if influence.agent in turtles:
                     turtles.remove(influence.agent)
-            
-            elif isinstance(influence, AgentPositionUpdate):
-                # Update agent position based on dynamics
-                influence.agent.position = influence.new_position
     
     # ========================================================================
     # Regular Influence Processing
@@ -215,20 +235,31 @@ class LogoReactionModel:
         """Process DropMark influences."""
         if not hasattr(environment, 'marks'):
             environment.marks = {}
-        
+
         for influence in influences.get_by_type(DropMark):
-            mark_id = f"mark_{self.marks_counter}"
-            self.marks_counter += 1
-            
-            mark = {
-                'id': mark_id,
-                'position': Point2D(influence.position.x, influence.position.y),
-                'content': influence.content,
-                'category': influence.category,
-                'agent': influence.agent
-            }
-            
-            environment.marks[mark_id] = mark
+            # Special case: if content is "remove", remove all marks at current position
+            if influence.content == "remove":
+                marks_to_remove = []
+                for mark_id, mark in environment.marks.items():
+                    if (abs(mark['position'].x - influence.position.x) < 1.0 and
+                        abs(mark['position'].y - influence.position.y) < 1.0):
+                        marks_to_remove.append(mark_id)
+                for mark_id in marks_to_remove:
+                    del environment.marks[mark_id]
+            else:
+                # Normal mark dropping
+                mark_id = f"mark_{self.marks_counter}"
+                self.marks_counter += 1
+
+                mark = {
+                    'id': mark_id,
+                    'position': Point2D(influence.position.x, influence.position.y),
+                    'content': influence.content,
+                    'category': influence.category,
+                    'agent': influence.agent
+                }
+
+                environment.marks[mark_id] = mark
     
     def _process_remove_mark_influences(self, influences: InfluencesMap,
                                        environment: Environment):

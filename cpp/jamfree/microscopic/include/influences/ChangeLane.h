@@ -1,6 +1,7 @@
 #ifndef JAMFREE_MICROSCOPIC_INFLUENCES_CHANGE_LANE_H
 #define JAMFREE_MICROSCOPIC_INFLUENCES_CHANGE_LANE_H
 
+#include "../../../../microkernel/include/influences/RegularInfluence.h"
 #include "../../../kernel/include/agents/Interfaces.h"
 #include <string>
 
@@ -12,9 +13,11 @@ namespace influences {
  * @brief Influence to change lane.
  *
  * This influence is emitted by the decision model (typically from
- * the Lane Change DMS using MOBIL) to request a lane change.
+ * the Lane Change DMS using MOBIL) to request a lane change for a
+ * specific vehicle.
  */
-class ChangeLane : public kernel::agents::RegularInfluence {
+class ChangeLane : public fr::univ_artois::lgi2a::similar::microkernel::
+                       influences::RegularInfluence {
 public:
   /**
    * @brief Lane change direction.
@@ -34,11 +37,12 @@ public:
    *
    * @param timeLowerBound Lower bound of time interval
    * @param timeUpperBound Upper bound of time interval
+   * @param ownerId Identifier of the vehicle that should change lane
    * @param direction Lane change direction
    */
   ChangeLane(kernel::agents::SimulationTimeStamp timeLowerBound,
              kernel::agents::SimulationTimeStamp timeUpperBound,
-             Direction direction);
+             const std::string &ownerId, Direction direction);
 
   /**
    * @brief Get lane change direction.
@@ -46,7 +50,14 @@ public:
    */
   Direction getDirection() const { return m_direction; }
 
+  /**
+   * @brief Get the identifier of the target vehicle.
+   * @return Vehicle owner ID
+   */
+  const std::string &getOwnerId() const { return m_ownerId; }
+
 private:
+  std::string m_ownerId;
   Direction m_direction;
 };
 

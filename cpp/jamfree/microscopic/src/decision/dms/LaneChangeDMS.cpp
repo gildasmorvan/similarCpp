@@ -84,7 +84,7 @@ bool LaneChangeDMS::manageDecision(
     }
 
     auto influence = std::make_shared<influences::ChangeLane>(
-        timeLowerBound, timeUpperBound, direction);
+        timeLowerBound, timeUpperBound, publicState.getOwnerId(), direction);
     producedInfluences.add(influence);
   }
 

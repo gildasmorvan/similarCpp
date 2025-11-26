@@ -966,32 +966,32 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/ExtendedAgent.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/IAgtDecisionModel.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/IGlobalState.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/ILocalStateOfAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/../AgentCategory.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/IGlobalState.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/ILocalStateOfAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/../AgentCategory.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/../ILocalState.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/IPerceivedData.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/agents/../SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/influences/InfluencesMap.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/../ILocalState.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/IPerceivedData.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/agents/../SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/influences/InfluencesMap.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/influences/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/influences/IInfluence.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/influences/../SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/influences/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/influences/../SimulationTimeStamp.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/IAgtGlobalStateRevisionModel.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/IAgtPerceptionModel.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/IPublicLocalDynamicState.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/../agents/ILocalStateOfAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/../environment/ILocalStateOfEnvironment.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/../environment/../ILocalState.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/../../microkernel/include/dynamicstate/../influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/IPublicLocalDynamicState.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../agents/ILocalStateOfAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/ILocalStateOfEnvironment.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/../ILocalState.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../influences/IInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../microkernel/include/libs/AbstractAgent.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../microkernel/include/libs/../agents/IAgent4Engine.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../microkernel/include/libs/../agents/IAgent.h \

@@ -1,0 +1,55 @@
+site_name: SIMILAR
+site_description: Multi-agent simulation framework
+site_author: SIMILAR Team
+site_url: https://gildasmorvan.github.io/similar/
+
+theme:
+  name: material
+  palette:
+    primary: blue
+    accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - macros
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfscripts
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+
+nav:
+  - Home: index.md
+  - Getting Started: GETTING_STARTED.md
+  - User Guide:
+      - Overview: README_USER.txt
+      - Developer Guide: README_DEVELOPPER.txt
+      - Quick Reference: QUICK_REFERENCE.md
+      - Quick Start: QUICKSTART.md
+  - C++ Engine:
+      - Overview: CPP_ENGINE_README.md
+      - Implementation: docs/CPP_ENGINE.md
+      - Plan: docs/CPP_ENGINE_PLAN.md
+      - Status: docs/CPP_ENGINE_STATUS.md
+  - Python DSL:
+      - Overview: python/README.md
+      - Examples: PYTHON_DSL_EXAMPLES_PROGRESS.md
+      - Plan: PYTHON_DSL_PLAN.md
+  - Examples:
+      - Running Examples: RUNNING_EXAMPLES.md
+      - Boids DSL: RUNNING_BOIDS_DSL.md
+      - Segregation: SEGREGATION_FIX.md
+  - Documentation Index: DOCUMENTATION_INDEX.md
+  - Contributing: CONTRIBUTING.md

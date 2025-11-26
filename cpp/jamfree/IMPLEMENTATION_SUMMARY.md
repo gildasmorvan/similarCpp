@@ -191,6 +191,27 @@ python app.py
 4. ✅ `ADAPTIVE_HYBRID_SIMULATION.md` - Original design document
 5. ✅ This summary document
 
+---
+
+## 🔭 Next JamFree C++ Feature Work (from `AUDIT.md`)
+
+The top-level `AUDIT.md` now includes a **JamFree C++ feature expansion** section (Section 9), which defines additional work that goes beyond the already completed hybrid and optimization features documented here. In summary, the recommended next C++ tasks are:
+
+- **Microscopic lane-changing and multi-lane refinements** in `MicroscopicReactionModel.cpp`:
+  - Implement full vehicle lookup and lane-change application.
+  - Handle edge cases (lane boundaries, blocked target lanes, minimal gaps).
+- **C++ hybrid controller enhancements** in `MultiLevelCoordinator.cpp`:
+  - Move more of the micro/macro switching logic into C++, guided by `MICRO_MACRO_AUTO_SWITCH.md`.
+  - Ensure vehicle/flow conservation when transferring between levels.
+- **Calibration and scenario APIs**:
+  - Provide C++ and Python-facing configuration hooks for loading scenarios and calibrating IDM/MOBIL parameters.
+- **Probe and logging support**:
+  - Add C++ probes for speeds, densities, and flows, and expose them to the web UI.
+- **Optional GPU/SIMD extensions**:
+  - Generalize the existing Metal acceleration so core per-vehicle updates can choose between CPU, SIMD, or GPU backends.
+
+These items are **planned next steps**, not completed deliverables, and should be implemented by following the concrete guidance in Section 9 of `AUDIT.md`.
+
 ### Code Files
 1. ✅ `hybrid/include/AdaptiveSimulator.h`
 2. ✅ `hybrid/src/AdaptiveSimulator.cpp`

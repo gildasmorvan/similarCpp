@@ -803,8 +803,15 @@ CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/ILocalStateOfEnvironment.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../environment/../ILocalState.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../extendedkernel/include/agents/../../../microkernel/include/dynamicstate/../influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/AgentCategory.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/LevelIdentifier.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../AgentCategory.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../LevelIdentifier.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../SimulationTimeStamp.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../dynamicstate/IPublicDynamicStateMap.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/../influences/InfluencesMap.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IGlobalState.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/ILocalStateOfAgent.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../include/agents/../../../kernel/include/agents/../../../../microkernel/include/agents/IPerceivedData.h \
@@ -826,12 +833,4 @@ CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o
   /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/AbstractAgent.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/IAgent4Engine.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/IAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/../AgentCategory.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/../LevelIdentifier.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/../SimulationTimeStamp.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/../dynamicstate/IPublicDynamicStateMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/../influences/InfluencesMap.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/IGlobalState.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/ILocalStateOfAgent.h \
-  /Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include/libs/../agents/IPerceivedData.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/../../../kernel/include/agents/Interfaces.h

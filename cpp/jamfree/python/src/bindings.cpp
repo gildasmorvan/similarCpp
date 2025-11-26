@@ -36,7 +36,12 @@ using namespace jamfree::hybrid;
 
 #include "../../../microkernel/include/engine/MultiThreadedSimulationEngine.h"
 #include "../../../microkernel/include/engine/SequentialSimulationEngine.h"
+#include "../../kernel/include/agents/VehicleAgent.h"
 #include "../../kernel/include/simulation/TrafficSimulationModel.h"
+#include "../../microscopic/include/agents/VehiclePrivateLocalStateMicro.h"
+#include "../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
+#include "../../microscopic/include/decision/VehicleDecisionModelMicro.h"
+#include "../../microscopic/include/perception/VehiclePerceptionModelMicro.h"
 
 PYBIND11_MODULE(_jamfree, m) {
   m.doc() = "JamFree: Traffic simulation library with microscopic models";
@@ -586,8 +591,9 @@ PYBIND11_MODULE(_jamfree, m) {
       m, "MultithreadedSimulationEngine")
       .def(py::init<int>(), py::arg("num_threads") = 0,
            "Create multithreaded simulation engine")
-      .def("run_new_schedule", &MultiThreadedSimulationEngine::runNewSchedule,
-           py::arg("initial_time"), py::arg("final_time"),
+      .def("run_new_simulation",
+           &MultiThreadedSimulationEngine::runNewSimulation,
+           py::call_guard<py::gil_scoped_release>(), py::arg("final_time"),
            "Run simulation schedule")
       .def("add_probe", &MultiThreadedSimulationEngine::addProbe,
            py::arg("probe_name"), py::arg("probe"),
@@ -619,4 +625,93 @@ PYBIND11_MODULE(_jamfree, m) {
       .def("__repr__", [](const SimulationTimeStamp &t) {
         return "SimulationTimeStamp(" + std::to_string(t.getIdentifier()) + ")";
       });
+
+  // ========================================================================
+  // Vehicle Agent and Local States
+  // ========================================================================
+
+  using namespace jamfree::kernel::agents;
+  using namespace jamfree::microscopic::agents;
+  using namespace jamfree::microscopic::perception;
+  using namespace jamfree::microscopic::decision;
+
+  // VehiclePublicLocalStateMicro
+  py::class_<VehiclePublicLocalStateMicro,
+             std::shared_ptr<VehiclePublicLocalStateMicro>>(
+      m, "VehiclePublicLocalStateMicro")
+      .def(py::init<const std::string &>(), py::arg("owner_id"),
+           "Create public local state")
+      .def("get_position", &VehiclePublicLocalStateMicro::getPosition,
+           "Get vehicle position")
+      .def("set_position", &VehiclePublicLocalStateMicro::setPosition,
+           py::arg("position"), "Set vehicle position")
+      .def("get_speed", &VehiclePublicLocalStateMicro::getSpeed,
+           "Get vehicle speed (m/s)")
+      .def("set_speed", &VehiclePublicLocalStateMicro::setSpeed,
+           py::arg("speed"), "Set vehicle speed (m/s)")
+      .def("get_acceleration", &VehiclePublicLocalStateMicro::getAcceleration,
+           "Get vehicle acceleration (m/s²)")
+      .def("set_acceleration", &VehiclePublicLocalStateMicro::setAcceleration,
+           py::arg("acceleration"), "Set vehicle acceleration (m/s²)")
+      .def("get_heading", &VehiclePublicLocalStateMicro::getHeading,
+           "Get vehicle heading (radians)")
+      .def("set_heading", &VehiclePublicLocalStateMicro::setHeading,
+           py::arg("heading"), "Set vehicle heading (radians)")
+      .def("get_lane_position", &VehiclePublicLocalStateMicro::getLanePosition,
+           "Get position along lane (m)")
+      .def("set_lane_position", &VehiclePublicLocalStateMicro::setLanePosition,
+           py::arg("position"), "Set position along lane (m)")
+      .def("get_lane_index", &VehiclePublicLocalStateMicro::getLaneIndex,
+           "Get lane index")
+      .def("set_lane_index", &VehiclePublicLocalStateMicro::setLaneIndex,
+           py::arg("index"), "Set lane index")
+      .def("get_length", &VehiclePublicLocalStateMicro::getLength,
+           "Get vehicle length (m)")
+      .def("set_length", &VehiclePublicLocalStateMicro::setLength,
+           py::arg("length"), "Set vehicle length (m)")
+      .def("is_active", &VehiclePublicLocalStateMicro::isActive,
+           "Check if vehicle is active")
+      .def("set_active", &VehiclePublicLocalStateMicro::setActive,
+           py::arg("active"), "Set vehicle active status");
+
+  // VehiclePrivateLocalStateMicro
+  py::class_<VehiclePrivateLocalStateMicro,
+             std::shared_ptr<VehiclePrivateLocalStateMicro>>(
+      m, "VehiclePrivateLocalStateMicro")
+      .def(py::init<const std::string &>(), py::arg("owner_id"),
+           "Create private local state")
+      .def("get_desired_speed", &VehiclePrivateLocalStateMicro::getDesiredSpeed,
+           "Get desired speed (m/s)")
+      .def("set_desired_speed", &VehiclePrivateLocalStateMicro::setDesiredSpeed,
+           py::arg("speed"), "Set desired speed (m/s)")
+      .def("get_time_headway", &VehiclePrivateLocalStateMicro::getTimeHeadway,
+           "Get time headway (s)")
+      .def("set_time_headway", &VehiclePrivateLocalStateMicro::setTimeHeadway,
+           py::arg("headway"), "Set time headway (s)")
+      .def("get_politeness", &VehiclePrivateLocalStateMicro::getPoliteness,
+           "Get politeness factor (0-1)")
+      .def("set_politeness", &VehiclePrivateLocalStateMicro::setPoliteness,
+           py::arg("politeness"), "Set politeness factor (0-1)")
+      .def("get_max_acceleration",
+           &VehiclePrivateLocalStateMicro::getMaxAcceleration,
+           "Get max acceleration (m/s²)")
+      .def("set_max_acceleration",
+           &VehiclePrivateLocalStateMicro::setMaxAcceleration, py::arg("accel"),
+           "Set max acceleration (m/s²)")
+      .def("get_comfortable_deceleration",
+           &VehiclePrivateLocalStateMicro::getComfortableDeceleration,
+           "Get comfortable deceleration (m/s²)")
+      .def("set_comfortable_deceleration",
+           &VehiclePrivateLocalStateMicro::setComfortableDeceleration,
+           py::arg("decel"), "Set comfortable deceleration (m/s²)");
+
+  // VehicleAgent
+  py::class_<VehicleAgent, std::shared_ptr<VehicleAgent>>(m, "VehicleAgent")
+      .def(py::init<const std::string &>(), py::arg("id"),
+           "Create vehicle agent")
+      .def("get_id", &VehicleAgent::getId, "Get vehicle ID");
+
+  // Note: VehiclePerceptionModelMicro and VehicleDecisionModelMicro
+  // are not exposed yet as they require more complex setup
+  // They will be added in a future update when needed
 }

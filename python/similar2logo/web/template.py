@@ -431,7 +431,7 @@ HTML_TEMPLATE = """
     <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
-        let ws = new WebSocket('ws://localhost:8080/ws');
+        let ws = new WebSocket('ws://' + window.location.host + '/ws');
         
         let lastFrameTime = Date.now();
         let frameCount = 0;
@@ -439,15 +439,24 @@ HTML_TEMPLATE = """
         let parameters = {};
         
         function connectWebSocket() {
-            ws = new WebSocket('ws://localhost:8080/ws');
+            ws = new WebSocket('ws://' + window.location.host + '/ws');
             ws.onmessage = function(event) {
-                const state = JSON.parse(event.data);
-                render(state);
-                updateStats(state);
+                try {
+                    const state = JSON.parse(event.data);
+                    console.log('Received state with', state.marks ? state.marks.length : 0, 'marks');
+                    render(state);
+                    updateStats(state);
+                } catch (e) {
+                    console.error('Error processing WebSocket message:', e);
+                }
             };
             ws.onclose = function() {
+                console.log('WebSocket closed, reconnecting...');
                 // Try to reconnect after a delay
                 setTimeout(connectWebSocket, 1000);
+            };
+            ws.onerror = function(error) {
+                console.error('WebSocket error:', error);
             };
         }
         
@@ -591,9 +600,11 @@ HTML_TEMPLATE = """
             // Clear canvas
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
+
             const scaleX = canvas.width / state.environment.width;
             const scaleY = canvas.height / state.environment.height;
+
+            console.log('Rendering state - turtles:', state.turtles.length, 'marks:', state.marks ? state.marks.length : 0);
             
             // Draw pheromones
             if (state.pheromones) {
@@ -635,22 +646,67 @@ HTML_TEMPLATE = """
                 ctx.lineTo(canvas.width, y);
                 ctx.stroke();
             }
-            
+
+            // Draw marks (before turtles so they don't get covered)
+            if (state.marks && state.marks.length > 0) {
+                console.log('Drawing', state.marks.length, 'marks');
+                state.marks.forEach((mark, index) => {
+                    const x = mark.position[0] * scaleX;
+                    const y = mark.position[1] * scaleY;
+                    console.log('Mark', index, 'at canvas position:', x, y);
+
+                    // Draw mark as a highly visible cross with background
+                    const colors = ['red', 'blue', 'green', 'orange', 'purple', 'cyan'];
+                    const color = colors[index % colors.length];
+
+                    // Draw white background circle for visibility
+                    ctx.fillStyle = 'white';
+                    ctx.beginPath();
+                    ctx.arc(x, y, 12, 0, 2 * Math.PI);
+                    ctx.fill();
+
+                    // Draw colored border
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 4;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 12, 0, 2 * Math.PI);
+                    ctx.stroke();
+
+                    // Draw cross
+                    ctx.strokeStyle = color;
+                    ctx.lineWidth = 3;
+                    const size = 8;
+
+                    ctx.beginPath();
+                    ctx.moveTo(x - size, y);
+                    ctx.lineTo(x + size, y);
+                    ctx.moveTo(x, y - size);
+                    ctx.lineTo(x, y + size);
+                    ctx.stroke();
+
+                    // Draw mark number for debugging
+                    ctx.fillStyle = color;
+                    ctx.font = '12px Arial';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(index.toString(), x, y + 4);
+                });
+            }
+
             // Draw turtles
             state.turtles.forEach(turtle => {
                 const x = turtle.position[0] * scaleX;
                 const y = turtle.position[1] * scaleY;
-                
+
                 ctx.fillStyle = turtle.color;
                 ctx.beginPath();
                 ctx.arc(x, y, 5, 0, 2 * Math.PI);
                 ctx.fill();
-                
+
                 // Draw heading indicator
                 const headingLength = 10;
                 const dx = Math.sin(turtle.heading) * headingLength;
                 const dy = -Math.cos(turtle.heading) * headingLength;
-                
+
                 ctx.strokeStyle = turtle.color;
                 ctx.lineWidth = 2;
                 ctx.beginPath();

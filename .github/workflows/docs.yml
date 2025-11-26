@@ -1,0 +1,200 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ main, master, develop ]
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - '**/*.md'
+  pull_request:
+    branches: [ main, master, develop ]
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - '**/*.md'
+
+jobs:
+  build-docs:
+    name: Build Documentation
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install documentation dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mkdocs mkdocs-material mkdocs-macros-plugin
+
+    - name: Check if mkdocs.yml exists
+      run: |
+        if [ -f "mkdocs.yml" ]; then
+          echo "MKDOCS_CONFIG_EXISTS=true" >> $GITHUB_ENV
+        else
+          echo "MKDOCS_CONFIG_EXISTS=false" >> $GITHUB_ENV
+        fi
+
+    - name: Create basic mkdocs config (if not exists)
+      if: env.MKDOCS_CONFIG_EXISTS == 'false'
+      run: |
+        cat > mkdocs.yml << EOF
+        site_name: SIMILAR
+        site_description: Multi-agent simulation framework
+        site_author: SIMILAR Team
+        site_url: https://gildasmorvan.github.io/similar/
+
+        theme:
+          name: material
+          palette:
+            primary: blue
+            accent: blue
+          features:
+            - navigation.tabs
+            - navigation.sections
+            - toc.integrate
+            - search.suggest
+            - search.highlight
+
+        plugins:
+          - search
+          - macros
+
+        markdown_extensions:
+          - pymdownx.highlight
+          - pymdownx.superfscripts
+          - pymdownx.inlinehilite
+          - pymdownx.snippets
+          - pymdownx.tabbed
+          - toc:
+              permalink: true
+          - pymdownx.arithmatex:
+              generic: true
+
+        nav:
+          - Home: index.md
+          - Getting Started: GETTING_STARTED.md
+          - User Guide:
+              - Overview: README_USER.txt
+              - Developer Guide: README_DEVELOPPER.txt
+              - Quick Reference: QUICK_REFERENCE.md
+              - Quick Start: QUICKSTART.md
+          - C++ Engine:
+              - Overview: CPP_ENGINE_README.md
+              - Implementation: docs/CPP_ENGINE.md
+              - Plan: docs/CPP_ENGINE_PLAN.md
+              - Status: docs/CPP_ENGINE_STATUS.md
+          - Python DSL:
+              - Overview: python/README.md
+              - Examples: PYTHON_DSL_EXAMPLES_PROGRESS.md
+              - Plan: PYTHON_DSL_PLAN.md
+          - Examples:
+              - Running Examples: RUNNING_EXAMPLES.md
+              - Boids DSL: RUNNING_BOIDS_DSL.md
+              - Segregation: SEGREGATION_FIX.md
+          - Documentation Index: DOCUMENTATION_INDEX.md
+          - Contributing: CONTRIBUTING.md
+        EOF
+
+    - name: Create docs/index.md (if not exists)
+      run: |
+        if [ ! -f "docs/index.md" ]; then
+          cat > docs/index.md << EOF
+        # SIMILAR: Multi-Agent Simulation Framework
+
+        SIMILAR is a comprehensive framework for developing and running multi-agent-based simulations. It provides both Java and C++/Python implementations of the SIMILAR API, enabling high-performance agent-based modeling with easy-to-use interfaces.
+
+        ## Key Features
+
+        - **Multi-paradigm**: Support for microscopic, macroscopic, and hybrid simulation approaches
+        - **High Performance**: C++ backend with multithreaded execution engine
+        - **Easy to Use**: Python DSL with web-based visualization
+        - **Extensible**: Plugin architecture for custom models and behaviors
+        - **Cross-platform**: Runs on Linux, macOS, and Windows
+
+        ## Quick Start
+
+        ### Python DSL
+
+        \`\`\`python
+        from similar2logo import LogoSimulation, Turtle
+
+        class MyAgent(Turtle):
+            def decide(self, perception):
+                # Your agent logic here
+                return self.influence_move_forward(1.0)
+
+        # Create and run simulation
+        sim = LogoSimulation.create(MyAgent, count=100)
+        sim.run_web()  # Opens browser with live visualization
+        \`\`\`
+
+        ### C++ Engine
+
+        \`\`\`cpp
+        // High-performance C++ simulation
+        auto engine = std::make_unique<MultiThreadedSimulationEngine>();
+        engine->run(model, parameters);
+        \`\`\`
+
+        ## Components
+
+        - **Similar2Logo**: Logo-inspired agent-based modeling
+        - **JamFree**: Traffic simulation platform
+        - **Microkernel**: Core simulation engine
+        - **ExtendedKernel**: Advanced agent modeling features
+
+        ## Documentation
+
+        - [Getting Started](GETTING_STARTED.md)
+        - [User Guide](README_USER.txt)
+        - [Developer Guide](README_DEVELOPPER.txt)
+        - [API Reference](QUICK_REFERENCE.md)
+
+        ## Community
+
+        - [GitHub Repository](https://github.com/gildasmorvan/similar)
+        - [Issues](https://github.com/gildasmorvan/similar/issues)
+        - [Discussions](https://github.com/gildasmorvan/similar/discussions)
+
+        ---
+
+        *Built with ❤️ by the SIMILAR team*
+        EOF
+        fi
+
+    - name: Build documentation
+      run: |
+        mkdocs build --clean
+
+    - name: Upload documentation artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: docs-site
+        path: site/
+
+  # Deploy to GitHub Pages (only on main/master branch)
+  deploy-docs:
+    name: Deploy Documentation
+    runs-on: ubuntu-22.04
+    needs: build-docs
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+    steps:
+    - name: Download documentation artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: docs-site
+        path: site/
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
+        cname: similar.readthedocs.io  # Optional: add custom domain

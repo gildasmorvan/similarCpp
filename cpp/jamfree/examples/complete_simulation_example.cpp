@@ -114,7 +114,8 @@ createMacroscopicCell(const std::string &id, int cellIndex, double density) {
 
   // Public state
   auto publicState =
-      std::make_shared<macroscopic::agents::VehiclePublicLocalStateMacro>(id);
+      std::shared_ptr<macroscopic::agents::VehiclePublicLocalStateMacro>(
+          new macroscopic::agents::VehiclePublicLocalStateMacro(id));
   publicState->setCellIndex(cellIndex);
   publicState->setDensity(density);
   publicState->setAverageSpeed(25.0);   // m/s
@@ -142,6 +143,7 @@ int main() {
   // Set up reaction models
   auto microReaction =
       std::make_shared<microscopic::reaction::MicroscopicReactionModel>(0.1);
+  microReaction->setSimulationEngine(engine.get());
   engine->setReactionModel(LevelIdentifiers::MICROSCOPIC, microReaction);
 
   std::cout << "  ✓ Engine created with dt=0.1s" << std::endl;
@@ -151,7 +153,8 @@ int main() {
   // Create Multi-Level Coordinator
   // ========================================================================
   std::cout << "Creating multi-level coordinator..." << std::endl;
-  auto coordinator = std::make_shared<MultiLevelCoordinator>();
+  auto coordinator =
+      std::shared_ptr<MultiLevelCoordinator>(new MultiLevelCoordinator());
   coordinator->setSimulationEngine(engine);
 
   // Add levels with different time scales

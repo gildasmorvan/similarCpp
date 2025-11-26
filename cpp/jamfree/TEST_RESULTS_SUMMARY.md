@@ -100,3 +100,15 @@ All core functionality is working correctly:
 - ⚠️ Web UI (functional but needs production server for automated testing)
 
 The JamFree system is fully functional and ready for use. The web UI works correctly when run in foreground mode, and all Python examples demonstrate the expected behavior.
+
+---
+
+## Relation to JamFree C++ Audit Plan
+
+The new JamFree section in `AUDIT.md` (Section 9) proposes **additional C++ feature work** (microscopic reaction refinements, enhanced hybrid coordination, calibration hooks, probes, and optional GPU/SIMD extensions). These tests **do not yet cover** that planned work; they validate the currently implemented features described above.
+
+When those C++ features are implemented, this summary should be extended with:
+
+- New scenarios stressing multi-lane lane-changing and microscopic reaction edge cases.
+- Tests that exercise density-based micro/macro switching logic in the C++ coordinator.
+- Probe/metric tests to confirm new C++ probes are correctly exposed to the Python/web layers.

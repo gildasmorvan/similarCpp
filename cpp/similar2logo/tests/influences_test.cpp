@@ -29,7 +29,7 @@ void testChangeAcceleration() {
   mk::SimulationTimeStamp t2(10);
   s2l::tools::Point2D loc(10, 20);
   auto turtle = std::make_shared<s2l::model::environment::TurtlePLSInLogo>(
-      loc, 0.0, true, "red");
+      loc, 0.0, 1.0, 0.0, true, std::string("red"));
 
   s2l::influences::ChangeAcceleration inf(t1, t2, 5.0, turtle);
 
@@ -45,7 +45,7 @@ void testChangeDirection() {
   mk::SimulationTimeStamp t2(10);
   s2l::tools::Point2D loc(10, 20);
   auto turtle = std::make_shared<s2l::model::environment::TurtlePLSInLogo>(
-      loc, 0.0, true, "red");
+      loc, 0.0, 1.0, 0.0, true, std::string("red"));
 
   s2l::influences::ChangeDirection inf(t1, t2, 1.57, turtle);
 
@@ -61,7 +61,7 @@ void testChangePosition() {
   mk::SimulationTimeStamp t2(10);
   s2l::tools::Point2D loc(10, 20);
   auto turtle = std::make_shared<s2l::model::environment::TurtlePLSInLogo>(
-      loc, 0.0, true, "red");
+      loc, 0.0, 1.0, 0.0, true, std::string("red"));
 
   s2l::influences::ChangePosition inf(t1, t2, 5.0, -3.0, turtle);
 
@@ -78,7 +78,7 @@ void testChangeSpeed() {
   mk::SimulationTimeStamp t2(10);
   s2l::tools::Point2D loc(10, 20);
   auto turtle = std::make_shared<s2l::model::environment::TurtlePLSInLogo>(
-      loc, 0.0, true, "red");
+      loc, 0.0, 1.0, 0.0, true, std::string("red"));
 
   s2l::influences::ChangeSpeed inf(t1, t2, 2.5, turtle);
 
@@ -159,7 +159,7 @@ void testStop() {
   mk::SimulationTimeStamp t2(10);
   s2l::tools::Point2D loc(10, 20);
   auto turtle = std::make_shared<s2l::model::environment::TurtlePLSInLogo>(
-      loc, 0.0, true, "red");
+      loc, 0.0, 1.0, 0.0, true, std::string("red"));
 
   s2l::influences::Stop inf(t1, t2, turtle);
 

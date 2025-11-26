@@ -1,0 +1,205 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  # Create release artifacts
+  build-release:
+    name: Build Release Artifacts
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake ninja-build
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine
+
+    - name: Build C++ engine
+      run: |
+        chmod +x build_cpp_engine.sh
+        ./build_cpp_engine.sh
+
+    - name: Build Python package
+      run: |
+        python -m build --wheel --sdist
+
+    - name: Build Java artifacts
+      run: |
+        mvn clean package -DskipTests
+
+    - name: Create release archives
+      run: |
+        # Create directories for artifacts
+        mkdir -p release-artifacts/python
+        mkdir -p release-artifacts/java
+        mkdir -p release-artifacts/docs
+
+        # Copy Python artifacts
+        cp dist/*.whl release-artifacts/python/
+        cp dist/*.tar.gz release-artifacts/python/
+
+        # Copy Java artifacts
+        find . -name "*.jar" -not -path "*/target/test-classes/*" -not -path "*/target/classes/*" | xargs -I {} cp {} release-artifacts/java/
+
+        # Copy documentation
+        cp README.md release-artifacts/docs/
+        cp *.md release-artifacts/docs/ || true
+        cp -r docs/* release-artifacts/docs/ || true
+
+        # Create archives
+        cd release-artifacts
+        tar -czf ../python-artifacts.tar.gz python/
+        tar -czf ../java-artifacts.tar.gz java/
+        tar -czf ../docs.tar.gz docs/
+
+    - name: Upload Python artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-artifacts
+        path: release-artifacts/python/
+
+    - name: Upload Java artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: java-artifacts
+        path: release-artifacts/java/
+
+    - name: Upload documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: docs
+        path: release-artifacts/docs/
+
+  # Publish to PyPI (if configured)
+  pypi-publish:
+    name: Publish to PyPI
+    runs-on: ubuntu-22.04
+    needs: build-release
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: python-artifacts
+        path: dist/
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+      # Uncomment the line above and add PYPI_API_TOKEN secret to enable PyPI publishing
+
+  # Create GitHub release
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-22.04
+    needs: build-release
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+
+    - name: Create release archives
+      run: |
+        # Create final release package
+        mkdir -p final-release
+        cp -r python-artifacts/* final-release/ 2>/dev/null || true
+        cp -r java-artifacts/* final-release/ 2>/dev/null || true
+        cp -r docs/* final-release/ 2>/dev/null || true
+
+        # Create source archive
+        tar -czf SIMILAR-${{ github.ref_name }}.tar.gz \
+          --exclude='.git' \
+          --exclude='target' \
+          --exclude='build' \
+          --exclude='__pycache__' \
+          --exclude='*.so' \
+          --exclude='*.dylib' \
+          --exclude='*.dll' \
+          .
+
+    - name: Generate release notes
+      run: |
+        # Extract version from tag
+        VERSION=${{ github.ref_name }}
+        VERSION=${VERSION#v}
+
+        # Generate basic release notes
+        cat > release-notes.md << EOF
+        # SIMILAR ${VERSION} Release
+
+        This release includes updates to the SIMILAR multi-agent simulation framework.
+
+        ## What's New
+
+        - Enhanced C++ performance with multithreaded simulation engine
+        - Improved Python bindings and DSL
+        - Updated Similar2Logo components
+        - Bug fixes and stability improvements
+
+        ## Components
+
+        - **C++ Core**: Multithreaded simulation engine with enhanced performance
+        - **Python Bindings**: Complete Similar2Logo DSL with web visualization
+        - **Java Libraries**: Full SIMILAR framework implementation
+        - **Documentation**: Comprehensive guides and examples
+
+        ## Installation
+
+        ### Python
+        \`\`\`bash
+        pip install similar2logo
+        \`\`\`
+
+        ### From Source
+        See README.md for detailed build instructions.
+
+        ## Compatibility
+
+        - Python 3.8+
+        - Java 11+
+        - CMake 3.15+
+        - C++17 compatible compiler
+
+        ---
+        Built on: $(date)
+        Commit: ${{ github.sha }}
+        EOF
+
+    - name: Create GitHub release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          SIMILAR-${{ github.ref_name }}.tar.gz
+        body_path: release-notes.md
+        draft: false
+        prerelease: ${{ contains(github.ref_name, 'rc') || contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

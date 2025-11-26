@@ -41,20 +41,44 @@ public:
   virtual ~TrafficSimulationModel() = default;
 
   // ISimulationModel implementation
-  std::shared_ptr<
-      fr::univ_artois::lgi2a::similar::microkernel::environment::IEnvironment>
-  getEnvironment() const override;
+  bool isFinalTimeOrAfter(
+      const fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &currentTime,
+      const fr::univ_artois::lgi2a::similar::microkernel::ISimulationEngine
+          &engine) const override;
 
-  // Note: AbstractSimulationModel doesn't implement getLevels(), we need to do
-  // it. Wait, ISimulationModel has getLevels(). AbstractSimulationModel doesn't
-  // implement it? Let's check AbstractSimulationModel again. It inherits
-  // ISimulationModel. It only implements getInitialTime(). So we need to
-  // implement getLevels().
+  std::vector<std::shared_ptr<
+      fr::univ_artois::lgi2a::similar::microkernel::levels::ILevel>>
+  generateLevels(
+      const fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &initialTime) override;
+
+  fr::univ_artois::lgi2a::similar::microkernel::ISimulationModel::
+      EnvironmentInitializationData
+      generateEnvironment(
+          const fr::univ_artois::lgi2a::similar::microkernel::
+              SimulationTimeStamp &initialTime,
+          const std::map<
+              fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier,
+              std::shared_ptr<
+                  fr::univ_artois::lgi2a::similar::microkernel::levels::ILevel>>
+              &levels) override;
+
+  fr::univ_artois::lgi2a::similar::microkernel::ISimulationModel::
+      AgentInitializationData
+      generateAgents(
+          const fr::univ_artois::lgi2a::similar::microkernel::
+              SimulationTimeStamp &initialTime,
+          const std::map<
+              fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier,
+              std::shared_ptr<
+                  fr::univ_artois::lgi2a::similar::microkernel::levels::ILevel>>
+              &levels) override;
 
   std::map<fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier,
            std::shared_ptr<
                fr::univ_artois::lgi2a::similar::microkernel::levels::ILevel>>
-  getLevels() const override;
+  getLevels() const;
 
 private:
   std::shared_ptr<jamfree::realdata::osm::RoadNetwork> m_network;

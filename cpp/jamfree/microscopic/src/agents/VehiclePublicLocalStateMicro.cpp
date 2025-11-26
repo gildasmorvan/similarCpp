@@ -8,13 +8,14 @@ namespace agents {
 
 VehiclePublicLocalStateMicro::VehiclePublicLocalStateMicro(
     const std::string &ownerId)
-    : m_ownerId(ownerId), m_heading(0), m_speed(0), m_acceleration(0),
-      m_current_lane(nullptr), m_lane_position(0), m_lane_index(0), m_length(0),
-      m_width(0), m_height(0), m_active(true) {}
+    : m_ownerId(ownerId), m_level("microscopic"), m_heading(0), m_speed(0),
+      m_acceleration(0), m_current_lane(nullptr), m_lane_position(0),
+      m_lane_index(0), m_length(0), m_width(0), m_height(0), m_active(true) {}
 
 std::shared_ptr<kernel::agents::ILocalState>
 VehiclePublicLocalStateMicro::clone() const {
-  auto cloned = std::make_shared<VehiclePublicLocalStateMicro>(m_ownerId);
+  auto cloned = std::shared_ptr<VehiclePublicLocalStateMicro>(
+      new VehiclePublicLocalStateMicro(m_ownerId));
   cloned->setPosition(m_position);
   cloned->setHeading(m_heading);
   cloned->setSpeed(m_speed);
@@ -29,8 +30,9 @@ VehiclePublicLocalStateMicro::clone() const {
   return cloned;
 }
 
-kernel::AgentCategory VehiclePublicLocalStateMicro::getCategoryOfAgent() const {
-  return kernel::AgentCategory("Vehicle");
+kernel::agents::AgentCategory
+VehiclePublicLocalStateMicro::getCategoryOfAgent() const {
+  return kernel::agents::AgentCategory("Vehicle");
 }
 
 bool VehiclePublicLocalStateMicro::isOwnedBy(
@@ -41,6 +43,10 @@ bool VehiclePublicLocalStateMicro::isOwnedBy(
     return vehicleAgent->getId() == m_ownerId;
   }
   return false;
+}
+
+kernel::agents::LevelIdentifier VehiclePublicLocalStateMicro::getLevel() const {
+  return m_level;
 }
 
 } // namespace agents

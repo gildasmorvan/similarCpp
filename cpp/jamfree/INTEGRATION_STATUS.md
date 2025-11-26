@@ -223,6 +223,14 @@ Add more detailed metrics:
 - Transition overhead (adaptive hybrid)
 - Per-lane performance stats
 
+In addition, the `AUDIT.md` file now describes further JamFree C++ feature work:
+
+- Refining microscopic reaction logic (lane changes, physics, state validation).
+- Moving more of the hybrid micro/macro coordination into the core C++ engine.
+- Adding richer probe data that the web UI can expose (per-lane speeds, densities, flows).
+
+These items are not yet implemented here but should be taken into account when extending the web UI and backend APIs.
+
 ## Documentation
 
 ### Updated Documentation Files

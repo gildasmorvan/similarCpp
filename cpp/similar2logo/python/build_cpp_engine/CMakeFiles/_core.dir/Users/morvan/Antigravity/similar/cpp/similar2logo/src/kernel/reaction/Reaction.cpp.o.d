@@ -968,6 +968,12 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/Mark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../tools/Point2D.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/SituatedEntity.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/TurtlePLSInLogo.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangeDirection.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../../../../microkernel/include/LevelIdentifier.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../../../../microkernel/include/SimulationTimeStamp.h \
@@ -975,13 +981,17 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../../../../microkernel/include/influences/AbstractInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../../../../microkernel/include/influences/IInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../model/environment/TurtlePLSInLogo.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../model/environment/../../tools/Point2D.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../model/environment/SituatedEntity.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangePosition.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangeSpeed.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangeAcceleration.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/EmitPheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../tools/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/Stop.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/TurtlePLSInLogo.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/DropMark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../model/environment/Mark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/RemoveMark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/RemoveMarks.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/AgentPositionUpdate.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/PheromoneFieldUpdate.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/tools/MathUtil.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numbers

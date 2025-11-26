@@ -13,62 +13,63 @@ TrafficSimulationModel::TrafficSimulationModel(
     const std::vector<std::shared_ptr<jamfree::kernel::agents::VehicleAgent>>
         &vehicles)
     : libs::abstractimpl::AbstractSimulationModel(initialTime),
-      m_network(network), m_vehicles(vehicles) {
+      m_network(network), m_vehicles(vehicles) {}
+
+bool TrafficSimulationModel::isFinalTimeOrAfter(
+    const SimulationTimeStamp &currentTime,
+    const ISimulationEngine &engine) const {
+  // Simple check: if current time >= 10000 (arbitrary end time for now)
+  // In a real simulation, this would be configurable
+  return currentTime.getIdentifier() >= 10000;
+}
+
+std::vector<std::shared_ptr<levels::ILevel>>
+TrafficSimulationModel::generateLevels(const SimulationTimeStamp &initialTime) {
+  std::vector<std::shared_ptr<levels::ILevel>> levels;
 
   // Create the microscopic level
-  m_microscopic_level = std::make_shared<TrafficLevel>(initialTime);
+  m_microscopic_level =
+      std::shared_ptr<TrafficLevel>(new TrafficLevel(initialTime));
+  levels.push_back(m_microscopic_level);
 
-  // Initialize agents in the level
-  // In SIMILAR, agents are usually added to the level via the environment or
-  // directly to the level's state. But here we are setting up the simulation
-  // model which the engine uses.
+  // Store in map for getLevels()
+  m_levels[m_microscopic_level->getIdentifier()] = m_microscopic_level;
 
-  // We need to ensure agents are "in" the level.
-  // VehicleAgent::setPublicLocalState/setPrivateLocalState does this by calling
-  // includeNewLevel. But that requires the agent to be initialized.
+  return levels;
+}
 
-  // For this integration, we assume agents are already configured with their
-  // local states (which they are in the current Python code, mostly). However,
-  // we might need to explicitly register them with the level if the level needs
-  // to know about them. The Level's state (ConsistentPublicLocalDynamicState)
-  // maintains a set of agent public states.
+ISimulationModel::EnvironmentInitializationData
+TrafficSimulationModel::generateEnvironment(
+    const SimulationTimeStamp &initialTime,
+    const std::map<LevelIdentifier, std::shared_ptr<levels::ILevel>> &levels) {
+  // We don't have a separate Environment class yet, so we return empty data
+  // But we need to initialize the level's environment state
+
+  // Note: The engine calls this method. We can use this opportunity to set up
+  // the level's environment state if needed.
 
   auto levelId = m_microscopic_level->getIdentifier();
   auto consistentState = m_microscopic_level->getLastConsistentState();
 
-  // Set environment state (dummy for now, or could wrap RoadNetwork)
-  // We use EmptyLocalStateOfEnvironment for now as RoadNetwork is static/global
-  // in this context
+  // Set environment state (dummy for now)
   consistentState->setPublicLocalStateOfEnvironment(
       std::make_shared<libs::generic::EmptyLocalStateOfEnvironment>(levelId));
 
-  for (const auto &vehicle : m_vehicles) {
-    // Ensure vehicle has this level
-    if (vehicle->hasLevel(levelId)) {
-      auto pubState = vehicle->getPublicLocalState(levelId);
-      // Cast to ILocalStateOfAgent (ILocalState inherits from it? No,
-      // ILocalState IS ILocalStateOfAgent in JamFree?) Let's check Interfaces.h
-      // In JamFree, ILocalState is an alias or inherits.
-      // Actually, in VehicleAgent.h:
-      // std::shared_ptr<ILocalState> getPublicLocalState(...)
-      // And ILocalState is likely jamfree::kernel::agents::ILocalState
-
-      // We need to add it to the level's state.
-      // consistentState->addPublicLocalStateOfAgent(pubState);
-      // But pubState needs to be castable to
-      // microkernel::agents::ILocalStateOfAgent
-    }
-  }
-
-  m_levels[levelId] = m_microscopic_level;
+  // Return empty initialization data (nullptr environment)
+  return EnvironmentInitializationData(nullptr);
 }
 
-std::shared_ptr<environment::IEnvironment>
-TrafficSimulationModel::getEnvironment() const {
-  // We don't have a separate Environment class yet, return nullptr or a dummy
-  // if needed. The engine might not strictly require it if we don't use
-  // environment-based influences.
-  return nullptr;
+ISimulationModel::AgentInitializationData
+TrafficSimulationModel::generateAgents(
+    const SimulationTimeStamp &initialTime,
+    const std::map<LevelIdentifier, std::shared_ptr<levels::ILevel>> &levels) {
+  AgentInitializationData data;
+
+  for (const auto &vehicle : m_vehicles) {
+    data.getAgents().insert(vehicle);
+  }
+
+  return data;
 }
 
 std::map<LevelIdentifier, std::shared_ptr<levels::ILevel>>

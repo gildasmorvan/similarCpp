@@ -1,0 +1,28 @@
+# Code owners for the SIMILAR project
+
+# Global owners
+* @gildasmorvan
+
+# C++ components
+cpp/ @gildasmorvan
+*.cpp @gildasmorvan
+*.hpp @gildasmorvan
+*.h @gildasmorvan
+CMakeLists.txt @gildasmorvan
+
+# Python components
+python/ @gildasmorvan
+setup.py @gildasmorvan
+*.py @gildasmorvan
+
+# Java components
+*.java @gildasmorvan
+pom.xml @gildasmorvan
+
+# Documentation
+docs/ @gildasmorvan
+*.md @gildasmorvan
+README* @gildasmorvan
+
+# CI/CD
+.github/ @gildasmorvan

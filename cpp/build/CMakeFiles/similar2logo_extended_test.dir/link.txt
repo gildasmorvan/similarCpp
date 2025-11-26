@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/similar2logo_extended_test.dir/similar2logo/tests/extended_kernel_tests.cpp.o -o similar2logo_extended_test  libsimilar_extendedkernel.a libsimilar_microkernel.a

@@ -3,8 +3,10 @@
 
 #include "../../../../extendedkernel/include/agents/IAgtDecisionModel.h"
 #include "../../../../extendedkernel/include/agents/IAgtPerceptionModel.h"
+#include "../../../../microkernel/include/AgentCategory.h"
 #include "../../../../microkernel/include/LevelIdentifier.h"
 #include "../../../../microkernel/include/SimulationTimeStamp.h"
+#include "../../../../microkernel/include/agents/IAgent.h"
 #include "../../../../microkernel/include/agents/IGlobalState.h"
 #include "../../../../microkernel/include/agents/ILocalStateOfAgent.h"
 #include "../../../../microkernel/include/agents/IPerceivedData.h"
@@ -17,6 +19,9 @@ namespace kernel {
 namespace agents {
 
 // Use SIMILAR types
+using AgentCategory =
+    fr::univ_artois::lgi2a::similar::microkernel::AgentCategory;
+using IAgent = fr::univ_artois::lgi2a::similar::microkernel::agents::IAgent;
 using LevelIdentifier =
     fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier;
 using SimulationTimeStamp =

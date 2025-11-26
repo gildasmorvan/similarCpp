@@ -1,8 +1,8 @@
 #ifndef EMPTYLOCALSTATEOFENVIRONMENT_H
 #define EMPTYLOCALSTATEOFENVIRONMENT_H
 
-#include "../LevelIdentifier.h"
-#include "../libs/abstractimpl/AbstractLocalStateOfEnvironment.h"
+#include "../../LevelIdentifier.h"
+#include "../../libs/abstractimpl/AbstractLocalStateOfEnvironment.h"
 
 namespace fr {
 namespace univ_artois {
@@ -20,7 +20,8 @@ namespace generic {
  * This local state is used when no information about the environment can be
  * perceived for a specific level.
  */
-class EmptyLocalStateOfEnvironment : public AbstractLocalStateOfEnvironment {
+class EmptyLocalStateOfEnvironment
+    : public abstractimpl::AbstractLocalStateOfEnvironment {
 public:
   /**
    * Builds an empty environment local state for a specific level.

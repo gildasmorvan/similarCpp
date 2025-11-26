@@ -11,6 +11,12 @@ TrafficLevel::TrafficLevel(const SimulationTimeStamp &initialTime)
     : libs::abstractimpl::AbstractLevel(initialTime,
                                         LevelIdentifier("microscopic")) {}
 
+SimulationTimeStamp
+TrafficLevel::getNextTime(const SimulationTimeStamp &currentTime) {
+  // Fixed time step of 1 second for now
+  return SimulationTimeStamp(currentTime.getIdentifier() + 1);
+}
+
 void TrafficLevel::makeRegularReaction(
     const SimulationTimeStamp &transitoryTimeMin,
     const SimulationTimeStamp &transitoryTimeMax,

@@ -44,8 +44,13 @@ void VehicleDecisionModelMicro::decide(
 
   // Delegate to root DMS
   if (m_root_dms) {
-    m_root_dms->decide(timeLowerBound, timeUpperBound, *publicState,
-                       *privateState, *pData, *producedInfluences);
+    // Note: globalState is not available in this context, passing empty
+    // shared_ptr This should be fixed when proper global state management is
+    // implemented
+    auto emptyGlobalState = std::make_shared<kernel::agents::GlobalState>();
+    m_root_dms->manageDecision(timeLowerBound, timeUpperBound, *publicState,
+                               *privateState, *pData, *emptyGlobalState,
+                               *producedInfluences);
   }
 }
 } // namespace decision

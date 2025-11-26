@@ -123,6 +123,7 @@ jamfree/all: jamfree/CMakeFiles/jamfree.dir/all
 jamfree/all: jamfree/CMakeFiles/highway_example.dir/all
 jamfree/all: jamfree/CMakeFiles/lane_changing_example.dir/all
 jamfree/all: jamfree/CMakeFiles/complete_simulation_example.dir/all
+jamfree/all: jamfree/CMakeFiles/highway_simulation.dir/all
 .PHONY : jamfree/all
 
 # Recursive "codegen" directory target.
@@ -130,6 +131,7 @@ jamfree/codegen: jamfree/CMakeFiles/jamfree.dir/codegen
 jamfree/codegen: jamfree/CMakeFiles/highway_example.dir/codegen
 jamfree/codegen: jamfree/CMakeFiles/lane_changing_example.dir/codegen
 jamfree/codegen: jamfree/CMakeFiles/complete_simulation_example.dir/codegen
+jamfree/codegen: jamfree/CMakeFiles/highway_simulation.dir/codegen
 .PHONY : jamfree/codegen
 
 # Recursive "preinstall" directory target.
@@ -141,6 +143,7 @@ jamfree/clean: jamfree/CMakeFiles/jamfree.dir/clean
 jamfree/clean: jamfree/CMakeFiles/highway_example.dir/clean
 jamfree/clean: jamfree/CMakeFiles/lane_changing_example.dir/clean
 jamfree/clean: jamfree/CMakeFiles/complete_simulation_example.dir/clean
+jamfree/clean: jamfree/CMakeFiles/highway_simulation.dir/clean
 .PHONY : jamfree/clean
 
 #=============================================================================
@@ -169,7 +172,7 @@ similar2logo/python/clean: similar2logo/python/CMakeFiles/_core.dir/clean
 CMakeFiles/similar_microkernel.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_microkernel.dir/build.make CMakeFiles/similar_microkernel.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_microkernel.dir/build.make CMakeFiles/similar_microkernel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=75,76,77,78,79,80,81 "Built target similar_microkernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=77,78,79,80,81,82,83 "Built target similar_microkernel"
 .PHONY : CMakeFiles/similar_microkernel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,7 +189,7 @@ similar_microkernel: CMakeFiles/similar_microkernel.dir/rule
 # codegen rule for target.
 CMakeFiles/similar_microkernel.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_microkernel.dir/build.make CMakeFiles/similar_microkernel.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=75,76,77,78,79,80,81 "Finished codegen for target similar_microkernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=77,78,79,80,81,82,83 "Finished codegen for target similar_microkernel"
 .PHONY : CMakeFiles/similar_microkernel.dir/codegen
 
 # clean rule for target.
@@ -201,7 +204,7 @@ CMakeFiles/similar_microkernel.dir/clean:
 CMakeFiles/similar_extendedkernel.dir/all: CMakeFiles/similar_microkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_extendedkernel.dir/build.make CMakeFiles/similar_extendedkernel.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_extendedkernel.dir/build.make CMakeFiles/similar_extendedkernel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Built target similar_extendedkernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target similar_extendedkernel"
 .PHONY : CMakeFiles/similar_extendedkernel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -218,7 +221,7 @@ similar_extendedkernel: CMakeFiles/similar_extendedkernel.dir/rule
 # codegen rule for target.
 CMakeFiles/similar_extendedkernel.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_extendedkernel.dir/build.make CMakeFiles/similar_extendedkernel.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Finished codegen for target similar_extendedkernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Finished codegen for target similar_extendedkernel"
 .PHONY : CMakeFiles/similar_extendedkernel.dir/codegen
 
 # clean rule for target.
@@ -233,7 +236,7 @@ CMakeFiles/similar_extendedkernel.dir/clean:
 CMakeFiles/similar2logo.dir/all: CMakeFiles/similar_microkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar2logo.dir/build.make CMakeFiles/similar2logo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar2logo.dir/build.make CMakeFiles/similar2logo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Built target similar2logo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58 "Built target similar2logo"
 .PHONY : CMakeFiles/similar2logo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -250,7 +253,7 @@ similar2logo: CMakeFiles/similar2logo.dir/rule
 # codegen rule for target.
 CMakeFiles/similar2logo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar2logo.dir/build.make CMakeFiles/similar2logo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56 "Finished codegen for target similar2logo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58 "Finished codegen for target similar2logo"
 .PHONY : CMakeFiles/similar2logo.dir/codegen
 
 # clean rule for target.
@@ -266,7 +269,7 @@ CMakeFiles/similar_example.dir/all: CMakeFiles/similar_microkernel.dir/all
 CMakeFiles/similar_example.dir/all: CMakeFiles/similar_extendedkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_example.dir/build.make CMakeFiles/similar_example.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_example.dir/build.make CMakeFiles/similar_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=59,60 "Built target similar_example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=61,62 "Built target similar_example"
 .PHONY : CMakeFiles/similar_example.dir/all
 
 # Build rule for subdir invocation for target.
@@ -283,7 +286,7 @@ similar_example: CMakeFiles/similar_example.dir/rule
 # codegen rule for target.
 CMakeFiles/similar_example.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar_example.dir/build.make CMakeFiles/similar_example.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=59,60 "Finished codegen for target similar_example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=61,62 "Finished codegen for target similar_example"
 .PHONY : CMakeFiles/similar_example.dir/codegen
 
 # clean rule for target.
@@ -299,7 +302,7 @@ CMakeFiles/predator_prey.dir/all: CMakeFiles/similar_microkernel.dir/all
 CMakeFiles/predator_prey.dir/all: CMakeFiles/similar_extendedkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/predator_prey.dir/build.make CMakeFiles/predator_prey.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/predator_prey.dir/build.make CMakeFiles/predator_prey.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=35,36 "Built target predator_prey"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=37,38 "Built target predator_prey"
 .PHONY : CMakeFiles/predator_prey.dir/all
 
 # Build rule for subdir invocation for target.
@@ -316,7 +319,7 @@ predator_prey: CMakeFiles/predator_prey.dir/rule
 # codegen rule for target.
 CMakeFiles/predator_prey.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/predator_prey.dir/build.make CMakeFiles/predator_prey.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=35,36 "Finished codegen for target predator_prey"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=37,38 "Finished codegen for target predator_prey"
 .PHONY : CMakeFiles/predator_prey.dir/codegen
 
 # clean rule for target.
@@ -332,7 +335,7 @@ CMakeFiles/improved_ecosystem.dir/all: CMakeFiles/similar_microkernel.dir/all
 CMakeFiles/improved_ecosystem.dir/all: CMakeFiles/similar_extendedkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/improved_ecosystem.dir/build.make CMakeFiles/improved_ecosystem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/improved_ecosystem.dir/build.make CMakeFiles/improved_ecosystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=19,20 "Built target improved_ecosystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=21,22 "Built target improved_ecosystem"
 .PHONY : CMakeFiles/improved_ecosystem.dir/all
 
 # Build rule for subdir invocation for target.
@@ -349,7 +352,7 @@ improved_ecosystem: CMakeFiles/improved_ecosystem.dir/rule
 # codegen rule for target.
 CMakeFiles/improved_ecosystem.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/improved_ecosystem.dir/build.make CMakeFiles/improved_ecosystem.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=19,20 "Finished codegen for target improved_ecosystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=21,22 "Finished codegen for target improved_ecosystem"
 .PHONY : CMakeFiles/improved_ecosystem.dir/codegen
 
 # clean rule for target.
@@ -398,7 +401,7 @@ CMakeFiles/random_demo.dir/all: CMakeFiles/similar_microkernel.dir/all
 CMakeFiles/random_demo.dir/all: CMakeFiles/similar_extendedkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_demo.dir/build.make CMakeFiles/random_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_demo.dir/build.make CMakeFiles/random_demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=37,38 "Built target random_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=39,40 "Built target random_demo"
 .PHONY : CMakeFiles/random_demo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -415,7 +418,7 @@ random_demo: CMakeFiles/random_demo.dir/rule
 # codegen rule for target.
 CMakeFiles/random_demo.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_demo.dir/build.make CMakeFiles/random_demo.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=37,38 "Finished codegen for target random_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=39,40 "Finished codegen for target random_demo"
 .PHONY : CMakeFiles/random_demo.dir/codegen
 
 # clean rule for target.
@@ -431,7 +434,7 @@ CMakeFiles/web_predator_prey.dir/all: CMakeFiles/similar_microkernel.dir/all
 CMakeFiles/web_predator_prey.dir/all: CMakeFiles/similar_extendedkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/web_predator_prey.dir/build.make CMakeFiles/web_predator_prey.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/web_predator_prey.dir/build.make CMakeFiles/web_predator_prey.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=82,83 "Built target web_predator_prey"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=84,85 "Built target web_predator_prey"
 .PHONY : CMakeFiles/web_predator_prey.dir/all
 
 # Build rule for subdir invocation for target.
@@ -448,7 +451,7 @@ web_predator_prey: CMakeFiles/web_predator_prey.dir/rule
 # codegen rule for target.
 CMakeFiles/web_predator_prey.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/web_predator_prey.dir/build.make CMakeFiles/web_predator_prey.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=82,83 "Finished codegen for target web_predator_prey"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=84,85 "Finished codegen for target web_predator_prey"
 .PHONY : CMakeFiles/web_predator_prey.dir/codegen
 
 # clean rule for target.
@@ -463,7 +466,7 @@ CMakeFiles/web_predator_prey.dir/clean:
 CMakeFiles/minimal_web_server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_web_server.dir/build.make CMakeFiles/minimal_web_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_web_server.dir/build.make CMakeFiles/minimal_web_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=33,34 "Built target minimal_web_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=35,36 "Built target minimal_web_server"
 .PHONY : CMakeFiles/minimal_web_server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -480,7 +483,7 @@ minimal_web_server: CMakeFiles/minimal_web_server.dir/rule
 # codegen rule for target.
 CMakeFiles/minimal_web_server.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/minimal_web_server.dir/build.make CMakeFiles/minimal_web_server.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=33,34 "Finished codegen for target minimal_web_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=35,36 "Finished codegen for target minimal_web_server"
 .PHONY : CMakeFiles/minimal_web_server.dir/codegen
 
 # clean rule for target.
@@ -496,7 +499,7 @@ CMakeFiles/similar2logo_influences_test.dir/all: CMakeFiles/similar_microkernel.
 CMakeFiles/similar2logo_influences_test.dir/all: CMakeFiles/similar2logo.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar2logo_influences_test.dir/build.make CMakeFiles/similar2logo_influences_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar2logo_influences_test.dir/build.make CMakeFiles/similar2logo_influences_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=57,58 "Built target similar2logo_influences_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=59,60 "Built target similar2logo_influences_test"
 .PHONY : CMakeFiles/similar2logo_influences_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -513,7 +516,7 @@ similar2logo_influences_test: CMakeFiles/similar2logo_influences_test.dir/rule
 # codegen rule for target.
 CMakeFiles/similar2logo_influences_test.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/similar2logo_influences_test.dir/build.make CMakeFiles/similar2logo_influences_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=57,58 "Finished codegen for target similar2logo_influences_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=59,60 "Finished codegen for target similar2logo_influences_test"
 .PHONY : CMakeFiles/similar2logo_influences_test.dir/codegen
 
 # clean rule for target.
@@ -561,7 +564,7 @@ jamfree/CMakeFiles/jamfree.dir/all: CMakeFiles/similar_microkernel.dir/all
 jamfree/CMakeFiles/jamfree.dir/all: CMakeFiles/similar_extendedkernel.dir/all
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/depend
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30 "Built target jamfree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Built target jamfree"
 .PHONY : jamfree/CMakeFiles/jamfree.dir/all
 
 # Build rule for subdir invocation for target.
@@ -578,7 +581,7 @@ jamfree: jamfree/CMakeFiles/jamfree.dir/rule
 # codegen rule for target.
 jamfree/CMakeFiles/jamfree.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30 "Finished codegen for target jamfree"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32 "Finished codegen for target jamfree"
 .PHONY : jamfree/CMakeFiles/jamfree.dir/codegen
 
 # clean rule for target.
@@ -629,7 +632,7 @@ jamfree/CMakeFiles/lane_changing_example.dir/all: CMakeFiles/similar_extendedker
 jamfree/CMakeFiles/lane_changing_example.dir/all: jamfree/CMakeFiles/jamfree.dir/all
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/lane_changing_example.dir/build.make jamfree/CMakeFiles/lane_changing_example.dir/depend
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/lane_changing_example.dir/build.make jamfree/CMakeFiles/lane_changing_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=31,32 "Built target lane_changing_example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=33,34 "Built target lane_changing_example"
 .PHONY : jamfree/CMakeFiles/lane_changing_example.dir/all
 
 # Build rule for subdir invocation for target.
@@ -646,7 +649,7 @@ lane_changing_example: jamfree/CMakeFiles/lane_changing_example.dir/rule
 # codegen rule for target.
 jamfree/CMakeFiles/lane_changing_example.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/lane_changing_example.dir/build.make jamfree/CMakeFiles/lane_changing_example.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=31,32 "Finished codegen for target lane_changing_example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=33,34 "Finished codegen for target lane_changing_example"
 .PHONY : jamfree/CMakeFiles/lane_changing_example.dir/codegen
 
 # clean rule for target.
@@ -687,6 +690,40 @@ jamfree/CMakeFiles/complete_simulation_example.dir/codegen:
 jamfree/CMakeFiles/complete_simulation_example.dir/clean:
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/complete_simulation_example.dir/build.make jamfree/CMakeFiles/complete_simulation_example.dir/clean
 .PHONY : jamfree/CMakeFiles/complete_simulation_example.dir/clean
+
+#=============================================================================
+# Target rules for target jamfree/CMakeFiles/highway_simulation.dir
+
+# All Build rule for target.
+jamfree/CMakeFiles/highway_simulation.dir/all: CMakeFiles/similar_microkernel.dir/all
+jamfree/CMakeFiles/highway_simulation.dir/all: CMakeFiles/similar_extendedkernel.dir/all
+jamfree/CMakeFiles/highway_simulation.dir/all: jamfree/CMakeFiles/jamfree.dir/all
+	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/depend
+	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=19,20 "Built target highway_simulation"
+.PHONY : jamfree/CMakeFiles/highway_simulation.dir/all
+
+# Build rule for subdir invocation for target.
+jamfree/CMakeFiles/highway_simulation.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morvan/Antigravity/similar/cpp/build/CMakeFiles 33
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 jamfree/CMakeFiles/highway_simulation.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/morvan/Antigravity/similar/cpp/build/CMakeFiles 0
+.PHONY : jamfree/CMakeFiles/highway_simulation.dir/rule
+
+# Convenience name for target.
+highway_simulation: jamfree/CMakeFiles/highway_simulation.dir/rule
+.PHONY : highway_simulation
+
+# codegen rule for target.
+jamfree/CMakeFiles/highway_simulation.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=19,20 "Finished codegen for target highway_simulation"
+.PHONY : jamfree/CMakeFiles/highway_simulation.dir/codegen
+
+# clean rule for target.
+jamfree/CMakeFiles/highway_simulation.dir/clean:
+	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/clean
+.PHONY : jamfree/CMakeFiles/highway_simulation.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

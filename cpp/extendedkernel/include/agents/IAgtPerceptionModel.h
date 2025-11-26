@@ -1,11 +1,11 @@
 #ifndef IAGTPERCEPTIONMODEL_H
 #define IAGTPERCEPTIONMODEL_H
 
-#include "../../microkernel/include/LevelIdentifier.h"
-#include "../../microkernel/include/SimulationTimeStamp.h"
-#include "../../microkernel/include/agents/ILocalStateOfAgent.h"
-#include "../../microkernel/include/agents/IPerceivedData.h"
-#include "../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h"
+#include "../../../microkernel/include/LevelIdentifier.h"
+#include "../../../microkernel/include/SimulationTimeStamp.h"
+#include "../../../microkernel/include/agents/ILocalStateOfAgent.h"
+#include "../../../microkernel/include/agents/IPerceivedData.h"
+#include "../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h"
 #include <map>
 #include <memory>
 

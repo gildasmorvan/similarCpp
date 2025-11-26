@@ -1,4 +1,4 @@
-#include "../include/decision/dms/SubsumptionDMS.h"
+#include "../../../include/decision/dms/SubsumptionDMS.h"
 
 namespace jamfree {
 namespace microscopic {

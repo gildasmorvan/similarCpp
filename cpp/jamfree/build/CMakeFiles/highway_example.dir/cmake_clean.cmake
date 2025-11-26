@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/highway_example.dir/examples/highway_example.cpp.o"
   "CMakeFiles/highway_example.dir/examples/highway_example.cpp.o.d"
-  "CMakeFiles/highway_example.dir/kernel/src/model/Lane.cpp.o"
-  "CMakeFiles/highway_example.dir/kernel/src/model/Lane.cpp.o.d"
   "bin/highway_example"
   "bin/highway_example.pdb"
 )

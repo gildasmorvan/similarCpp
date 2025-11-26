@@ -1,5 +1,5 @@
-#include "../include/decision/dms/LaneChangeDMS.h"
-#include "../include/influences/ChangeLane.h"
+#include "../../../include/decision/dms/LaneChangeDMS.h"
+#include "../../../include/influences/ChangeLane.h"
 #include <limits>
 
 namespace jamfree {

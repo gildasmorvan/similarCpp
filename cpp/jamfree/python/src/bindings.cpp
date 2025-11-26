@@ -34,6 +34,10 @@ using namespace jamfree::macroscopic::models;
 using namespace jamfree::realdata::osm;
 using namespace jamfree::hybrid;
 
+#include "../../../microkernel/include/engine/MultiThreadedSimulationEngine.h"
+#include "../../../microkernel/include/engine/SequentialSimulationEngine.h"
+#include "../../kernel/include/simulation/TrafficSimulationModel.h"
+
 PYBIND11_MODULE(_jamfree, m) {
   m.doc() = "JamFree: Traffic simulation library with microscopic models";
 
@@ -567,4 +571,52 @@ PYBIND11_MODULE(_jamfree, m) {
   m.def(
       "ms_to_kmh", [](double ms) { return ms * 3.6; }, py::arg("ms"),
       "Convert m/s to km/h");
+
+  // ========================================================================
+  // Multithreaded Simulation Engine
+  // ========================================================================
+
+  using namespace fr::univ_artois::lgi2a::similar::microkernel;
+  using namespace fr::univ_artois::lgi2a::similar::microkernel::engine;
+  using namespace jamfree::kernel::simulation;
+
+  py::class_<ISimulationEngine>(m, "ISimulationEngine");
+
+  py::class_<MultiThreadedSimulationEngine, ISimulationEngine>(
+      m, "MultithreadedSimulationEngine")
+      .def(py::init<int>(), py::arg("num_threads") = 0,
+           "Create multithreaded simulation engine")
+      .def("run_new_schedule", &MultiThreadedSimulationEngine::runNewSchedule,
+           py::arg("initial_time"), py::arg("final_time"),
+           "Run simulation schedule")
+      .def("add_probe", &MultiThreadedSimulationEngine::addProbe,
+           py::arg("probe_name"), py::arg("probe"),
+           "Add a probe to the engine");
+
+  // ========================================================================
+  // Traffic Simulation Model
+  // ========================================================================
+
+  py::class_<ISimulationModel, std::shared_ptr<ISimulationModel>>(
+      m, "ISimulationModel");
+
+  py::class_<TrafficSimulationModel, ISimulationModel,
+             std::shared_ptr<TrafficSimulationModel>>(m,
+                                                      "TrafficSimulationModel")
+      .def(py::init<const SimulationTimeStamp &, std::shared_ptr<RoadNetwork>,
+                    const std::vector<std::shared_ptr<
+                        jamfree::kernel::agents::VehicleAgent>> &>(),
+           py::arg("initial_time"), py::arg("network"), py::arg("vehicles"),
+           "Create traffic simulation model");
+
+  // ========================================================================
+  // Simulation Time Stamp
+  // ========================================================================
+  py::class_<SimulationTimeStamp>(m, "SimulationTimeStamp")
+      .def(py::init<long>(), py::arg("identifier"), "Create time stamp")
+      .def("get_identifier", &SimulationTimeStamp::getIdentifier,
+           "Get identifier")
+      .def("__repr__", [](const SimulationTimeStamp &t) {
+        return "SimulationTimeStamp(" + std::to_string(t.getIdentifier()) + ")";
+      });
 }

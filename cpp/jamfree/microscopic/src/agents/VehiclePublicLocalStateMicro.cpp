@@ -1,34 +1,46 @@
-#include "../include/agents/VehiclePublicLocalStateMicro.h"
+#include "../../include/agents/VehiclePublicLocalStateMicro.h"
+#include "../../../../microkernel/include/AgentCategory.h"
+#include "../../../kernel/include/agents/VehicleAgent.h"
 
 namespace jamfree {
 namespace microscopic {
 namespace agents {
 
-VehiclePublicLocalStateMicro::VehiclePublicLocalStateMicro()
-    : m_position(0, 0), m_heading(0.0), m_speed(0.0), m_acceleration(0.0),
-      m_current_lane(nullptr), m_lane_position(0.0), m_lane_index(0),
-      m_length(5.0), // Default car length
-      m_width(2.0),  // Default car width
-      m_height(1.5), // Default car height
-      m_active(true) {}
+VehiclePublicLocalStateMicro::VehiclePublicLocalStateMicro(
+    const std::string &ownerId)
+    : m_ownerId(ownerId), m_heading(0), m_speed(0), m_acceleration(0),
+      m_current_lane(nullptr), m_lane_position(0), m_lane_index(0), m_length(0),
+      m_width(0), m_height(0), m_active(true) {}
 
 std::shared_ptr<kernel::agents::ILocalState>
 VehiclePublicLocalStateMicro::clone() const {
-  auto cloned = std::make_shared<VehiclePublicLocalStateMicro>();
-
-  cloned->m_position = m_position;
-  cloned->m_heading = m_heading;
-  cloned->m_speed = m_speed;
-  cloned->m_acceleration = m_acceleration;
-  cloned->m_current_lane = m_current_lane;
-  cloned->m_lane_position = m_lane_position;
-  cloned->m_lane_index = m_lane_index;
-  cloned->m_length = m_length;
-  cloned->m_width = m_width;
-  cloned->m_height = m_height;
-  cloned->m_active = m_active;
-
+  auto cloned = std::make_shared<VehiclePublicLocalStateMicro>(m_ownerId);
+  cloned->setPosition(m_position);
+  cloned->setHeading(m_heading);
+  cloned->setSpeed(m_speed);
+  cloned->setAcceleration(m_acceleration);
+  cloned->setCurrentLane(m_current_lane);
+  cloned->setLanePosition(m_lane_position);
+  cloned->setLaneIndex(m_lane_index);
+  cloned->setLength(m_length);
+  cloned->setWidth(m_width);
+  cloned->setHeight(m_height);
+  cloned->setActive(m_active);
   return cloned;
+}
+
+kernel::AgentCategory VehiclePublicLocalStateMicro::getCategoryOfAgent() const {
+  return kernel::AgentCategory("Vehicle");
+}
+
+bool VehiclePublicLocalStateMicro::isOwnedBy(
+    const kernel::agents::IAgent &agent) const {
+  const auto *vehicleAgent =
+      dynamic_cast<const kernel::agents::VehicleAgent *>(&agent);
+  if (vehicleAgent) {
+    return vehicleAgent->getId() == m_ownerId;
+  }
+  return false;
 }
 
 } // namespace agents

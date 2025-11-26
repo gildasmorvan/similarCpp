@@ -57,7 +57,8 @@ int main() {
     auto vehicle = std::make_shared<agents::VehicleAgent>(vehicleId);
 
     // Create public state (visible to all)
-    auto publicState = std::make_shared<agents::VehiclePublicLocalStateMicro>();
+    auto publicState =
+        std::make_shared<agents::VehiclePublicLocalStateMicro>(vehicleId);
     publicState->setCurrentLane(highway->getLane(i % 3).get());
     publicState->setLaneIndex(i % 3);
     publicState->setLanePosition(i * 50.0);  // Stagger vehicles
@@ -67,7 +68,7 @@ int main() {
 
     // Create private state (agent-specific)
     auto privateState =
-        std::make_shared<agents::VehiclePrivateLocalStateMicro>();
+        std::make_shared<agents::VehiclePrivateLocalStateMicro>(vehicleId);
     privateState->setDesiredSpeed(30.0 + (i * 2.0)); // Desired speed
     privateState->setTimeHeadway(1.5);
     privateState->setMinGap(2.0);

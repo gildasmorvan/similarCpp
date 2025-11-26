@@ -23,7 +23,7 @@ try:
     import jamfree as jf
 except ImportError:
     print("Error: jamfree module not found. Please build the C++ extension first.")
-    print("Run: cd /Users/morvan/Antigravity/similar/cpp/jamfree && ./build_python.sh")
+    print("Run: cd ../.. && ./build_python.sh")
     sys.exit(1)
 
 

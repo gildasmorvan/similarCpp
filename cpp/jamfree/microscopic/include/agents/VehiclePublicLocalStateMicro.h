@@ -20,14 +20,25 @@ class VehiclePublicLocalStateMicro : public kernel::agents::ILocalState {
 public:
   /**
    * @brief Constructor.
+   * @param ownerId The identifier of the agent owning this state.
    */
-  VehiclePublicLocalStateMicro();
+  explicit VehiclePublicLocalStateMicro(const std::string &ownerId);
 
   /**
    * @brief Clone this state.
    * @return Cloned state
    */
   std::shared_ptr<kernel::agents::ILocalState> clone() const override;
+
+  /**
+   * @brief Gets the category of the agent owning this local state.
+   */
+  kernel::AgentCategory getCategoryOfAgent() const override;
+
+  /**
+   * @brief Checks if an agent is the owner of a local state.
+   */
+  bool isOwnedBy(const kernel::agents::IAgent &agent) const override;
 
   // Position and orientation
   const kernel::model::Point2D &getPosition() const { return m_position; }
@@ -70,6 +81,8 @@ public:
   void setActive(bool active) { m_active = active; }
 
 private:
+  std::string m_ownerId;
+
   // Position and orientation
   kernel::model::Point2D m_position;
   double m_heading; // radians

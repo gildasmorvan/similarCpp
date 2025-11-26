@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/jamfree
+CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/jamfree -I/Users/morvan/Antigravity/similar/cpp/jamfree/../microkernel/include -I/Users/morvan/Antigravity/similar/cpp/jamfree/../extendedkernel/include
 
 CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++17 -arch arm64
 

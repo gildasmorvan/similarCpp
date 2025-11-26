@@ -8,12 +8,17 @@ This provides a web interface for:
 - Accessing real traffic data sources
 """
 
-from flask import Flask, render_template, jsonify, request, send_from_directory
+from flask import Flask, render_template, jsonify, request, send_from_directory, send_file
 from flask_cors import CORS
+from flask_socketio import SocketIO, emit
 import json
+import csv
+import io
 import os
 from pathlib import Path
 import math
+import threading
+import time
 from routing import RoutingEngine
 
 # Try to import jamfree (may not be built yet)
@@ -26,6 +31,9 @@ except ImportError:
 
 app = Flask(__name__)
 CORS(app)
+
+# Initialize SocketIO for WebSocket support
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
 
 # Configuration
 UPLOAD_FOLDER = Path('uploads')
@@ -60,6 +68,9 @@ simulation_state = {
         'speedup_factor': 1.0,
     }
 }
+
+# Track vehicle history for export
+vehicle_history = []
 
 @app.route('/')
 def index():
@@ -343,6 +354,52 @@ def get_traffic_data():
         'message': f'Mock data - source {source} not configured or unknown'
     })
 
+@app.route('/api/export/csv', methods=['GET'])
+def export_csv():
+    """Export simulation data as CSV."""
+    output = io.StringIO()
+    writer = csv.writer(output)
+    
+    # Header
+    writer.writerow(['step', 'vehicle_id', 'lat', 'lon', 'speed', 'lane_id'])
+    
+    # Data
+    for record in vehicle_history:
+        writer.writerow([
+            record['step'],
+            record['vehicle_id'],
+            record['lat'],
+            record['lon'],
+            record['speed'],
+            record['lane_id']
+        ])
+    
+    # Create file
+    output.seek(0)
+    return send_file(
+        io.BytesIO(output.getvalue().encode()),
+        mimetype='text/csv',
+        as_attachment=True,
+        download_name='jamfree_simulation.csv'
+    )
+
+@app.route('/api/export/json', methods=['GET'])
+def export_json():
+    """Export simulation data as JSON."""
+    data = {
+        'config': simulation_state['config'],
+        'total_steps': simulation_state['step'],
+        'vehicle_history': vehicle_history,
+        'performance_stats': simulation_state['performance_stats']
+    }
+    
+    return send_file(
+        io.BytesIO(json.dumps(data, indent=2).encode()),
+        mimetype='application/json',
+        as_attachment=True,
+        download_name='jamfree_simulation.json'
+    )
+
 def build_road_graph(network):
     """Build adjacency graph for roads."""
     graph = {}
@@ -394,9 +451,13 @@ def start_simulation():
     if simulation_state['network'] is None:
         return jsonify({'error': 'No network loaded'}), 400
     
-    simulation_state['running'] = True
+    # simulation_state['running'] = True  <-- MOVED TO END
     simulation_state['step'] = 0
     simulation_state['vehicles'] = []
+    
+    # Clear history on start
+    global vehicle_history
+    vehicle_history = []
     
     # Build road graph for routing
     print("Building road graph...")
@@ -444,7 +505,9 @@ def start_simulation():
         simulation_state['spatial_index'] = None # Indicate not in use
     
     # Initialize Adaptive Hybrid Simulator if enabled
-    use_adaptive = simulation_state['config'].get('use_adaptive_hybrid', True)
+    # NOTE: Currently disabled by default due to vehicle tracking issues in C++ AdaptiveSimulator
+    # The simulator incorrectly reports 0 vehicles on lanes, causing all lanes to transition to microscopic with 0 density
+    use_adaptive = simulation_state['config'].get('use_adaptive_hybrid', False)
     adaptive_threshold = simulation_state['config'].get('adaptive_threshold', 50)
     
     if use_adaptive and hasattr(jamfree, 'AdaptiveSimulator'):
@@ -464,34 +527,19 @@ def start_simulation():
         # Create simulator
         simulation_state['adaptive_simulator'] = jamfree.AdaptiveSimulator(adaptive_config)
         
-        # Register all lanes with specific modes based on geometry
-        micro_count = 0
-        macro_count = 0
-        
+        # Register all lanes - let adaptive simulator determine modes after vehicles are spawned
         for road in network.roads:
             length = road.get_length()
             # Threshold for short lanes/crossings (e.g. 100m)
-            is_short = length < 100.0 
+            is_critical = length < 100.0 
             
             for lane_idx in range(road.get_num_lanes()):
                 lane = road.get_lane(lane_idx)
-                lane_id = lane.get_id()
                 
-                # Register lane (is_critical=True for short lanes)
-                simulation_state['adaptive_simulator'].register_lane(lane, is_short)
-                
-                if is_short:
-                    # Force microscopic for short lanes and crossings
-                    simulation_state['adaptive_simulator'].force_microscopic(lane_id)
-                    micro_count += 1
-                else:
-                    # Force macroscopic for long lanes
-                    simulation_state['adaptive_simulator'].force_macroscopic(lane_id)
-                    macro_count += 1
+                # Register lane (is_critical=True for short lanes/intersections)
+                simulation_state['adaptive_simulator'].register_lane(lane, is_critical)
                     
-        print(f"    Mode assignment: {micro_count} Micro (short/crossing), {macro_count} Macro (long)")
-        
-        print(f"    Registered {sum(r.get_num_lanes() for r in network.roads)} lanes")
+        print(f"    Registered {sum(r.get_num_lanes() for r in network.roads)} lanes (adaptive mode will be determined after vehicle spawning)")
         print(f"    Threshold: {adaptive_threshold} vehicles per lane")
     else:
         simulation_state['adaptive_simulator'] = None
@@ -578,6 +626,18 @@ def start_simulation():
             count += 1
     
     print(f"Initialized {count} vehicles")
+    
+    # Verify vehicles on lanes
+    total_on_lanes = 0
+    for road in network.roads:
+        for i in range(road.get_num_lanes()):
+            lane = road.get_lane(i)
+            total_on_lanes += len(lane.get_vehicles())
+    print(f"Total vehicles on lanes: {total_on_lanes}")
+    
+    # Start simulation now that everything is ready
+    simulation_state['running'] = True
+    
     return jsonify({'status': 'started', 'vehicle_count': len(simulation_state['vehicles'])})
 
 @app.route('/api/simulation/stop', methods=['POST'])
@@ -1052,6 +1112,319 @@ def list_data_sources():
     
     return jsonify({'sources': sources})
 
+# ============================================================================
+# WebSocket Event Handlers for Real-time Updates
+# ============================================================================
+
+# Global variables for WebSocket simulation control
+ws_simulation_running = False
+ws_simulation_thread = None
+
+def simulation_background_task():
+    """Background thread that runs simulation and emits WebSocket updates."""
+    global ws_simulation_running
+    
+    step_delay = 0.033  # ~30 FPS
+    
+    while ws_simulation_running:
+        if simulation_state['running']:
+            try:
+                # Execute simulation step
+                step_data = execute_simulation_step()
+                
+                # Record vehicle positions for export
+                for v_data in step_data['vehicles']:
+                    vehicle_history.append({
+                        'step': step_data['step'],
+                        'vehicle_id': v_data['id'],
+                        'lat': v_data['lat'],
+                        'lon': v_data['lon'],
+                        'speed': v_data['speed'],
+                        'lane_id': v_data['lane_id']
+                    })
+                
+                # Broadcast to all connected clients
+                socketio.emit('simulation_update', step_data, namespace='/simulation')
+                
+            except Exception as e:
+                print(f"Error in simulation step: {e}")
+                socketio.emit('error', {'message': str(e)}, namespace='/simulation')
+        
+        # Control update rate
+        # Base delay is 33ms (30 FPS)
+        # Adjust based on playback speed: higher speed = lower delay
+        speed = simulation_state.get('playback_speed', 1.0)
+        if speed <= 0:
+            speed = 0.1 # Prevent division by zero
+            
+        # Limit max speed to avoid CPU saturation (e.g. 5x)
+        speed = min(speed, 5.0)
+        
+        time.sleep(step_delay / speed)
+
+def execute_simulation_step():
+    """Execute one simulation step and return data for visualization."""
+    if not simulation_state['running']:
+        return {'error': 'Simulation not running'}
+    
+    import time
+    step_start = time.time()
+    
+    dt = 0.1  # 100ms time step
+    vehicles_data = []
+    
+    default_idm = simulation_state['models']['default_idm']
+    vehicle_models = simulation_state.get('vehicle_models', {})
+    vehicle_routes = simulation_state.get('vehicle_routes', {})
+    routing_engine = simulation_state.get('routing_engine')
+    spatial_indices = simulation_state.get('spatial_index', {})
+    
+    # Pre-compute network center for coordinate conversion
+    network = simulation_state['network']
+    center_lat = (network.min_lat + network.max_lat) / 2.0
+    center_lon = (network.min_lon + network.max_lon) / 2.0
+    
+    # Update spatial indices if enabled
+    if spatial_indices:
+        for lane_id, index in spatial_indices.items():
+            index.update()
+    
+    # Check if using Adaptive Hybrid Simulator
+    adaptive_sim = simulation_state.get('adaptive_simulator')
+    num_vehicles = len(simulation_state['vehicles'])
+    
+    if adaptive_sim:
+        # CRITICAL: AdaptiveSimulator needs to see vehicles through lane.get_vehicles()
+        # Make sure all vehicles are properly on their lanes before calling update()
+        
+        # The AdaptiveSimulator.update() call will:
+        # 1. Check vehicle counts on each lane via lane.get_vehicles()
+        # 2. Decide whether to use micro or macro mode
+        # 3. Update vehicles accordingly
+        
+        # Use Adaptive Hybrid Simulator
+        adaptive_sim.update(dt, default_idm)
+        
+        # Get statistics
+        stats = adaptive_sim.get_statistics()
+        simulation_state['performance_stats']['micro_lanes'] = stats.micro_lanes
+        simulation_state['performance_stats']['macro_lanes'] = stats.macro_lanes
+        simulation_state['performance_stats']['speedup_factor'] = stats.speedup_factor
+    else:
+        # Non-adaptive: update all vehicles individually
+        for vehicle in simulation_state['vehicles']:
+            try:
+                lane = vehicle.get_current_lane()
+                if not lane:
+                    continue
+                
+                # Get leader using spatial index if available
+                if spatial_indices and lane.get_id() in spatial_indices:
+                    leader = spatial_indices[lane.get_id()].find_leader(vehicle)
+                else:
+                    leader = lane.get_leader(vehicle)
+                
+                # Get vehicle-specific IDM or use default
+                v_id = vehicle.get_id()
+                idm = vehicle_models.get(v_id, default_idm)
+                
+                # Calculate acceleration
+                acc = idm.calculate_acceleration(vehicle, leader)
+                
+                # Update vehicle state
+                vehicle.update(dt, acc)
+            except Exception as e:
+                print(f"Error updating vehicle: {e}")
+        
+    # Handle road transitions and routing (for both adaptive and non-adaptive)
+    for vehicle in simulation_state['vehicles']:
+        try:
+            lane = vehicle.get_current_lane()
+            if lane and vehicle.get_lane_position() > lane.get_length():
+                v_id = vehicle.get_id()
+                route_info = vehicle_routes.get(v_id)
+                
+                if route_info and routing_engine:
+                    path = route_info['path']
+                    current_idx = route_info['current_index']
+                    
+                    if current_idx + 1 < len(path):
+                        next_road_id = path[current_idx + 1]
+                        next_road = routing_engine.roads.get(next_road_id)
+                        
+                        if next_road:
+                            next_lane_idx = min(lane.get_index(), next_road.get_num_lanes() - 1)
+                            next_lane = next_road.get_lane(next_lane_idx)
+                            
+                            lane.remove_vehicle(vehicle)
+                            next_lane.add_vehicle(vehicle)
+                            vehicle.set_current_lane(next_lane)
+                            vehicle.set_lane_position(0)
+                            
+                            route_info['current_index'] += 1
+                            
+                            if v_id in vehicle_models:
+                                vehicle_models[v_id].set_desired_speed(next_lane.get_speed_limit())
+                    else:
+                        # Respawn with new route
+                        start_road_id, end_road_id = routing_engine.get_random_od()
+                        if start_road_id:
+                            new_path = routing_engine.get_shortest_path(start_road_id, end_road_id)
+                            if new_path:
+                                lane.remove_vehicle(vehicle)
+                                new_start_road = routing_engine.roads[start_road_id]
+                                new_lane = new_start_road.get_lane(0)
+                                new_lane.add_vehicle(vehicle)
+                                vehicle.set_current_lane(new_lane)
+                                vehicle.set_lane_position(0)
+                                vehicle.set_speed(new_lane.get_speed_limit() * 0.5)
+                                
+                                vehicle_routes[v_id] = {
+                                    'path': new_path,
+                                    'current_index': 0,
+                                    'destination': end_road_id
+                                }
+                                
+                                if v_id in vehicle_models:
+                                    vehicle_models[v_id].set_desired_speed(new_lane.get_speed_limit())
+        except Exception as e:
+            pass
+        
+    # Get lane modes and densities for visualization
+    lane_modes = {}
+    lane_densities = {}
+    
+    if adaptive_sim:
+        for road in network.roads:
+            for i in range(road.get_num_lanes()):
+                lane = road.get_lane(i)
+                lane_id = lane.get_id()
+                
+                try:
+                    mode = adaptive_sim.get_lane_mode(lane_id)
+                    lane_modes[lane_id] = mode
+                    
+                    # Get density if in macro mode
+                    if mode == 'MACROSCOPIC':
+                        lane_state = adaptive_sim.get_lane_state(lane_id)
+                        lane_densities[lane_id] = lane_state.current_density
+                except Exception:
+                    pass
+
+    # Collect vehicle data
+    for vehicle in simulation_state['vehicles']:
+        try:
+            lane = vehicle.get_current_lane()
+            if not lane:
+                continue
+                
+            # If adaptive simulation is on, check if vehicle is in a macroscopic lane
+            if adaptive_sim:
+                lane_id = lane.get_id()
+                # If lane is macroscopic, skip individual vehicle visualization
+                # The lane color will represent the density
+                if lane_modes.get(lane_id) == 'MACROSCOPIC':
+                    continue
+
+            pos = vehicle.get_position()
+            geo_pos = jamfree.OSMParser.meters_to_lat_lon(pos.x, pos.y, center_lat, center_lon)
+            
+            vehicles_data.append({
+                'id': vehicle.get_id(),
+                'x': pos.x,
+                'y': pos.y,
+                'lat': geo_pos.x,
+                'lon': geo_pos.y,
+                'angle': vehicle.get_heading(),
+                'speed': vehicle.get_speed() * 3.6,  # km/h
+                'lane_id': lane.get_id()
+            })
+        except Exception as e:
+            pass
+    
+    # Increment step
+    simulation_state['step'] += 1
+
+    step_time = (time.time() - step_start) * 1000  # ms
+    
+    return {
+        'step': simulation_state['step'],
+        'vehicles': vehicles_data,
+        'performance': simulation_state['performance_stats'],
+        'lane_modes': lane_modes,
+        'lane_densities': lane_densities,
+        'update_time_ms': step_time
+    }
+
+@socketio.on('connect', namespace='/simulation')
+def handle_connect():
+    """Handle WebSocket connection."""
+    print('✅ Client connected to WebSocket')
+    emit('status', {
+        'connected': True,
+        'running': simulation_state['running'],
+        'step': simulation_state['step']
+    })
+
+@socketio.on('disconnect', namespace='/simulation')
+def handle_disconnect():
+    """Handle WebSocket disconnection."""
+    print('❌ Client disconnected from WebSocket')
+
+@socketio.on('start_simulation', namespace='/simulation')
+def handle_start_simulation(data):
+    """Handle simulation start request via WebSocket."""
+    global ws_simulation_running, ws_simulation_thread
+    
+    print(f"Starting simulation with config: {data}")
+    
+    # Update configuration from client
+    if data:
+        simulation_state['config'].update(data)
+    
+    # Start simulation if not already running
+    # Start simulation if not already running
+    if not ws_simulation_running:
+        ws_simulation_running = True
+        # simulation_state['running'] = True # Handled in start_simulation logic or needs to be set here if not calling start_simulation
+        # But wait, start_simulation is an API endpoint.
+        # If we call this via WebSocket, we need to trigger the initialization logic.
+        # For now, let's assume the client calls the REST API to start (as per index.html)
+        # OR if we want to support pure WebSocket start, we need to call the logic.
+        
+        # The index.html calls REST API start AND emits start_simulation.
+        # The REST API start handles initialization.
+        # So we just need to ensure the background thread is running.
+        pass
+        
+        # Start background thread
+        ws_simulation_thread = socketio.start_background_task(simulation_background_task)
+        
+        emit('status', {'running': True})
+    else:
+        emit('status', {'running': True, 'message': 'Already running'})
+
+@socketio.on('stop_simulation', namespace='/simulation')
+def handle_stop_simulation():
+    """Handle simulation stop request via WebSocket."""
+    global ws_simulation_running
+    
+    print("Stopping simulation via WebSocket")
+    ws_simulation_running = False
+    simulation_state['running'] = False
+    
+    emit('status', {'running': False})
+
+@socketio.on('set_playback_speed', namespace='/simulation')
+def handle_set_playback_speed(data):
+    """Handle playback speed change."""
+    speed = data.get('speed', 1.0)
+    # Store playback speed for future use
+    simulation_state['playback_speed'] = speed
+    emit('status', {'playback_speed': speed})
+
+# Keep existing REST endpoints for backwards compatibility
+
 if __name__ == '__main__':
     print("=" * 60)
     print("JamFree Web UI")
@@ -1059,7 +1432,8 @@ if __name__ == '__main__':
     print()
     print(f"JamFree available: {JAMFREE_AVAILABLE}")
     print()
-    print("Starting server on http://localhost:5001")
+    print("Starting server with WebSocket support on http://localhost:5001")
     print()
     
-    app.run(debug=False, host='0.0.0.0', port=5001, threaded=True)
+    # Use socketio.run() instead of app.run() for WebSocket support
+    socketio.run(app, debug=False, host='0.0.0.0', port=5001, allow_unsafe_werkzeug=True)

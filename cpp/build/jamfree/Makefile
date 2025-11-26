@@ -217,6 +217,20 @@ complete_simulation_example/fast:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/complete_simulation_example.dir/build.make jamfree/CMakeFiles/complete_simulation_example.dir/build
 .PHONY : complete_simulation_example/fast
 
+# Convenience name for target.
+jamfree/CMakeFiles/highway_simulation.dir/rule:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 jamfree/CMakeFiles/highway_simulation.dir/rule
+.PHONY : jamfree/CMakeFiles/highway_simulation.dir/rule
+
+# Convenience name for target.
+highway_simulation: jamfree/CMakeFiles/highway_simulation.dir/rule
+.PHONY : highway_simulation
+
+# fast build rule for target.
+highway_simulation/fast:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/build
+.PHONY : highway_simulation/fast
+
 examples/complete_simulation_example.o: examples/complete_simulation_example.cpp.o
 .PHONY : examples/complete_simulation_example.o
 
@@ -264,6 +278,30 @@ examples/highway_example.s: examples/highway_example.cpp.s
 examples/highway_example.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_example.dir/build.make jamfree/CMakeFiles/highway_example.dir/examples/highway_example.cpp.s
 .PHONY : examples/highway_example.cpp.s
+
+examples/highway_simulation.o: examples/highway_simulation.cpp.o
+.PHONY : examples/highway_simulation.o
+
+# target to build an object file
+examples/highway_simulation.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/examples/highway_simulation.cpp.o
+.PHONY : examples/highway_simulation.cpp.o
+
+examples/highway_simulation.i: examples/highway_simulation.cpp.i
+.PHONY : examples/highway_simulation.i
+
+# target to preprocess a source file
+examples/highway_simulation.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/examples/highway_simulation.cpp.i
+.PHONY : examples/highway_simulation.cpp.i
+
+examples/highway_simulation.s: examples/highway_simulation.cpp.s
+.PHONY : examples/highway_simulation.s
+
+# target to generate assembly for a file
+examples/highway_simulation.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/examples/highway_simulation.cpp.s
+.PHONY : examples/highway_simulation.cpp.s
 
 examples/lane_changing_example.o: examples/lane_changing_example.cpp.o
 .PHONY : examples/lane_changing_example.o
@@ -519,6 +557,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... complete_simulation_example"
 	@echo "... highway_example"
+	@echo "... highway_simulation"
 	@echo "... jamfree"
 	@echo "... lane_changing_example"
 	@echo "... examples/complete_simulation_example.o"
@@ -527,6 +566,9 @@ help:
 	@echo "... examples/highway_example.o"
 	@echo "... examples/highway_example.i"
 	@echo "... examples/highway_example.s"
+	@echo "... examples/highway_simulation.o"
+	@echo "... examples/highway_simulation.i"
+	@echo "... examples/highway_simulation.s"
 	@echo "... examples/lane_changing_example.o"
 	@echo "... examples/lane_changing_example.i"
 	@echo "... examples/lane_changing_example.s"

@@ -76,6 +76,18 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/complete_simulation_example.cpp"
     )
 endif()
 
+# Highway simulation example (New Refactored API)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples/highway_simulation.cpp")
+    add_executable(highway_simulation
+        examples/highway_simulation.cpp
+    )
+    target_link_libraries(highway_simulation jamfree similar_extendedkernel similar_microkernel)
+    
+    set_target_properties(highway_simulation PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin"
+    )
+endif()
+
 # Install headers
 install(DIRECTORY kernel/include/
     DESTINATION include/jamfree/kernel

@@ -222,6 +222,9 @@ JamFree_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 JamFree_SOURCE_DIR:STATIC=/Users/morvan/Antigravity/similar/cpp/jamfree
 
+//Dependencies for the target
+jamfree_LIB_DEPENDS:STATIC=general;similar_extendedkernel;general;similar_microkernel;
+
 
 ########################
 # INTERNAL cache entries

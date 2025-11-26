@@ -1,10 +1,10 @@
 #ifndef IAGTGLOBALSTATEREVISIONMODEL_H
 #define IAGTGLOBALSTATEREVISIONMODEL_H
 
-#include "../../microkernel/include/LevelIdentifier.h"
-#include "../../microkernel/include/SimulationTimeStamp.h"
-#include "../../microkernel/include/agents/IGlobalState.h"
-#include "../../microkernel/include/agents/IPerceivedData.h"
+#include "../../../microkernel/include/LevelIdentifier.h"
+#include "../../../microkernel/include/SimulationTimeStamp.h"
+#include "../../../microkernel/include/agents/IGlobalState.h"
+#include "../../../microkernel/include/agents/IPerceivedData.h"
 #include <map>
 #include <memory>
 

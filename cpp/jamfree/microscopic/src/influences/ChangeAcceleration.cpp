@@ -1,4 +1,4 @@
-#include "../include/influences/ChangeAcceleration.h"
+#include "../../include/influences/ChangeAcceleration.h"
 
 namespace jamfree {
 namespace microscopic {

@@ -295,18 +295,54 @@
                 <label>Desired Speed (km/h)</label>
                 <input type="number" id="desired-speed" value="120" min="30" max="200">
 
+                <label>Playback Speed</label>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <input type="range" id="playback-speed" min="0.1" max="3.0" step="0.1" value="1.0" style="flex: 1;">
+                    <span id="speed-display" style="font-weight: bold; width: 40px;">1.0x</span>
+                </div>
+
                 <div
                     style="margin: 15px 0; padding: 10px; background: #f8fafc; border-radius: 6px; border: 1px solid #e2e8f0;">
                     <label style="margin-top: 0;">
-                        <input type="checkbox" id="use-adaptive" checked style="width: auto; margin-right: 8px;">
+                        <input type="checkbox" id="use-adaptive" style="width: auto; margin-right: 8px;">
                         Adaptive Hybrid Simulation
                     </label>
+                    <div style="font-size: 11px; color: #dc2626; margin-top: 4px; font-weight: 500;">
+                        ⚠️ Currently disabled due to C++ vehicle tracking bug. Use pure microscopic mode.
+                    </div>
 
-                    <div id="adaptive-controls" style="margin-top: 10px;">
+                    <div id="adaptive-controls" style="margin-top: 10px; display: none;">
                         <label style="font-size: 12px;">Switching Threshold (veh/lane)</label>
                         <input type="number" id="adaptive-threshold" value="50" min="10" max="200">
                         <div style="font-size: 11px; color: #64748b; margin-top: 4px;">
-                            Lanes with > N vehicles switch to Macroscopic mode (blue).
+                            Lanes with > N vehicles switch to Macroscopic mode.
+                        </div>
+
+                        <!-- Density Legend -->
+                        <div style="margin-top: 10px; border-top: 1px solid #e2e8f0; padding-top: 8px;">
+                            <div style="font-size: 11px; font-weight: 600; margin-bottom: 5px;">Legend:</div>
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div style="width: 20px; height: 3px; background: #22c55e;"></div>
+                                    <span style="font-size: 10px;">Microscopic</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div
+                                        style="width: 20px; height: 3px; background: linear-gradient(to right, #64b5f6, #1976d2);">
+                                    </div>
+                                    <span style="font-size: 10px;">Macro (Low Density)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div
+                                        style="width: 20px; height: 3px; background: linear-gradient(to right, #ffb300, #f44336);">
+                                    </div>
+                                    <span style="font-size: 10px;">Macro (High Density)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <div style="width: 20px; height: 3px; background: #f59e0b;"></div>
+                                    <span style="font-size: 10px;">Transitioning</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -326,6 +362,16 @@
                 <button onclick="stopSimulation()" id="stop-btn" class="secondary" disabled>⏸️ Stop</button>
             </div>
 
+            <!-- Export Data -->
+            <div class="panel">
+                <h2>📥 Export Data</h2>
+                <button onclick="exportCSV()">Download CSV</button>
+                <button onclick="exportJSON()">Download JSON</button>
+                <div class="info-box" style="margin-top: 10px; font-size: 12px;">
+                    Export includes vehicle trajectories and performance metrics.
+                </div>
+            </div>
+
             <!-- Data Sources -->
             <div class="panel">
                 <h2>📊 Real Data Sources</h2>
@@ -341,6 +387,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script>
         // Initialize map
         const map = L.map('map').setView([48.8566, 2.3522], 12);
@@ -352,7 +399,114 @@
         const roadLayer = L.layerGroup().addTo(map);
         const roadLayers = new Map(); // Map<lane_id, L.Polyline>
 
-        let simulationInterval = null;
+        // WebSocket connection
+        const socket = io('/simulation');
+        let simulationRunning = false;
+
+        socket.on('connect', () => {
+            console.log('✅ WebSocket connected');
+            document.getElementById('status-text').textContent = 'Connected';
+        });
+
+        socket.on('disconnect', () => {
+            console.log('❌ WebSocket disconnected');
+            document.getElementById('status-text').textContent = 'Disconnected';
+        });
+
+        socket.on('status', (data) => {
+            console.log('Status update:', data);
+            if (data.running !== undefined) {
+                simulationRunning = data.running;
+                document.getElementById('start-btn').disabled = data.running;
+                document.getElementById('stop-btn').disabled = !data.running;
+                document.getElementById('status-text').textContent = data.running ? 'Running' : 'Ready';
+            }
+        });
+
+        socket.on('simulation_update', (data) => {
+            updateSimulationDisplay(data);
+        });
+
+        socket.on('error', (data) => {
+            console.error('Simulation error:', data.message);
+        });
+
+        function updateSimulationDisplay(data) {
+            // Update stats
+            document.getElementById('step-count').textContent = data.step;
+            document.getElementById('vehicle-count').textContent = data.vehicles.length;
+
+            // Update performance stats
+            if (data.performance) {
+                document.getElementById('speedup-factor').textContent = data.performance.speedup_factor.toFixed(2) + 'x';
+                document.getElementById('macro-lanes').textContent = data.performance.macro_lanes || 0;
+            }
+
+            // Update lane colors based on mode and density
+            if (data.lane_modes) {
+                for (const [laneId, mode] of Object.entries(data.lane_modes)) {
+                    const polyline = roadLayers.get(laneId);
+                    if (polyline) {
+                        let color = '#94a3b8'; // Default
+                        let weight = 3;
+
+                        if (mode === 'MICROSCOPIC') {
+                            color = '#22c55e'; // Green
+                            weight = 3;
+                        } else if (mode === 'MACROSCOPIC') {
+                            // Color based on density
+                            let density = 0;
+                            if (data.lane_densities && data.lane_densities[laneId] !== undefined) {
+                                density = data.lane_densities[laneId];
+                            }
+
+                            // Density gradient: 0 (light blue) -> 0.15 (dark red)
+                            const normalizedDensity = Math.min(density / 0.15, 1.0);
+
+                            if (normalizedDensity < 0.3) {
+                                const t = normalizedDensity / 0.3;
+                                color = `rgb(${Math.round(100 + t * 55)}, ${Math.round(200 + t * 55)}, 255)`;
+                            } else if (normalizedDensity < 0.6) {
+                                const t = (normalizedDensity - 0.3) / 0.3;
+                                color = `rgb(${Math.round(155 + t * 100)}, ${Math.round(255 - t * 55)}, ${Math.round(255 - t * 255)})`;
+                            } else {
+                                const t = (normalizedDensity - 0.6) / 0.4;
+                                color = `rgb(255, ${Math.round(200 - t * 200)}, 0)`;
+                            }
+
+                            weight = 5;
+                        } else if (mode === 'TRANSITIONING') {
+                            color = '#f59e0b'; // Orange
+                        }
+
+                        polyline.setStyle({ color: color, weight: weight });
+                    }
+                }
+            }
+
+            // Update vehicle positions on map
+            vehicleLayer.clearLayers();
+
+            data.vehicles.forEach(v => {
+                if (v.lat && v.lon) {
+                    const marker = L.circleMarker([v.lat, v.lon], {
+                        radius: 4,
+                        fillColor: '#ef4444',
+                        color: '#fff',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+
+                    marker.bindPopup(`
+                        <b>Vehicle ${v.id}</b><br>
+                        Speed: ${v.speed.toFixed(1)} km/h
+                    `);
+
+                    marker.addTo(vehicleLayer);
+                }
+            });
+        }
 
         // Toggle adaptive controls
         document.getElementById('use-adaptive').addEventListener('change', (e) => {
@@ -449,7 +603,7 @@
                 const useGpu = document.getElementById('use-gpu').checked;
                 const adaptiveThreshold = parseInt(document.getElementById('adaptive-threshold').value);
 
-                // Update config first
+                // First, initialize simulation via REST API
                 await fetch('/api/config', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -472,12 +626,16 @@
                     return;
                 }
 
-                document.getElementById('start-btn').disabled = true;
-                document.getElementById('stop-btn').disabled = false;
-                document.getElementById('status-text').textContent = 'Running';
+                // Emit WebSocket start event
+                socket.emit('start_simulation', {
+                    num_vehicles: numVehicles,
+                    desired_speed: desiredSpeed,
+                    use_adaptive_hybrid: useAdaptive,
+                    use_gpu: useGpu,
+                    adaptive_threshold: adaptiveThreshold
+                });
 
-                // Start simulation loop
-                simulationInterval = setInterval(simulationStep, 100);
+                document.getElementById('status-text').textContent = 'Running';
             } catch (error) {
                 alert('Failed to start: ' + error);
             }
@@ -485,12 +643,12 @@
 
         // Stop simulation
         async function stopSimulation() {
-            clearInterval(simulationInterval);
+            // Emit WebSocket stop event
+            socket.emit('stop_simulation');
 
+            // Also call REST API for compatibility
             await fetch('/api/simulation/stop', { method: 'POST' });
 
-            document.getElementById('start-btn').disabled = false;
-            document.getElementById('stop-btn').disabled = true;
             document.getElementById('status-text').textContent = 'Stopped';
         }
 
@@ -611,6 +769,15 @@
             downloadOSM(bbox);
         }
 
+        // Export functions
+        function exportCSV() {
+            window.location.href = '/api/export/csv';
+        }
+
+        function exportJSON() {
+            window.location.href = '/api/export/json';
+        }
+
         // Download OSM data
         async function downloadOSM(bbox) {
             document.getElementById('status-text').textContent = 'Downloading...';
@@ -642,6 +809,28 @@
                 document.getElementById('status-text').textContent = 'Error';
             }
         }
+
+        // Playback speed control
+        document.getElementById('playback-speed').addEventListener('input', (e) => {
+            const speed = parseFloat(e.target.value);
+            document.getElementById('speed-display').textContent = speed.toFixed(1) + 'x';
+
+            // Emit speed change event
+            socket.emit('set_playback_speed', { speed: speed });
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Space bar to toggle simulation
+            if (e.code === 'Space') {
+                e.preventDefault(); // Prevent scrolling
+                if (simulationRunning) {
+                    stopSimulation();
+                } else {
+                    startSimulation();
+                }
+            }
+        });
 
         // Initialize
         loadDataSources();

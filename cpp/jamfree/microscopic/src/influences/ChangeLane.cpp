@@ -1,4 +1,4 @@
-#include "../include/influences/ChangeLane.h"
+#include "../../include/influences/ChangeLane.h"
 
 namespace jamfree {
 namespace microscopic {

@@ -369,6 +369,19 @@ complete_simulation_example/fast:
 	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/complete_simulation_example.dir/build.make jamfree/CMakeFiles/complete_simulation_example.dir/build
 .PHONY : complete_simulation_example/fast
 
+#=============================================================================
+# Target rules for targets named highway_simulation
+
+# Build rule for target.
+highway_simulation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 highway_simulation
+.PHONY : highway_simulation
+
+# fast build rule for target.
+highway_simulation/fast:
+	$(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/highway_simulation.dir/build.make jamfree/CMakeFiles/highway_simulation.dir/build
+.PHONY : highway_simulation/fast
+
 extendedkernel/examples/extendedlibs_demo.o: extendedkernel/examples/extendedlibs_demo.cpp.o
 .PHONY : extendedkernel/examples/extendedlibs_demo.o
 
@@ -1441,6 +1454,7 @@ help:
 	@echo "... complete_simulation_example"
 	@echo "... extendedlibs_demo"
 	@echo "... highway_example"
+	@echo "... highway_simulation"
 	@echo "... improved_ecosystem"
 	@echo "... jamfree"
 	@echo "... lane_changing_example"

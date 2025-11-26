@@ -1,4 +1,4 @@
-#include "../include/decision/VehicleDecisionModelMicro.h"
+#include "../../include/decision/VehicleDecisionModelMicro.h"
 #include <stdexcept>
 
 namespace jamfree {

@@ -22,14 +22,25 @@ class VehiclePrivateLocalStateMicro : public kernel::agents::ILocalState {
 public:
   /**
    * @brief Constructor with default parameters.
+   * @param ownerId The identifier of the agent owning this state.
    */
-  VehiclePrivateLocalStateMicro();
+  explicit VehiclePrivateLocalStateMicro(const std::string &ownerId);
 
   /**
    * @brief Clone this state.
    * @return Cloned state
    */
   std::shared_ptr<kernel::agents::ILocalState> clone() const override;
+
+  /**
+   * @brief Gets the category of the agent owning this local state.
+   */
+  kernel::AgentCategory getCategoryOfAgent() const override;
+
+  /**
+   * @brief Checks if an agent is the owner of a local state.
+   */
+  bool isOwnedBy(const kernel::agents::IAgent &agent) const override;
 
   // IDM parameters
   double getDesiredSpeed() const { return m_desired_speed; }
@@ -89,6 +100,8 @@ public:
   }
 
 private:
+  std::string m_ownerId;
+
   // IDM parameters
   double m_desired_speed;            // m/s
   double m_time_headway;             // s

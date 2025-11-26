@@ -1,12 +1,12 @@
 #ifndef IAGTDECISIONMODEL_H
 #define IAGTDECISIONMODEL_H
 
-#include "../../microkernel/include/LevelIdentifier.h"
-#include "../../microkernel/include/SimulationTimeStamp.h"
-#include "../../microkernel/include/agents/IGlobalState.h"
-#include "../../microkernel/include/agents/ILocalStateOfAgent.h"
-#include "../../microkernel/include/agents/IPerceivedData.h"
-#include "../../microkernel/include/influences/InfluencesMap.h"
+#include "../../../microkernel/include/LevelIdentifier.h"
+#include "../../../microkernel/include/SimulationTimeStamp.h"
+#include "../../../microkernel/include/agents/IGlobalState.h"
+#include "../../../microkernel/include/agents/ILocalStateOfAgent.h"
+#include "../../../microkernel/include/agents/IPerceivedData.h"
+#include "../../../microkernel/include/influences/InfluencesMap.h"
 #include <memory>
 
 namespace fr {

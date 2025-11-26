@@ -21,14 +21,25 @@ class VehiclePublicLocalStateMacro : public kernel::agents::ILocalState {
 public:
   /**
    * @brief Constructor.
+   * @param ownerId The identifier of the agent owning this state.
    */
-  VehiclePublicLocalStateMacro();
+  explicit VehiclePublicLocalStateMacro(const std::string &ownerId);
 
   /**
    * @brief Clone this state.
    * @return Cloned state
    */
   std::shared_ptr<kernel::agents::ILocalState> clone() const override;
+
+  /**
+   * @brief Gets the category of the agent owning this local state.
+   */
+  kernel::AgentCategory getCategoryOfAgent() const override;
+
+  /**
+   * @brief Checks if an agent is the owner of a local state.
+   */
+  bool isOwnedBy(const kernel::agents::IAgent &agent) const override;
 
   // Flow properties
   double getDensity() const { return m_density; }
@@ -55,6 +66,8 @@ public:
   void setActive(bool active) { m_active = active; }
 
 private:
+  std::string m_ownerId;
+
   // Flow properties
   double m_density;       // vehicles/m
   double m_flow;          // vehicles/s

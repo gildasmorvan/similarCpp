@@ -26,6 +26,7 @@
 /Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/highway_example.dir
 /Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/lane_changing_example.dir
 /Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/complete_simulation_example.dir
+/Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/highway_simulation.dir
 /Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/edit_cache.dir
 /Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/rebuild_cache.dir
 /Users/morvan/Antigravity/similar/cpp/build/jamfree/CMakeFiles/list_install_components.dir

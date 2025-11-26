@@ -63,7 +63,7 @@ std::shared_ptr<VehicleAgent> createMicroscopicAgent(const std::string &id,
 
   // Public state
   auto publicState =
-      std::make_shared<microscopic::agents::VehiclePublicLocalStateMicro>();
+      std::make_shared<microscopic::agents::VehiclePublicLocalStateMicro>(id);
   publicState->setPosition(position);
   publicState->setSpeed(speed);
   publicState->setLength(5.0);
@@ -71,7 +71,7 @@ std::shared_ptr<VehicleAgent> createMicroscopicAgent(const std::string &id,
 
   // Private state
   auto privateState =
-      std::make_shared<microscopic::agents::VehiclePrivateLocalStateMicro>();
+      std::make_shared<microscopic::agents::VehiclePrivateLocalStateMicro>(id);
   privateState->setDesiredSpeed(33.3); // 120 km/h
   privateState->setPoliteness(0.5);
   vehicle->setPrivateLocalState(LevelIdentifiers::MICROSCOPIC, privateState);
@@ -114,7 +114,7 @@ createMacroscopicCell(const std::string &id, int cellIndex, double density) {
 
   // Public state
   auto publicState =
-      std::make_shared<macroscopic::agents::VehiclePublicLocalStateMacro>();
+      std::make_shared<macroscopic::agents::VehiclePublicLocalStateMacro>(id);
   publicState->setCellIndex(cellIndex);
   publicState->setDensity(density);
   publicState->setAverageSpeed(25.0);   // m/s

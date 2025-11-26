@@ -9,7 +9,13 @@ This script tests the MOBIL lane-changing model to verify:
 """
 
 import sys
-sys.path.insert(0, '/Users/morvan/Antigravity/similar/cpp/jamfree/python')
+import os
+from pathlib import Path
+
+# Add python directory to path relative to this file
+current_dir = Path(__file__).parent
+python_dir = current_dir.parent / 'python'
+sys.path.insert(0, str(python_dir.resolve()))
 
 import jamfree
 import random

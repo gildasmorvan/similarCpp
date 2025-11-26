@@ -14,9 +14,6 @@ on:
       - 'README.md'
       - '**/*.md'
 
-# Allow manual trigger for testing
-  workflow_dispatch:
-
 jobs:
   build-docs:
     name: Build Documentation

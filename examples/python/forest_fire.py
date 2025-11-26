@@ -92,6 +92,23 @@ def custom_setup(sim):
         if isinstance(turtle, Tree):
             pos_key = (int(turtle.position.x), int(turtle.position.y))
             sim.environment.position_to_tree[pos_key] = turtle
+
+    # Optimize perception building for forest fire - no need for expensive spatial queries
+    # Override the perception building to skip nearby turtles and pheromones
+    original_build_perception = sim._build_perception
+    def optimized_build_perception(turtle):
+        """Optimized perception building for forest fire - only environment needed"""
+        return {
+            'environment': sim.environment,
+            'position': turtle.position,
+            'heading': turtle.heading,
+            'speed': turtle.speed,
+            'time': sim.current_step,
+            'pheromones': {},  # Empty - no pheromones used
+            'nearby_turtles': [],  # Empty - no nearby turtles needed
+            'marks': []  # Empty - no marks used
+        }
+    sim._build_perception = optimized_build_perception
     
     # Generate trees based on density
     for x in range(params.grid_size):

@@ -102,23 +102,9 @@ void TrafficReactionModel::applyInfluences(
                     if (vehicleToMove) {
                       currentLane->removeVehicle(vehicleToMove);
                       targetLane->addVehicle(vehicleToMove);
-                      vehicleToMove->setCurrentLane(
-                          std::shared_ptr<model::Lane>(
-                              targetLane, [](model::Lane *) {
-                              })); // Non-owning shared_ptr for now, or fix
-                                   // ownership
-                      // Ideally Vehicle should hold weak_ptr or shared_ptr to
-                      // Lane if Lane holds shared_ptr to Vehicle (circular
-                      // dependency). In Vehicle.h: std::shared_ptr<Lane>
-                      // m_current_lane; In Lane.h:
-                      // std::vector<std::shared_ptr<Vehicle>> m_vehicles; This
-                      // is a circular dependency if both are strong refs.
-                      // Usually one should be weak.
-                      // Assuming Vehicle holds weak or we are careful.
-                      // Vehicle.h says: m_current_lane is shared_ptr.
 
                       // Update PLS
-                      target->setCurrentLane(targetLane);
+                      target->setCurrentLane(targetLane.get());
                       target->setLaneIndex(targetIndex);
                     }
                   }

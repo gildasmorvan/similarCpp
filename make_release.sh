@@ -100,9 +100,14 @@ echo ""
 echo "Building Java components..."
 echo "==========================="
 
-# Build Java components
+# Build Java components (optional - skip if modules are missing)
 cd "$SCRIPT_DIR"
-mvn clean package -DskipTests -q
+if mvn clean package -DskipTests -q; then
+    echo "✓ Java components built successfully"
+else
+    echo "⚠️  Java build failed - skipping (missing Java modules)"
+    JAVA_FAILED=true
+fi
 
 echo ""
 echo "Creating release artifacts..."

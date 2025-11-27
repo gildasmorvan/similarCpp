@@ -730,7 +730,17 @@ PYBIND11_MODULE(_jamfree, m) {
             agent.setDecisionModel(kernel::agents::LevelIdentifier(level),
                                    model);
           },
-          py::arg("level"), py::arg("model"), "Set decision model for level");
+          py::arg("level"), py::arg("model"), "Set decision model for level")
+      .def(
+          "set_models",
+          [](VehicleAgent &agent, const std::string &level,
+             std::shared_ptr<IPerceptionModel> perception,
+             std::shared_ptr<IDecisionModel> decision) {
+            agent.setModels(kernel::agents::LevelIdentifier(level), perception,
+                            decision);
+          },
+          py::arg("level"), py::arg("perception"), py::arg("decision"),
+          "Set both perception and decision models for level");
 
   // ========================================================================
   // Interfaces

@@ -66,11 +66,13 @@ void VehicleAgent::setPrivateLocalState(const LevelIdentifier &level,
 
 void VehicleAgent::setPerceptionModel(const LevelIdentifier &level,
                                       std::shared_ptr<IPerceptionModel> model) {
-  auto decisionModel = getDecisionModel(level);
-  // Note: getDecisionModel returns raw pointer, but specifyBehaviorForLevel
-  // needs shared_ptr. ExtendedAgent::getDecisionModel returns shared_ptr.
-  auto decisionModelShared = fr::univ_artois::lgi2a::similar::extendedkernel::
-      agents::ExtendedAgent::getDecisionModel(level);
+  std::shared_ptr<IDecisionModel> decisionModelShared = nullptr;
+  try {
+    decisionModelShared = fr::univ_artois::lgi2a::similar::extendedkernel::
+        agents::ExtendedAgent::getDecisionModel(level);
+  } catch (...) {
+    // Decision model might not be set yet
+  }
 
   specifyBehaviorForLevel(level, model, decisionModelShared);
 }
@@ -84,9 +86,21 @@ VehicleAgent::getPerceptionModel(const LevelIdentifier &level) {
 
 void VehicleAgent::setDecisionModel(const LevelIdentifier &level,
                                     std::shared_ptr<IDecisionModel> model) {
-  auto perceptionModelShared = fr::univ_artois::lgi2a::similar::extendedkernel::
-      agents::ExtendedAgent::getPerceptionModel(level);
+  std::shared_ptr<IPerceptionModel> perceptionModelShared = nullptr;
+  try {
+    perceptionModelShared = fr::univ_artois::lgi2a::similar::extendedkernel::
+        agents::ExtendedAgent::getPerceptionModel(level);
+  } catch (...) {
+    // Perception model might not be set yet
+  }
+
   specifyBehaviorForLevel(level, perceptionModelShared, model);
+}
+
+void VehicleAgent::setModels(const LevelIdentifier &level,
+                             std::shared_ptr<IPerceptionModel> perceptionModel,
+                             std::shared_ptr<IDecisionModel> decisionModel) {
+  specifyBehaviorForLevel(level, perceptionModel, decisionModel);
 }
 
 IDecisionModel *VehicleAgent::getDecisionModel(const LevelIdentifier &level) {

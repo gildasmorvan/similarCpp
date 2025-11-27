@@ -56,11 +56,8 @@ def test_bindings():
     agent = jamfree.VehicleAgent("test_agent")
     print("  Created VehicleAgent")
     
-    agent.set_perception_model("Microscopic", perception)
-    print("  Set perception model for Microscopic level")
-    
-    agent.set_decision_model("Microscopic", decision)
-    print("  Set decision model for Microscopic level")
+    agent.set_models("Microscopic", perception, decision)
+    print("  Set perception and decision models for Microscopic level")
 
     print("\nAll binding tests passed!")
 

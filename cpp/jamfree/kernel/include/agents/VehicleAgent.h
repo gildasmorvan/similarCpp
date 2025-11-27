@@ -119,6 +119,16 @@ public:
    */
   IDecisionModel *getDecisionModel(const LevelIdentifier &level);
 
+  /**
+   * @brief Set both perception and decision models for a level.
+   * @param level Level identifier
+   * @param perceptionModel Perception model
+   * @param decisionModel Decision model
+   */
+  void setModels(const LevelIdentifier &level,
+                 std::shared_ptr<IPerceptionModel> perceptionModel,
+                 std::shared_ptr<IDecisionModel> decisionModel);
+
 private:
   std::string m_id;
 };

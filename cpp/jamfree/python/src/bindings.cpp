@@ -259,7 +259,7 @@ PYBIND11_MODULE(_jamfree, m) {
   // ========================================================================
   // OSM (OpenStreetMap) Support
   // ========================================================================
-  py::class_<RoadNetwork>(m, "RoadNetwork")
+  py::class_<RoadNetwork, std::shared_ptr<RoadNetwork>>(m, "RoadNetwork")
       .def(py::init<>(), "Create empty road network")
       .def_readonly("roads", &RoadNetwork::roads, "List of roads")
       .def_readonly("min_lat", &RoadNetwork::min_lat, "Minimum latitude")

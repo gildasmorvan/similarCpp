@@ -54,6 +54,7 @@ jobs:
         pip install pybind11 numpy build twine
 
     - name: Build C++ engine
+      shell: bash
       run: |
         chmod +x build_cpp_engine.sh
         ./build_cpp_engine.sh
@@ -64,6 +65,7 @@ jobs:
 
 
     - name: Create release archives
+      shell: bash
       run: |
         # Create directories for artifacts
         mkdir -p release-artifacts/python
@@ -119,7 +121,7 @@ jobs:
       if: matrix.os == 'ubuntu-22.04'
       uses: actions/upload-artifact@v4
       with:
-        name: docs
+        name: docs-${{ matrix.platform }}
         path: release-artifacts/docs/
 
   # Publish to PyPI (if configured)
@@ -154,6 +156,7 @@ jobs:
     - name: Download all artifacts
       uses: actions/download-artifact@v4
       with:
+        pattern: "*artifacts*"
         path: artifacts/
 
     - name: Create release archives

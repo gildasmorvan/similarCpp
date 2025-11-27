@@ -2023,12 +2023,12 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/environment/Environment.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/FastMath.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/Mark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/SituatedEntity.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/TurtlePLSInLogo.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/FastMath.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/MathUtil.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/Point2D.h
 
@@ -9020,13 +9020,14 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/RemoveMark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/RemoveMarks.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/Stop.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/FastMath.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/Mark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/SituatedEntity.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/TurtlePLSInLogo.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/environment/Environment.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/reaction/Reaction.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/FastMath.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/MathUtil.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/Point2D.h
 
@@ -11102,39 +11103,39 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/reaction/Reaction.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/FastMath.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/Point2D.h \
-  /opt/homebrew/include/pybind11/attr.h \
-  /opt/homebrew/include/pybind11/cast.h \
-  /opt/homebrew/include/pybind11/conduit/pybind11_platform_abi_id.h \
-  /opt/homebrew/include/pybind11/conduit/wrap_include_python_h.h \
-  /opt/homebrew/include/pybind11/buffer_info.h \
-  /opt/homebrew/include/pybind11/detail/common.h \
-  /opt/homebrew/include/pybind11/pytypes.h \
-  /opt/homebrew/include/pybind11/detail/class.h \
-  /opt/homebrew/include/pybind11/detail/common.h \
-  /opt/homebrew/include/pybind11/detail/cpp_conduit.h \
-  /opt/homebrew/include/pybind11/detail/descr.h \
-  /opt/homebrew/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h \
-  /opt/homebrew/include/pybind11/detail/exception_translation.h \
-  /opt/homebrew/include/pybind11/detail/function_record_pyobject.h \
-  /opt/homebrew/include/pybind11/detail/init.h \
-  /opt/homebrew/include/pybind11/detail/internals.h \
-  /opt/homebrew/include/pybind11/detail/native_enum_data.h \
-  /opt/homebrew/include/pybind11/detail/pybind11_namespace_macros.h \
-  /opt/homebrew/include/pybind11/detail/struct_smart_holder.h \
-  /opt/homebrew/include/pybind11/detail/type_caster_base.h \
-  /opt/homebrew/include/pybind11/detail/typeid.h \
-  /opt/homebrew/include/pybind11/detail/using_smart_holder.h \
-  /opt/homebrew/include/pybind11/detail/value_and_holder.h \
-  /opt/homebrew/include/pybind11/functional.h \
-  /opt/homebrew/include/pybind11/gil.h \
-  /opt/homebrew/include/pybind11/gil_safe_call_once.h \
-  /opt/homebrew/include/pybind11/gil_simple.h \
-  /opt/homebrew/include/pybind11/options.h \
-  /opt/homebrew/include/pybind11/pybind11.h \
-  /opt/homebrew/include/pybind11/pytypes.h \
-  /opt/homebrew/include/pybind11/stl.h \
-  /opt/homebrew/include/pybind11/trampoline_self_life_support.h \
-  /opt/homebrew/include/pybind11/typing.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/attr.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/cast.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/wrap_include_python_h.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/buffer_info.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/common.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pytypes.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/class.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/common.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/cpp_conduit.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/descr.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/exception_translation.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/function_record_pyobject.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/init.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/internals.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/native_enum_data.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/pybind11_namespace_macros.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/struct_smart_holder.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/type_caster_base.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/typeid.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/using_smart_holder.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/value_and_holder.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/functional.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil_safe_call_once.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil_simple.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/options.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pybind11.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pytypes.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/stl.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/trampoline_self_life_support.h \
+  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/typing.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/Python.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/abstract.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/audit.h \
@@ -11280,8 +11281,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pystrtod.h:
 
-/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pystats.h:
-
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pystate.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pymem.h:
@@ -11297,8 +11296,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/objimpl.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/monitoring.h:
-
-/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/modsupport.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/refcount.h:
 
@@ -11360,10 +11357,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/dictobject.h:
 
-/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pylifecycle.h:
-
-/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/descrobject.h:
-
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/context.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/complexobject.h:
@@ -11388,33 +11381,37 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/Python.h:
 
-/opt/homebrew/include/pybind11/trampoline_self_life_support.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/stl.h:
 
-/opt/homebrew/include/pybind11/pybind11.h:
+/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pylifecycle.h:
 
-/opt/homebrew/include/pybind11/options.h:
+/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/descrobject.h:
 
-/opt/homebrew/include/pybind11/detail/value_and_holder.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pybind11.h:
 
-/opt/homebrew/include/pybind11/detail/using_smart_holder.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil_safe_call_once.h:
 
-/opt/homebrew/include/pybind11/detail/pybind11_namespace_macros.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/type_caster_base.h:
 
-/opt/homebrew/include/pybind11/detail/native_enum_data.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/pybind11_namespace_macros.h:
 
-/opt/homebrew/include/pybind11/detail/internals.h:
+/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pystats.h:
 
-/opt/homebrew/include/pybind11/detail/function_record_pyobject.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/exception_translation.h:
 
-/opt/homebrew/include/pybind11/detail/class.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/descr.h:
 
-/opt/homebrew/include/pybind11/pytypes.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/class.h:
 
-/opt/homebrew/include/pybind11/detail/common.h:
+/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/modsupport.h:
 
-/opt/homebrew/include/pybind11/cast.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pytypes.h:
 
-/opt/homebrew/include/pybind11/attr.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/common.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/buffer_info.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h:
 
 /Users/morvan/Antigravity/similar/cpp/microkernel/include/engine/MultiThreadedSimulationEngine.h:
 
@@ -11519,8 +11516,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/AbstractInfluence.h:
 
 /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/influences/ChangeDirection.cpp:
-
-/opt/homebrew/include/pybind11/stl.h:
 
 /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/TurtlePLSInLogo.h:
 
@@ -11644,6 +11639,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/ptrcheck.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/struct_smart_holder.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/limits.h:
@@ -11651,8 +11648,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_size_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_rsize_t.h:
-
-/opt/homebrew/include/pybind11/gil_simple.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_ptrdiff_t.h:
 
@@ -11665,6 +11660,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_max_align_t.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/listobject.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/init.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stdarg_va_list.h:
 
@@ -11689,8 +11686,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/traceback.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/pythonrun.h:
-
-/opt/homebrew/include/pybind11/detail/exception_translation.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
 
@@ -11894,6 +11889,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/native_enum_data.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/merge.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print:
@@ -11984,8 +11981,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/is_valid_range.h:
 
-/opt/homebrew/include/pybind11/buffer_info.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/climits:
@@ -12020,8 +12015,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/auto_cast.h:
 
-/opt/homebrew/include/pybind11/detail/type_caster_base.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_pointer.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ctime:
@@ -12037,8 +12030,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/void_t.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/audit.h:
-
-/opt/homebrew/include/pybind11/detail/init.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
 
@@ -12126,6 +12117,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_signed_integer.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/options.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_same.h:
@@ -12192,9 +12185,9 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_callable.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_assignable.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil.h:
 
-/opt/homebrew/include/pybind11/detail/typeid.h:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/forward_like.h:
 
@@ -12212,8 +12205,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/extent.h:
 
-/opt/homebrew/include/pybind11/gil_safe_call_once.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/datasizeof.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/copy_cvref.h:
@@ -12229,8 +12220,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/pyhash.h:
-
-/opt/homebrew/include/pybind11/functional.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/has_virtual_destructor.h:
 
@@ -12318,11 +12307,13 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/size.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/wrap_include_python_h.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/cast.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/from_range.h:
-
-/opt/homebrew/include/pybind11/detail/descr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/destructible.h:
 
@@ -12374,6 +12365,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/critical_section.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/typeid.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_static_assert.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/gamma_distribution.h:
@@ -12418,6 +12411,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/trampoline_self_life_support.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uses_allocator.h:
@@ -12435,6 +12430,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/knuth_b.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/inout_ptr.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/function_record_pyobject.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/concepts.h:
 
@@ -12576,7 +12573,7 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/min_max.h:
 
-/opt/homebrew/include/pybind11/conduit/wrap_include_python_h.h:
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/typing.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iter_move.h:
 
@@ -12627,8 +12624,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/codecs.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__undef_macros:
-
-/opt/homebrew/include/pybind11/detail/struct_smart_holder.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/subrange.h:
 
@@ -12734,6 +12729,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/not_fn.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil_simple.h:
+
 /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/ChangeAcceleration.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/width_estimation_table.h:
@@ -12778,8 +12775,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/container_adaptor.h:
 
-/opt/homebrew/include/pybind11/conduit/pybind11_platform_abi_id.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_stdio.h:
@@ -12795,8 +12790,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception_ptr.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__debug_utils/sanitizers.h:
-
-/opt/homebrew/include/pybind11/gil.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
 
@@ -12819,6 +12812,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_intersection.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/availability.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/abi.h:
 
@@ -12881,6 +12876,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uint16_t.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/using_smart_holder.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/next_permutation.h:
 
@@ -12964,8 +12961,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/steady_clock.h:
 
-/opt/homebrew/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_upper_bound.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
@@ -12979,6 +12974,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars_integral.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pyframe.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/internals.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/limits.h:
 
@@ -13082,6 +13079,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/is_always_lock_free.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/attr.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/fence.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_remove_copy.h:
@@ -13156,8 +13155,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
-/opt/homebrew/include/pybind11/typing.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/xlocale/_string.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cwchar:
@@ -13204,6 +13201,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_end.h:
 
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/functional.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/replace_copy_if.h:
@@ -13227,6 +13226,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/derived_from.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/system_clock.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/value_and_holder.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
 
@@ -13652,8 +13653,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/search_n.h:
 
-/opt/homebrew/include/pybind11/detail/cpp_conduit.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/tag_types.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
@@ -13803,6 +13802,8 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: /Users/morvan/Antigravity/similar/
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
+
+/opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/cpp_conduit.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/reverse.h:
 

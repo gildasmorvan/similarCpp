@@ -1,5 +1,6 @@
 #pragma once
 #include "kernel/model/environment/Mark.h"
+#include "kernel/model/environment/Pheromone.h"
 #include "kernel/model/environment/TurtlePLSInLogo.h"
 #include "kernel/tools/Point2D.h"
 #include <memory>
@@ -10,7 +11,6 @@
 
 namespace fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
     environment {
-class Pheromone;
 class TurtlePLSInLogo;
 } // namespace
   // fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::environment

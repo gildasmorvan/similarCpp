@@ -11,6 +11,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.2.0/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.0/CMakeSystem.cmake"
+  "/opt/homebrew/lib/python3.14/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake"
+  "/opt/homebrew/lib/python3.14/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake"
+  "/opt/homebrew/lib/python3.14/site-packages/pybind11/share/cmake/pybind11/pybind11ConfigVersion.cmake"
+  "/opt/homebrew/lib/python3.14/site-packages/pybind11/share/cmake/pybind11/pybind11NewTools.cmake"
+  "/opt/homebrew/lib/python3.14/site-packages/pybind11/share/cmake/pybind11/pybind11Targets.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -51,11 +56,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang-CXX.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/Linker/Apple-AppleClang.cmake"
   "/opt/homebrew/share/cmake/Modules/Platform/UnixPaths.cmake"
-  "/opt/homebrew/share/cmake/pybind11/pybind11Common.cmake"
-  "/opt/homebrew/share/cmake/pybind11/pybind11Config.cmake"
-  "/opt/homebrew/share/cmake/pybind11/pybind11ConfigVersion.cmake"
-  "/opt/homebrew/share/cmake/pybind11/pybind11NewTools.cmake"
-  "/opt/homebrew/share/cmake/pybind11/pybind11Targets.cmake"
   )
 
 # The corresponding makefile is:

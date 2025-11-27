@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -D_core_EXPORTS
 
-CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include -I/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../microkernel/include -I/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include -isystem /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14 -isystem /opt/homebrew/include
+CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include -I/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../microkernel/include -I/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../extendedkernel/include -isystem /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14 -isystem /opt/homebrew/lib/python3.14/site-packages/pybind11/include
 
 CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++20 -arch arm64 -fPIC -fvisibility=hidden -flto
 

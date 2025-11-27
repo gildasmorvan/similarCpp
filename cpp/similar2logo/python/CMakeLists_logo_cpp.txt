@@ -44,12 +44,7 @@ target_link_libraries(_core PRIVATE
     extendedkernel
 )
 
-# Set output directory
-set_target_properties(_core PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../../python/similar2logo
-)
-
-# Installation
+# Installation - install to the python package directory
 install(TARGETS _core
     LIBRARY DESTINATION ${CMAKE_CURRENT_SOURCE_DIR}/../../../python/similar2logo
 )

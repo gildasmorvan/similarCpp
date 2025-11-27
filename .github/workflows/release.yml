@@ -150,9 +150,12 @@ jobs:
     - name: Create release archives
       shell: bash
       run: |
-        # Create source archive first (before creating other archives)
+        # Create source archive first (from a clean copy to avoid file conflicts)
         echo "Creating source archive..."
-        tar -czf SIMILAR-${{ github.ref_name }}-source.tar.gz \
+        mkdir -p /tmp/source-build
+        cp -r . /tmp/source-build/ 2>/dev/null || true
+        cd /tmp/source-build
+        tar -czf "$OLDPWD/SIMILAR-${{ github.ref_name }}-source.tar.gz" \
           --exclude='.git' \
           --exclude='target' \
           --exclude='build' \
@@ -161,6 +164,8 @@ jobs:
           --exclude='*.dylib' \
           --exclude='*.dll' \
           .
+        cd "$OLDPWD"
+        rm -rf /tmp/source-build
 
         # Create platform-specific archives
         for platform in linux-x64 macos-x64 windows-x64; do

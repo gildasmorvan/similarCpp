@@ -92,11 +92,8 @@ jobs:
         cp *.md release-artifacts/docs/ || true
         cp -r docs/* release-artifacts/docs/ || true
 
-        # Create archives
-        cd release-artifacts
-        tar -czf ../python-artifacts.tar.gz python/
-        tar -czf ../cpp-artifacts.tar.gz cpp/
-        tar -czf ../docs.tar.gz docs/
+        # Note: Artifacts are uploaded as directories, not archives
+        # Final archives will be created in the release job
 
     - name: Upload Python artifacts
       uses: actions/upload-artifact@v4
@@ -159,24 +156,28 @@ jobs:
 
           # Copy Python artifacts for this platform
           if [ -d "artifacts/python-artifacts-$platform" ]; then
-            cp -r artifacts/python-artifacts-$platform/* "release-$platform/" 2>/dev/null || true
+            cp -r "artifacts/python-artifacts-$platform"/* "release-$platform/" 2>/dev/null || true
           fi
 
           # Copy C++ artifacts for this platform
           if [ -d "artifacts/cpp-artifacts-$platform" ]; then
-            cp -r artifacts/cpp-artifacts-$platform/* "release-$platform/" 2>/dev/null || true
+            cp -r "artifacts/cpp-artifacts-$platform"/* "release-$platform/" 2>/dev/null || true
           fi
 
           # Copy documentation (only from linux build)
-          if [ -d "artifacts/docs" ] && [ "$platform" = "linux-x64" ]; then
-            cp -r artifacts/docs/* "release-$platform/" 2>/dev/null || true
+          if [ -d "artifacts/docs-linux-x64" ] && [ "$platform" = "linux-x64" ]; then
+            cp -r "artifacts/docs-linux-x64"/* "release-$platform/" 2>/dev/null || true
           fi
 
           # Create platform archive if it has content
-          if [ -d "release-$platform" ] && [ "$(ls -A release-$platform)" ]; then
+          if [ -d "release-$platform" ] && [ "$(ls -A "release-$platform" 2>/dev/null)" ]; then
             if [[ "$platform" == windows-* ]]; then
-              # Windows: create zip
-              zip -r "SIMILAR-${{ github.ref_name }}-$platform.zip" "release-$platform/"
+              # Windows: create zip (if zip available, otherwise tar)
+              if command -v zip >/dev/null 2>&1; then
+                zip -r "SIMILAR-${{ github.ref_name }}-$platform.zip" "release-$platform/"
+              else
+                tar -czf "SIMILAR-${{ github.ref_name }}-$platform.tar.gz" -C "release-$platform" .
+              fi
             else
               # Unix: create tar.gz
               tar -czf "SIMILAR-${{ github.ref_name }}-$platform.tar.gz" -C "release-$platform" .

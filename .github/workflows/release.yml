@@ -117,6 +117,12 @@ jobs:
         name: python-artifacts-${{ matrix.platform }}
         path: release-artifacts/python/
 
+    - name: Upload C++ artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: cpp-artifacts-${{ matrix.platform }}
+        path: release-artifacts/cpp/
+
     - name: Upload documentation
       uses: actions/upload-artifact@v4
       with:

@@ -36,6 +36,14 @@ python3 -c "import pybind11" 2>/dev/null || {
 echo "✓ All dependencies found"
 echo ""
 
+# Clean build directories for CI environments
+if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
+    echo "CI environment detected, cleaning build directories..."
+    rm -rf "$SCRIPT_DIR/cpp/microkernel/build"
+    rm -rf "$SCRIPT_DIR/cpp/extendedkernel/build"
+    rm -rf "$BUILD_DIR"
+fi
+
 # Build microkernel first
 echo "Building microkernel..."
 MICROKERNEL_DIR="$SCRIPT_DIR/cpp/microkernel"

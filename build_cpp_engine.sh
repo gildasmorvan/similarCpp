@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Build script for SIMILAR2Logo C++ Engine Python Bindings
+# Build script for SIMILAR2Logo C++ Engine with Python Bindings
+# This script builds only the C++ components and Python bindings.
+# Java components are built separately using Maven.
 
 set -e  # Exit on error
 

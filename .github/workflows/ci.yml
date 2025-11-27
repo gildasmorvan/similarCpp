@@ -62,6 +62,9 @@ jobs:
 
     - name: Test C++ build
       run: |
+        # Install the Python package in development mode
+        pip install -e .
+        # Test the C++ engine
         python -c "from similar2logo.cpp_engine import use_cpp_engine; print('C++ engine available:', use_cpp_engine())"
 
   # Build and test Python components
@@ -120,6 +123,8 @@ jobs:
 
     - name: Test Python package
       run: |
+        # Install the package in development mode
+        pip install -e .
         python -c "import similar2logo; print('Import successful')"
         python -c "from similar2logo.cpp_engine import use_cpp_engine; print('C++ engine:', use_cpp_engine())"
 
@@ -173,6 +178,11 @@ jobs:
         pip install -e .[dev]
 
     - name: Build all components
+      run: |
+        chmod +x build_cpp_engine.sh
+        ./build_cpp_engine.sh
+        # Install the package after building C++ extensions
+        pip install -e .
       run: |
         chmod +x build_cpp_engine.sh
         ./build_cpp_engine.sh

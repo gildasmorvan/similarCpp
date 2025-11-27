@@ -88,7 +88,12 @@ make -j$NPROC
 # Install
 echo ""
 echo "Installing to Python package..."
-make install
+if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "win32" ]]; then
+    echo "Windows detected - extension built to python/similar2logo/ directory"
+    # On Windows, LIBRARY_OUTPUT_DIRECTORY should be sufficient
+else
+    make install
+fi
 
 echo ""
 echo "========================================"

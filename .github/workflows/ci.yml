@@ -183,9 +183,6 @@ jobs:
         ./build_cpp_engine.sh
         # Install the package after building C++ extensions
         pip install -e .
-      run: |
-        chmod +x build_cpp_engine.sh
-        ./build_cpp_engine.sh
 
     - name: Test DSL examples
       run: |

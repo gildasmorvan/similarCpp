@@ -7,7 +7,11 @@ from pathlib import Path
 
 # Read README
 readme_file = Path(__file__).parent / "README.md"
-long_description = readme_file.read_text() if readme_file.exists() else ""
+try:
+    long_description = readme_file.read_text(encoding='utf-8') if readme_file.exists() else ""
+except UnicodeDecodeError:
+    # Fallback for Windows encoding issues
+    long_description = ""
 
 setup(
     name="similar2logo",

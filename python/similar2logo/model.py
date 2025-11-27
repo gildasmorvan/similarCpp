@@ -51,7 +51,12 @@ class Turtle:
     """
     
     def __init__(self, position=None, heading=0.0, color="black", **kwargs):
-        self._position = position if position else Point2D(0, 0)
+        if position is None:
+            self._position = Point2D(0, 0)
+        elif isinstance(position, (tuple, list)) and len(position) == 2:
+            self._position = Point2D(position[0], position[1])
+        else:
+            self._position = position
         self._heading = heading
         self._color = color
         self._speed = 1.0

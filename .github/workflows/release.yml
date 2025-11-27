@@ -96,19 +96,19 @@ jobs:
         # Final archives will be created in the release job
 
     - name: Upload Python artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: python-artifacts-${{ matrix.platform }}
         path: release-artifacts/python/
 
     - name: Upload C++ artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: cpp-artifacts-${{ matrix.platform }}
         path: release-artifacts/cpp/
 
     - name: Upload documentation
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: docs-${{ matrix.platform }}
         path: release-artifacts/docs/

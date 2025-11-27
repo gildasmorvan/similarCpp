@@ -53,6 +53,17 @@ PYBIND11_MODULE(_jamfree, m) {
   m.doc() = "JamFree: Traffic simulation library with microscopic models";
 
   // ========================================================================
+  // Interfaces
+  // ========================================================================
+  py::class_<IPerceptionModel, std::shared_ptr<IPerceptionModel>>(
+      m, "IPerceptionModel");
+  py::class_<IDecisionModel, std::shared_ptr<IDecisionModel>>(m,
+                                                              "IDecisionModel");
+  py::class_<jamfree::kernel::agents::ILocalState,
+             std::shared_ptr<jamfree::kernel::agents::ILocalState>>(
+      m, "ILocalState");
+
+  // ========================================================================
   // Point2D
   // ========================================================================
   py::class_<Point2D>(m, "Point2D")
@@ -642,7 +653,7 @@ PYBIND11_MODULE(_jamfree, m) {
   using namespace jamfree::microscopic::decision;
 
   // VehiclePublicLocalStateMicro
-  py::class_<VehiclePublicLocalStateMicro,
+  py::class_<VehiclePublicLocalStateMicro, jamfree::kernel::agents::ILocalState,
              std::shared_ptr<VehiclePublicLocalStateMicro>>(
       m, "VehiclePublicLocalStateMicro")
       .def(py::init<const std::string &>(), py::arg("owner_id"),
@@ -682,6 +693,7 @@ PYBIND11_MODULE(_jamfree, m) {
 
   // VehiclePrivateLocalStateMicro
   py::class_<VehiclePrivateLocalStateMicro,
+             jamfree::kernel::agents::ILocalState,
              std::shared_ptr<VehiclePrivateLocalStateMicro>>(
       m, "VehiclePrivateLocalStateMicro")
       .def(py::init<const std::string &>(), py::arg("owner_id"),
@@ -740,15 +752,36 @@ PYBIND11_MODULE(_jamfree, m) {
                             decision);
           },
           py::arg("level"), py::arg("perception"), py::arg("decision"),
-          "Set both perception and decision models for level");
-
-  // ========================================================================
-  // Interfaces
-  // ========================================================================
-  py::class_<IPerceptionModel, std::shared_ptr<IPerceptionModel>>(
-      m, "IPerceptionModel");
-  py::class_<IDecisionModel, std::shared_ptr<IDecisionModel>>(m,
-                                                              "IDecisionModel");
+          "Set both perception and decision models for level")
+      .def(
+          "set_public_local_state",
+          [](VehicleAgent &agent, const std::string &level,
+             std::shared_ptr<jamfree::kernel::agents::ILocalState> state) {
+            agent.setPublicLocalState(kernel::agents::LevelIdentifier(level),
+                                      state);
+          },
+          py::arg("level"), py::arg("state"),
+          "Set public local state for level")
+      .def(
+          "set_private_local_state",
+          [](VehicleAgent &agent, const std::string &level,
+             std::shared_ptr<jamfree::kernel::agents::ILocalState> state) {
+            agent.setPrivateLocalState(kernel::agents::LevelIdentifier(level),
+                                       state);
+          },
+          py::arg("level"), py::arg("state"),
+          "Set private local state for level")
+      .def(
+          "set_states",
+          [](VehicleAgent &agent, const std::string &level,
+             std::shared_ptr<jamfree::kernel::agents::ILocalState> publicState,
+             std::shared_ptr<jamfree::kernel::agents::ILocalState>
+                 privateState) {
+            agent.setStates(kernel::agents::LevelIdentifier(level), publicState,
+                            privateState);
+          },
+          py::arg("level"), py::arg("public_state"), py::arg("private_state"),
+          "Set both public and private local states for level");
 
   // ========================================================================
   // Perception Model

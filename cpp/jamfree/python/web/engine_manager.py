@@ -89,32 +89,63 @@ class SimulationEngineManager:
         Returns:
             Configured VehicleAgent
         """
-        # Create public state with initial position and speed
+        # 1. Create Perception Model
+        perception_range = config.get('perception_range', 200.0)
+        perception_model = jamfree.VehiclePerceptionModelMicro(perception_range)
+        
+        # 2. Create Decision Models (IDM & MOBIL)
+        idm = jamfree.IDM()
+        idm.setDesiredSpeed(config.get('desired_speed', 33.3))
+        idm.setMinGap(config.get('min_gap', 2.0))
+        idm.setTimeHeadway(config.get('time_headway', 1.5))
+        idm.setMaxAccel(config.get('max_accel', 3.0))
+        idm.setComfortableDecel(config.get('comfort_decel', 2.0))
+        idm.setAccelExponent(config.get('accel_exponent', 4.0))
+        
+        mobil = jamfree.MOBIL()
+        mobil.setPoliteness(config.get('politeness', 0.5))
+        mobil.setThreshold(config.get('lc_threshold', 0.1))
+        mobil.setMaxSafeDecel(config.get('max_safe_decel', 4.0))
+        mobil.setBiasRight(config.get('bias_right', 0.1))
+        
+        # 3. Create Decision Micro Submodels (DMS)
+        accel_dms = jamfree.ForwardAccelerationDMS(idm)
+        lane_change_dms = jamfree.LaneChangeDMS(mobil, idm)
+        
+        # 4. Create Composite DMS (Conjunction)
+        conjunction_dms = jamfree.ConjunctionDMS()
+        conjunction_dms.add_submodel(accel_dms)
+        conjunction_dms.add_submodel(lane_change_dms)
+        
+        # 5. Create Vehicle Decision Model
+        decision_model = jamfree.VehicleDecisionModelMicro(conjunction_dms)
+        
+        # 6. Create Vehicle Agent
+        agent = jamfree.VehicleAgent(vehicle_id)
+        
+        # 7. Create States
         public_state = jamfree.VehiclePublicLocalStateMicro(vehicle_id)
-        public_state.setSpeed(config.get('initial_speed', 30.0))  # m/s (~108 km/h)
+        public_state.setSpeed(config.get('initial_speed', 30.0))
         public_state.setLanePosition(config.get('initial_position', 0.0))
         public_state.setCurrentLane(initial_lane)
         public_state.setActive(True)
         public_state.setLength(config.get('length', 5.0))
         public_state.setWidth(config.get('width', 2.0))
         
-        # Create private state with IDM/MOBIL parameters
         private_state = jamfree.VehiclePrivateLocalStateMicro(vehicle_id)
-        private_state.setDesiredSpeed(config.get('desired_speed', 33.3))  # m/s (~120 km/h)
-        private_state.setMinGap(config.get('min_gap', 2.0))  # meters
-        private_state.setTimeHeadway(config.get('time_headway', 1.5))  # seconds
-        private_state.setMaxAcceleration(config.get('max_accel', 3.0))  # m/s^2
-        private_state.setComfortableDeceleration(config.get('comfort_decel', 2.0))  # m/s^2
+        # Note: Parameters are also set in IDM/MOBIL, but state stores them for reference/other uses
+        private_state.setDesiredSpeed(config.get('desired_speed', 33.3))
+        private_state.setMinGap(config.get('min_gap', 2.0))
+        private_state.setTimeHeadway(config.get('time_headway', 1.5))
+        private_state.setMaxAcceleration(config.get('max_accel', 3.0))
+        private_state.setComfortableDeceleration(config.get('comfort_decel', 2.0))
         private_state.setPoliteness(config.get('politeness', 0.5))
         private_state.setLaneChangingThreshold(config.get('lc_threshold', 0.1))
         
-        # Create agent
-        # Note: VehicleAgent constructor may need perception/decision models in the future
-        # For now, we create with just the ID and rely on C++ defaults
-        agent = jamfree.VehicleAgent(vehicle_id)
-        
-        # Store states (they will be managed by the simulation engine)
-        # The engine will use these states when running the simulation
+        # 8. Set Models and States
+        # "Microscopic" is the level identifier
+        agent.set_models("Microscopic", perception_model, decision_model)
+        agent.set_states("Microscopic", public_state, private_state)
         
         return agent
         

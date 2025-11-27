@@ -90,6 +90,16 @@ public:
                             std::shared_ptr<ILocalState> state);
 
   /**
+   * @brief Set both public and private local states for a level.
+   * @param level Level identifier
+   * @param publicState Public local state
+   * @param privateState Private local state
+   */
+  void setStates(const LevelIdentifier &level,
+                 std::shared_ptr<ILocalState> publicState,
+                 std::shared_ptr<ILocalState> privateState);
+
+  /**
    * @brief Set perception model for a level.
    * @param level Level identifier
    * @param model Perception model

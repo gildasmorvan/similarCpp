@@ -48,7 +48,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake ninja-build
         elif [ "$RUNNER_OS" == "macOS" ]; then
-          brew install cmake ninja pybind11
+          brew install cmake ninja
         fi
 
     - name: Configure CMake (Windows)
@@ -100,7 +100,7 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake ninja-build pybind11-dev
+        sudo apt-get install -y cmake ninja-build
 
     - name: Install system dependencies (macOS)
       if: runner.os == 'macOS'
@@ -170,7 +170,7 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake ninja-build pybind11-dev
+        sudo apt-get install -y cmake ninja-build
 
     - name: Install Python dependencies
       run: |

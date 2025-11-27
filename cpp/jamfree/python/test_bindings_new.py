@@ -58,6 +58,13 @@ def test_bindings():
     
     agent.set_models("Microscopic", perception, decision)
     print("  Set perception and decision models for Microscopic level")
+    
+    # Create and set states
+    public_state = jamfree.VehiclePublicLocalStateMicro("test_agent")
+    private_state = jamfree.VehiclePrivateLocalStateMicro("test_agent")
+    
+    agent.set_states("Microscopic", public_state, private_state)
+    print("  Set public and private local states for Microscopic level")
 
     print("\nAll binding tests passed!")
 

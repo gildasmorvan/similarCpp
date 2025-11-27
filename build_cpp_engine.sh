@@ -75,8 +75,13 @@ cd "$BUILD_DIR"
 echo "Configuring CMake..."
 # Copy CMakeLists_logo_cpp.txt to CMakeLists.txt for cmake
 cp "$CPP_DIR/CMakeLists_logo_cpp.txt" "$CPP_DIR/CMakeLists.txt"
+
+# Get pybind11 directory from pip installation
+PYBIND11_DIR=$(python3 -c "import pybind11; import os; print(os.path.join(os.path.dirname(pybind11.__file__), 'share', 'cmake', 'pybind11'))")
+
 cmake -DCMAKE_BUILD_TYPE=Release \
       -DPYTHON_EXECUTABLE=$(which python3) \
+      -Dpybind11_DIR="$PYBIND11_DIR" \
       "$CPP_DIR"
 
 # Build

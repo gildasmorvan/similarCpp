@@ -103,6 +103,15 @@ void VehicleAgent::setModels(const LevelIdentifier &level,
   specifyBehaviorForLevel(level, perceptionModel, decisionModel);
 }
 
+void VehicleAgent::setStates(const LevelIdentifier &level,
+                             std::shared_ptr<ILocalState> publicState,
+                             std::shared_ptr<ILocalState> privateState) {
+  if (hasLevel(level)) {
+    excludeFromLevel(level);
+  }
+  includeNewLevel(level, publicState, privateState);
+}
+
 IDecisionModel *VehicleAgent::getDecisionModel(const LevelIdentifier &level) {
   return fr::univ_artois::lgi2a::similar::extendedkernel::agents::
       ExtendedAgent::getDecisionModel(level)

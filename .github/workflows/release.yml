@@ -22,11 +22,6 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Set up JDK
-      uses: actions/setup-java@v4
-      with:
-        java-version: '11'
-        distribution: 'temurin'
 
     - name: Install system dependencies
       run: |
@@ -47,23 +42,16 @@ jobs:
       run: |
         python -m build --wheel --sdist
 
-    - name: Build Java artifacts
-      run: |
-        mvn clean package -DskipTests
 
     - name: Create release archives
       run: |
         # Create directories for artifacts
         mkdir -p release-artifacts/python
-        mkdir -p release-artifacts/java
         mkdir -p release-artifacts/docs
 
         # Copy Python artifacts
         cp dist/*.whl release-artifacts/python/
         cp dist/*.tar.gz release-artifacts/python/
-
-        # Copy Java artifacts
-        find . -name "*.jar" -not -path "*/target/test-classes/*" -not -path "*/target/classes/*" | xargs -I {} cp {} release-artifacts/java/
 
         # Copy documentation
         cp README.md release-artifacts/docs/
@@ -73,7 +61,6 @@ jobs:
         # Create archives
         cd release-artifacts
         tar -czf ../python-artifacts.tar.gz python/
-        tar -czf ../java-artifacts.tar.gz java/
         tar -czf ../docs.tar.gz docs/
 
     - name: Upload Python artifacts
@@ -82,11 +69,6 @@ jobs:
         name: python-artifacts
         path: release-artifacts/python/
 
-    - name: Upload Java artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: java-artifacts
-        path: release-artifacts/java/
 
     - name: Upload documentation
       uses: actions/upload-artifact@v4
@@ -131,7 +113,6 @@ jobs:
         # Create final release package
         mkdir -p final-release
         cp -r python-artifacts/* final-release/ 2>/dev/null || true
-        cp -r java-artifacts/* final-release/ 2>/dev/null || true
         cp -r docs/* final-release/ 2>/dev/null || true
 
         # Create source archive
@@ -168,7 +149,6 @@ jobs:
 
         - **C++ Core**: Multithreaded simulation engine with enhanced performance
         - **Python Bindings**: Complete Similar2Logo DSL with web visualization
-        - **Java Libraries**: Full SIMILAR framework implementation
         - **Documentation**: Comprehensive guides and examples
 
         ## Installation
@@ -184,7 +164,6 @@ jobs:
         ## Compatibility
 
         - Python 3.8+
-        - Java 11+
         - CMake 3.15+
         - C++17 compatible compiler
 

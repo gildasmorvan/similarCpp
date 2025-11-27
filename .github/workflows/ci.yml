@@ -64,36 +64,6 @@ jobs:
       run: |
         python -c "from similar2logo.cpp_engine import use_cpp_engine; print('C++ engine available:', use_cpp_engine())"
 
-  # Build Java components
-  java-build:
-    name: Java Build
-    runs-on: ubuntu-22.04
-
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up JDK
-      uses: actions/setup-java@v4
-      with:
-        java-version: '11'
-        distribution: 'temurin'
-
-    - name: Cache Maven packages
-      uses: actions/cache@v4
-      with:
-        path: ~/.m2
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: ${{ runner.os }}-m2
-
-    - name: Build with Maven
-      run: mvn clean compile -B -V
-
-    - name: Run Maven tests
-      run: mvn test -B
-
-    - name: Package Java artifacts
-      run: mvn package -DskipTests
-
   # Build and test Python components
   python-build:
     name: Python Build (${{ matrix.python-version }}, ${{ matrix.os }})
@@ -176,7 +146,7 @@ jobs:
   integration-test:
     name: Integration Tests
     runs-on: ubuntu-22.04
-    needs: [cpp-build, java-build, python-build]
+    needs: [cpp-build, python-build]
 
     steps:
     - uses: actions/checkout@v4

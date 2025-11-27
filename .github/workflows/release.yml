@@ -148,7 +148,20 @@ jobs:
         path: artifacts/
 
     - name: Create release archives
+      shell: bash
       run: |
+        # Create source archive first (before creating other archives)
+        echo "Creating source archive..."
+        tar -czf SIMILAR-${{ github.ref_name }}-source.tar.gz \
+          --exclude='.git' \
+          --exclude='target' \
+          --exclude='build' \
+          --exclude='__pycache__' \
+          --exclude='*.so' \
+          --exclude='*.dylib' \
+          --exclude='*.dll' \
+          .
+
         # Create platform-specific archives
         for platform in linux-x64 macos-x64 windows-x64; do
           echo "Creating archive for $platform..."
@@ -184,17 +197,6 @@ jobs:
             fi
           fi
         done
-
-        # Create source archive
-        tar -czf SIMILAR-${{ github.ref_name }}-source.tar.gz \
-          --exclude='.git' \
-          --exclude='target' \
-          --exclude='build' \
-          --exclude='__pycache__' \
-          --exclude='*.so' \
-          --exclude='*.dylib' \
-          --exclude='*.dll' \
-          .
 
     - name: Generate release notes
       run: |

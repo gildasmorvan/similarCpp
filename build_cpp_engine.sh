@@ -46,24 +46,37 @@ if [ -n "$CI" ] || [ -n "$GITHUB_ACTIONS" ]; then
     rm -rf "$BUILD_DIR"
 fi
 
+# Function to build with appropriate build system
+build_project() {
+    local project_dir="$1"
+    local build_dir="$2"
+    local project_name="$3"
+
+    echo "Building $project_name..."
+    mkdir -p "$build_dir"
+    cd "$build_dir"
+    cmake -DCMAKE_BUILD_TYPE=Release "$project_dir"
+
+    # Use appropriate build command based on platform
+    if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "win32" ]]; then
+        # Windows with MSVC
+        cmake --build . --config Release
+    else
+        # Unix-like systems (Linux, macOS)
+        make -j$(python3 -c "import os; print(os.cpu_count())")
+    fi
+}
+
 # Build microkernel first
-echo "Building microkernel..."
 MICROKERNEL_DIR="$SCRIPT_DIR/cpp/microkernel"
 MICROKERNEL_BUILD="$MICROKERNEL_DIR/build"
-mkdir -p "$MICROKERNEL_BUILD"
-cd "$MICROKERNEL_BUILD"
-cmake -DCMAKE_BUILD_TYPE=Release "$MICROKERNEL_DIR"
-make -j$(python3 -c "import os; print(os.cpu_count())")
+build_project "$MICROKERNEL_DIR" "$MICROKERNEL_BUILD" "microkernel"
 
 # Build extendedkernel
 echo ""
-echo "Building extendedkernel..."
 EXTKERNEL_DIR="$SCRIPT_DIR/cpp/extendedkernel"
 EXTKERNEL_BUILD="$EXTKERNEL_DIR/build"
-mkdir -p "$EXTKERNEL_BUILD"
-cd "$EXTKERNEL_BUILD"
-cmake -DCMAKE_BUILD_TYPE=Release "$EXTKERNEL_DIR"
-make -j$(python3 -c "import os; print(os.cpu_count())")
+build_project "$EXTKERNEL_DIR" "$EXTKERNEL_BUILD" "extendedkernel"
 
 # Create build directory for Logo engine
 echo ""
@@ -71,24 +84,30 @@ echo "Creating Logo engine build directory..."
 mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
-# Configure
-echo "Configuring CMake..."
+# Build Logo engine
+echo ""
+echo "Building Logo engine..."
 # Copy CMakeLists_logo_cpp.txt to CMakeLists.txt for cmake
 cp "$CPP_DIR/CMakeLists_logo_cpp.txt" "$CPP_DIR/CMakeLists.txt"
 
 # Get pybind11 directory from pip installation
 PYBIND11_DIR=$(python3 -c "import pybind11; import os; print(os.path.join(os.path.dirname(pybind11.__file__), 'share', 'cmake', 'pybind11'))")
 
+mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR"
 cmake -DCMAKE_BUILD_TYPE=Release \
       -DPYTHON_EXECUTABLE=$(which python3) \
       -Dpybind11_DIR="$PYBIND11_DIR" \
       "$CPP_DIR"
 
-# Build
-echo ""
-echo "Building C++ engine..."
-NPROC=$(python3 -c "import os; print(os.cpu_count())")
-make -j$NPROC
+# Use appropriate build command based on platform
+if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "win32" ]]; then
+    # Windows with MSVC
+    cmake --build . --config Release
+else
+    # Unix-like systems (Linux, macOS)
+    make -j$(python3 -c "import os; print(os.cpu_count())")
+fi
 
 # Install
 echo ""

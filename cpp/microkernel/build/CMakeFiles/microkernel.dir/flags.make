@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/Users/morvan/Antigravity/similar/cpp/microkernel/include
 
-CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++20 -arch arm64
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++20 -arch arm64 -fPIC
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -arch arm64
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -arch arm64 -fPIC
 

@@ -201,7 +201,7 @@ jobs:
         sim = (Simulation()
                .grid(10, 10)
                .agents(TestTurtle, 5)
-               .run(steps=1))
+               .run(max_steps=1))
         print('DSL simulation completed')
         "
 

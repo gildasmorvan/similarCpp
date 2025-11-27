@@ -94,19 +94,23 @@ class SimulationEngineManager:
         perception_model = jamfree.VehiclePerceptionModelMicro(perception_range)
         
         # 2. Create Decision Models (IDM & MOBIL)
-        idm = jamfree.IDM()
-        idm.setDesiredSpeed(config.get('desired_speed', 33.3))
-        idm.setMinGap(config.get('min_gap', 2.0))
-        idm.setTimeHeadway(config.get('time_headway', 1.5))
-        idm.setMaxAccel(config.get('max_accel', 3.0))
-        idm.setComfortableDecel(config.get('comfort_decel', 2.0))
-        idm.setAccelExponent(config.get('accel_exponent', 4.0))
+        # IDM constructor: (desired_speed, time_headway, min_gap, max_accel, comfortable_decel, accel_exponent)
+        idm = jamfree.IDM(
+            config.get('desired_speed', 33.3),
+            config.get('time_headway', 1.5),
+            config.get('min_gap', 2.0),
+            config.get('max_accel', 3.0),
+            config.get('comfort_decel', 2.0),
+            config.get('accel_exponent', 4.0)
+        )
         
-        mobil = jamfree.MOBIL()
-        mobil.setPoliteness(config.get('politeness', 0.5))
-        mobil.setThreshold(config.get('lc_threshold', 0.1))
-        mobil.setMaxSafeDecel(config.get('max_safe_decel', 4.0))
-        mobil.setBiasRight(config.get('bias_right', 0.1))
+        # MOBIL constructor: (politeness, threshold, max_safe_decel, bias_right)
+        mobil = jamfree.MOBIL(
+            config.get('politeness', 0.5),
+            config.get('lc_threshold', 0.1),
+            config.get('max_safe_decel', 4.0),
+            config.get('bias_right', 0.1)
+        )
         
         # 3. Create Decision Micro Submodels (DMS)
         accel_dms = jamfree.ForwardAccelerationDMS(idm)
@@ -125,22 +129,19 @@ class SimulationEngineManager:
         
         # 7. Create States
         public_state = jamfree.VehiclePublicLocalStateMicro(vehicle_id)
-        public_state.setSpeed(config.get('initial_speed', 30.0))
-        public_state.setLanePosition(config.get('initial_position', 0.0))
-        public_state.setCurrentLane(initial_lane)
-        public_state.setActive(True)
-        public_state.setLength(config.get('length', 5.0))
-        public_state.setWidth(config.get('width', 2.0))
+        public_state.set_speed(config.get('initial_speed', 30.0))
+        public_state.set_lane_position(config.get('initial_position', 0.0))
+        public_state.set_lane_index(initial_lane.get_index())
+        public_state.set_active(True)
+        public_state.set_length(config.get('length', 5.0))
         
         private_state = jamfree.VehiclePrivateLocalStateMicro(vehicle_id)
-        # Note: Parameters are also set in IDM/MOBIL, but state stores them for reference/other uses
-        private_state.setDesiredSpeed(config.get('desired_speed', 33.3))
-        private_state.setMinGap(config.get('min_gap', 2.0))
-        private_state.setTimeHeadway(config.get('time_headway', 1.5))
-        private_state.setMaxAcceleration(config.get('max_accel', 3.0))
-        private_state.setComfortableDeceleration(config.get('comfort_decel', 2.0))
-        private_state.setPoliteness(config.get('politeness', 0.5))
-        private_state.setLaneChangingThreshold(config.get('lc_threshold', 0.1))
+        # Only set parameters that have setters available in the bindings
+        private_state.set_desired_speed(config.get('desired_speed', 33.3))
+        private_state.set_time_headway(config.get('time_headway', 1.5))
+        private_state.set_max_acceleration(config.get('max_accel', 3.0))
+        private_state.set_comfortable_deceleration(config.get('comfort_decel', 2.0))
+        private_state.set_politeness(config.get('politeness', 0.5))
         
         # 8. Set Models and States
         # "Microscopic" is the level identifier
@@ -265,7 +266,7 @@ class SimulationEngineManager:
                         'lon': lat_lon.y,
                         'speed': state.get_speed() * 3.6, # m/s to km/h
                         'angle': state.get_heading(),
-                        'lane_id': state.get_current_lane().get_id() if state.get_current_lane() else ""
+                        'lane_id': f"lane_{state.get_lane_index()}"
                     })
             
             # Calculate performance metrics

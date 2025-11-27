@@ -224,19 +224,20 @@
 
 ### 8. Implementation Guidance for Next Agent
 
-**Current Status Summary (2025-11-26):**
+**Current Status Summary (2025-11-27):**
 - ✅ **ExtendedKernel**: Core abstractions complete and functional
-- ✅ **Similar2Logo Core**: Basic reaction logic implemented, environment aligned
-- ✅ **Python DSL**: Working examples with web UI, reaction warnings suppressed
+- ✅ **Similar2Logo Core**: Reaction logic complete with proper spatial indexing and physics
+- ✅ **Critical Behavioral Fixes**: Turtle patch management, out-of-bounds removal, physics integration all implemented
+- 🔍 **Pheromone Diffusion**: Boundary handling needs verification vs Java
 - ❌ **Jamfree**: Major gaps remain - microscopic reaction incomplete, web integration missing
 - ❌ **Cross-cutting**: Documentation and regression tests not implemented
 
 **Updated Order of Work (suggested)**:
-1. **Fix Critical Java/C++ Behavioral Differences** (Section 11):
-   - Implement turtle patch management in ChangePosition/AgentPositionUpdate
-   - Fix out-of-bounds turtle removal in AgentPositionUpdate
-   - Align physics integration with Java model (remove dt from speed update)
-   - Verify pheromone diffusion boundary handling
+1. **Fix Remaining Java/C++ Behavioral Differences**:
+   - ✅ **COMPLETED**: Turtle patch management implemented in ChangePosition/AgentPositionUpdate
+   - ✅ **COMPLETED**: Out-of-bounds turtle removal implemented in AgentPositionUpdate
+   - ✅ **COMPLETED**: Physics integration aligned with Java model (speed += acceleration, no dt)
+   - 🔍 **INVESTIGATE**: Pheromone diffusion boundary handling - verify neighbor counting matches Java
 
 2. **Finish Jamfree implementation** (Section 6, tasks 17-18):
    - Complete microscopic reaction model (lane changes, physics updates)
@@ -435,20 +436,24 @@ new_grid[y][x] -= diffusion_amount;
 - Position update: `x,y += dx*dt, dy*dt` where `dx,dy` are pre-calculated velocities
 
 **C++:**
-- Speed update: `speed += acceleration * dt`
+- ✅ **FIXED**: Speed update: `speed += acceleration` (no dt multiplier - matches Java)
 - Position update: `x,y += cos(θ)*speed*dt, sin(θ)*speed*dt`
 
 **Impact**: **MAJOR** - Different physics integration, C++ uses velocity integration, Java uses stored velocity components
 
-### **Critical Issues Requiring Fixes**
+### **Critical Issues Status**
 
-#### **🚨 HIGH PRIORITY**
-1. **Turtle Patch Management**: C++ ChangePosition and AgentPositionUpdate must update spatial indices
-2. **Out-of-bounds Removal**: AgentPositionUpdate must remove turtles that exit bounds
-3. **Physics Integration**: Align C++ AgentPositionUpdate with Java physics model
+#### **✅ COMPLETED - HIGH PRIORITY**
+1. **Turtle Patch Management**: ✅ IMPLEMENTED - `env.update_turtle_patch()` updates spatial indices in ChangePosition and AgentPositionUpdate
+2. **Out-of-bounds Removal**: ✅ IMPLEMENTED - `env.remove_turtle()` removes turtles that exit bounds in AgentPositionUpdate
+3. **Physics Integration**: ✅ IMPLEMENTED - Speed update uses `speed += acceleration` (no dt multiplier, matches Java)
 
-#### **🔧 MEDIUM PRIORITY**
-4. **Pheromone Diffusion**: Verify boundary handling matches Java behavior
+#### **🔍 MEDIUM PRIORITY - Investigate**
+4. **Pheromone Diffusion Boundary Handling**:
+   - **Java**: Fixed `/8` divisor (8 neighbors assumed for all cells)
+   - **C++**: Dynamic divisor based on actual neighbor count (3-8 neighbors at boundaries)
+   - **Impact**: Different diffusion rates at grid boundaries
+   - **Action**: Verify if this behavioral difference is acceptable or needs Java alignment
 5. **Influence Processing Order**: Consider reordering C++ to match Java switch statement
 
 #### **📋 LOW PRIORITY**
@@ -456,10 +461,10 @@ new_grid[y][x] -= diffusion_amount;
 7. **Random Generation**: Document PRNG differences and provide seed compatibility if needed
 
 ### **Next Steps**
-- Fix turtle patch management in ChangePosition and AgentPositionUpdate
-- Align physics integration with Java model
-- Add regression tests comparing Java vs C++ outputs
-- Document all remaining deliberate deviations
+- ✅ **COMPLETED**: Turtle patch management and physics integration
+- 🔍 **INVESTIGATE**: Pheromone diffusion boundary handling differences
+- 📝 **DOCUMENT**: Create regression tests comparing Java vs C++/Python outputs
+- 📚 **DOCUMENT**: Document remaining deliberate deviations
 
 ---
 

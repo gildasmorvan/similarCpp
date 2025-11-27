@@ -938,9 +938,11 @@ CMakeFiles/_jamfree.dir/python/src/bindings.cpp.o: /Users/morvan/Antigravity/sim
   /Users/morvan/Antigravity/similar/cpp/microkernel/include/libs/abstractimpl/AbstractLevel.h \
   /Users/morvan/Antigravity/similar/cpp/microkernel/include/libs/abstractimpl/AbstractSimulationModel.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/realdata/include/OSMParser.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/agents/Interfaces.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/agents/VehicleAgent.h \
   /Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/IInfluence.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/reaction/TrafficReactionModel.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/simulation/SimulationEngine.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/simulation/TrafficLevel.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/simulation/TrafficSimulationModel.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/tools/FastMath.h \
@@ -981,6 +983,15 @@ CMakeFiles/_jamfree.dir/python/src/bindings.cpp.o: /Users/morvan/Antigravity/sim
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/VehiclePrivateLocalStateMicro.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/VehiclePublicLocalStateMicro.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/perception/VehiclePerceptionModelMicro.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/agents/Interfaces.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/agents/VehiclePublicLocalStateMicro.h \
+  /Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/AbstractInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/IInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/RegularInfluence.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/agents/Interfaces.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/influences/ChangeAcceleration.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/influences/ChangeLane.h \
+  /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/reaction/MicroscopicReactionModel.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/model/Lane.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/model/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/model/Road.h \
@@ -1319,6 +1330,16 @@ CMakeFiles/_jamfree.dir/python/src/bindings.cpp.o: /Users/morvan/Antigravity/sim
 
 /opt/homebrew/include/pybind11/attr.h:
 
+/Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/reaction/MicroscopicReactionModel.h:
+
+/Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/influences/ChangeLane.h:
+
+/Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/influences/ChangeAcceleration.h:
+
+/Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/RegularInfluence.h:
+
+/Users/morvan/Antigravity/similar/cpp/microkernel/include/influences/AbstractInfluence.h:
+
 /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/include/decision/dms/SubsumptionDMS.h:
 
 /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/monitoring.h:
@@ -1344,6 +1365,8 @@ CMakeFiles/_jamfree.dir/python/src/bindings.cpp.o: /Users/morvan/Antigravity/sim
 /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/simulation/TrafficSimulationModel.h:
 
 /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/simulation/TrafficLevel.h:
+
+/Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/simulation/SimulationEngine.h:
 
 /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/include/reaction/TrafficReactionModel.h:
 

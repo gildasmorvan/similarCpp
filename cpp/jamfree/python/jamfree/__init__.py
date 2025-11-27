@@ -57,6 +57,11 @@ from ._jamfree import (
     LaneChangeDMS,
     ConjunctionDMS,
     SubsumptionDMS,
+    
+    # Simulation Engine (JamFree Kernel)
+    SimulationEngine,
+    IReactionModel,
+    MicroscopicReactionModel,
 )
 
 __version__ = '0.1.0'
@@ -106,6 +111,10 @@ __all__ = [
     'LaneChangeDMS',
     'ConjunctionDMS',
     'SubsumptionDMS',
+    # Simulation Engine
+    'SimulationEngine',
+    'IReactionModel',
+    'MicroscopicReactionModel',
     # Metal GPU
     'MetalCompute',
     'GPUVehicleState',

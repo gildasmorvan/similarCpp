@@ -21,6 +21,14 @@ import threading
 import time
 from routing import RoutingEngine
 
+# Try to import jamfree and engine_manager
+try:
+    from engine_manager import SimulationEngineManager
+    ENGINE_MANAGER_AVAILABLE = True
+except ImportError:
+    ENGINE_MANAGER_AVAILABLE = False
+    print("Warning: engine_manager not available.")
+
 # Try to import jamfree (may not be built yet)
 try:
     import jamfree
@@ -43,22 +51,33 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Global simulation state
 simulation_state = {
     'network': None,
+    'engine_manager': None,  # SimulationEngineManager instance
     'vehicles': [],
     'running': False,
     'step': 0,
+    'center_lat': 0.0,  # For coordinate conversion
+    'center_lon': 0.0,  # For coordinate conversion
     'config': {
-        'num_vehicles': 200,  # Increased for large-scale simulation
-        'desired_speed': 120,  # km/h
+        'num_vehicles': 10,  # Start with smaller number for testing
+        'desired_speed': 33.3,  # m/s (120 km/h)
         'time_headway': 1.5,
         'politeness': 0.3,
-        # Performance optimizations
-        'use_idm_lookup': True,      # Use IDM lookup tables (30-40% faster)
-        'use_spatial_index': True,   # Use spatial index (O(log N) queries)
-        'use_multithreading': True,  # Use multithreading for large N
-        'use_adaptive_hybrid': True, # Adaptive micro/macro switching
-        'adaptive_threshold': 50,    # Switch to macro at N vehicles per lane
+        'perception_range': 200.0,
+        'min_gap': 2.0,
+        'max_accel': 3.0,
+        'comfort_decel': 2.0,
+        'accel_exponent': 4.0,
+        'lc_threshold': 0.1,
+        'max_safe_decel': 4.0,
+        'bias_right': 0.1,
+        # Legacy optimization flags (kept for compatibility)
+        'use_idm_lookup': True,
+        'use_spatial_index': True,
+        'use_multithreading': True,
+        'use_adaptive_hybrid': True,
+        'adaptive_threshold': 50,
     },
-    # Optimization components
+    # Optimization components (legacy, kept for compatibility)
     'spatial_index': None,
     'adaptive_simulator': None,
     'performance_stats': {
@@ -121,10 +140,14 @@ def upload_osm():
             network = jamfree.OSMParser.parse_file(str(filepath))
             simulation_state['network'] = network
             
+            # Calculate and store center coordinates for coordinate conversion
+            simulation_state['center_lat'] = (network.min_lat + network.max_lat) / 2.0
+            simulation_state['center_lon'] = (network.min_lon + network.max_lon) / 2.0
+            
             # Extract road geometry for visualization
             road_geometry = []
-            center_lat = (network.min_lat + network.max_lat) / 2.0
-            center_lon = (network.min_lon + network.max_lon) / 2.0
+            center_lat = simulation_state['center_lat']
+            center_lon = simulation_state['center_lon']
             
             for road in network.roads:
                 road_id = road.get_id()
@@ -227,10 +250,14 @@ def download_osm():
             network = jamfree.OSMParser.parse_string(response.text)
             simulation_state['network'] = network
             
+            # Calculate and store center coordinates for coordinate conversion
+            simulation_state['center_lat'] = (network.min_lat + network.max_lat) / 2.0
+            simulation_state['center_lon'] = (network.min_lon + network.max_lon) / 2.0
+            
             # Extract road geometry for visualization
             road_geometry = []
-            center_lat = (network.min_lat + network.max_lat) / 2.0
-            center_lon = (network.min_lon + network.max_lon) / 2.0
+            center_lat = simulation_state['center_lat']
+            center_lon = simulation_state['center_lon']
             
             for road in network.roads:
                 road_id = road.get_id()

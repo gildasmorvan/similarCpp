@@ -783,7 +783,22 @@ PYBIND11_MODULE(_jamfree, m) {
                             privateState);
           },
           py::arg("level"), py::arg("public_state"), py::arg("private_state"),
-          "Set both public and private local states for level");
+          "Set both public and private local states for level")
+      .def(
+          "get_public_local_state",
+          [](VehicleAgent &agent, const std::string &level) {
+            return agent.getPublicLocalState(
+                kernel::agents::LevelIdentifier(level));
+          },
+          py::arg("level"), "Get public local state for level")
+      .def(
+          "get_private_local_state",
+          [](VehicleAgent &agent, const std::string &level) {
+            return agent.getPrivateLocalState(
+                kernel::agents::LevelIdentifier(level));
+          },
+          py::arg("level"), "Get private local state for level")
+      .def("get_id", &VehicleAgent::getId, "Get agent ID");
 
   // ========================================================================
   // Perception Model
@@ -869,8 +884,14 @@ PYBIND11_MODULE(_jamfree, m) {
            "Remove agent")
       .def("get_agent", &SimulationEngine::getAgent, py::arg("agent_id"),
            "Get agent")
-      .def("set_reaction_model", &SimulationEngine::setReactionModel,
-           py::arg("level"), py::arg("model"), "Set reaction model for level")
+      .def(
+          "set_reaction_model",
+          [](SimulationEngine &engine, const std::string &level,
+             std::shared_ptr<IReactionModel> model) {
+            engine.setReactionModel(
+                jamfree::kernel::agents::LevelIdentifier(level), model);
+          },
+          py::arg("level"), py::arg("model"), "Set reaction model for level")
       .def("step", &SimulationEngine::step, "Execute one simulation step")
       .def("run", &SimulationEngine::run, py::arg("num_steps"),
            "Run multiple steps")

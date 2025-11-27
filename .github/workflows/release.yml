@@ -212,12 +212,12 @@ jobs:
         - Updated Similar2Logo components
         - Bug fixes and stability improvements
 
-## Components
+        ## Components
 
-- **C++ Core**: Multithreaded simulation engine with enhanced performance
-- **Python Bindings**: Complete Similar2Logo DSL with web visualization
-- **C++ Libraries**: Pre-compiled libraries for Linux, macOS, and Windows
-- **Documentation**: Comprehensive guides and examples
+        - **C++ Core**: Multithreaded simulation engine with enhanced performance
+        - **Python Bindings**: Complete Similar2Logo DSL with web visualization
+        - **C++ Libraries**: Pre-compiled libraries for Linux, macOS, and Windows
+        - **Documentation**: Comprehensive guides and examples
 
         ## Installation
 

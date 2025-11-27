@@ -47,11 +47,23 @@ jobs:
       run: |
         # Create directories for artifacts
         mkdir -p release-artifacts/python
+        mkdir -p release-artifacts/cpp
         mkdir -p release-artifacts/docs
 
         # Copy Python artifacts
         cp dist/*.whl release-artifacts/python/
         cp dist/*.tar.gz release-artifacts/python/
+
+        # Copy C++ libraries (if built)
+        if [ -d "cpp/microkernel/build" ]; then
+          cp cpp/microkernel/build/libmicrokernel.a release-artifacts/cpp/ || true
+        fi
+        if [ -d "cpp/extendedkernel/build" ]; then
+          cp cpp/extendedkernel/build/libextendedkernel.a release-artifacts/cpp/ || true
+        fi
+        if [ -d "python/similar2logo" ]; then
+          find python/similar2logo -name "*.so" -o -name "*.dylib" -o -name "*.dll" | xargs -I {} cp {} release-artifacts/cpp/ || true
+        fi
 
         # Copy documentation
         cp README.md release-artifacts/docs/
@@ -61,6 +73,7 @@ jobs:
         # Create archives
         cd release-artifacts
         tar -czf ../python-artifacts.tar.gz python/
+        tar -czf ../cpp-artifacts.tar.gz cpp/
         tar -czf ../docs.tar.gz docs/
 
     - name: Upload Python artifacts
@@ -69,6 +82,12 @@ jobs:
         name: python-artifacts
         path: release-artifacts/python/
 
+
+    - name: Upload C++ artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: cpp-artifacts
+        path: release-artifacts/cpp/
 
     - name: Upload documentation
       uses: actions/upload-artifact@v4
@@ -107,16 +126,19 @@ jobs:
 
     - name: Download all artifacts
       uses: actions/download-artifact@v4
+      with:
+        path: artifacts/
 
     - name: Create release archives
       run: |
         # Create final release package
         mkdir -p final-release
-        cp -r python-artifacts/* final-release/ 2>/dev/null || true
-        cp -r docs/* final-release/ 2>/dev/null || true
+        cp -r artifacts/python-artifacts/* final-release/ 2>/dev/null || true
+        cp -r artifacts/cpp-artifacts/* final-release/ 2>/dev/null || true
+        cp -r artifacts/docs/* final-release/ 2>/dev/null || true
 
         # Create source archive
-        tar -czf SIMILAR-${{ github.ref_name }}.tar.gz \
+        tar -czf SIMILAR-${{ github.ref_name }}-source.tar.gz \
           --exclude='.git' \
           --exclude='target' \
           --exclude='build' \
@@ -125,6 +147,11 @@ jobs:
           --exclude='*.dylib' \
           --exclude='*.dll' \
           .
+
+        # Create platform-specific binary archives
+        if [ -d "final-release" ] && [ "$(ls -A final-release)" ]; then
+          tar -czf SIMILAR-${{ github.ref_name }}-linux-x64.tar.gz -C final-release .
+        fi
 
     - name: Generate release notes
       run: |
@@ -176,7 +203,8 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: |
-          SIMILAR-${{ github.ref_name }}.tar.gz
+          SIMILAR-${{ github.ref_name }}-source.tar.gz
+          SIMILAR-${{ github.ref_name }}-linux-x64.tar.gz
         body_path: release-notes.md
         draft: false
         prerelease: ${{ contains(github.ref_name, 'rc') || contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') }}

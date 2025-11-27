@@ -9,10 +9,22 @@ env:
   BUILD_TYPE: Release
 
 jobs:
-  # Create release artifacts
+  # Build release artifacts on multiple platforms
   build-release:
-    name: Build Release Artifacts
-    runs-on: ubuntu-22.04
+    name: Build Release (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-22.04
+            platform: linux-x64
+          - os: macos-14
+            platform: macos-x64
+          - os: windows-2022
+            platform: windows-x64
+
+    steps:
 
     steps:
     - uses: actions/checkout@v4
@@ -86,10 +98,17 @@ jobs:
     - name: Upload C++ artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: cpp-artifacts
+        name: cpp-artifacts-${{ matrix.platform }}
         path: release-artifacts/cpp/
 
+    - name: Upload Python artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: python-artifacts-${{ matrix.platform }}
+        path: release-artifacts/python/
+
     - name: Upload documentation
+      if: matrix.os == 'ubuntu-22.04'
       uses: actions/upload-artifact@v4
       with:
         name: docs
@@ -131,11 +150,37 @@ jobs:
 
     - name: Create release archives
       run: |
-        # Create final release package
-        mkdir -p final-release
-        cp -r artifacts/python-artifacts/* final-release/ 2>/dev/null || true
-        cp -r artifacts/cpp-artifacts/* final-release/ 2>/dev/null || true
-        cp -r artifacts/docs/* final-release/ 2>/dev/null || true
+        # Create platform-specific archives
+        for platform in linux-x64 macos-x64 windows-x64; do
+          echo "Creating archive for $platform..."
+          mkdir -p "release-$platform"
+
+          # Copy Python artifacts for this platform
+          if [ -d "artifacts/python-artifacts-$platform" ]; then
+            cp -r artifacts/python-artifacts-$platform/* "release-$platform/" 2>/dev/null || true
+          fi
+
+          # Copy C++ artifacts for this platform
+          if [ -d "artifacts/cpp-artifacts-$platform" ]; then
+            cp -r artifacts/cpp-artifacts-$platform/* "release-$platform/" 2>/dev/null || true
+          fi
+
+          # Copy documentation (only from linux build)
+          if [ -d "artifacts/docs" ] && [ "$platform" = "linux-x64" ]; then
+            cp -r artifacts/docs/* "release-$platform/" 2>/dev/null || true
+          fi
+
+          # Create platform archive if it has content
+          if [ -d "release-$platform" ] && [ "$(ls -A release-$platform)" ]; then
+            if [[ "$platform" == windows-* ]]; then
+              # Windows: create zip
+              zip -r "SIMILAR-${{ github.ref_name }}-$platform.zip" "release-$platform/"
+            else
+              # Unix: create tar.gz
+              tar -czf "SIMILAR-${{ github.ref_name }}-$platform.tar.gz" -C "release-$platform" .
+            fi
+          fi
+        done
 
         # Create source archive
         tar -czf SIMILAR-${{ github.ref_name }}-source.tar.gz \
@@ -147,11 +192,6 @@ jobs:
           --exclude='*.dylib' \
           --exclude='*.dll' \
           .
-
-        # Create platform-specific binary archives
-        if [ -d "final-release" ] && [ "$(ls -A final-release)" ]; then
-          tar -czf SIMILAR-${{ github.ref_name }}-linux-x64.tar.gz -C final-release .
-        fi
 
     - name: Generate release notes
       run: |
@@ -172,11 +212,12 @@ jobs:
         - Updated Similar2Logo components
         - Bug fixes and stability improvements
 
-        ## Components
+## Components
 
-        - **C++ Core**: Multithreaded simulation engine with enhanced performance
-        - **Python Bindings**: Complete Similar2Logo DSL with web visualization
-        - **Documentation**: Comprehensive guides and examples
+- **C++ Core**: Multithreaded simulation engine with enhanced performance
+- **Python Bindings**: Complete Similar2Logo DSL with web visualization
+- **C++ Libraries**: Pre-compiled libraries for Linux, macOS, and Windows
+- **Documentation**: Comprehensive guides and examples
 
         ## Installation
 
@@ -205,6 +246,8 @@ jobs:
         files: |
           SIMILAR-${{ github.ref_name }}-source.tar.gz
           SIMILAR-${{ github.ref_name }}-linux-x64.tar.gz
+          SIMILAR-${{ github.ref_name }}-macos-x64.tar.gz
+          SIMILAR-${{ github.ref_name }}-windows-x64.zip
         body_path: release-notes.md
         draft: false
         prerelease: ${{ contains(github.ref_name, 'rc') || contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') }}

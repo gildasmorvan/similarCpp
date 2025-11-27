@@ -51,6 +51,17 @@ def test_bindings():
     decision2 = jamfree.VehicleDecisionModelMicro(subsumption)
     print("  Created VehicleDecisionModelMicro with SubsumptionDMS")
 
+    # 5. Test VehicleAgent Integration
+    print("\n5. Testing VehicleAgent Integration...")
+    agent = jamfree.VehicleAgent("test_agent")
+    print("  Created VehicleAgent")
+    
+    agent.set_perception_model("Microscopic", perception)
+    print("  Set perception model for Microscopic level")
+    
+    agent.set_decision_model("Microscopic", decision)
+    print("  Set decision model for Microscopic level")
+
     print("\nAll binding tests passed!")
 
 if __name__ == "__main__":

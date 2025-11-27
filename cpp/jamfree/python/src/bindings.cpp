@@ -33,7 +33,6 @@ using namespace jamfree::microscopic::models;
 using namespace jamfree::macroscopic::models;
 using namespace jamfree::realdata::osm;
 using namespace jamfree::hybrid;
-using namespace jamfree::kernel::agents;
 
 #include "../../../microkernel/include/engine/MultiThreadedSimulationEngine.h"
 #include "../../../microkernel/include/engine/SequentialSimulationEngine.h"
@@ -47,6 +46,8 @@ using namespace jamfree::kernel::agents;
 #include "../../microscopic/include/decision/dms/LaneChangeDMS.h"
 #include "../../microscopic/include/decision/dms/SubsumptionDMS.h"
 #include "../../microscopic/include/perception/VehiclePerceptionModelMicro.h"
+
+using namespace jamfree::kernel::agents;
 
 PYBIND11_MODULE(_jamfree, m) {
   m.doc() = "JamFree: Traffic simulation library with microscopic models";

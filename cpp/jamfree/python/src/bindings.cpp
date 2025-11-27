@@ -37,6 +37,7 @@ using namespace jamfree::hybrid;
 #include "../../../microkernel/include/engine/MultiThreadedSimulationEngine.h"
 #include "../../../microkernel/include/engine/SequentialSimulationEngine.h"
 #include "../../kernel/include/agents/VehicleAgent.h"
+#include "../../kernel/include/simulation/SimulationEngine.h"
 #include "../../kernel/include/simulation/TrafficSimulationModel.h"
 #include "../../microscopic/include/agents/VehiclePrivateLocalStateMicro.h"
 #include "../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
@@ -46,6 +47,7 @@ using namespace jamfree::hybrid;
 #include "../../microscopic/include/decision/dms/LaneChangeDMS.h"
 #include "../../microscopic/include/decision/dms/SubsumptionDMS.h"
 #include "../../microscopic/include/perception/VehiclePerceptionModelMicro.h"
+#include "../../microscopic/include/reaction/MicroscopicReactionModel.h"
 
 using namespace jamfree::kernel::agents;
 
@@ -850,4 +852,49 @@ PYBIND11_MODULE(_jamfree, m) {
           py::init<
               std::shared_ptr<microscopic::decision::IDecisionMicroSubmodel>>(),
           py::arg("root_dms"), "Create vehicle decision model with root DMS");
+
+  // ========================================================================
+  // Simulation Engine (JamFree Kernel)
+  // ========================================================================
+
+  using namespace jamfree::kernel::simulation;
+  using namespace jamfree::microscopic::reaction;
+
+  py::class_<SimulationEngine, std::shared_ptr<SimulationEngine>>(
+      m, "SimulationEngine")
+      .def(py::init<double>(), py::arg("dt") = 0.1, "Create simulation engine")
+      .def("add_agent", &SimulationEngine::addAgent, py::arg("agent"),
+           "Add agent")
+      .def("remove_agent", &SimulationEngine::removeAgent, py::arg("agent_id"),
+           "Remove agent")
+      .def("get_agent", &SimulationEngine::getAgent, py::arg("agent_id"),
+           "Get agent")
+      .def("set_reaction_model", &SimulationEngine::setReactionModel,
+           py::arg("level"), py::arg("model"), "Set reaction model for level")
+      .def("step", &SimulationEngine::step, "Execute one simulation step")
+      .def("run", &SimulationEngine::run, py::arg("num_steps"),
+           "Run multiple steps")
+      .def("reset", &SimulationEngine::reset, "Reset simulation")
+      .def("get_current_time", &SimulationEngine::getCurrentTime,
+           "Get current time")
+      .def("get_time_step", &SimulationEngine::getTimeStep, "Get time step")
+      .def("set_time_step", &SimulationEngine::setTimeStep, py::arg("dt"),
+           "Set time step")
+      .def("get_step_count", &SimulationEngine::getStepCount, "Get step count");
+
+  // ========================================================================
+  // Reaction Models
+  // ========================================================================
+
+  py::class_<IReactionModel, std::shared_ptr<IReactionModel>>(m,
+                                                              "IReactionModel");
+
+  py::class_<MicroscopicReactionModel, IReactionModel,
+             std::shared_ptr<MicroscopicReactionModel>>(
+      m, "MicroscopicReactionModel")
+      .def(py::init<double>(), py::arg("dt") = 0.1,
+           "Create microscopic reaction model")
+      .def("set_simulation_engine",
+           &MicroscopicReactionModel::setSimulationEngine, py::arg("engine"),
+           "Set simulation engine");
 }

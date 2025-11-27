@@ -45,9 +45,9 @@ bool ForwardAccelerationDMS::manageDecision(
   m_idm->setDesiredSpeed(desiredSpeed);
   m_idm->setTimeHeadway(privateState.getTimeHeadway());
   m_idm->setMinGap(privateState.getMinGap());
-  m_idm->setMaxAcceleration(privateState.getMaxAcceleration());
-  m_idm->setComfortableDeceleration(privateState.getComfortableDeceleration());
-  m_idm->setAccelerationExponent(privateState.getAccelerationExponent());
+  m_idm->setMaxAccel(privateState.getMaxAcceleration());
+  m_idm->setComfortableDecel(privateState.getComfortableDeceleration());
+  m_idm->setAccelExponent(privateState.getAccelerationExponent());
 
   // Calculate IDM acceleration
   double acceleration =

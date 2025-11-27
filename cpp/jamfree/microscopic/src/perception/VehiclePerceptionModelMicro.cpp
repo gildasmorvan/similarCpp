@@ -240,6 +240,12 @@ VehiclePerceptionModelMicro::findFollower(kernel::model::Lane *lane,
   return {closestFollower, minGap};
 }
 
+// ... (existing code)
+
+kernel::agents::LevelIdentifier VehiclePerceptionModelMicro::getLevel() const {
+  return kernel::agents::LevelIdentifier("Microscopic");
+}
+
 } // namespace perception
 } // namespace microscopic
 } // namespace jamfree

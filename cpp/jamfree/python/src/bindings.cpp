@@ -33,6 +33,7 @@ using namespace jamfree::microscopic::models;
 using namespace jamfree::macroscopic::models;
 using namespace jamfree::realdata::osm;
 using namespace jamfree::hybrid;
+using namespace jamfree::kernel::agents;
 
 #include "../../../microkernel/include/engine/MultiThreadedSimulationEngine.h"
 #include "../../../microkernel/include/engine/SequentialSimulationEngine.h"
@@ -41,6 +42,10 @@ using namespace jamfree::hybrid;
 #include "../../microscopic/include/agents/VehiclePrivateLocalStateMicro.h"
 #include "../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
 #include "../../microscopic/include/decision/VehicleDecisionModelMicro.h"
+#include "../../microscopic/include/decision/dms/ConjunctionDMS.h"
+#include "../../microscopic/include/decision/dms/ForwardAccelerationDMS.h"
+#include "../../microscopic/include/decision/dms/LaneChangeDMS.h"
+#include "../../microscopic/include/decision/dms/SubsumptionDMS.h"
 #include "../../microscopic/include/perception/VehiclePerceptionModelMicro.h"
 
 PYBIND11_MODULE(_jamfree, m) {
@@ -219,7 +224,7 @@ PYBIND11_MODULE(_jamfree, m) {
       .value("RIGHT", MOBIL::Direction::RIGHT, "Change to right lane")
       .export_values();
 
-  py::class_<MOBIL>(m, "MOBIL")
+  py::class_<MOBIL, std::shared_ptr<MOBIL>>(m, "MOBIL")
       .def(py::init<double, double, double, double>(),
            py::arg("politeness") = 0.5, py::arg("threshold") = 0.1,
            py::arg("max_safe_decel") = 4.0, py::arg("bias_right") = 0.3,
@@ -709,9 +714,96 @@ PYBIND11_MODULE(_jamfree, m) {
   py::class_<VehicleAgent, std::shared_ptr<VehicleAgent>>(m, "VehicleAgent")
       .def(py::init<const std::string &>(), py::arg("id"),
            "Create vehicle agent")
-      .def("get_id", &VehicleAgent::getId, "Get vehicle ID");
+      .def(
+          "set_perception_model",
+          [](VehicleAgent &agent, const std::string &level,
+             std::shared_ptr<IPerceptionModel> model) {
+            agent.setPerceptionModel(kernel::agents::LevelIdentifier(level),
+                                     model);
+          },
+          py::arg("level"), py::arg("model"), "Set perception model for level")
+      .def(
+          "set_decision_model",
+          [](VehicleAgent &agent, const std::string &level,
+             std::shared_ptr<IDecisionModel> model) {
+            agent.setDecisionModel(kernel::agents::LevelIdentifier(level),
+                                   model);
+          },
+          py::arg("level"), py::arg("model"), "Set decision model for level");
 
-  // Note: VehiclePerceptionModelMicro and VehicleDecisionModelMicro
-  // are not exposed yet as they require more complex setup
-  // They will be added in a future update when needed
+  // ========================================================================
+  // Interfaces
+  // ========================================================================
+  py::class_<IPerceptionModel, std::shared_ptr<IPerceptionModel>>(
+      m, "IPerceptionModel");
+  py::class_<IDecisionModel, std::shared_ptr<IDecisionModel>>(m,
+                                                              "IDecisionModel");
+
+  // ========================================================================
+  // Perception Model
+  // ========================================================================
+  py::class_<
+      microscopic::perception::VehiclePerceptionModelMicro, IPerceptionModel,
+      std::shared_ptr<microscopic::perception::VehiclePerceptionModelMicro>>(
+      m, "VehiclePerceptionModelMicro")
+      .def(py::init<double>(), py::arg("perception_range") = 150.0,
+           "Create vehicle perception model with perception range (meters)");
+
+  // ========================================================================
+  // Decision Micro Submodels (DMS)
+  // ========================================================================
+
+  // Base interface
+  py::class_<microscopic::decision::IDecisionMicroSubmodel,
+             std::shared_ptr<microscopic::decision::IDecisionMicroSubmodel>>(
+      m, "IDecisionMicroSubmodel");
+
+  // ForwardAccelerationDMS - basic car-following
+  py::class_<
+      microscopic::decision::dms::ForwardAccelerationDMS,
+      microscopic::decision::IDecisionMicroSubmodel,
+      std::shared_ptr<microscopic::decision::dms::ForwardAccelerationDMS>>(
+      m, "ForwardAccelerationDMS")
+      .def(py::init<std::shared_ptr<IDM>>(), py::arg("idm"),
+           "Create forward acceleration DMS (IDM car-following)");
+
+  // LaneChangeDMS - lane changing behavior
+  py::class_<microscopic::decision::dms::LaneChangeDMS,
+             microscopic::decision::IDecisionMicroSubmodel,
+             std::shared_ptr<microscopic::decision::dms::LaneChangeDMS>>(
+      m, "LaneChangeDMS")
+      .def(py::init<std::shared_ptr<MOBIL>, std::shared_ptr<IDM>>(),
+           py::arg("mobil"), py::arg("idm"),
+           "Create lane change DMS (MOBIL lane-changing)");
+
+  // ConjunctionDMS - combines multiple DMS
+  py::class_<microscopic::decision::dms::ConjunctionDMS,
+             microscopic::decision::IDecisionMicroSubmodel,
+             std::shared_ptr<microscopic::decision::dms::ConjunctionDMS>>(
+      m, "ConjunctionDMS")
+      .def(py::init<>(), "Create conjunction DMS")
+      .def("add_submodel",
+           &microscopic::decision::dms::ConjunctionDMS::addSubmodel,
+           py::arg("submodel"), "Add a sub-model to the conjunction");
+
+  // SubsumptionDMS - priority-based DMS selection
+  py::class_<microscopic::decision::dms::SubsumptionDMS,
+             microscopic::decision::IDecisionMicroSubmodel,
+             std::shared_ptr<microscopic::decision::dms::SubsumptionDMS>>(
+      m, "SubsumptionDMS")
+      .def(py::init<>(), "Create subsumption DMS")
+      .def("add_submodel",
+           &microscopic::decision::dms::SubsumptionDMS::addSubmodel,
+           py::arg("submodel"), "Add a sub-model to the subsumption hierarchy");
+
+  // ========================================================================
+  // Decision Model
+  // ========================================================================
+  py::class_<microscopic::decision::VehicleDecisionModelMicro, IDecisionModel,
+             std::shared_ptr<microscopic::decision::VehicleDecisionModelMicro>>(
+      m, "VehicleDecisionModelMicro")
+      .def(
+          py::init<
+              std::shared_ptr<microscopic::decision::IDecisionMicroSubmodel>>(),
+          py::arg("root_dms"), "Create vehicle decision model with root DMS");
 }

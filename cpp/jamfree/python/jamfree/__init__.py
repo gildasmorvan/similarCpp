@@ -48,6 +48,15 @@ from ._jamfree import (
     VehicleAgent,
     VehiclePublicLocalStateMicro,
     VehiclePrivateLocalStateMicro,
+    
+    # Perception and Decision Models
+    VehiclePerceptionModelMicro,
+    VehicleDecisionModelMicro,
+    IDecisionMicroSubmodel,
+    ForwardAccelerationDMS,
+    LaneChangeDMS,
+    ConjunctionDMS,
+    SubsumptionDMS,
 )
 
 __version__ = '0.1.0'
@@ -89,6 +98,14 @@ __all__ = [
     'VehicleAgent',
     'VehiclePublicLocalStateMicro',
     'VehiclePrivateLocalStateMicro',
+    # Perception and Decision
+    'VehiclePerceptionModelMicro',
+    'VehicleDecisionModelMicro',
+    'IDecisionMicroSubmodel',
+    'ForwardAccelerationDMS',
+    'LaneChangeDMS',
+    'ConjunctionDMS',
+    'SubsumptionDMS',
     # Metal GPU
     'MetalCompute',
     'GPUVehicleState',

@@ -37,16 +37,16 @@ bool LaneChangeDMS::manageDecision(
   // Update MOBIL parameters from private state
   m_mobil->setPoliteness(privateState.getPoliteness());
   m_mobil->setThreshold(privateState.getLaneChangeThreshold());
-  m_mobil->setMaxSafeDeceleration(privateState.getMaxSafeDeceleration());
+  m_mobil->setMaxSafeDecel(privateState.getMaxSafeDeceleration());
   m_mobil->setBiasRight(privateState.getRightLaneBias());
 
   // Update IDM parameters
   m_idm->setDesiredSpeed(privateState.getDesiredSpeed());
   m_idm->setTimeHeadway(privateState.getTimeHeadway());
   m_idm->setMinGap(privateState.getMinGap());
-  m_idm->setMaxAcceleration(privateState.getMaxAcceleration());
-  m_idm->setComfortableDeceleration(privateState.getComfortableDeceleration());
-  m_idm->setAccelerationExponent(privateState.getAccelerationExponent());
+  m_idm->setMaxAccel(privateState.getMaxAcceleration());
+  m_idm->setComfortableDecel(privateState.getComfortableDeceleration());
+  m_idm->setAccelExponent(privateState.getAccelerationExponent());
 
   // Evaluate lane changes
   double leftIncentive = -std::numeric_limits<double>::infinity();

@@ -97,6 +97,18 @@ public:
     return Direction::NONE;
   }
 
+  // Setters
+  void setPoliteness(double p) { m_politeness = p; }
+  void setThreshold(double t) { m_threshold = t; }
+  void setMaxSafeDecel(double b) { m_max_safe_decel = b; }
+  void setBiasRight(double bias) { m_bias_right = bias; }
+
+  // Getters
+  double getPoliteness() const { return m_politeness; }
+  double getThreshold() const { return m_threshold; }
+  double getMaxSafeDecel() const { return m_max_safe_decel; }
+  double getBiasRight() const { return m_bias_right; }
+
 private:
   /**
    * @brief Evaluate advantage of changing to a target lane.

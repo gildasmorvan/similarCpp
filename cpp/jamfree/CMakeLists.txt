@@ -54,6 +54,12 @@ set(JAMFREE_MICROSCOPIC_SOURCES
     microscopic/src/perception/VehiclePerceptionModelMicro.cpp
     microscopic/src/decision/VehicleDecisionModelMicro.cpp
     microscopic/src/reaction/MicroscopicReactionModel.cpp
+    microscopic/src/decision/dms/ForwardAccelerationDMS.cpp
+    microscopic/src/decision/dms/LaneChangeDMS.cpp
+    microscopic/src/decision/dms/ConjunctionDMS.cpp
+    microscopic/src/decision/dms/SubsumptionDMS.cpp
+    microscopic/src/influences/ChangeAcceleration.cpp
+    microscopic/src/influences/ChangeLane.cpp
 )
 
 # Hybrid source files

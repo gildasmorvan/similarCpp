@@ -86,6 +86,36 @@ public:
   }
 
   /**
+   * @brief Calculate acceleration from raw values.
+   *
+   * @param v Current speed (m/s)
+   * @param s Gap to leader (m)
+   * @param dv Relative speed to leader (v - v_leader) (m/s)
+   * @return Acceleration in m/s²
+   */
+  double calculateAcceleration(double v, double s, double dv) const {
+    double v0 = m_desired_speed;
+    double a = m_max_accel;
+    double delta = m_accel_exponent;
+
+    // Free-flow acceleration term
+    double accel_free = a * (1.0 - std::pow(v / v0, delta));
+
+    if (std::isinf(s)) {
+      return accel_free;
+    }
+
+    // Desired gap
+    double s_star = calculateDesiredGap(v, dv);
+
+    // Interaction term
+    double accel_interaction =
+        -a * kernel::tools::MathTools::square(s_star / s);
+
+    return accel_free + accel_interaction;
+  }
+
+  /**
    * @brief Calculate desired gap.
    *
    * s* = s₀ + v*T + v*Δv / (2√(a*b))

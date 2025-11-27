@@ -50,6 +50,8 @@ public:
            std::shared_ptr<kernel::agents::IPublicDynamicStateMap>
                dynamicStates) override;
 
+  kernel::agents::LevelIdentifier getLevel() const override;
+
 private:
   double m_perception_range; // Maximum perception distance (m)
 

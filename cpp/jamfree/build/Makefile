@@ -612,6 +612,150 @@ microscopic/src/decision/VehicleDecisionModelMicro.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.s
 .PHONY : microscopic/src/decision/VehicleDecisionModelMicro.cpp.s
 
+microscopic/src/decision/dms/ConjunctionDMS.o: microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/ConjunctionDMS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+
+microscopic/src/decision/dms/ConjunctionDMS.i: microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/ConjunctionDMS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+
+microscopic/src/decision/dms/ConjunctionDMS.s: microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/ConjunctionDMS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+
+microscopic/src/decision/dms/ForwardAccelerationDMS.o: microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+
+microscopic/src/decision/dms/ForwardAccelerationDMS.i: microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+
+microscopic/src/decision/dms/ForwardAccelerationDMS.s: microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+
+microscopic/src/decision/dms/LaneChangeDMS.o: microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/LaneChangeDMS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+
+microscopic/src/decision/dms/LaneChangeDMS.i: microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/LaneChangeDMS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+
+microscopic/src/decision/dms/LaneChangeDMS.s: microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/LaneChangeDMS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+
+microscopic/src/decision/dms/SubsumptionDMS.o: microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/SubsumptionDMS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+
+microscopic/src/decision/dms/SubsumptionDMS.i: microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/SubsumptionDMS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+
+microscopic/src/decision/dms/SubsumptionDMS.s: microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/SubsumptionDMS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+
+microscopic/src/influences/ChangeAcceleration.o: microscopic/src/influences/ChangeAcceleration.cpp.o
+.PHONY : microscopic/src/influences/ChangeAcceleration.o
+
+# target to build an object file
+microscopic/src/influences/ChangeAcceleration.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o
+.PHONY : microscopic/src/influences/ChangeAcceleration.cpp.o
+
+microscopic/src/influences/ChangeAcceleration.i: microscopic/src/influences/ChangeAcceleration.cpp.i
+.PHONY : microscopic/src/influences/ChangeAcceleration.i
+
+# target to preprocess a source file
+microscopic/src/influences/ChangeAcceleration.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.i
+.PHONY : microscopic/src/influences/ChangeAcceleration.cpp.i
+
+microscopic/src/influences/ChangeAcceleration.s: microscopic/src/influences/ChangeAcceleration.cpp.s
+.PHONY : microscopic/src/influences/ChangeAcceleration.s
+
+# target to generate assembly for a file
+microscopic/src/influences/ChangeAcceleration.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.s
+.PHONY : microscopic/src/influences/ChangeAcceleration.cpp.s
+
+microscopic/src/influences/ChangeLane.o: microscopic/src/influences/ChangeLane.cpp.o
+.PHONY : microscopic/src/influences/ChangeLane.o
+
+# target to build an object file
+microscopic/src/influences/ChangeLane.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o
+.PHONY : microscopic/src/influences/ChangeLane.cpp.o
+
+microscopic/src/influences/ChangeLane.i: microscopic/src/influences/ChangeLane.cpp.i
+.PHONY : microscopic/src/influences/ChangeLane.i
+
+# target to preprocess a source file
+microscopic/src/influences/ChangeLane.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.i
+.PHONY : microscopic/src/influences/ChangeLane.cpp.i
+
+microscopic/src/influences/ChangeLane.s: microscopic/src/influences/ChangeLane.cpp.s
+.PHONY : microscopic/src/influences/ChangeLane.s
+
+# target to generate assembly for a file
+microscopic/src/influences/ChangeLane.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jamfree.dir/build.make CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.s
+.PHONY : microscopic/src/influences/ChangeLane.cpp.s
+
 microscopic/src/perception/VehiclePerceptionModelMicro.o: microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o
 .PHONY : microscopic/src/perception/VehiclePerceptionModelMicro.o
 
@@ -796,6 +940,24 @@ help:
 	@echo "... microscopic/src/decision/VehicleDecisionModelMicro.o"
 	@echo "... microscopic/src/decision/VehicleDecisionModelMicro.i"
 	@echo "... microscopic/src/decision/VehicleDecisionModelMicro.s"
+	@echo "... microscopic/src/decision/dms/ConjunctionDMS.o"
+	@echo "... microscopic/src/decision/dms/ConjunctionDMS.i"
+	@echo "... microscopic/src/decision/dms/ConjunctionDMS.s"
+	@echo "... microscopic/src/decision/dms/ForwardAccelerationDMS.o"
+	@echo "... microscopic/src/decision/dms/ForwardAccelerationDMS.i"
+	@echo "... microscopic/src/decision/dms/ForwardAccelerationDMS.s"
+	@echo "... microscopic/src/decision/dms/LaneChangeDMS.o"
+	@echo "... microscopic/src/decision/dms/LaneChangeDMS.i"
+	@echo "... microscopic/src/decision/dms/LaneChangeDMS.s"
+	@echo "... microscopic/src/decision/dms/SubsumptionDMS.o"
+	@echo "... microscopic/src/decision/dms/SubsumptionDMS.i"
+	@echo "... microscopic/src/decision/dms/SubsumptionDMS.s"
+	@echo "... microscopic/src/influences/ChangeAcceleration.o"
+	@echo "... microscopic/src/influences/ChangeAcceleration.i"
+	@echo "... microscopic/src/influences/ChangeAcceleration.s"
+	@echo "... microscopic/src/influences/ChangeLane.o"
+	@echo "... microscopic/src/influences/ChangeLane.i"
+	@echo "... microscopic/src/influences/ChangeLane.s"
 	@echo "... microscopic/src/perception/VehiclePerceptionModelMicro.o"
 	@echo "... microscopic/src/perception/VehiclePerceptionModelMicro.i"
 	@echo "... microscopic/src/perception/VehiclePerceptionModelMicro.s"

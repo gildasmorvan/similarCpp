@@ -12,14 +12,24 @@ Welcome! This guide will get you up and running with SIMILAR2Logo and JamFree in
 
 ## ⚡ Quick Install (5 minutes)
 
-### Step 1: Clone Repository
+### Option A: Install from PyPI (Easiest)
+
+```bash
+pip3 install similar2logo
+```
+
+This gives you the latest stable version with pre-compiled C++ extensions. Skip to **Step 4: Verify Installation**.
+
+### Option B: Install from Source
+
+#### Step 1: Clone Repository
 
 ```bash
 git clone https://github.com/gildasmorvan/similar
 cd similar
 ```
 
-### Step 2: Install Python Dependencies
+#### Step 2: Install Python Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -27,7 +37,7 @@ pip install -r requirements.txt
 
 That's it! You can now run Python-only simulations.
 
-### Step 3: Build C++ Engine (Optional but HIGHLY Recommended)
+#### Step 3: Build C++ Engine (Optional but Recommended)
 
 For 10-100x performance boost:
 

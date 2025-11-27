@@ -10,16 +10,26 @@
 
 ### Installation
 
+#### Option 1: Install from PyPI (Recommended)
+
+```bash
+pip3 install similar2logo
+```
+
+This installs the latest stable version with pre-compiled C++ extensions for optimal performance.
+
+#### Option 2: Install from Source
+
 ```bash
 # Clone the repository
 git clone https://github.com/gildasmorvan/similar
 cd similar
 
-# Build C++ engine (recommended for 10-100x performance boost)
+# Build C++ engine (for development or custom builds)
 ./build_cpp_engine.sh
 
-# Install Python dependencies
-pip install -r requirements.txt
+# Install Python package
+pip install -e .
 ```
 
 **📖 New to SIMILAR?** See **[Getting Started Guide](GETTING_STARTED.md)** for a complete walkthrough!

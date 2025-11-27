@@ -4,6 +4,14 @@
 
 ### Installation
 
+#### Quick Install (Recommended)
+
+```bash
+pip3 install similar2logo
+```
+
+#### From Source (Development)
+
 ```bash
 # Clone the repository
 git clone https://github.com/gildasmorvan/similar

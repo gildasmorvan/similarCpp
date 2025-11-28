@@ -100,10 +100,24 @@ jamfree/CMakeFiles/jamfree.dir/kernel/src/agents/VehicleAgent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/kernel/src/agents/VehicleAgent.cpp.s"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/agents/VehicleAgent.cpp -o CMakeFiles/jamfree.dir/kernel/src/agents/VehicleAgent.cpp.s
 
+jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/levels/LevelIdentifiers.cpp
+jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o -MF CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o.d -o CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/levels/LevelIdentifiers.cpp
+
+jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/levels/LevelIdentifiers.cpp > CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/levels/LevelIdentifiers.cpp -o CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.s
+
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/SimulationEngine.cpp
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o -MF CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o.d -o CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/SimulationEngine.cpp
 
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.i: cmake_force
@@ -117,7 +131,7 @@ jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.s: cma
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/TrafficSimulationModel.cpp
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o -MF CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o.d -o CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/TrafficSimulationModel.cpp
 
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.i: cmake_force
@@ -131,7 +145,7 @@ jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/TrafficLevel.cpp
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o -MF CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o.d -o CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/TrafficLevel.cpp
 
 jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.i: cmake_force
@@ -142,10 +156,24 @@ jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.s: cmake_f
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.s"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/TrafficLevel.cpp -o CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.s
 
+jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/MultiLevelCoordinator.cpp
+jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o -MF CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o.d -o CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/MultiLevelCoordinator.cpp
+
+jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/MultiLevelCoordinator.cpp > CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/simulation/MultiLevelCoordinator.cpp -o CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.s
+
 jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/TrafficReactionModel.cpp
 jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o -MF CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o.d -o CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/kernel/src/reaction/TrafficReactionModel.cpp
 
 jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.i: cmake_force
@@ -159,7 +187,7 @@ jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.s: c
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/VehiclePerceivedDataMicro.cpp
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/VehiclePerceivedDataMicro.cpp
 
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.i: cmake_force
@@ -173,7 +201,7 @@ jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp
 
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.i: cmake_force
@@ -187,7 +215,7 @@ jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMic
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp
 
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMicro.cpp.i: cmake_force
@@ -201,7 +229,7 @@ jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePrivateLocalStateMi
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/VehiclePerceptionModelMicro.cpp
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/perception/VehiclePerceptionModelMicro.cpp
 
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.i: cmake_force
@@ -215,7 +243,7 @@ jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModel
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/VehicleDecisionModelMicro.cpp
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/VehicleDecisionModelMicro.cpp
 
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.i: cmake_force
@@ -229,7 +257,7 @@ jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicr
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/reaction/MicroscopicReactionModel.cpp
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/reaction/MicroscopicReactionModel.cpp
 
 jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.i: cmake_force
@@ -240,10 +268,108 @@ jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.s"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/reaction/MicroscopicReactionModel.cpp -o CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.s
 
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp > CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/LaneChangeDMS.cpp
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/LaneChangeDMS.cpp
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/LaneChangeDMS.cpp > CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/LaneChangeDMS.cpp -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ConjunctionDMS.cpp
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ConjunctionDMS.cpp
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ConjunctionDMS.cpp > CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/ConjunctionDMS.cpp -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/SubsumptionDMS.cpp
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/SubsumptionDMS.cpp
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/SubsumptionDMS.cpp > CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/decision/dms/SubsumptionDMS.cpp -o CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeAcceleration.cpp
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeAcceleration.cpp
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeAcceleration.cpp > CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeAcceleration.cpp -o CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.s
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeLane.cpp
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o -MF CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o.d -o CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeLane.cpp
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeLane.cpp > CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/microscopic/src/influences/ChangeLane.cpp -o CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.s
+
+jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
+jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp
+jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o -MF CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o.d -o CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp
+
+jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/morvan/Antigravity/similar/cpp/jamfree/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp > CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i
+
+jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s"
+	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/morvan/Antigravity/similar/cpp/jamfree/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp -o CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s
+
 jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/hybrid/src/AdaptiveSimulator.cpp
 jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o -MF CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o.d -o CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/hybrid/src/AdaptiveSimulator.cpp
 
 jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.i: cmake_force
@@ -257,7 +383,7 @@ jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.s: cmake_force
 jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o: jamfree/CMakeFiles/jamfree.dir/flags.make
 jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o: /Users/morvan/Antigravity/similar/cpp/jamfree/realdata/src/OSMParser.cpp
 jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o: jamfree/CMakeFiles/jamfree.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o -MF CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o.d -o CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o -c /Users/morvan/Antigravity/similar/cpp/jamfree/realdata/src/OSMParser.cpp
 
 jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.i: cmake_force
@@ -272,9 +398,11 @@ jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.s: cmake_force
 jamfree_OBJECTS = \
 "CMakeFiles/jamfree.dir/kernel/src/model/Lane.cpp.o" \
 "CMakeFiles/jamfree.dir/kernel/src/agents/VehicleAgent.cpp.o" \
+"CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o" \
 "CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o" \
 "CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o" \
 "CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o" \
+"CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o" \
 "CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o" \
 "CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o" \
 "CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o" \
@@ -282,6 +410,13 @@ jamfree_OBJECTS = \
 "CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o" \
 "CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o" \
 "CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o" \
+"CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o" \
+"CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o" \
+"CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o" \
+"CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o" \
+"CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o" \
+"CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o" \
+"CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o" \
 "CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o" \
 "CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o"
 
@@ -290,9 +425,11 @@ jamfree_EXTERNAL_OBJECTS =
 
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/model/Lane.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/agents/VehicleAgent.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/SimulationEngine.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficLevel.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/VehiclePublicLocalStateMicro.cpp.o
@@ -300,11 +437,18 @@ jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/agents/Vehi
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/reaction/MicroscopicReactionModel.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o
+jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/hybrid/src/AdaptiveSimulator.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/realdata/src/OSMParser.cpp.o
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/build.make
 jamfree/libjamfree.a: jamfree/CMakeFiles/jamfree.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX static library libjamfree.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/morvan/Antigravity/similar/cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX static library libjamfree.a"
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && $(CMAKE_COMMAND) -P CMakeFiles/jamfree.dir/cmake_clean_target.cmake
 	cd /Users/morvan/Antigravity/similar/cpp/build/jamfree && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/jamfree.dir/link.txt --verbose=$(VERBOSE)
 

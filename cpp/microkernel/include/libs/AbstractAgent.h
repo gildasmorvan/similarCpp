@@ -37,6 +37,10 @@ public:
   explicit AbstractAgent(const AgentCategory &category);
   virtual ~AbstractAgent() = default;
 
+protected:
+  AbstractAgent(const AbstractAgent &other);
+
+public:
   AgentCategory getCategory() const override;
   std::shared_ptr<agents::IGlobalState> getGlobalState() const override;
   void initializeGlobalState(

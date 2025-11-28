@@ -39,6 +39,9 @@ private:
   /** Flag to abort simulation */
   std::atomic<bool> abortRequested{false};
 
+  /** The current simulation model */
+  std::shared_ptr<ISimulationModel> currentModel;
+
   // Cache for simulation components (retrieved from model)
   std::map<LevelIdentifier, std::shared_ptr<levels::ILevel>> levels;
   std::shared_ptr<environment::IEnvironment4Engine> environment;
@@ -48,6 +51,9 @@ private:
 
   // Dynamic state
   std::shared_ptr<dynamicstate::IPublicDynamicStateMap> dynamicStates;
+
+  // Simulation state
+  SimulationTimeStamp currentTime;
 
 public:
   /**
@@ -61,7 +67,7 @@ public:
   /**
    * {@inheritDoc}
    */
-  void addProbe(const std::string &identifier,
+  void addProbe(const std::string &probeName,
                 std::shared_ptr<IProbe> probe) override;
 
   /**
@@ -84,6 +90,11 @@ public:
    */
   void runNewSimulation(std::shared_ptr<ISimulationModel> model) override;
 
+  /**
+   * {@inheritDoc}
+   */
+  void runSimulation(const SimulationTimeStamp &finalTime) override;
+
   // ISimulationEngine getters implementation
   std::shared_ptr<dynamicstate::IPublicDynamicStateMap>
   getSimulationDynamicStates() const override;
@@ -97,9 +108,22 @@ public:
   getEnvironment() const override;
 
   std::shared_ptr<dynamicstate::ConsistentPublicLocalDynamicState>
+  makeRegularReaction(
+      SimulationTimeStamp transitoryPeriodMin,
+      SimulationTimeStamp transitoryPeriodMax,
+      std::shared_ptr<dynamicstate::ConsistentPublicLocalDynamicState>
+          consistentDynamicState,
+      std::set<std::shared_ptr<influences::IInfluence>>
+          regularInfluencesOftransitoryStateDynamics,
+      std::shared_ptr<dynamicstate::TransitoryPublicLocalDynamicState>
+          transitoryDynamicState) const;
+
+  std::shared_ptr<dynamicstate::ConsistentPublicLocalDynamicState>
   disambiguation(
       std::shared_ptr<dynamicstate::TransitoryPublicLocalDynamicState>
           transitoryDynamicState) const override;
+
+  std::shared_ptr<ISimulationEngine> clone() const override;
 
 private:
   /**

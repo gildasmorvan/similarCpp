@@ -70,6 +70,12 @@ public:
    */
   virtual std::set<std::shared_ptr<influences::IInfluence>>
   getRegularInfluencesOfStateDynamics() const = 0;
+
+  /**
+   * Clones the public local dynamic state.
+   * @return A deep copy of the state.
+   */
+  virtual std::shared_ptr<IPublicLocalDynamicState> clone() const = 0;
 };
 
 } // namespace dynamicstate

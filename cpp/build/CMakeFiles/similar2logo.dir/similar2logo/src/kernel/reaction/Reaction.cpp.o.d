@@ -970,7 +970,7 @@ CMakeFiles/similar2logo.dir/similar2logo/src/kernel/reaction/Reaction.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/SituatedEntity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/model/environment/TurtlePLSInLogo.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/Point2D.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
@@ -993,5 +993,4 @@ CMakeFiles/similar2logo.dir/similar2logo/src/kernel/reaction/Reaction.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/RemoveMark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/RemoveMarks.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/influences/Stop.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/MathUtil.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numbers
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/include/kernel/tools/MathUtil.h

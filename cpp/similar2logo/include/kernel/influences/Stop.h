@@ -46,8 +46,10 @@ public:
    * @param timeUpperBound The upper bound of the transitory period
    * @param target The turtle's public local state that is going to change
    */
-  Stop(const microkernel::SimulationTimeStamp &timeLowerBound,
-       const microkernel::SimulationTimeStamp &timeUpperBound,
+  Stop(const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+           &timeLowerBound,
+       const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+           &timeUpperBound,
        std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
@@ -59,9 +61,12 @@ public:
    * @param timeUpperBound The upper bound of the transitory period
    * @param target The turtle's public local state that is going to change
    */
-  Stop(const microkernel::LevelIdentifier &levelIdentifier,
-       const microkernel::SimulationTimeStamp &timeLowerBound,
-       const microkernel::SimulationTimeStamp &timeUpperBound,
+  Stop(const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+           &levelIdentifier,
+       const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+           &timeLowerBound,
+       const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+           &timeUpperBound,
        std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**

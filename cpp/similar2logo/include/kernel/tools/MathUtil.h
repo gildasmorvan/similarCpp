@@ -3,7 +3,10 @@
 
 #include "Point2D.h"
 #include <cmath>
-#include <numbers>
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 namespace fr {
 namespace univ_artois {
@@ -21,11 +24,11 @@ namespace tools {
 class MathUtil {
 public:
   // Constants
-  static constexpr double PI = std::numbers::pi;
-  static constexpr double TWO_PI = 2.0 * std::numbers::pi;
-  static constexpr double HALF_PI = std::numbers::pi / 2.0;
-  static constexpr double DEG_TO_RAD = std::numbers::pi / 180.0;
-  static constexpr double RAD_TO_DEG = 180.0 / std::numbers::pi;
+  static constexpr double PI = M_PI;
+  static constexpr double TWO_PI = 2.0 * M_PI;
+  static constexpr double HALF_PI = M_PI / 2.0;
+  static constexpr double DEG_TO_RAD = M_PI / 180.0;
+  static constexpr double RAD_TO_DEG = 180.0 / M_PI;
 
   /**
    * Normalizes an angle to the range [-π, π].
@@ -75,21 +78,34 @@ public:
   /**
    * Computes the Euclidean distance between two points.
    */
-  static double distance(const Point2D &p1, const Point2D &p2) {
+  /**
+   * Computes the Euclidean distance between two points.
+   */
+  static double distance(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                             kernel::tools::Point2D &p1,
+                         const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                             kernel::tools::Point2D &p2) {
     return p1.distanceTo(p2);
   }
 
   /**
    * Computes the squared distance between two points.
    */
-  static double distanceSquared(const Point2D &p1, const Point2D &p2) {
+  static double distanceSquared(const ::fr::univ_artois::lgi2a::similar::
+                                    similar2logo::kernel::tools::Point2D &p1,
+                                const ::fr::univ_artois::lgi2a::similar::
+                                    similar2logo::kernel::tools::Point2D &p2) {
     return p1.distanceSquaredTo(p2);
   }
 
   /**
    * Computes the Manhattan distance between two points.
    */
-  static double manhattanDistance(const Point2D &p1, const Point2D &p2) {
+  static double
+  manhattanDistance(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                        kernel::tools::Point2D &p1,
+                    const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                        kernel::tools::Point2D &p2) {
     return std::abs(p1.x - p2.x) + std::abs(p1.y - p2.y);
   }
 
@@ -148,7 +164,10 @@ public:
    * @param xTorus Whether x-axis wraps
    * @param yTorus Whether y-axis wraps
    */
-  static double toroidalDistance(const Point2D &p1, const Point2D &p2,
+  static double toroidalDistance(const ::fr::univ_artois::lgi2a::similar::
+                                     similar2logo::kernel::tools::Point2D &p1,
+                                 const ::fr::univ_artois::lgi2a::similar::
+                                     similar2logo::kernel::tools::Point2D &p2,
                                  double width, double height, bool xTorus,
                                  bool yTorus) {
     double dx = std::abs(p1.x - p2.x);
@@ -167,9 +186,12 @@ public:
   /**
    * Computes the toroidal displacement vector from p1 to p2.
    */
-  static Point2D toroidalDisplacement(const Point2D &p1, const Point2D &p2,
-                                      double width, double height, bool xTorus,
-                                      bool yTorus) {
+  static ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
+  toroidalDisplacement(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                           kernel::tools::Point2D &p1,
+                       const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                           kernel::tools::Point2D &p2,
+                       double width, double height, bool xTorus, bool yTorus) {
     double dx = p2.x - p1.x;
     double dy = p2.y - p1.y;
 
@@ -186,7 +208,8 @@ public:
         dy += height;
     }
 
-    return Point2D(dx, dy);
+    return ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
+        Point2D(dx, dy);
   }
 };
 

@@ -15,10 +15,14 @@ namespace influences {
  */
 class RegularInfluence : public AbstractInfluence {
 public:
-  RegularInfluence(const std::string &category,
-                   const LevelIdentifier &targetLevel,
-                   const SimulationTimeStamp &timeLowerBound,
-                   const SimulationTimeStamp &timeUpperBound)
+  RegularInfluence(
+      const std::string &category,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &targetLevel,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound)
       : AbstractInfluence(category, targetLevel, timeLowerBound,
                           timeUpperBound) {}
 

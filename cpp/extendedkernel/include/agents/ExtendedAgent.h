@@ -30,9 +30,10 @@ private:
 
 public:
   explicit ExtendedAgent(const microkernel::AgentCategory &category);
+  ExtendedAgent(const ExtendedAgent &other);
   virtual ~ExtendedAgent() = default;
 
-  // Expose base class methods
+public: // Expose base class methods
   using similar::microkernel::libs::AbstractAgent::includeNewLevel;
   using similar::microkernel::libs::AbstractAgent::initializeGlobalState;
 
@@ -86,6 +87,9 @@ public:
       std::shared_ptr<microkernel::agents::IPerceivedData> perceivedData,
       std::shared_ptr<microkernel::influences::InfluencesMap>
           producedInfluences) override;
+
+  // Clone method
+  std::shared_ptr<microkernel::agents::IAgent> clone() const override;
 };
 
 } // namespace agents

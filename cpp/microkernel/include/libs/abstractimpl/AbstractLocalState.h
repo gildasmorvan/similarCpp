@@ -17,9 +17,10 @@ namespace abstractimpl {
  * An abstract implementation of the ILocalState interface,
  * providing a default behavior to the method of the interface.
  */
-class AbstractLocalState : public virtual ILocalState {
+class AbstractLocalState : public virtual ::fr::univ_artois::lgi2a::similar::
+                               microkernel::ILocalState {
 private:
-  LevelIdentifier level;
+  ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier level;
 
 protected:
   /**
@@ -27,7 +28,10 @@ protected:
    * @param level The level for which this local state was defined
    * @throws std::invalid_argument If level is invalid
    */
-  explicit AbstractLocalState(const LevelIdentifier &level) : level(level) {
+  explicit AbstractLocalState(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &level)
+      : level(level) {
     if (level.toString().empty()) {
       throw std::invalid_argument("The 'level' argument cannot be null.");
     }
@@ -40,7 +44,10 @@ public:
    * Gets the level for which this local state was defined.
    * @return The level identifier
    */
-  LevelIdentifier getLevel() const override { return level; }
+  ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+  getLevel() const override {
+    return level;
+  }
 };
 
 } // namespace abstractimpl

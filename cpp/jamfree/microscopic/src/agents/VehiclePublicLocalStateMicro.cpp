@@ -12,7 +12,8 @@ VehiclePublicLocalStateMicro::VehiclePublicLocalStateMicro(
       m_acceleration(0), m_current_lane(nullptr), m_lane_position(0),
       m_lane_index(0), m_length(0), m_width(0), m_height(0), m_active(true) {}
 
-std::shared_ptr<kernel::agents::ILocalState>
+std::shared_ptr<
+    fr::univ_artois::lgi2a::similar::microkernel::ILocalState>
 VehiclePublicLocalStateMicro::clone() const {
   auto cloned = std::shared_ptr<VehiclePublicLocalStateMicro>(
       new VehiclePublicLocalStateMicro(m_ownerId));

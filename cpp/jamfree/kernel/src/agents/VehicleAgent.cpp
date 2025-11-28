@@ -13,6 +13,7 @@ VehicleAgent::VehicleAgent(const std::string &id)
       m_id(id) {}
 
 void VehicleAgent::addLevel(const LevelIdentifier &level) {
+  (void)level;
   // In SIMILAR, levels are added via includeNewLevel with states.
   // This method is kept for compatibility but does nothing if states are not
   // provided. Users should use includeNewLevel or

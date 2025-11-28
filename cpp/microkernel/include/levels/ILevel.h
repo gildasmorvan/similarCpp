@@ -100,6 +100,12 @@ public:
           &systemInfluencesToManage,
       bool happensBeforeRegularReaction,
       std::shared_ptr<influences::InfluencesMap> newInfluencesToProcess) = 0;
+
+  /**
+   * Clones the level, creating a deep copy of its state.
+   * @return A deep copy of the level.
+   */
+  virtual std::shared_ptr<ILevel> clone() const = 0;
 };
 
 } // namespace levels

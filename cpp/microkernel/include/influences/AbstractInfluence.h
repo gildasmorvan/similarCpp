@@ -14,38 +14,54 @@ namespace influences {
 /**
  * Provides a default behavior of the generic methods of the IInfluence class.
  */
-class AbstractInfluence : public IInfluence {
+class AbstractInfluence : public ::fr::univ_artois::lgi2a::similar::
+                              microkernel::influences::IInfluence {
 private:
-  const std::string category;
-  const LevelIdentifier targetLevel;
-  const SimulationTimeStamp timeLowerBound;
-  const SimulationTimeStamp timeUpperBound;
+  ::std::string category;
+  ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier level;
+  ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+      timeLowerBound;
+  ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+      timeUpperBound;
 
 public:
   /**
    * Builds an influence having a specific category and a specific target level.
    */
-  AbstractInfluence(const std::string &category,
-                    const LevelIdentifier &targetLevel,
-                    const SimulationTimeStamp &timeLowerBound,
-                    const SimulationTimeStamp &timeUpperBound)
-      : category(category), targetLevel(targetLevel),
-        timeLowerBound(timeLowerBound), timeUpperBound(timeUpperBound) {
-    if (category.empty()) {
-      // In Java it checked for null.
-    }
+  AbstractInfluence(
+      const ::std::string &category,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &level,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound)
+      : category(category), level(level), timeLowerBound(timeLowerBound),
+        timeUpperBound(timeUpperBound) {}
+
+  virtual ~AbstractInfluence() = default;
+
+  // IInfluence interface
+  ::std::string getCategory() const override { return category; }
+
+  ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+  getTargetLevel() const override {
+    return level;
   }
 
-  std::string getCategory() const override { return this->category; }
-
-  LevelIdentifier getTargetLevel() const override { return this->targetLevel; }
-
-  SimulationTimeStamp getTimeLowerBound() const override {
-    return this->timeLowerBound;
+  ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+  getLevel() const {
+    return level;
   }
 
-  SimulationTimeStamp getTimeUpperBound() const override {
-    return this->timeUpperBound;
+  ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+  getTimeLowerBound() const override {
+    return timeLowerBound;
+  }
+
+  ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+  getTimeUpperBound() const override {
+    return timeUpperBound;
   }
 };
 

@@ -1,4 +1,4 @@
-#include "../include/agents/VehiclePublicLocalStateMacro.h"
+#include "../../include/agents/VehiclePublicLocalStateMacro.h"
 #include "../../../../microkernel/include/AgentCategory.h"
 #include "../../../kernel/include/agents/VehicleAgent.h"
 
@@ -8,11 +8,12 @@ namespace agents {
 
 VehiclePublicLocalStateMacro::VehiclePublicLocalStateMacro(
     const std::string &ownerId)
-    : m_ownerId(ownerId), m_density(0.0), m_flow(0.0), m_average_speed(0.0),
-      m_current_lane(nullptr), m_cell_position(0.0), m_cell_index(0),
-      m_active(true) {}
+    : m_ownerId(ownerId), m_level("Macroscopic"), m_density(0.0), m_flow(0.0),
+      m_average_speed(0.0), m_current_lane(nullptr), m_cell_position(0.0),
+      m_cell_index(0), m_active(true) {}
 
-std::shared_ptr<kernel::agents::ILocalState>
+std::shared_ptr<
+    fr::univ_artois::lgi2a::similar::microkernel::ILocalState>
 VehiclePublicLocalStateMacro::clone() const {
   auto cloned = std::make_shared<VehiclePublicLocalStateMacro>(m_ownerId);
   cloned->setDensity(m_density);
@@ -25,8 +26,9 @@ VehiclePublicLocalStateMacro::clone() const {
   return cloned;
 }
 
-kernel::AgentCategory VehiclePublicLocalStateMacro::getCategoryOfAgent() const {
-  return kernel::AgentCategory("Vehicle");
+kernel::agents::AgentCategory
+VehiclePublicLocalStateMacro::getCategoryOfAgent() const {
+  return kernel::agents::AgentCategory("Vehicle");
 }
 
 bool VehiclePublicLocalStateMacro::isOwnedBy(
@@ -37,6 +39,11 @@ bool VehiclePublicLocalStateMacro::isOwnedBy(
     return vehicleAgent->getId() == m_ownerId;
   }
   return false;
+}
+
+kernel::agents::LevelIdentifier
+VehiclePublicLocalStateMacro::getLevel() const {
+  return m_level;
 }
 
 } // namespace agents

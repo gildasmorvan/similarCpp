@@ -24,7 +24,7 @@ public:
    * Gets the category of the influence.
    * @return The category of the influence.
    */
-  virtual std::string getCategory() const = 0;
+  virtual ::std::string getCategory() const = 0;
 
   /**
    * Gets the identifier of the level whose reaction will process this
@@ -32,7 +32,8 @@ public:
    * @return The identifier of the level whose reaction will process this
    * influence.
    */
-  virtual LevelIdentifier getTargetLevel() const = 0;
+  virtual ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+  getTargetLevel() const = 0;
 
   /**
    * Checks if this influence is a system influence.
@@ -46,7 +47,8 @@ public:
    * @return The lower bound of the transitory period during which this
    * influence was created.
    */
-  virtual SimulationTimeStamp getTimeLowerBound() const = 0;
+  virtual ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+  getTimeLowerBound() const = 0;
 
   /**
    * Gets the upper bound of the transitory period during which this influence
@@ -54,7 +56,8 @@ public:
    * @return The upper bound of the transitory period during which this
    * influence was created.
    */
-  virtual SimulationTimeStamp getTimeUpperBound() const = 0;
+  virtual ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+  getTimeUpperBound() const = 0;
 };
 
 } // namespace influences

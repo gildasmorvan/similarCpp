@@ -22,6 +22,12 @@ public:
    * @return The identifier of the level for which this local state was defined.
    */
   virtual LevelIdentifier getLevel() const = 0;
+
+  /**
+   * Clones the local state, creating a deep copy.
+   * @return A deep copy of the local state.
+   */
+  virtual std::shared_ptr<ILocalState> clone() const = 0;
 };
 
 } // namespace microkernel

@@ -30,7 +30,7 @@ private:
   double speed;
   double acceleration;
   bool penDown;
-  std::string color;
+  ::std::string color;
 
 public:
   /**
@@ -45,7 +45,7 @@ public:
   TurtlePLSInLogo(const ::fr::univ_artois::lgi2a::similar::similar2logo::
                       kernel::tools::Point2D &location,
                   double heading, double speed, double acceleration,
-                  bool penDown, const std::string &color)
+                  bool penDown, const ::std::string &color)
       : location(location), heading(heading), speed(speed),
         acceleration(acceleration), penDown(penDown), color(color) {}
 
@@ -69,13 +69,20 @@ public:
   void setSpeed(double newSpeed) { speed = newSpeed; }
 
   double getAcceleration() const { return acceleration; }
-  void setAcceleration(double newAcceleration) { acceleration = newAcceleration; }
+  void setAcceleration(double newAcceleration) {
+    acceleration = newAcceleration;
+  }
 
   bool isPenDown() const { return penDown; }
   void setPenDown(bool isDown) { penDown = isDown; }
 
-  const std::string &getColor() const { return color; }
-  void setColor(const std::string &newColor) { color = newColor; }
+  const ::std::string &getColor() const { return color; }
+  void setColor(const ::std::string &newColor) { color = newColor; }
+
+  // Clone method for deep copying
+  std::shared_ptr<TurtlePLSInLogo> clone() const {
+    return std::make_shared<TurtlePLSInLogo>(*this);
+  }
 };
 
 } // namespace environment

@@ -121,6 +121,11 @@ public:
       const fr::univ_artois::lgi2a::similar::microkernel::ISimulationEngine
           &simulationEngine) override;
   void endObservation() override;
+
+  std::shared_ptr<fr::univ_artois::lgi2a::similar::microkernel::IProbe>
+  clone() const override {
+    return nullptr; // Controller cloning not supported/needed
+  }
 };
 
 } // namespace control

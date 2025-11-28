@@ -95,6 +95,7 @@ jamfree_basic_test_EXTERNAL_OBJECTS =
 
 jamfree/jamfree_basic_test: jamfree/CMakeFiles/jamfree_basic_test.dir/tests/basic_jamfree_tests.cpp.o
 jamfree/jamfree_basic_test: jamfree/CMakeFiles/jamfree_basic_test.dir/build.make
+jamfree/jamfree_basic_test: jamfree/libjamfree.a
 jamfree/jamfree_basic_test: libsimilar_microkernel.a
 jamfree/jamfree_basic_test: libsimilar_extendedkernel.a
 jamfree/jamfree_basic_test: jamfree/CMakeFiles/jamfree_basic_test.dir/link.txt

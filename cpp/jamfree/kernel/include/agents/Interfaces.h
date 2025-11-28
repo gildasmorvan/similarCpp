@@ -13,6 +13,7 @@
 #include "../../../../microkernel/include/dynamicstate/IPublicDynamicStateMap.h"
 #include "../../../../microkernel/include/influences/IInfluence.h"
 #include "../../../../microkernel/include/influences/InfluencesMap.h"
+#include <functional>
 
 namespace jamfree {
 namespace kernel {
@@ -43,6 +44,12 @@ using IPerceptionModel = fr::univ_artois::lgi2a::similar::extendedkernel::
     agents::IAgtPerceptionModel;
 using IDecisionModel =
     fr::univ_artois::lgi2a::similar::extendedkernel::agents::IAgtDecisionModel;
+
+struct LevelIdentifierHash {
+  std::size_t operator()(const LevelIdentifier &id) const {
+    return std::hash<LevelIdentifier>{}(id);
+  }
+};
 
 /**
  * @brief Reaction model interface.

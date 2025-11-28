@@ -52,9 +52,12 @@ public:
    * @param ds The speed change
    * @param target The turtle's public local state that is going to change
    */
-  ChangeSpeed(const microkernel::SimulationTimeStamp &timeLowerBound,
-              const microkernel::SimulationTimeStamp &timeUpperBound, double ds,
-              std::shared_ptr<model::environment::TurtlePLSInLogo> target);
+  ChangeSpeed(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      double ds, std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
    * Builds an instance of this influence created during the transitory
@@ -66,10 +69,14 @@ public:
    * @param ds The speed change
    * @param target The turtle's public local state that is going to change
    */
-  ChangeSpeed(const microkernel::LevelIdentifier &levelIdentifier,
-              const microkernel::SimulationTimeStamp &timeLowerBound,
-              const microkernel::SimulationTimeStamp &timeUpperBound, double ds,
-              std::shared_ptr<model::environment::TurtlePLSInLogo> target);
+  ChangeSpeed(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &levelIdentifier,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      double ds, std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
    * @return The speed change.

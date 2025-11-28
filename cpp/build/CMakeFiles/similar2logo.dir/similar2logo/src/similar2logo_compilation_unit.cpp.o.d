@@ -973,10 +973,8 @@ CMakeFiles/similar2logo.dir/similar2logo/src/similar2logo_compilation_unit.cpp.o
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numbers \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/src/../include/kernel/model/environment/Mark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/src/../include/kernel/model/environment/SituatedEntity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/src/../include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/src/../include/kernel/model/environment/TurtlePLSInLogo.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/set \

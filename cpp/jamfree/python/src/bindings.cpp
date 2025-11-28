@@ -615,8 +615,9 @@ PYBIND11_MODULE(_jamfree, m) {
            py::call_guard<py::gil_scoped_release>(), py::arg("final_time"),
            "Run simulation schedule")
       .def("add_probe", &MultiThreadedSimulationEngine::addProbe,
-           py::arg("probe_name"), py::arg("probe"),
-           "Add a probe to the engine");
+           py::arg("probe_name"), py::arg("probe"), "Add a probe to the engine")
+      .def("clone", &MultiThreadedSimulationEngine::clone,
+           "Create a deep copy of the simulation engine");
 
   // ========================================================================
   // Traffic Simulation Model

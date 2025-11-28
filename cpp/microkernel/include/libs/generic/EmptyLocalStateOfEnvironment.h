@@ -3,6 +3,7 @@
 
 #include "../../LevelIdentifier.h"
 #include "../../libs/abstractimpl/AbstractLocalStateOfEnvironment.h"
+#include <memory>
 
 namespace fr {
 namespace univ_artois {
@@ -32,6 +33,12 @@ public:
       : AbstractLocalStateOfEnvironment(levelIdentifier) {}
 
   virtual ~EmptyLocalStateOfEnvironment() = default;
+
+  std::shared_ptr<
+      ::fr::univ_artois::lgi2a::similar::microkernel::ILocalState>
+  clone() const override {
+    return std::make_shared<EmptyLocalStateOfEnvironment>(*this);
+  }
 };
 
 } // namespace generic

@@ -64,6 +64,10 @@ public:
       : energy(initialEnergy), position(pos), age(0), isAlive(true) {}
 
   virtual ~AnimalGlobalState() = default;
+
+  std::shared_ptr<microkernel::agents::IGlobalState> clone() const override {
+    return std::make_shared<AnimalGlobalState>(*this);
+  }
 };
 
 // ===== Improved Perception Model using AbstractAgtPerceptionModel =====

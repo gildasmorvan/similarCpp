@@ -26,6 +26,10 @@ class SimpleGlobalState : public microkernel::agents::IGlobalState {
 public:
   int counter = 0;
   virtual ~SimpleGlobalState() = default;
+
+  std::shared_ptr<microkernel::agents::IGlobalState> clone() const override {
+    return std::make_shared<SimpleGlobalState>(*this);
+  }
 };
 
 int main() {

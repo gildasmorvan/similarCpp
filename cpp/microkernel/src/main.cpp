@@ -44,6 +44,10 @@ using namespace fr::univ_artois::lgi2a::similar::microkernel;
 class MockGlobalState : public agents::IGlobalState {
 public:
   virtual ~MockGlobalState() = default;
+
+  std::shared_ptr<agents::IGlobalState> clone() const override {
+    return std::make_shared<MockGlobalState>(*this);
+  }
 };
 
 class MockAgent; // Forward declaration
@@ -69,6 +73,10 @@ public:
 
   bool isOwnedBy(const agents::IAgent &agent) const override {
     return &agent == owner.get();
+  }
+
+  std::shared_ptr<ILocalState> clone() const override {
+    return std::make_shared<MockLocalStateOfAgent>(*this);
   }
 };
 
@@ -161,6 +169,10 @@ public:
   std::map<LevelIdentifier, std::shared_ptr<agents::ILocalStateOfAgent>>
   getPublicLocalStates() const override {
     return publicStates;
+  }
+
+  std::shared_ptr<agents::IAgent> clone() const override {
+    return std::make_shared<MockAgent>(*this);
   }
 };
 

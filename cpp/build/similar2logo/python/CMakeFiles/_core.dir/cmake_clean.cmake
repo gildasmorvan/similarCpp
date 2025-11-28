@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so"
-  "/Users/morvan/Antigravity/similar/python/similar2logo/_core.pdb"
   "CMakeFiles/_core.dir/__/src/kernel/agents/LogoAgent.cpp.o"
   "CMakeFiles/_core.dir/__/src/kernel/agents/LogoAgent.cpp.o.d"
   "CMakeFiles/_core.dir/__/src/kernel/environment/Environment.cpp.o"
@@ -23,6 +21,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/_core.dir/__/src/kernel/tools/FastMath.cpp.o.d"
   "CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o"
   "CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o.d"
+  "_core.cpython-314-darwin.so"
+  "_core.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

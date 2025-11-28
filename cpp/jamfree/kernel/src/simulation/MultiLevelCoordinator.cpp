@@ -1,5 +1,5 @@
-#include "../include/simulation/MultiLevelCoordinator.h"
-#include "../include/levels/LevelIdentifiers.h"
+#include "../../include/simulation/MultiLevelCoordinator.h"
+#include "../../include/levels/LevelIdentifiers.h"
 #include <iostream>
 
 namespace jamfree {
@@ -10,8 +10,8 @@ MultiLevelCoordinator::MultiLevelCoordinator()
     : m_current_time(0.0), m_step_count(0) {}
 
 void MultiLevelCoordinator::addLevel(const LevelConfig &config) {
-  m_levels[config.level] = config;
-  std::cout << "Added level: " << config.level.getName()
+  m_levels.insert_or_assign(config.level, config);
+  std::cout << "Added level: " << config.level.toString()
             << " (dt=" << config.time_step
             << "s, freq=" << config.update_frequency << ")" << std::endl;
 }
@@ -64,7 +64,8 @@ void MultiLevelCoordinator::transitionAgent(
   }
 
   std::cout << "Transitioning agent " << agentId << " from "
-            << fromLevel.getName() << " to " << toLevel.getName() << std::endl;
+            << fromLevel.toString() << " to " << toLevel.toString()
+            << std::endl;
 
   // Get state from source level
   auto sourcePublicState = agent->getPublicLocalState(fromLevel);
@@ -72,13 +73,21 @@ void MultiLevelCoordinator::transitionAgent(
 
   if (!sourcePublicState || !sourcePrivateState) {
     std::cerr << "Error: Agent " << agentId << " has no state in "
-              << fromLevel.getName() << std::endl;
+              << fromLevel.toString() << std::endl;
     return;
   }
 
   // Clone states to target level
-  auto targetPublicState = sourcePublicState->clone();
-  auto targetPrivateState = sourcePrivateState->clone();
+  auto targetPublicState = std::dynamic_pointer_cast<agents::ILocalState>(
+      sourcePublicState->clone());
+  auto targetPrivateState = std::dynamic_pointer_cast<agents::ILocalState>(
+      sourcePrivateState->clone());
+
+  if (!targetPublicState || !targetPrivateState) {
+    std::cerr << "Error: Failed to clone states when transitioning agent "
+              << agentId << std::endl;
+    return;
+  }
 
   // Add target level if not already present
   if (!agent->hasLevel(toLevel)) {
@@ -139,7 +148,7 @@ void MultiLevelCoordinator::updateLevel(const agents::LevelIdentifier &level) {
   // For now, we use the main engine which updates all levels
   // In a full implementation, this would update only the specified level
 
-  std::cout << "Updating level: " << level.getName() << " (step "
+  std::cout << "Updating level: " << level.toString() << " (step "
             << m_step_count << ")" << std::endl;
 
   // TODO: Level-specific updates

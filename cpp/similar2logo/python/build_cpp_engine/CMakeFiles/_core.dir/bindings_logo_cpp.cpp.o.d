@@ -1,11 +1,11 @@
 CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/bindings_logo_cpp.cpp \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/functional.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pybind11.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/class.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/attr.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/common.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/wrap_include_python_h.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/functional.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/pybind11.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/class.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/attr.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/common.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/wrap_include_python_h.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/Python.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/patchlevel.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/pyconfig.h \
@@ -455,7 +455,7 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/tracemalloc.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/frameobject.h \
   /opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14/cpython/frameobject.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/pybind11_namespace_macros.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/pybind11_namespace_macros.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/optional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/variant \
@@ -1053,21 +1053,21 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeindex \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/cast.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/descr.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/native_enum_data.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/../pytypes.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/../detail/common.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/../buffer_info.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/internals.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil_simple.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/cast.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/descr.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/native_enum_data.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/../pytypes.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/../detail/common.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/../buffer_info.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/internals.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/gil_simple.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/pytypes.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/trampoline_self_life_support.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/using_smart_holder.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/struct_smart_holder.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/value_and_holder.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/pytypes.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/trampoline_self_life_support.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/using_smart_holder.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/struct_smart_holder.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/value_and_holder.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/thread \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
@@ -1136,20 +1136,20 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_token.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/type_caster_base.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/cpp_conduit.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/typeid.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/type_caster_base.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/gil.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/cpp_conduit.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/typeid.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cxxabi.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__cxxabi_config.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/options.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/exception_translation.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/function_record_pyobject.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/detail/init.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/gil_safe_call_once.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/typing.h \
-  /opt/homebrew/lib/python3.14/site-packages/pybind11/include/pybind11/stl.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/options.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/exception_translation.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/function_record_pyobject.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/detail/init.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/gil_safe_call_once.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/typing.h \
+  /Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include/pybind11/stl.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
@@ -1230,7 +1230,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/Mark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../tools/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/SituatedEntity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/TurtlePLSInLogo.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangeDirection.h \
@@ -1246,6 +1245,7 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../tools/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/Stop.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/LogoSimulationModel.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/../agents/LogoAgent.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/LogoEnvPLS.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../../../../microkernel/include/LevelIdentifier.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../../../../microkernel/include/libs/abstractimpl/AbstractLocalStateOfEnvironment.h \
@@ -1254,7 +1254,6 @@ CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../../../../microkernel/include/libs/abstractimpl/AbstractLocalState.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../../../../microkernel/include/libs/abstractimpl/../../ILocalState.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../tools/MathUtil.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numbers \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/levels/LogoSimulationLevelList.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/levels/../../../../../microkernel/include/LevelIdentifier.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../microkernel/include/ISimulationEngine.h \

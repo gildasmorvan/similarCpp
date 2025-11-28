@@ -52,10 +52,12 @@ public:
    * @param dd The direction change (in radians)
    * @param target The turtle's public local state that is going to change
    */
-  ChangeDirection(const microkernel::SimulationTimeStamp &timeLowerBound,
-                  const microkernel::SimulationTimeStamp &timeUpperBound,
-                  double dd,
-                  std::shared_ptr<model::environment::TurtlePLSInLogo> target);
+  ChangeDirection(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      double dd, std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
    * Builds an instance of this influence created during the transitory
@@ -67,11 +69,14 @@ public:
    * @param dd The direction change (in radians)
    * @param target The turtle's public local state that is going to change
    */
-  ChangeDirection(const microkernel::LevelIdentifier &levelIdentifier,
-                  const microkernel::SimulationTimeStamp &timeLowerBound,
-                  const microkernel::SimulationTimeStamp &timeUpperBound,
-                  double dd,
-                  std::shared_ptr<model::environment::TurtlePLSInLogo> target);
+  ChangeDirection(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &levelIdentifier,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      double dd, std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
    * @return The direction change (in radians).

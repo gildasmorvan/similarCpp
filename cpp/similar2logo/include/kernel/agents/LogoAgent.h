@@ -44,116 +44,126 @@ public:
 
   const std::string &getColor() const { return color; }
   void setColor(const std::string &newColor) { color = newColor; }
-};
 
-/**
- * Logo Perception Data - Contains what a turtle perceives.
- */
-class LogoPerceivedData : public mk::agents::IPerceivedData {
-private:
-  mk::LevelIdentifier level;
-  mk::SimulationTimeStamp timeLower, timeUpper;
+  std::shared_ptr<mk::agents::IAgent> clone() const override {
+    return std::make_shared<LogoAgent>(*this);
+  }
 
-  // Perception data
-  tools::Point2D position;
-  double heading;
-  double speed;
+  // Copy constructor (public for clone())
+  LogoAgent(const LogoAgent &other)
+      : ek::agents::ExtendedAgent(other), speed(other.speed),
+        color(other.color) {}
 
-  // Nearby turtles
-  struct NearbyTurtle {
+public:
+  /**
+   * Logo Perception Data - Contains what a turtle perceives.
+   */
+  class LogoPerceivedData : public mk::agents::IPerceivedData {
+  private:
+    mk::LevelIdentifier level;
+    mk::SimulationTimeStamp timeLower, timeUpper;
+
+    // Perception data
     tools::Point2D position;
     double heading;
-    double distance;
-    mk::AgentCategory category;
-  };
-  std::vector<NearbyTurtle> nearbyTurtles;
+    double speed;
 
-  // Pheromones at current location
-  std::map<std::string, double> pheromones;
+    // Nearby turtles
+    struct NearbyTurtle {
+      tools::Point2D position;
+      double heading;
+      double distance;
+      mk::AgentCategory category;
+    };
+    std::vector<NearbyTurtle> nearbyTurtles;
 
-public:
-  LogoPerceivedData(const mk::LevelIdentifier &level,
-                    const mk::SimulationTimeStamp &lower,
-                    const mk::SimulationTimeStamp &upper,
-                    const tools::Point2D &pos, double heading, double speed)
-      : level(level), timeLower(lower), timeUpper(upper), position(pos),
-        heading(heading), speed(speed) {}
+    // Pheromones at current location
+    std::map<std::string, double> pheromones;
 
-  mk::LevelIdentifier getLevel() const override { return level; }
-  mk::SimulationTimeStamp getTransitoryPeriodMin() const override {
-    return timeLower;
-  }
-  mk::SimulationTimeStamp getTransitoryPeriodMax() const override {
-    return timeUpper;
-  }
+  public:
+    LogoPerceivedData(const mk::LevelIdentifier &level,
+                      const mk::SimulationTimeStamp &lower,
+                      const mk::SimulationTimeStamp &upper,
+                      const tools::Point2D &pos, double heading, double speed)
+        : level(level), timeLower(lower), timeUpper(upper), position(pos),
+          heading(heading), speed(speed) {}
 
-  const tools::Point2D &getPosition() const { return position; }
-  double getHeading() const { return heading; }
-  double getSpeed() const { return speed; }
-
-  void addNearbyTurtle(const tools::Point2D &pos, double heading,
-                       double distance, const mk::AgentCategory &category) {
-    nearbyTurtles.push_back({pos, heading, distance, category});
-  }
-
-  const std::vector<NearbyTurtle> &getNearbyTurtles() const {
-    return nearbyTurtles;
-  }
-
-  void setPheromone(const std::string &id, double value) {
-    pheromones[id] = value;
-  }
-
-  double getPheromone(const std::string &id) const {
-    auto it = pheromones.find(id);
-    return it != pheromones.end() ? it->second : 0.0;
-  }
-
-  const std::map<std::string, double> &getAllPheromones() const {
-    return pheromones;
-  }
-};
-
-/**
- * Python-Callable Decision Model
- *
- * This allows Python code to provide the decision logic while
- * the C++ engine handles the multithreading.
- */
-class PythonDecisionModel : public ek::agents::IAgtDecisionModel {
-private:
-  mk::LevelIdentifier level;
-
-public:
-  // Function type for Python callbacks
-  using DecisionCallback =
-      std::function<void(std::shared_ptr<LogoPerceivedData>,
-                         std::shared_ptr<mk::influences::InfluencesMap>)>;
-
-  DecisionCallback callback;
-
-  PythonDecisionModel(const mk::LevelIdentifier &level, DecisionCallback cb)
-      : level(level), callback(cb) {}
-
-  mk::LevelIdentifier getLevel() const override { return level; }
-
-  void decide(const mk::SimulationTimeStamp &, const mk::SimulationTimeStamp &,
-              std::shared_ptr<mk::agents::IGlobalState>,
-              std::shared_ptr<mk::agents::ILocalStateOfAgent>,
-              std::shared_ptr<mk::agents::ILocalStateOfAgent>,
-              std::shared_ptr<mk::agents::IPerceivedData> perceivedData,
-              std::shared_ptr<mk::influences::InfluencesMap> producedInfluences)
-      override {
-
-    // Cast to LogoPerceivedData
-    auto logoPerception =
-        std::dynamic_pointer_cast<LogoPerceivedData>(perceivedData);
-    if (logoPerception && callback) {
-      callback(logoPerception, producedInfluences);
+    mk::LevelIdentifier getLevel() const override { return level; }
+    mk::SimulationTimeStamp getTransitoryPeriodMin() const override {
+      return timeLower;
     }
-  }
-};
+    mk::SimulationTimeStamp getTransitoryPeriodMax() const override {
+      return timeUpper;
+    }
 
+    const tools::Point2D &getPosition() const { return position; }
+    double getHeading() const { return heading; }
+    double getSpeed() const { return speed; }
+
+    void addNearbyTurtle(const tools::Point2D &pos, double heading,
+                         double distance, const mk::AgentCategory &category) {
+      nearbyTurtles.push_back({pos, heading, distance, category});
+    }
+
+    const std::vector<NearbyTurtle> &getNearbyTurtles() const {
+      return nearbyTurtles;
+    }
+
+    void setPheromone(const std::string &id, double value) {
+      pheromones[id] = value;
+    }
+
+    double getPheromone(const std::string &id) const {
+      auto it = pheromones.find(id);
+      return it != pheromones.end() ? it->second : 0.0;
+    }
+
+    const std::map<std::string, double> &getAllPheromones() const {
+      return pheromones;
+    }
+  };
+
+  /**
+   * Python-Callable Decision Model
+   *
+   * This allows Python code to provide the decision logic while
+   * the C++ engine handles the multithreading.
+   */
+  class PythonDecisionModel : public ek::agents::IAgtDecisionModel {
+  private:
+    mk::LevelIdentifier level;
+
+  public:
+    // Function type for Python callbacks
+    using DecisionCallback =
+        std::function<void(std::shared_ptr<LogoPerceivedData>,
+                           std::shared_ptr<mk::influences::InfluencesMap>)>;
+
+    DecisionCallback callback;
+
+    PythonDecisionModel(const mk::LevelIdentifier &level, DecisionCallback cb)
+        : level(level), callback(cb) {}
+
+    mk::LevelIdentifier getLevel() const override { return level; }
+
+    void
+    decide(const mk::SimulationTimeStamp &, const mk::SimulationTimeStamp &,
+           std::shared_ptr<mk::agents::IGlobalState>,
+           std::shared_ptr<mk::agents::ILocalStateOfAgent>,
+           std::shared_ptr<mk::agents::ILocalStateOfAgent>,
+           std::shared_ptr<mk::agents::IPerceivedData> perceivedData,
+           std::shared_ptr<mk::influences::InfluencesMap> producedInfluences)
+        override {
+
+      // Cast to LogoPerceivedData
+      auto logoPerception =
+          std::dynamic_pointer_cast<LogoPerceivedData>(perceivedData);
+      if (logoPerception && callback) {
+        callback(logoPerception, producedInfluences);
+      }
+    }
+  };
+};
 } // namespace agents
 } // namespace kernel
 } // namespace similar2logo

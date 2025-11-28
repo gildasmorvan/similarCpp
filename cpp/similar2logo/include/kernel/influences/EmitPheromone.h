@@ -39,7 +39,8 @@ private:
   /**
    * The location where the pheromone is emitted.
    */
-  tools::Point2D location;
+  ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
+      location;
 
   /**
    * The amount of emitted pheromone.
@@ -57,10 +58,14 @@ public:
    * @param pheromoneIdentifier The identifier of the emitted pheromone
    * @param value The amount of emitted pheromone
    */
-  EmitPheromone(const microkernel::SimulationTimeStamp &timeLowerBound,
-                const microkernel::SimulationTimeStamp &timeUpperBound,
-                const tools::Point2D &location,
-                const std::string &pheromoneIdentifier, double value);
+  EmitPheromone(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
+          Point2D &location,
+      const ::std::string &pheromoneIdentifier, double value);
 
   /**
    * Builds an instance of this influence created during the transitory
@@ -73,16 +78,25 @@ public:
    * @param pheromoneIdentifier The identifier of the emitted pheromone
    * @param value The amount of emitted pheromone
    */
-  EmitPheromone(const microkernel::LevelIdentifier &levelIdentifier,
-                const microkernel::SimulationTimeStamp &timeLowerBound,
-                const microkernel::SimulationTimeStamp &timeUpperBound,
-                const tools::Point2D &location,
-                const std::string &pheromoneIdentifier, double value);
+  EmitPheromone(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &levelIdentifier,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
+          Point2D &location,
+      const ::std::string &pheromoneIdentifier, double value);
 
   /**
    * @return The location where the pheromone is emitted.
    */
-  const tools::Point2D &getLocation() const { return location; }
+  const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
+      Point2D &
+      getLocation() const {
+    return location;
+  }
 
   /**
    * @return The identifier of the emitted pheromone.

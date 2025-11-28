@@ -82,6 +82,22 @@ protected:
             initialTime, identifier));
   }
 
+  AbstractLevel(const AbstractLevel &other)
+      : identifier(other.identifier),
+        perceptibleLevels(other.perceptibleLevels),
+        influenceableLevels(other.influenceableLevels) {
+    if (other.lastConsistentPublicLocalDynamicState) {
+      this->lastConsistentPublicLocalDynamicState = std::dynamic_pointer_cast<
+          dynamicstate::ConsistentPublicLocalDynamicState>(
+          other.lastConsistentPublicLocalDynamicState->clone());
+    }
+    if (other.lastTransitoryPublicLocalDynamicState) {
+      this->lastTransitoryPublicLocalDynamicState = std::dynamic_pointer_cast<
+          dynamicstate::TransitoryPublicLocalDynamicState>(
+          other.lastTransitoryPublicLocalDynamicState->clone());
+    }
+  }
+
 public:
   virtual ~AbstractLevel() = default;
 

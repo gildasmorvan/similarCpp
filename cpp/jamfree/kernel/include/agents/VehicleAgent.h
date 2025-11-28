@@ -38,6 +38,16 @@ public:
    */
   virtual ~VehicleAgent() = default;
 
+  std::shared_ptr<fr::univ_artois::lgi2a::similar::microkernel::agents::IAgent>
+  clone() const override {
+    return std::make_shared<VehicleAgent>(*this);
+  }
+
+  VehicleAgent(const VehicleAgent &other)
+      : fr::univ_artois::lgi2a::similar::extendedkernel::agents::ExtendedAgent(
+            other),
+        m_id(other.m_id) {}
+
   /**
    * @brief Get agent ID.
    * @return Agent identifier
@@ -63,7 +73,7 @@ public:
    * @return Public local state or nullptr
    */
   std::shared_ptr<ILocalState>
-  getPublicLocalState(const LevelIdentifier &level) const;
+  getPublicLocalState(const LevelIdentifier &level) const override;
 
   /**
    * @brief Set public local state for a level.
@@ -79,7 +89,7 @@ public:
    * @return Private local state or nullptr
    */
   std::shared_ptr<ILocalState>
-  getPrivateLocalState(const LevelIdentifier &level) const;
+  getPrivateLocalState(const LevelIdentifier &level) const override;
 
   /**
    * @brief Set private local state for a level.

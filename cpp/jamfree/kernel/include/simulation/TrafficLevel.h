@@ -64,6 +64,10 @@ public:
                           InfluencesMap>
           newInfluencesToProcess) override;
 
+  std::shared_ptr<
+      fr::univ_artois::lgi2a::similar::microkernel::levels::ILevel>
+  clone() const override;
+
 private:
   reaction::TrafficReactionModel m_reactionModel;
 };

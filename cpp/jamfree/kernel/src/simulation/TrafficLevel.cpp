@@ -54,6 +54,10 @@ void TrafficLevel::makeSystemReaction(
   // For now, empty implementation.
 }
 
+std::shared_ptr<levels::ILevel> TrafficLevel::clone() const {
+  return std::make_shared<TrafficLevel>(*this);
+}
+
 } // namespace simulation
 } // namespace kernel
 } // namespace jamfree

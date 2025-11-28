@@ -126,6 +126,12 @@ public:
          std::shared_ptr<ILocalStateOfAgent> privateLocalState,
          std::shared_ptr<IPerceivedData> perceivedData,
          std::shared_ptr<influences::InfluencesMap> producedInfluences) = 0;
+
+  /**
+   * Clones the agent, creating a deep copy of its state.
+   * @return A deep copy of the agent.
+   */
+  virtual std::shared_ptr<IAgent> clone() const = 0;
 };
 
 } // namespace agents

@@ -141,6 +141,10 @@ private:
     }
     void setTime(double time) { m_time = time; }
 
+    std::shared_ptr<agents::GlobalState> clone() const override {
+      return std::make_shared<SimulationGlobalState>(*this);
+    }
+
   private:
     double m_time;
   };

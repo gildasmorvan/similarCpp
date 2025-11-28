@@ -50,11 +50,25 @@ public:
 
   virtual ~AbstractEnvironment() = default;
 
-  /**
-   * Gets the public local state of the environment for a specific level.
-   * @param level The identifier of the level.
-   * @return The public local state.
-   */
+protected:
+  AbstractEnvironment(const AbstractEnvironment &other) {
+    for (const auto &pair : other.publicLocalStates) {
+      this->publicLocalStates[pair.first] =
+          std::dynamic_pointer_cast<environment::ILocalStateOfEnvironment>(
+              pair.second->clone());
+    }
+    for (const auto &pair : other.privateLocalStates) {
+      this->privateLocalStates[pair.first] =
+          std::dynamic_pointer_cast<environment::ILocalStateOfEnvironment>(
+              pair.second->clone());
+    }
+  }
+
+public: /**
+         * Gets the public local state of the environment for a specific level.
+         * @param level The identifier of the level.
+         * @return The public local state.
+         */
   std::shared_ptr<environment::ILocalStateOfEnvironment>
   getPublicLocalState(const LevelIdentifier &level) const override {
     auto it = publicLocalStates.find(level);

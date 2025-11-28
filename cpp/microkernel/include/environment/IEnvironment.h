@@ -65,6 +65,12 @@ public:
       std::shared_ptr<ILocalStateOfEnvironment> privateLocalState,
       std::shared_ptr<dynamicstate::IPublicDynamicStateMap> dynamicStates,
       std::shared_ptr<influences::InfluencesMap> producedInfluences) = 0;
+
+  /**
+   * Clones the environment, creating a deep copy of its state.
+   * @return A deep copy of the environment.
+   */
+  virtual std::shared_ptr<IEnvironment> clone() const = 0;
 };
 
 } // namespace environment

@@ -1,7 +1,7 @@
 similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/model/LogoSimulationModel.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/src/kernel/model/LogoSimulationModel.cpp \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/LogoSimulationModel.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/agents/LogoAgent.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/../agents/LogoAgent.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/tools/Point2D.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/tools/FastMath.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath \
@@ -1013,10 +1013,8 @@ similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/model/LogoSimulationModel
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../../../../microkernel/include/libs/abstractimpl/../../ILocalState.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../tools/MathUtil.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/../../tools/Point2D.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numbers \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/Mark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/SituatedEntity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/TurtlePLSInLogo.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \

@@ -28,7 +28,9 @@ public:
    * @brief Clone this perceived data.
    * @return Cloned data
    */
-  std::shared_ptr<kernel::agents::IPerceivedData> clone() const;
+  std::shared_ptr<
+      fr::univ_artois::lgi2a::similar::microkernel::agents::IPerceivedData>
+  clone() const override;
 
   // Implement IPerceivedData
   kernel::agents::LevelIdentifier getLevel() const override;

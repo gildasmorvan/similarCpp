@@ -1,18 +1,19 @@
-#include "../../../microscopic/include/agents/VehiclePrivateLocalStateMicro.h"
-#include "../../../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
-#include "../../../microscopic/include/decision/VehicleDecisionModelMicro.h"
-#include "../../../microscopic/include/perception/VehiclePerceptionModelMicro.h"
-#include "../../../microscopic/include/reaction/MicroscopicReactionModel.h"
-#include "../../include/agents/VehicleAgent.h"
-#include "../../include/model/Lane.h"
-#include "../../include/model/Road.h"
-#include "../../include/simulation/SimulationEngine.h"
+#include "../microscopic/include/agents/VehiclePrivateLocalStateMicro.h"
+#include "../microscopic/include/agents/VehiclePublicLocalStateMicro.h"
+#include "../microscopic/include/decision/VehicleDecisionModelMicro.h"
+#include "../microscopic/include/IDM.h"
+#include "../microscopic/include/decision/dms/SubsumptionDMS.h"
+#include "../microscopic/include/decision/dms/ForwardAccelerationDMS.h"
+#include "../microscopic/include/perception/VehiclePerceptionModelMicro.h"
+#include "../microscopic/include/reaction/MicroscopicReactionModel.h"
+#include "../kernel/include/agents/VehicleAgent.h"
+#include "../kernel/include/model/Lane.h"
+#include "../kernel/include/model/Road.h"
+#include "../kernel/include/simulation/SimulationEngine.h"
 #include <iostream>
 #include <memory>
 
 using namespace jamfree;
-using namespace jamfree::kernel;
-using namespace jamfree::microscopic;
 
 /**
  * @brief Simple highway traffic simulation example.
@@ -30,12 +31,12 @@ int main() {
 
   // Create simulation engine
   double timeStep = 0.1; // 100ms time step
-  auto engine = std::make_shared<simulation::SimulationEngine>(timeStep);
+  auto engine = std::make_shared<kernel::simulation::SimulationEngine>(timeStep);
 
   // Create a 3-lane highway (1km long)
-  model::Point2D start(0, 0);
-  model::Point2D end(1000, 0);
-  auto highway = std::make_shared<model::Road>("Highway-1", start, end, 3, 3.5);
+  kernel::model::Point2D start(0, 0);
+  kernel::model::Point2D end(1000, 0);
+  auto highway = std::make_shared<kernel::model::Road>("Highway-1", start, end, 3, 3.5);
 
   std::cout << "Created highway: " << highway->getId() << std::endl;
   std::cout << "  Lanes: " << highway->getNumLanes() << std::endl;
@@ -44,8 +45,8 @@ int main() {
 
   // Create reaction model for microscopic level
   auto reactionModel =
-      std::make_shared<reaction::MicroscopicReactionModel>(timeStep);
-  agents::LevelIdentifier microLevel("Microscopic");
+      std::make_shared<microscopic::reaction::MicroscopicReactionModel>(timeStep);
+  kernel::agents::LevelIdentifier microLevel("Microscopic");
   engine->setReactionModel(microLevel, reactionModel);
 
   // Create vehicles
@@ -54,11 +55,11 @@ int main() {
   for (int i = 0; i < 5; ++i) {
     // Create vehicle agent
     std::string vehicleId = "Vehicle-" + std::to_string(i);
-    auto vehicle = std::make_shared<agents::VehicleAgent>(vehicleId);
+    auto vehicle = std::make_shared<kernel::agents::VehicleAgent>(vehicleId);
 
     // Create public state (visible to all)
     auto publicState =
-        std::make_shared<agents::VehiclePublicLocalStateMicro>(vehicleId);
+        std::make_shared<microscopic::agents::VehiclePublicLocalStateMicro>(vehicleId);
     publicState->setCurrentLane(highway->getLane(i % 3).get());
     publicState->setLaneIndex(i % 3);
     publicState->setLanePosition(i * 50.0);  // Stagger vehicles
@@ -68,7 +69,7 @@ int main() {
 
     // Create private state (agent-specific)
     auto privateState =
-        std::make_shared<agents::VehiclePrivateLocalStateMicro>(vehicleId);
+        std::make_shared<microscopic::agents::VehiclePrivateLocalStateMicro>(vehicleId);
     privateState->setDesiredSpeed(30.0 + (i * 2.0)); // Desired speed
     privateState->setTimeHeadway(1.5);
     privateState->setMinGap(2.0);
@@ -78,12 +79,18 @@ int main() {
 
     // Create perception model
     auto perceptionModel =
-        std::make_shared<perception::VehiclePerceptionModelMicro>(150.0);
+        std::make_shared<microscopic::perception::VehiclePerceptionModelMicro>(150.0);
 
-    // Create decision model (placeholder - would need actual DMS
-    // implementation)
+    // Create decision model with subsumption DMS
+    auto subsumptionDMS = std::make_shared<microscopic::decision::dms::SubsumptionDMS>();
+
+    // Add IDM-based acceleration DMS
+    auto idm = std::make_shared<microscopic::models::IDM>();
+    auto accelDMS = std::make_shared<microscopic::decision::dms::ForwardAccelerationDMS>(idm);
+    subsumptionDMS->addSubmodel(accelDMS);
+
     auto decisionModel =
-        std::make_shared<decision::VehicleDecisionModelMicro>();
+        std::make_shared<microscopic::decision::VehicleDecisionModelMicro>(subsumptionDMS);
 
     // Add to agent
     vehicle->includeNewLevel(microLevel, publicState, privateState);
@@ -116,7 +123,7 @@ int main() {
         auto publicState = agent->getPublicLocalState(microLevel);
         if (publicState) {
           auto vehicleState =
-              std::dynamic_pointer_cast<agents::VehiclePublicLocalStateMicro>(
+              std::dynamic_pointer_cast<microscopic::agents::VehiclePublicLocalStateMicro>(
                   publicState);
           if (vehicleState) {
             std::cout << agent->getId() << "="

@@ -85,6 +85,13 @@ public:
   runNewSimulation(std::shared_ptr<ISimulationModel> simulationModel) = 0;
 
   /**
+   * Runs the simulation until the specified final time.
+   * This method assumes the simulation has been initialized.
+   * @param finalTime The time until which the simulation should run.
+   */
+  virtual void runSimulation(const SimulationTimeStamp &finalTime) = 0;
+
+  /**
    * Gets the current dynamic states of the simulation.
    * @return The dynamic state of the simulation.
    */
@@ -139,6 +146,12 @@ public:
   disambiguation(
       std::shared_ptr<dynamicstate::TransitoryPublicLocalDynamicState>
           transitoryDynamicState) const = 0;
+
+  /**
+   * Clones the simulation engine, creating a deep copy of the simulation state.
+   * @return A deep copy of the simulation engine.
+   */
+  virtual std::shared_ptr<ISimulationEngine> clone() const = 0;
 };
 
 } // namespace microkernel

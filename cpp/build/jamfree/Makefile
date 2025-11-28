@@ -403,6 +403,30 @@ kernel/src/agents/VehicleAgent.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/agents/VehicleAgent.cpp.s
 .PHONY : kernel/src/agents/VehicleAgent.cpp.s
 
+kernel/src/levels/LevelIdentifiers.o: kernel/src/levels/LevelIdentifiers.cpp.o
+.PHONY : kernel/src/levels/LevelIdentifiers.o
+
+# target to build an object file
+kernel/src/levels/LevelIdentifiers.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.o
+.PHONY : kernel/src/levels/LevelIdentifiers.cpp.o
+
+kernel/src/levels/LevelIdentifiers.i: kernel/src/levels/LevelIdentifiers.cpp.i
+.PHONY : kernel/src/levels/LevelIdentifiers.i
+
+# target to preprocess a source file
+kernel/src/levels/LevelIdentifiers.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.i
+.PHONY : kernel/src/levels/LevelIdentifiers.cpp.i
+
+kernel/src/levels/LevelIdentifiers.s: kernel/src/levels/LevelIdentifiers.cpp.s
+.PHONY : kernel/src/levels/LevelIdentifiers.s
+
+# target to generate assembly for a file
+kernel/src/levels/LevelIdentifiers.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/levels/LevelIdentifiers.cpp.s
+.PHONY : kernel/src/levels/LevelIdentifiers.cpp.s
+
 kernel/src/model/Lane.o: kernel/src/model/Lane.cpp.o
 .PHONY : kernel/src/model/Lane.o
 
@@ -450,6 +474,30 @@ kernel/src/reaction/TrafficReactionModel.s: kernel/src/reaction/TrafficReactionM
 kernel/src/reaction/TrafficReactionModel.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/reaction/TrafficReactionModel.cpp.s
 .PHONY : kernel/src/reaction/TrafficReactionModel.cpp.s
+
+kernel/src/simulation/MultiLevelCoordinator.o: kernel/src/simulation/MultiLevelCoordinator.cpp.o
+.PHONY : kernel/src/simulation/MultiLevelCoordinator.o
+
+# target to build an object file
+kernel/src/simulation/MultiLevelCoordinator.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.o
+.PHONY : kernel/src/simulation/MultiLevelCoordinator.cpp.o
+
+kernel/src/simulation/MultiLevelCoordinator.i: kernel/src/simulation/MultiLevelCoordinator.cpp.i
+.PHONY : kernel/src/simulation/MultiLevelCoordinator.i
+
+# target to preprocess a source file
+kernel/src/simulation/MultiLevelCoordinator.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.i
+.PHONY : kernel/src/simulation/MultiLevelCoordinator.cpp.i
+
+kernel/src/simulation/MultiLevelCoordinator.s: kernel/src/simulation/MultiLevelCoordinator.cpp.s
+.PHONY : kernel/src/simulation/MultiLevelCoordinator.s
+
+# target to generate assembly for a file
+kernel/src/simulation/MultiLevelCoordinator.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/MultiLevelCoordinator.cpp.s
+.PHONY : kernel/src/simulation/MultiLevelCoordinator.cpp.s
 
 kernel/src/simulation/SimulationEngine.o: kernel/src/simulation/SimulationEngine.cpp.o
 .PHONY : kernel/src/simulation/SimulationEngine.o
@@ -522,6 +570,30 @@ kernel/src/simulation/TrafficSimulationModel.s: kernel/src/simulation/TrafficSim
 kernel/src/simulation/TrafficSimulationModel.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/kernel/src/simulation/TrafficSimulationModel.cpp.s
 .PHONY : kernel/src/simulation/TrafficSimulationModel.cpp.s
+
+macroscopic/src/agents/VehiclePublicLocalStateMacro.o: macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o
+.PHONY : macroscopic/src/agents/VehiclePublicLocalStateMacro.o
+
+# target to build an object file
+macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o
+.PHONY : macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.o
+
+macroscopic/src/agents/VehiclePublicLocalStateMacro.i: macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i
+.PHONY : macroscopic/src/agents/VehiclePublicLocalStateMacro.i
+
+# target to preprocess a source file
+macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i
+.PHONY : macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.i
+
+macroscopic/src/agents/VehiclePublicLocalStateMacro.s: macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s
+.PHONY : macroscopic/src/agents/VehiclePublicLocalStateMacro.s
+
+# target to generate assembly for a file
+macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s
+.PHONY : macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp.s
 
 microscopic/src/agents/VehiclePerceivedDataMicro.o: microscopic/src/agents/VehiclePerceivedDataMicro.cpp.o
 .PHONY : microscopic/src/agents/VehiclePerceivedDataMicro.o
@@ -618,6 +690,150 @@ microscopic/src/decision/VehicleDecisionModelMicro.s: microscopic/src/decision/V
 microscopic/src/decision/VehicleDecisionModelMicro.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/VehicleDecisionModelMicro.cpp.s
 .PHONY : microscopic/src/decision/VehicleDecisionModelMicro.cpp.s
+
+microscopic/src/decision/dms/ConjunctionDMS.o: microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/ConjunctionDMS.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.cpp.o
+
+microscopic/src/decision/dms/ConjunctionDMS.i: microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/ConjunctionDMS.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.cpp.i
+
+microscopic/src/decision/dms/ConjunctionDMS.s: microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/ConjunctionDMS.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ConjunctionDMS.cpp.s
+
+microscopic/src/decision/dms/ForwardAccelerationDMS.o: microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.o
+
+microscopic/src/decision/dms/ForwardAccelerationDMS.i: microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.i
+
+microscopic/src/decision/dms/ForwardAccelerationDMS.s: microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/ForwardAccelerationDMS.cpp.s
+
+microscopic/src/decision/dms/LaneChangeDMS.o: microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/LaneChangeDMS.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.cpp.o
+
+microscopic/src/decision/dms/LaneChangeDMS.i: microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/LaneChangeDMS.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.cpp.i
+
+microscopic/src/decision/dms/LaneChangeDMS.s: microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/LaneChangeDMS.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/LaneChangeDMS.cpp.s
+
+microscopic/src/decision/dms/SubsumptionDMS.o: microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.o
+
+# target to build an object file
+microscopic/src/decision/dms/SubsumptionDMS.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.cpp.o
+
+microscopic/src/decision/dms/SubsumptionDMS.i: microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.i
+
+# target to preprocess a source file
+microscopic/src/decision/dms/SubsumptionDMS.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.cpp.i
+
+microscopic/src/decision/dms/SubsumptionDMS.s: microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.s
+
+# target to generate assembly for a file
+microscopic/src/decision/dms/SubsumptionDMS.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+.PHONY : microscopic/src/decision/dms/SubsumptionDMS.cpp.s
+
+microscopic/src/influences/ChangeAcceleration.o: microscopic/src/influences/ChangeAcceleration.cpp.o
+.PHONY : microscopic/src/influences/ChangeAcceleration.o
+
+# target to build an object file
+microscopic/src/influences/ChangeAcceleration.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.o
+.PHONY : microscopic/src/influences/ChangeAcceleration.cpp.o
+
+microscopic/src/influences/ChangeAcceleration.i: microscopic/src/influences/ChangeAcceleration.cpp.i
+.PHONY : microscopic/src/influences/ChangeAcceleration.i
+
+# target to preprocess a source file
+microscopic/src/influences/ChangeAcceleration.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.i
+.PHONY : microscopic/src/influences/ChangeAcceleration.cpp.i
+
+microscopic/src/influences/ChangeAcceleration.s: microscopic/src/influences/ChangeAcceleration.cpp.s
+.PHONY : microscopic/src/influences/ChangeAcceleration.s
+
+# target to generate assembly for a file
+microscopic/src/influences/ChangeAcceleration.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeAcceleration.cpp.s
+.PHONY : microscopic/src/influences/ChangeAcceleration.cpp.s
+
+microscopic/src/influences/ChangeLane.o: microscopic/src/influences/ChangeLane.cpp.o
+.PHONY : microscopic/src/influences/ChangeLane.o
+
+# target to build an object file
+microscopic/src/influences/ChangeLane.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.o
+.PHONY : microscopic/src/influences/ChangeLane.cpp.o
+
+microscopic/src/influences/ChangeLane.i: microscopic/src/influences/ChangeLane.cpp.i
+.PHONY : microscopic/src/influences/ChangeLane.i
+
+# target to preprocess a source file
+microscopic/src/influences/ChangeLane.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.i
+.PHONY : microscopic/src/influences/ChangeLane.cpp.i
+
+microscopic/src/influences/ChangeLane.s: microscopic/src/influences/ChangeLane.cpp.s
+.PHONY : microscopic/src/influences/ChangeLane.s
+
+# target to generate assembly for a file
+microscopic/src/influences/ChangeLane.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f jamfree/CMakeFiles/jamfree.dir/build.make jamfree/CMakeFiles/jamfree.dir/microscopic/src/influences/ChangeLane.cpp.s
+.PHONY : microscopic/src/influences/ChangeLane.cpp.s
 
 microscopic/src/perception/VehiclePerceptionModelMicro.o: microscopic/src/perception/VehiclePerceptionModelMicro.cpp.o
 .PHONY : microscopic/src/perception/VehiclePerceptionModelMicro.o
@@ -776,12 +992,18 @@ help:
 	@echo "... kernel/src/agents/VehicleAgent.o"
 	@echo "... kernel/src/agents/VehicleAgent.i"
 	@echo "... kernel/src/agents/VehicleAgent.s"
+	@echo "... kernel/src/levels/LevelIdentifiers.o"
+	@echo "... kernel/src/levels/LevelIdentifiers.i"
+	@echo "... kernel/src/levels/LevelIdentifiers.s"
 	@echo "... kernel/src/model/Lane.o"
 	@echo "... kernel/src/model/Lane.i"
 	@echo "... kernel/src/model/Lane.s"
 	@echo "... kernel/src/reaction/TrafficReactionModel.o"
 	@echo "... kernel/src/reaction/TrafficReactionModel.i"
 	@echo "... kernel/src/reaction/TrafficReactionModel.s"
+	@echo "... kernel/src/simulation/MultiLevelCoordinator.o"
+	@echo "... kernel/src/simulation/MultiLevelCoordinator.i"
+	@echo "... kernel/src/simulation/MultiLevelCoordinator.s"
 	@echo "... kernel/src/simulation/SimulationEngine.o"
 	@echo "... kernel/src/simulation/SimulationEngine.i"
 	@echo "... kernel/src/simulation/SimulationEngine.s"
@@ -791,6 +1013,9 @@ help:
 	@echo "... kernel/src/simulation/TrafficSimulationModel.o"
 	@echo "... kernel/src/simulation/TrafficSimulationModel.i"
 	@echo "... kernel/src/simulation/TrafficSimulationModel.s"
+	@echo "... macroscopic/src/agents/VehiclePublicLocalStateMacro.o"
+	@echo "... macroscopic/src/agents/VehiclePublicLocalStateMacro.i"
+	@echo "... macroscopic/src/agents/VehiclePublicLocalStateMacro.s"
 	@echo "... microscopic/src/agents/VehiclePerceivedDataMicro.o"
 	@echo "... microscopic/src/agents/VehiclePerceivedDataMicro.i"
 	@echo "... microscopic/src/agents/VehiclePerceivedDataMicro.s"
@@ -803,6 +1028,24 @@ help:
 	@echo "... microscopic/src/decision/VehicleDecisionModelMicro.o"
 	@echo "... microscopic/src/decision/VehicleDecisionModelMicro.i"
 	@echo "... microscopic/src/decision/VehicleDecisionModelMicro.s"
+	@echo "... microscopic/src/decision/dms/ConjunctionDMS.o"
+	@echo "... microscopic/src/decision/dms/ConjunctionDMS.i"
+	@echo "... microscopic/src/decision/dms/ConjunctionDMS.s"
+	@echo "... microscopic/src/decision/dms/ForwardAccelerationDMS.o"
+	@echo "... microscopic/src/decision/dms/ForwardAccelerationDMS.i"
+	@echo "... microscopic/src/decision/dms/ForwardAccelerationDMS.s"
+	@echo "... microscopic/src/decision/dms/LaneChangeDMS.o"
+	@echo "... microscopic/src/decision/dms/LaneChangeDMS.i"
+	@echo "... microscopic/src/decision/dms/LaneChangeDMS.s"
+	@echo "... microscopic/src/decision/dms/SubsumptionDMS.o"
+	@echo "... microscopic/src/decision/dms/SubsumptionDMS.i"
+	@echo "... microscopic/src/decision/dms/SubsumptionDMS.s"
+	@echo "... microscopic/src/influences/ChangeAcceleration.o"
+	@echo "... microscopic/src/influences/ChangeAcceleration.i"
+	@echo "... microscopic/src/influences/ChangeAcceleration.s"
+	@echo "... microscopic/src/influences/ChangeLane.o"
+	@echo "... microscopic/src/influences/ChangeLane.i"
+	@echo "... microscopic/src/influences/ChangeLane.s"
 	@echo "... microscopic/src/perception/VehiclePerceptionModelMicro.o"
 	@echo "... microscopic/src/perception/VehiclePerceptionModelMicro.i"
 	@echo "... microscopic/src/perception/VehiclePerceptionModelMicro.s"

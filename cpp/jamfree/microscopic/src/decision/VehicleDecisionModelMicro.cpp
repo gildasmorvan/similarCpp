@@ -1,6 +1,19 @@
 #include "../../include/decision/VehicleDecisionModelMicro.h"
 #include <stdexcept>
 
+namespace {
+class EmptyGlobalState
+    : public jamfree::kernel::agents::GlobalState {
+public:
+  EmptyGlobalState() = default;
+
+  std::shared_ptr<jamfree::kernel::agents::GlobalState>
+  clone() const override {
+    return std::make_shared<EmptyGlobalState>(*this);
+  }
+};
+} // namespace
+
 namespace jamfree {
 namespace microscopic {
 namespace decision {
@@ -47,7 +60,7 @@ void VehicleDecisionModelMicro::decide(
     // Note: globalState is not available in this context, passing empty
     // shared_ptr This should be fixed when proper global state management is
     // implemented
-    auto emptyGlobalState = std::make_shared<kernel::agents::GlobalState>();
+    auto emptyGlobalState = std::make_shared<EmptyGlobalState>();
     m_root_dms->manageDecision(timeLowerBound, timeUpperBound, *publicState,
                                *privateState, *pData, *emptyGlobalState,
                                *producedInfluences);

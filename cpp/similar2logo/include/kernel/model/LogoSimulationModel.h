@@ -1,9 +1,9 @@
 #ifndef SIMILAR2LOGO_LOGOSIMULATIONMODEL_H
 #define SIMILAR2LOGO_LOGOSIMULATIONMODEL_H
 
-#include "kernel/agents/LogoAgent.h"
-#include "kernel/model/environment/LogoEnvPLS.h"
-#include "kernel/model/levels/LogoSimulationLevelList.h"
+#include "../agents/LogoAgent.h"
+#include "environment/LogoEnvPLS.h"
+#include "levels/LogoSimulationLevelList.h"
 #include <ISimulationEngine.h>
 #include <functional>
 #include <memory>
@@ -35,7 +35,7 @@ private:
 
   // Agent factory callback (can be set from Python)
   using AgentFactory =
-      std::function<std::vector<std::shared_ptr<agents::LogoAgent>>()>;
+      std::function<std::vector<std::shared_ptr<kernel::agents::LogoAgent>>()>;
   AgentFactory agentFactory;
 
   // Environment configuration
@@ -63,23 +63,46 @@ public:
     return mk::SimulationTimeStamp(0);
   }
 
-  bool isFinalTimeOrAfter(const mk::SimulationTimeStamp &currentTime,
-                          const mk::ISimulationEngine &) const override {
+  bool isFinalTimeOrAfter(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &currentTime,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::ISimulationEngine &)
+      const override {
     return currentTime.getIdentifier() >= maxSteps;
   }
 
-  std::vector<std::shared_ptr<mk::levels::ILevel>>
-  generateLevels(const mk::SimulationTimeStamp &initialTime) override;
+  std::vector<std::shared_ptr<
+      ::fr::univ_artois::lgi2a::similar::microkernel::levels::ILevel>>
+  generateLevels(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &initialTime) override;
 
-  mk::ISimulationModel::EnvironmentInitializationData generateEnvironment(
-      const mk::SimulationTimeStamp &initialTime,
-      const std::map<mk::LevelIdentifier, std::shared_ptr<mk::levels::ILevel>>
-          &levels) override;
+  ::fr::univ_artois::lgi2a::similar::microkernel::ISimulationModel::
+      EnvironmentInitializationData
+      generateEnvironment(
+          const ::fr::univ_artois::lgi2a::similar::microkernel::
+              SimulationTimeStamp &initialTime,
+          const std::map<
+              ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier,
+              std::shared_ptr<::fr::univ_artois::lgi2a::similar::microkernel::
+                                  levels::ILevel>> &levels) override;
 
-  mk::ISimulationModel::AgentInitializationData generateAgents(
-      const mk::SimulationTimeStamp &initialTime,
-      const std::map<mk::LevelIdentifier, std::shared_ptr<mk::levels::ILevel>>
-          &levels) override;
+  ::fr::univ_artois::lgi2a::similar::microkernel::ISimulationModel::
+      AgentInitializationData
+      generateAgents(
+          const ::fr::univ_artois::lgi2a::similar::microkernel::
+              SimulationTimeStamp &initialTime,
+          const std::map<
+              ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier,
+              std::shared_ptr<::fr::univ_artois::lgi2a::similar::microkernel::
+                                  levels::ILevel>> &levels) override;
+
+  void
+  setEngine(std::shared_ptr<
+            ::fr::univ_artois::lgi2a::similar::microkernel::ISimulationEngine>
+                engine) {
+    // No-op for now
+  }
 };
 
 } // namespace model

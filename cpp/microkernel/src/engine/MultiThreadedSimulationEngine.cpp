@@ -14,7 +14,8 @@ namespace engine {
 
 MultiThreadedSimulationEngine::MultiThreadedSimulationEngine(size_t numThreads)
     : numThreads(numThreads == 0 ? std::thread::hardware_concurrency()
-                                 : numThreads) {
+                                 : numThreads),
+      currentTime(0) {
   if (this->numThreads == 0) {
     this->numThreads = 4; // Fallback if hardware_concurrency returns 0
   }
@@ -111,9 +112,10 @@ void MultiThreadedSimulationEngine::runNewSimulation(
     std::shared_ptr<ISimulationModel> model) {
 
   abortRequested = false;
+  currentModel = model;
 
   // Get initial time
-  SimulationTimeStamp currentTime = model->getInitialTime();
+  currentTime = model->getInitialTime();
 
   // 1. Generate Levels
   std::vector<std::shared_ptr<levels::ILevel>> levelsVector =
@@ -135,13 +137,8 @@ void MultiThreadedSimulationEngine::runNewSimulation(
   agents.clear();
   agentsByLevel.clear();
 
-  // Build agent list for parallel processing
-  std::vector<std::shared_ptr<agents::IAgent4Engine>> agentsVector;
-
   for (const auto &agent : agentInitData.getAgents()) {
     agents.insert(agent);
-    agentsVector.push_back(agent);
-
     for (const auto &levelId : agent->getLevels()) {
       agentsByLevel[levelId].insert(agent);
     }
@@ -166,7 +163,26 @@ void MultiThreadedSimulationEngine::runNewSimulation(
   }
 
   // Main simulation loop
-  while (!model->isFinalTimeOrAfter(currentTime, *this) && !abortRequested) {
+  runSimulation(SimulationTimeStamp(std::numeric_limits<long>::max()));
+}
+
+void MultiThreadedSimulationEngine::runSimulation(
+    const SimulationTimeStamp &finalTime) {
+  if (!currentModel) {
+    throw std::runtime_error("Simulation has not been initialized.");
+  }
+
+  // Build agent list for parallel processing
+  std::vector<std::shared_ptr<agents::IAgent4Engine>> agentsVector;
+  for (const auto &agent : agents) {
+    agentsVector.push_back(agent);
+  }
+
+  auto publicStateMap =
+      std::dynamic_pointer_cast<PublicDynamicStateMap>(dynamicStates);
+
+  while (!currentModel->isFinalTimeOrAfter(currentTime, *this) &&
+         !abortRequested && currentTime < finalTime) {
 
     SimulationTimeStamp nextTime(currentTime, 1);
 
@@ -250,6 +266,12 @@ void MultiThreadedSimulationEngine::runNewSimulation(
     for (const auto &probe : probes) {
       probe.second->observeAtPartialConsistentTime(currentTime, *this);
     }
+
+    // Check final time again after update?
+    // The loop condition handles it.
+    if (finalTime < currentTime) {
+      break;
+    }
   }
 
   if (abortRequested) {
@@ -302,6 +324,56 @@ void MultiThreadedSimulationEngine::parallelProcess(
       thread.join();
     }
   }
+}
+
+std::shared_ptr<ISimulationEngine>
+MultiThreadedSimulationEngine::clone() const {
+  auto clonedEngine =
+      std::make_shared<MultiThreadedSimulationEngine>(this->numThreads);
+
+  // 1. Clone probes
+  for (const auto &pair : this->probes) {
+    clonedEngine->addProbe(pair.first, pair.second->clone());
+  }
+
+  // 2. Clone levels
+  for (const auto &pair : this->levels) {
+    clonedEngine->levels[pair.first] = pair.second->clone();
+  }
+
+  // 3. Clone environment
+  if (this->environment) {
+    clonedEngine->environment =
+        std::dynamic_pointer_cast<environment::IEnvironment4Engine>(
+            this->environment->clone());
+  }
+
+  // 4. Clone agents
+  for (const auto &agent : this->agents) {
+    auto clonedAgent =
+        std::dynamic_pointer_cast<agents::IAgent4Engine>(agent->clone());
+    clonedEngine->agents.insert(clonedAgent);
+    for (const auto &levelId : clonedAgent->getLevels()) {
+      clonedEngine->agentsByLevel[levelId].insert(clonedAgent);
+    }
+  }
+
+  // 5. Clone dynamic states
+  // The dynamic states are held by the levels, so we just need to populate the
+  // map from the cloned levels
+  // We need to cast to PublicDynamicStateMap to use put() or ensure
+  // dynamicStates is initialized
+  auto publicStateMap = std::make_shared<PublicDynamicStateMap>();
+  clonedEngine->dynamicStates = publicStateMap;
+
+  for (const auto &pair : clonedEngine->levels) {
+    publicStateMap->put(pair.second->getLastConsistentState());
+  }
+
+  // 6. Copy other fields
+  clonedEngine->abortRequested = this->abortRequested.load();
+
+  return clonedEngine;
 }
 
 } // namespace engine

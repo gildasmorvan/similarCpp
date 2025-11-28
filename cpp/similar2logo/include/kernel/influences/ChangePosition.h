@@ -58,10 +58,13 @@ public:
    * @param dy The position change in the y axis
    * @param target The turtle's public local state that is going to change
    */
-  ChangePosition(const microkernel::SimulationTimeStamp &timeLowerBound,
-                 const microkernel::SimulationTimeStamp &timeUpperBound,
-                 double dx, double dy,
-                 std::shared_ptr<model::environment::TurtlePLSInLogo> target);
+  ChangePosition(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      double dx, double dy,
+      std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
    * Builds an instance of this influence created during the transitory
@@ -74,11 +77,15 @@ public:
    * @param dy The position change in the y axis
    * @param target The turtle's public local state that is going to change
    */
-  ChangePosition(const microkernel::LevelIdentifier &levelIdentifier,
-                 const microkernel::SimulationTimeStamp &timeLowerBound,
-                 const microkernel::SimulationTimeStamp &timeUpperBound,
-                 double dx, double dy,
-                 std::shared_ptr<model::environment::TurtlePLSInLogo> target);
+  ChangePosition(
+      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+          &levelIdentifier,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeLowerBound,
+      const ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp
+          &timeUpperBound,
+      double dx, double dy,
+      std::shared_ptr<model::environment::TurtlePLSInLogo> target);
 
   /**
    * @return The position change in the x axis.

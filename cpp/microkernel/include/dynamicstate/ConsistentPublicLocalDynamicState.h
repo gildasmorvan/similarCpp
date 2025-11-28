@@ -130,6 +130,29 @@ public:
   void clearRegularInfluences() override {
     this->stateDynamicsRegularInfluences.clear();
   }
+
+  std::shared_ptr<IPublicLocalDynamicState> clone() const override {
+    auto clonedState = std::make_shared<ConsistentPublicLocalDynamicState>(
+        this->time, this->level);
+    if (this->publicLocalstateOfEnvironment) {
+      clonedState->setPublicLocalStateOfEnvironment(
+          std::dynamic_pointer_cast<environment::ILocalStateOfEnvironment>(
+              this->publicLocalstateOfEnvironment->clone()));
+    }
+    for (const auto &agentState : this->publicLocalStateOfAgents) {
+      clonedState->addPublicLocalStateOfAgent(
+          std::dynamic_pointer_cast<agents::ILocalStateOfAgent>(
+              agentState->clone()));
+    }
+    // Shallow copy of influences as they are typically immutable
+    for (const auto &influence : this->stateDynamicsSystemInfluences) {
+      clonedState->addInfluence(influence);
+    }
+    for (const auto &influence : this->stateDynamicsRegularInfluences) {
+      clonedState->addInfluence(influence);
+    }
+    return clonedState;
+  }
 };
 
 } // namespace dynamicstate

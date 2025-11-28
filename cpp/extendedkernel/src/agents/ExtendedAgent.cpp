@@ -11,6 +11,11 @@ namespace agents {
 ExtendedAgent::ExtendedAgent(const microkernel::AgentCategory &category)
     : AbstractAgent(category) {}
 
+ExtendedAgent::ExtendedAgent(const ExtendedAgent &other)
+    : AbstractAgent(other), perceptionModels(other.perceptionModels),
+      globalStateRevisionModel(other.globalStateRevisionModel),
+      decisionModels(other.decisionModels) {}
+
 std::shared_ptr<IAgtGlobalStateRevisionModel>
 ExtendedAgent::getGlobalStateRevisionModel() const {
   if (globalStateRevisionModel == nullptr) {
@@ -119,6 +124,10 @@ void ExtendedAgent::decide(
   getDecisionModel(levelId)->decide(timeLowerBound, timeUpperBound, globalState,
                                     publicLocalState, privateLocalState,
                                     perceivedData, producedInfluences);
+}
+
+std::shared_ptr<microkernel::agents::IAgent> ExtendedAgent::clone() const {
+  return std::make_shared<ExtendedAgent>(*this);
 }
 
 } // namespace agents

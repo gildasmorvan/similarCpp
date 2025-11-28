@@ -80,6 +80,10 @@ public:
 
   Position getPosition() const { return position; }
   void setPosition(const Position &pos) { position = pos; }
+
+  std::shared_ptr<microkernel::ILocalState> clone() const override {
+    return std::make_shared<SpatialLocalState>(*this);
+  }
 };
 
 // ===== Perceived Data with Nearby Agents =====
@@ -113,6 +117,10 @@ public:
   getNearbyAgents() const {
     return nearbyAgents;
   }
+
+  std::shared_ptr<microkernel::agents::IPerceivedData> clone() const override {
+    return std::make_shared<EcosystemPerceivedData>(*this);
+  }
 };
 
 // ===== Agent Global State =====
@@ -126,6 +134,10 @@ public:
       : energy(initialEnergy), age(0), isAlive(true) {}
 
   virtual ~EcosystemGlobalState() = default;
+
+  std::shared_ptr<microkernel::agents::IGlobalState> clone() const override {
+    return std::make_shared<EcosystemGlobalState>(*this);
+  }
 };
 
 // ===== Perception Model =====

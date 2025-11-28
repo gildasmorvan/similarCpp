@@ -65,7 +65,15 @@ public:
                                  environment::ILocalStateOfEnvironment>>
         map;
     map.insert({pls->getLevel(), pls});
+    map.insert({pls->getLevel(), pls});
     return map;
+  }
+
+  std::shared_ptr<
+      fr::univ_artois::lgi2a::similar::microkernel::environment::IEnvironment>
+  clone() const override {
+    return std::make_shared<LogoEnvironment>(
+        std::dynamic_pointer_cast<LogoEnvPLS>(pls->clone()));
   }
 };
 

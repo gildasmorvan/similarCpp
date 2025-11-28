@@ -40,9 +40,11 @@ message(STATUS "SIMILAR ExtendedKernel library: ${SIMILAR_EXTENDEDKERNEL_LIB}")
 set(JAMFREE_KERNEL_SOURCES
     kernel/src/model/Lane.cpp
     kernel/src/agents/VehicleAgent.cpp
+    kernel/src/levels/LevelIdentifiers.cpp
     kernel/src/simulation/SimulationEngine.cpp
     kernel/src/simulation/TrafficSimulationModel.cpp
     kernel/src/simulation/TrafficLevel.cpp
+    kernel/src/simulation/MultiLevelCoordinator.cpp
     kernel/src/reaction/TrafficReactionModel.cpp
 )
 
@@ -62,6 +64,11 @@ set(JAMFREE_MICROSCOPIC_SOURCES
     microscopic/src/influences/ChangeLane.cpp
 )
 
+# Macroscopic source files
+set(JAMFREE_MACROSCOPIC_SOURCES
+    macroscopic/src/agents/VehiclePublicLocalStateMacro.cpp
+)
+
 # Hybrid source files
 set(JAMFREE_HYBRID_SOURCES
     hybrid/src/AdaptiveSimulator.cpp
@@ -76,6 +83,7 @@ set(JAMFREE_REALDATA_SOURCES
 add_library(jamfree STATIC
     ${JAMFREE_KERNEL_SOURCES}
     ${JAMFREE_MICROSCOPIC_SOURCES}
+    ${JAMFREE_MACROSCOPIC_SOURCES}
     ${JAMFREE_HYBRID_SOURCES}
     ${JAMFREE_REALDATA_SOURCES}
 )
@@ -170,9 +178,7 @@ endif()
 add_executable(jamfree_basic_test tests/basic_jamfree_tests.cpp)
 
 target_link_libraries(jamfree_basic_test
-    jamfree_kernel
-    jamfree_microscopic
-    jamfree_macroscopic
+    jamfree
     ${SIMILAR_MICROKERNEL_LIB}
     ${SIMILAR_EXTENDEDKERNEL_LIB}
 )

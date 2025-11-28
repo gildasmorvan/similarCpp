@@ -35,37 +35,24 @@ class TurtlePLSInLogo;
  * - Marks dropped by agents
  * - Turtle positions
  */
-class LogoEnvPLS : public ::fr::univ_artois::lgi2a::similar::microkernel::libs::
-                       abstractimpl::AbstractLocalStateOfEnvironment {
+class LogoEnvPLS : public similar::microkernel::libs::abstractimpl::
+                       AbstractLocalStateOfEnvironment {
 public:
   // Direction constants (in radians)
   static constexpr double NORTH = 0.0;
   static constexpr double NORTH_EAST =
-      -::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
-          MathUtil::PI /
-      4.0;
-  static constexpr double EAST = -::fr::univ_artois::lgi2a::similar::
-                                     similar2logo::kernel::tools::MathUtil::PI /
-                                 2.0;
+      -similar2logo::kernel::tools::MathUtil::PI / 4.0;
+  static constexpr double EAST =
+      -similar2logo::kernel::tools::MathUtil::PI / 2.0;
   static constexpr double SOUTH_EAST =
-      -3.0 *
-      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::MathUtil::
-          PI /
-      4.0;
-  static constexpr double SOUTH = -::fr::univ_artois::lgi2a::similar::
-                                      similar2logo::kernel::tools::MathUtil::PI;
+      -3.0 * similar2logo::kernel::tools::MathUtil::PI / 4.0;
+  static constexpr double SOUTH = -similar2logo::kernel::tools::MathUtil::PI;
   static constexpr double SOUTH_WEST =
-      3.0 *
-      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::MathUtil::
-          PI /
-      4.0;
-  static constexpr double WEST = ::fr::univ_artois::lgi2a::similar::
-                                     similar2logo::kernel::tools::MathUtil::PI /
-                                 2.0;
+      3.0 * similar2logo::kernel::tools::MathUtil::PI / 4.0;
+  static constexpr double WEST =
+      similar2logo::kernel::tools::MathUtil::PI / 2.0;
   static constexpr double NORTH_WEST =
-      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::MathUtil::
-          PI /
-      4.0;
+      similar2logo::kernel::tools::MathUtil::PI / 4.0;
 
 private:
   int width;
@@ -95,12 +82,10 @@ public:
    * @param yAxisTorus True if environment is toroidal along y axis
    * @param pheromones The set of pheromone fields
    */
-  LogoEnvPLS(
-      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
-          &levelIdentifier,
-      int gridWidth, int gridHeight, bool xAxisTorus, bool yAxisTorus,
-      const std::unordered_set<Pheromone> &pheromones)
-      : ::fr::univ_artois::lgi2a::similar::microkernel::libs::abstractimpl::
+  LogoEnvPLS(const similar::microkernel::LevelIdentifier &levelIdentifier,
+             int gridWidth, int gridHeight, bool xAxisTorus, bool yAxisTorus,
+             const std::unordered_set<Pheromone> &pheromones)
+      : similar::microkernel::libs::abstractimpl::
             AbstractLocalStateOfEnvironment(levelIdentifier),
         width(gridWidth), height(gridHeight), xAxisTorus(xAxisTorus),
         yAxisTorus(yAxisTorus) {
@@ -134,15 +119,71 @@ public:
   bool isYAxisTorus() const { return yAxisTorus; }
 
   /**
+   * Gets the dimensions of the environment.
+   * @return A Point2D representing the width and height.
+   */
+  ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
+  getDimensions() const {
+    return ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
+        Point2D(width, height);
+  }
+
+  /**
+   * Gets the toroidal distance between two points in this environment.
+   * @param p1 The first point.
+   * @param p2 The second point.
+   * @return The toroidal distance.
+   */
+  double getDistance(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                         kernel::tools::Point2D &p1,
+                     const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                         kernel::tools::Point2D &p2) const {
+    return kernel::tools::MathUtil::toroidalDistance(p1, p2, width, height,
+                                                     xAxisTorus, yAxisTorus);
+  }
+
+  /**
+   * Gets the toroidal displacement vector from p1 to p2.
+   * @param p1 The first point.
+   * @param p2 The second point.
+   * @return The toroidal displacement vector.
+   */
+  ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
+  getDisplacement(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                      kernel::tools::Point2D &p1,
+                  const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                      kernel::tools::Point2D &p2) const {
+    return kernel::tools::MathUtil::toroidalDisplacement(
+        p1, p2, width, height, xAxisTorus, yAxisTorus);
+  }
+
+  /**
+   * Normalizes a point to be within the environment bounds (toroidal).
+   * @param p The point to normalize.
+   * @return The normalized point.
+   */
+  ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
+  normalizePoint(const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::
+                     tools::Point2D &p) const {
+    double x = kernel::tools::MathUtil::wrap(p.x, 0, width);
+    double y = kernel::tools::MathUtil::wrap(p.y, 0, height);
+    return ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::
+        Point2D(x, y);
+  }
+
+  /**
    * Computes the positions of the neighbors of a patch.
    * @param x The x coordinate of the patch
    * @param y The y coordinate of the patch
    * @param distance The maximal distance of neighbors
    * @return The positions of the patch neighbors
    */
-  std::vector<kernel::tools::Point2D> getNeighbors(int x, int y,
-                                                   int distance) const {
-    std::vector<kernel::tools::Point2D> neighbors;
+  std::vector<
+      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D>
+  getNeighbors(int x, int y, int distance) const {
+    std::vector<
+        ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D>
+        neighbors;
 
     for (int dx = -distance; dx <= distance; dx++) {
       for (int dy = -distance; dy <= distance; dy++) {
@@ -159,7 +200,8 @@ public:
 
         // Check if within bounds
         if (nx >= 0 && nx < width && ny >= 0 && ny < height) {
-          neighbors.push_back(kernel::tools::Point2D(nx, ny));
+          neighbors.push_back(::fr::univ_artois::lgi2a::similar::similar2logo::
+                                  kernel::tools::Point2D(nx, ny));
         }
       }
     }
@@ -174,8 +216,10 @@ public:
    * @param to The target point
    * @return The direction in radians
    */
-  double getDirection(const kernel::tools::Point2D &from,
-                      const kernel::tools::Point2D &to) const {
+  double getDirection(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                          kernel::tools::Point2D &from,
+                      const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                          kernel::tools::Point2D &to) const {
     double xtarget = to.x;
     double ytarget = to.y;
 
@@ -199,27 +243,7 @@ public:
     return -std::atan2(xtarget - from.x, ytarget - from.y);
   }
 
-  /**
-   * Computes the distance between two points, considering toroidal topology.
-   * @param loc1 The first point
-   * @param loc2 The second point
-   * @return The distance
-   */
-  double getDistance(const kernel::tools::Point2D &loc1,
-                     const kernel::tools::Point2D &loc2) const {
-    double dx = std::abs(loc1.x - loc2.x);
-    double dy = std::abs(loc1.y - loc2.y);
-
-    // Handle toroidal wrapping for shortest distance
-    if (xAxisTorus && dx * 2 > width) {
-      dx = width - dx;
-    }
-    if (yAxisTorus && dy * 2 > height) {
-      dy = height - dy;
-    }
-
-    return std::sqrt(dx * dx + dy * dy);
-  }
+  // Removed duplicate getDistance method here
 
   // Pheromone field access
   double getPheromoneValueAt(const Pheromone &pheromone, int x, int y) const {
@@ -317,8 +341,7 @@ public:
    * Private constructor for cloning.
    */
   LogoEnvPLS(
-      const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
-          &levelIdentifier,
+      const similar::microkernel::LevelIdentifier &levelIdentifier,
       int gridWidth, int gridHeight, bool xAxisTorus, bool yAxisTorus,
       const std::unordered_map<Pheromone, std::vector<std::vector<double>>>
           &pheromoneField,
@@ -327,7 +350,7 @@ public:
       const std::vector<
           std::vector<std::unordered_set<std::shared_ptr<TurtlePLSInLogo>>>>
           &turtlesInPatches)
-      : ::fr::univ_artois::lgi2a::similar::microkernel::libs::abstractimpl::
+      : similar::microkernel::libs::abstractimpl::
             AbstractLocalStateOfEnvironment(levelIdentifier),
         width(gridWidth), height(gridHeight), xAxisTorus(xAxisTorus),
         yAxisTorus(yAxisTorus), pheromoneField(pheromoneField), marks(marks),
@@ -338,7 +361,7 @@ public:
    * Creates a deep copy of this environment state.
    * @return A new LogoEnvPLS with copied data
    */
-  std::shared_ptr<LogoEnvPLS> clone() const {
+  std::shared_ptr<similar::microkernel::ILocalState> clone() const override {
     // Deep copy marks
     std::vector<std::vector<std::unordered_set<std::shared_ptr<SimpleMark>>>>
         marksCopy = marks;
@@ -351,18 +374,22 @@ public:
       }
     }
 
-    // Turtles are shared pointers, shallow copy of the set is fine if we want
-    // to share the same turtle PLS objects But if we want a snapshot, we might
-    // need deep copy? Usually PLS are snapshots. But TurtlePLSInLogo is a state
-    // object. For now, let's keep it as shared pointers to the same objects
-    // (shallow copy of the list). Actually, if LogoEnvPLS is cloned for a new
-    // time step or for an agent's perception, it should probably reference the
-    // SAME turtle states if they haven't changed, or new ones if they have. But
-    // here we are just cloning the environment state.
+    // Deep copy turtles
+    std::vector<
+        std::vector<std::unordered_set<std::shared_ptr<TurtlePLSInLogo>>>>
+        turtlesCopy = turtlesInPatches;
+    for (int x = 0; x < width; x++) {
+      for (int y = 0; y < height; y++) {
+        turtlesCopy[x][y].clear();
+        for (const auto &turtle : turtlesInPatches[x][y]) {
+          turtlesCopy[x][y].insert(turtle->clone());
+        }
+      }
+    }
 
     return std::shared_ptr<LogoEnvPLS>(
         new LogoEnvPLS(getLevel(), width, height, xAxisTorus, yAxisTorus,
-                       pheromoneField, marksCopy, turtlesInPatches));
+                       pheromoneField, marksCopy, turtlesCopy));
   }
 
   // Turtle access

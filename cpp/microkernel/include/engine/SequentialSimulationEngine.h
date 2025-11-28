@@ -31,6 +31,7 @@ private:
   // Simulation state
   std::atomic<bool> abortionRequested;
   std::shared_ptr<ISimulationModel> currentModel;
+  SimulationTimeStamp currentTime;
 
   // Dynamic state
   std::shared_ptr<dynamicstate::IPublicDynamicStateMap> dynamicStates;
@@ -44,7 +45,7 @@ private:
 
   // Helper methods
   void initializeSimulation(std::shared_ptr<ISimulationModel> model);
-  void runSimulationLoop();
+  void runSimulationLoop(const SimulationTimeStamp &finalTime);
   void notifyProbesOfPreparation(const SimulationTimeStamp &initialTime);
   void notifyProbesOfStart(const SimulationTimeStamp &initialTime);
   void notifyProbesOfEnd(const SimulationTimeStamp &finalTime);
@@ -62,6 +63,7 @@ public:
   void requestSimulationAbortion() override;
   void
   runNewSimulation(std::shared_ptr<ISimulationModel> simulationModel) override;
+  void runSimulation(const SimulationTimeStamp &finalTime) override;
 
   std::shared_ptr<dynamicstate::IPublicDynamicStateMap>
   getSimulationDynamicStates() const override;
@@ -74,10 +76,14 @@ public:
   std::shared_ptr<environment::IEnvironment4Engine>
   getEnvironment() const override;
 
-  std::shared_ptr<dynamicstate::ConsistentPublicLocalDynamicState>
+  std::shared_ptr<fr::univ_artois::lgi2a::similar::microkernel::dynamicstate::
+                      ConsistentPublicLocalDynamicState>
   disambiguation(
-      std::shared_ptr<dynamicstate::TransitoryPublicLocalDynamicState>
+      std::shared_ptr<fr::univ_artois::lgi2a::similar::microkernel::
+                          dynamicstate::TransitoryPublicLocalDynamicState>
           transitoryDynamicState) const override;
+
+  std::shared_ptr<ISimulationEngine> clone() const override;
 };
 
 } // namespace engine

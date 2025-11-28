@@ -23,7 +23,8 @@ VehiclePerceivedDataMicro::VehiclePerceivedDataMicro()
       m_current_speed_limit(33.3) { // Default 120 km/h
 }
 
-std::shared_ptr<kernel::agents::IPerceivedData>
+std::shared_ptr<
+    fr::univ_artois::lgi2a::similar::microkernel::agents::IPerceivedData>
 VehiclePerceivedDataMicro::clone() const {
   auto cloned = std::make_shared<VehiclePerceivedDataMicro>();
 

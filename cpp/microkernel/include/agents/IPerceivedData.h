@@ -39,6 +39,12 @@ public:
    * perceived.
    */
   virtual SimulationTimeStamp getTransitoryPeriodMax() const = 0;
+
+  /**
+   * Clones the perceived data, creating a deep copy.
+   * @return A deep copy of the perceived data.
+   */
+  virtual std::shared_ptr<IPerceivedData> clone() const = 0;
 };
 
 } // namespace agents

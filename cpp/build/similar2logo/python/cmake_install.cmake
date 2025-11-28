@@ -46,7 +46,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../../python/similar2logo" TYPE MODULE FILES "/Users/morvan/Antigravity/similar/python/similar2logo/_core.cpython-314-darwin.so")
+  file(INSTALL DESTINATION "/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../../python/similar2logo" TYPE MODULE FILES "/Users/morvan/Antigravity/similar/cpp/build/similar2logo/python/_core.cpython-314-darwin.so")
   if(EXISTS "$ENV{DESTDIR}/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../../python/similar2logo/_core.cpython-314-darwin.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/Users/morvan/Antigravity/similar/cpp/similar2logo/python/../../../python/similar2logo/_core.cpython-314-darwin.so")
     execute_process(COMMAND /usr/bin/install_name_tool

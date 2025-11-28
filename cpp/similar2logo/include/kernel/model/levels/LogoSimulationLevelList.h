@@ -21,7 +21,8 @@ public:
    * The identifier of the "Logo" level.
    * This is the main level used in Logo simulations.
    */
-  static const microkernel::LevelIdentifier LOGO;
+  static const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+      LOGO;
 
 protected:
   /**
@@ -32,7 +33,8 @@ protected:
 };
 
 // Define the static member
-inline const microkernel::LevelIdentifier LogoSimulationLevelList::LOGO("logo");
+inline const ::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier
+    LogoSimulationLevelList::LOGO("logo");
 
 } // namespace levels
 } // namespace model

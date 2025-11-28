@@ -970,7 +970,6 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/unistd.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/SituatedEntity.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/Pheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/environment/TurtlePLSInLogo.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/tools/Point2D.h \
@@ -994,5 +993,4 @@ CMakeFiles/_core.dir/Users/morvan/Antigravity/similar/cpp/similar2logo/src/kerne
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/RemoveMark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/RemoveMarks.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/Stop.h \
-  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/tools/MathUtil.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/numbers
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/tools/MathUtil.h

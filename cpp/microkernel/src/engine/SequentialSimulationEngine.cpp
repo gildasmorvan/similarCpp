@@ -45,7 +45,7 @@ public:
 };
 
 SequentialSimulationEngine::SequentialSimulationEngine()
-    : abortionRequested(false) {
+    : abortionRequested(false), currentTime(0) {
   dynamicStates = std::make_shared<PublicDynamicStateMap>();
 }
 
@@ -96,9 +96,25 @@ void SequentialSimulationEngine::runNewSimulation(
 
   try {
     initializeSimulation(simulationModel);
-    runSimulationLoop();
+    runSimulationLoop(SimulationTimeStamp(std::numeric_limits<long>::max()));
   } catch (const std::exception &e) {
     // Ensure we clean up or log if needed
+    std::cerr << "Simulation failed: " << e.what() << std::endl;
+    throw;
+  }
+}
+
+void SequentialSimulationEngine::runSimulation(
+    const SimulationTimeStamp &finalTime) {
+  if (!currentModel) {
+    throw std::runtime_error("Simulation has not been initialized.");
+  }
+
+  abortionRequested = false;
+
+  try {
+    runSimulationLoop(finalTime);
+  } catch (const std::exception &e) {
     std::cerr << "Simulation failed: " << e.what() << std::endl;
     throw;
   }
@@ -107,6 +123,7 @@ void SequentialSimulationEngine::runNewSimulation(
 void SequentialSimulationEngine::initializeSimulation(
     std::shared_ptr<ISimulationModel> model) {
   SimulationTimeStamp initialTime = model->getInitialTime();
+  currentTime = initialTime;
 
   // 1. Generate Levels
   auto generatedLevels = model->generateLevels(initialTime);
@@ -143,12 +160,12 @@ void SequentialSimulationEngine::initializeSimulation(
   notifyProbesOfPreparation(initialTime);
 }
 
-void SequentialSimulationEngine::runSimulationLoop() {
-  SimulationTimeStamp currentTime = currentModel->getInitialTime();
+void SequentialSimulationEngine::runSimulationLoop(
+    const SimulationTimeStamp &finalTime) {
+  // currentTime is already initialized
   notifyProbesOfStart(currentTime);
 
-  while (!abortionRequested &&
-         !currentModel->isFinalTimeOrAfter(currentTime, *this)) {
+  while (!abortionRequested && currentTime < finalTime) {
     // 1. Determine next time step (minimum of all levels' next times)
     // For simplicity, we assume all levels move in sync or we take the smallest
     // step. A robust engine would handle multi-rate simulation. Here, we ask
@@ -171,6 +188,12 @@ void SequentialSimulationEngine::runSimulationLoop() {
 
     if (!hasNextTime)
       break; // Should not happen
+
+    // Ensure we don't go past finalTime if needed, but usually we run step by
+    // step. If nextTime > finalTime, should we stop? Yes.
+    if (finalTime < nextTime) {
+      break;
+    }
 
     // 2. Process each level
     for (const auto &pair : levels) {
@@ -363,13 +386,60 @@ SequentialSimulationEngine::getEnvironment() const {
   return environment;
 }
 
-std::shared_ptr<dynamicstate::ConsistentPublicLocalDynamicState>
+std::shared_ptr<fr::univ_artois::lgi2a::similar::microkernel::dynamicstate::
+                    ConsistentPublicLocalDynamicState>
 SequentialSimulationEngine::disambiguation(
-    std::shared_ptr<dynamicstate::TransitoryPublicLocalDynamicState>
+    std::shared_ptr<fr::univ_artois::lgi2a::similar::microkernel::dynamicstate::
+                        TransitoryPublicLocalDynamicState>
         transitoryDynamicState) const {
   // Simple implementation: just return null or throw, as this logic is complex
   // and model-dependent In a real engine, this would handle state conflicts.
   return nullptr;
+}
+
+std::shared_ptr<ISimulationEngine> SequentialSimulationEngine::clone() const {
+  auto clonedEngine = std::make_shared<SequentialSimulationEngine>();
+
+  // 1. Clone probes
+  for (const auto &pair : this->probes) {
+    clonedEngine->addProbe(pair.first, pair.second->clone());
+  }
+
+  // 2. Clone levels
+  for (const auto &pair : this->levels) {
+    clonedEngine->levels[pair.first] = pair.second->clone();
+  }
+
+  // 3. Clone environment
+  if (this->environment) {
+    clonedEngine->environment =
+        std::dynamic_pointer_cast<environment::IEnvironment4Engine>(
+            this->environment->clone());
+  }
+
+  // 4. Clone agents
+  for (const auto &agent : this->agents) {
+    auto clonedAgent =
+        std::dynamic_pointer_cast<agents::IAgent4Engine>(agent->clone());
+    clonedEngine->agents.insert(clonedAgent);
+    for (const auto &levelId : clonedAgent->getLevels()) {
+      clonedEngine->agentsByLevel[levelId].insert(clonedAgent);
+    }
+  }
+
+  // 5. Clone dynamic states
+  // The dynamic states are held by the levels, so we just need to populate the
+  // map from the cloned levels
+  for (const auto &pair : clonedEngine->levels) {
+    clonedEngine->dynamicStates->put(pair.second->getLastConsistentState());
+  }
+
+  // 6. Copy other fields
+  clonedEngine->currentModel = this->currentModel; // Shared model
+  clonedEngine->abortionRequested = this->abortionRequested.load();
+  clonedEngine->currentTime = this->currentTime;
+
+  return clonedEngine;
 }
 
 } // namespace engine

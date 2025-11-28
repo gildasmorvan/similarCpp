@@ -83,6 +83,9 @@ public:
 
   // String representation
   std::string toString() const { return identifier; }
+
+  // Hash code for use in unordered containers
+  std::size_t hashCode() const { return std::hash<std::string>{}(identifier); }
 };
 
 } // namespace environment
@@ -94,14 +97,18 @@ public:
 } // namespace univ_artois
 } // namespace fr
 
+// Note: Hash specialization commented out due to namespace issues in Python
+// bindings If needed for unordered containers, can be added in a separate
+// header
+
 // Hash function for use in unordered containers
 namespace std {
 template <>
 struct hash<fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
                 environment::Pheromone> {
-  size_t operator()(const fr::univ_artois::lgi2a::similar::similar2logo::
-                        kernel::model::environment::Pheromone &p) const {
-    return std::hash<std::string>{}(p.getIdentifier());
+  std::size_t operator()(const fr::univ_artois::lgi2a::similar::similar2logo::
+                             kernel::model::environment::Pheromone &k) const {
+    return k.hashCode();
   }
 };
 } // namespace std

@@ -3,7 +3,6 @@
 
 #include "../../tools/Point2D.h"
 #include "SituatedEntity.h"
-#include <any>
 #include <memory>
 #include <string>
 
@@ -22,7 +21,7 @@ namespace environment {
  *
  * Template parameter T is the type of content stored in the mark.
  */
-template <typename T = std::any> class Mark : public SituatedEntity {
+template <typename T> class Mark : public SituatedEntity {
 private:
   ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
       location;
@@ -110,8 +109,8 @@ public:
   }
 };
 
-// Specialization for marks without specific content type
-using SimpleMark = Mark<std::any>;
+// Common mark types - using double as default instead of std::any
+using SimpleMark = Mark<double>;
 
 // Common mark types
 using IntMark = Mark<int>;

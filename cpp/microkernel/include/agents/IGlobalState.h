@@ -14,6 +14,12 @@ namespace agents {
 class IGlobalState {
 public:
   virtual ~IGlobalState() = default;
+
+  /**
+   * Clones the global state, creating a deep copy.
+   * @return A deep copy of the global state.
+   */
+  virtual std::shared_ptr<IGlobalState> clone() const = 0;
 };
 
 } // namespace agents

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsimilar_microkernel.a CMakeFiles/similar_microkernel.dir/src/main.cpp.o
-/usr/bin/ranlib libsimilar_microkernel.a

@@ -21,6 +21,10 @@ public:
   std::string mood = "happy";
 
   virtual ~SimpleGlobalState() = default;
+
+  std::shared_ptr<microkernel::agents::IGlobalState> clone() const override {
+    return std::make_shared<SimpleGlobalState>(*this);
+  }
 };
 
 // ===== Example Perception Model =====

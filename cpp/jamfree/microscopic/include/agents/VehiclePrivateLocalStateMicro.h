@@ -30,7 +30,9 @@ public:
    * @brief Clone this state.
    * @return Cloned state
    */
-  std::shared_ptr<kernel::agents::ILocalState> clone() const;
+  std::shared_ptr<
+      fr::univ_artois::lgi2a::similar::microkernel::ILocalState>
+  clone() const override;
 
   /**
    * @brief Gets the category of the agent owning this local state.

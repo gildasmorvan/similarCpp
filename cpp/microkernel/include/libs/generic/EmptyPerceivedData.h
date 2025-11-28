@@ -24,6 +24,10 @@ public:
                      const SimulationTimeStamp &transitoryPeriodMax);
 
   virtual ~EmptyPerceivedData() = default;
+
+  std::shared_ptr<microkernel::agents::IPerceivedData> clone() const override {
+    return std::make_shared<EmptyPerceivedData>(*this);
+  }
 };
 
 } // namespace generic

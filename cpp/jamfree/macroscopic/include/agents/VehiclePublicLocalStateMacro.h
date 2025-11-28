@@ -29,17 +29,21 @@ public:
    * @brief Clone this state.
    * @return Cloned state
    */
-  std::shared_ptr<kernel::agents::ILocalState> clone() const override;
+  std::shared_ptr<
+      fr::univ_artois::lgi2a::similar::microkernel::ILocalState>
+  clone() const override;
 
   /**
    * @brief Gets the category of the agent owning this local state.
    */
-  kernel::AgentCategory getCategoryOfAgent() const override;
+  kernel::agents::AgentCategory getCategoryOfAgent() const override;
 
   /**
    * @brief Checks if an agent is the owner of a local state.
    */
   bool isOwnedBy(const kernel::agents::IAgent &agent) const override;
+
+  kernel::agents::LevelIdentifier getLevel() const override;
 
   // Flow properties
   double getDensity() const { return m_density; }
@@ -67,6 +71,7 @@ public:
 
 private:
   std::string m_ownerId;
+  kernel::agents::LevelIdentifier m_level;
 
   // Flow properties
   double m_density;       // vehicles/m

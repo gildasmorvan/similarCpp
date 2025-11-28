@@ -94,6 +94,12 @@ public:
   virtual void endObservation() {
     // Does nothing.
   }
+
+  /**
+   * Clones the probe, creating a deep copy.
+   * @return A deep copy of the probe.
+   */
+  virtual std::shared_ptr<IProbe> clone() const = 0;
 };
 
 } // namespace microkernel

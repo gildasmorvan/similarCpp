@@ -29,53 +29,113 @@ PYBIND11_MODULE(_core, m) {
       "SIMILAR2Logo C++ Engine - High-performance multithreaded simulation";
 
   // ========== Microkernel Types ==========
-  py::class_<mk::SimulationTimeStamp>(m, "SimulationTimeStamp")
+  py::class_<
+      ::fr::univ_artois::lgi2a::similar::microkernel::SimulationTimeStamp>(
+      m, "SimulationTimeStamp")
       .def(py::init<double>(), py::arg("time") = 0.0);
 
-  py::class_<mk::LevelIdentifier>(m, "LevelIdentifier")
+  py::class_<::fr::univ_artois::lgi2a::similar::microkernel::LevelIdentifier>(
+      m, "LevelIdentifier")
       .def(py::init<std::string>(), py::arg("id"));
 
   // ========== Point2D ==========
-  py::class_<tools::Point2D>(m, "Point2D")
+  py::class_<
+      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D>(
+      m, "Point2D")
       .def(py::init<double, double>(), py::arg("x") = 0.0, py::arg("y") = 0.0)
-      .def_readwrite("x", &tools::Point2D::x)
-      .def_readwrite("y", &tools::Point2D::y)
-      .def("__repr__", [](const tools::Point2D &p) {
+      .def_readwrite("x", &::fr::univ_artois::lgi2a::similar::similar2logo::
+                              kernel::tools::Point2D::x)
+      .def_readwrite("y", &::fr::univ_artois::lgi2a::similar::similar2logo::
+                              kernel::tools::Point2D::y)
+      .def("__repr__", [](const ::fr::univ_artois::lgi2a::similar::
+                              similar2logo::kernel::tools::Point2D &p) {
         return "Point2D(x=" + std::to_string(p.x) +
                ", y=" + std::to_string(p.y) + ")";
       });
 
   // ========== Logo Agent ==========
-  py::class_<agents::LogoAgent, std::shared_ptr<agents::LogoAgent>>(m,
-                                                                    "LogoAgent")
-      .def(py::init<const mk::AgentCategory &, double, const std::string &>(),
-           py::arg("category"), py::arg("speed") = 1.0,
+  py::class_<::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+                 LogoAgent,
+             std::shared_ptr<::fr::univ_artois::lgi2a::similar::similar2logo::
+                                 kernel::agents::LogoAgent>>(m, "LogoAgent")
+      .def(py::init<const ::fr::univ_artois::lgi2a::similar::microkernel::
+                        AgentCategory &,
+                    double, const std::string &>(),
+           py::arg("category"), py::arg("initialSpeed") = 1.0,
            py::arg("color") = "blue")
-      .def("get_speed", &agents::LogoAgent::getSpeed)
-      .def("set_speed", &agents::LogoAgent::setSpeed)
-      .def("get_color", &agents::LogoAgent::getColor)
-      .def("set_color", &agents::LogoAgent::setColor);
+      .def("get_color", &::fr::univ_artois::lgi2a::similar::similar2logo::
+                            kernel::agents::LogoAgent::getColor)
+      .def("set_color", &::fr::univ_artois::lgi2a::similar::similar2logo::
+                            kernel::agents::LogoAgent::setColor);
+
+  // ========== IPerceivedData ==========
+  py::class_<mk::agents::IPerceivedData,
+             std::shared_ptr<mk::agents::IPerceivedData>>(m, "IPerceivedData");
 
   // ========== Logo Perceived Data ==========
-  py::class_<agents::LogoPerceivedData,
-             std::shared_ptr<agents::LogoPerceivedData>>(m, "LogoPerceivedData")
-      .def("get_position", &agents::LogoPerceivedData::getPosition)
-      .def("get_heading", &agents::LogoPerceivedData::getHeading)
-      .def("get_speed", &agents::LogoPerceivedData::getSpeed)
-      .def("get_nearby_turtles", &agents::LogoPerceivedData::getNearbyTurtles)
-      .def("get_pheromone", &agents::LogoPerceivedData::getPheromone)
-      .def("get_all_pheromones", &agents::LogoPerceivedData::getAllPheromones);
+  py::class_<
+      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+          LogoAgent::LogoPerceivedData,
+      std::shared_ptr<::fr::univ_artois::lgi2a::similar::similar2logo::kernel::
+                          agents::LogoAgent::LogoPerceivedData>,
+      ::fr::univ_artois::lgi2a::similar::microkernel::agents::IPerceivedData>(
+      m, "LogoPerceivedData")
+      .def("get_position",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+               LogoAgent::LogoPerceivedData::getPosition)
+      .def("get_heading",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+               LogoAgent::LogoPerceivedData::getHeading)
+      .def("get_speed",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+               LogoAgent::LogoPerceivedData::getSpeed)
+      .def("get_nearby_turtles",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+               LogoAgent::LogoPerceivedData::getNearbyTurtles)
+      .def("get_pheromone",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+               LogoAgent::LogoPerceivedData::getPheromone)
+      .def("get_all_pheromones",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+               LogoAgent::LogoPerceivedData::getAllPheromones);
+
+  // ========== IAgtDecisionModel ==========
+  py::class_<::fr::univ_artois::lgi2a::similar::extendedkernel::agents::
+                 IAgtDecisionModel,
+             std::shared_ptr<::fr::univ_artois::lgi2a::similar::extendedkernel::
+                                 agents::IAgtDecisionModel>>(
+      m, "IAgtDecisionModel");
 
   // ========== Python Decision Model ==========
-  py::class_<agents::PythonDecisionModel,
-             std::shared_ptr<agents::PythonDecisionModel>>(
-      m, "PythonDecisionModel")
-      .def(py::init<const mk::LevelIdentifier &,
-                    agents::PythonDecisionModel::DecisionCallback>(),
+  py::class_<
+      ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+          LogoAgent::PythonDecisionModel,
+      std::shared_ptr<::fr::univ_artois::lgi2a::similar::similar2logo::kernel::
+                          agents::LogoAgent::PythonDecisionModel>,
+      ::fr::univ_artois::lgi2a::similar::extendedkernel::agents::
+          IAgtDecisionModel>(m, "PythonDecisionModel")
+      .def(py::init<
+               const mk::LevelIdentifier &,
+               ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
+                   LogoAgent::PythonDecisionModel::DecisionCallback>(),
            py::arg("level"), py::arg("callback"));
+
+  // ========== ISimulationModel (Microkernel) ==========
+  py::class_<mk::ISimulationModel, std::shared_ptr<mk::ISimulationModel>>(
+      m, "ISimulationModel");
+
+  // ========== ISimulationModel (ExtendedKernel) ==========
+  py::class_<::fr::univ_artois::lgi2a::similar::extendedkernel::
+                 simulationmodel::ISimulationModel,
+             mk::ISimulationModel,
+             std::shared_ptr<::fr::univ_artois::lgi2a::similar::extendedkernel::
+                                 simulationmodel::ISimulationModel>>(
+      m, "ExtendedISimulationModel");
 
   // ========== Logo Simulation Model ==========
   py::class_<model::LogoSimulationModel,
+             ::fr::univ_artois::lgi2a::similar::extendedkernel::
+                 simulationmodel::ISimulationModel,
              std::shared_ptr<model::LogoSimulationModel>>(m,
                                                           "LogoSimulationModel")
       .def(py::init<int, int, bool, bool, int>(), py::arg("width"),
@@ -90,7 +150,10 @@ PYBIND11_MODULE(_core, m) {
       m, "MultiThreadedEngine")
       .def(py::init<size_t>(), py::arg("num_threads") = 0)
       .def("run_new_simulation",
-           &mk::engine::MultiThreadedSimulationEngine::runNewSimulation);
+           &mk::engine::MultiThreadedSimulationEngine::runNewSimulation)
+      .def("run_simulation",
+           &mk::engine::MultiThreadedSimulationEngine::runSimulation)
+      .def("clone", &mk::engine::MultiThreadedSimulationEngine::clone);
 
   // ========== Environment (New) ==========
   auto env_module = m.def_submodule("environment", "Environment module");
@@ -127,9 +190,9 @@ PYBIND11_MODULE(_core, m) {
                                                                    "TurtlePLS")
       .def(py::init<const tools::Point2D &, double, double, double, bool,
                     const std::string &>(),
-           py::arg("location"), py::arg("heading"),
-           py::arg("speed") = 1.0, py::arg("acceleration") = 0.0,
-           py::arg("pen_down") = false, py::arg("color") = "blue")
+           py::arg("location"), py::arg("heading"), py::arg("speed") = 1.0,
+           py::arg("acceleration") = 0.0, py::arg("pen_down") = false,
+           py::arg("color") = "blue")
       .def("get_location", &model::environment::TurtlePLSInLogo::getLocation)
       .def("set_location", &model::environment::TurtlePLSInLogo::setLocation)
       .def("get_heading", &model::environment::TurtlePLSInLogo::getHeading)

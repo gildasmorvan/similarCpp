@@ -17,7 +17,7 @@ class ISimulationParameters;
  * Stub interface for simulation model (minimal for web interface compilation)
  */
 class ISimulationModel
-    : public fr::univ_artois::lgi2a::similar::microkernel::ISimulationModel {
+    : public ::fr::univ_artois::lgi2a::similar::microkernel::ISimulationModel {
 public:
   virtual ~ISimulationModel() = default;
 

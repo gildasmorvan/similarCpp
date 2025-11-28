@@ -167,6 +167,25 @@ public:
     }
     this->stateTransitoryDynamicsRegularInfluences.clear();
   }
+
+  std::shared_ptr<IPublicLocalDynamicState> clone() const override {
+    auto clonedConsistent =
+        std::dynamic_pointer_cast<ConsistentPublicLocalDynamicState>(
+            this->lastConsistentDynamicState->clone());
+    auto clonedState = std::make_shared<TransitoryPublicLocalDynamicState>(
+        clonedConsistent, this->timeUpperBound);
+
+    // Shallow copy of influences
+    for (const auto &influence :
+         this->stateTransitoryDynamicsSystemInfluences) {
+      clonedState->addInfluence(influence);
+    }
+    for (const auto &influence :
+         this->stateTransitoryDynamicsRegularInfluences) {
+      clonedState->addInfluence(influence);
+    }
+    return clonedState;
+  }
 };
 
 } // namespace dynamicstate

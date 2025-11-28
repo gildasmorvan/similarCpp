@@ -12,6 +12,28 @@ AbstractAgent::AbstractAgent(const AgentCategory &category)
   // Maps are default initialized as empty
 }
 
+AbstractAgent::AbstractAgent(const AbstractAgent &other)
+    : category(other.category) {
+  if (other.globalState) {
+    this->globalState = std::dynamic_pointer_cast<agents::IGlobalState>(
+        other.globalState->clone());
+  }
+  for (const auto &pair : other.publicLocalStates) {
+    this->publicLocalStates[pair.first] =
+        std::dynamic_pointer_cast<agents::ILocalStateOfAgent>(
+            pair.second->clone());
+  }
+  for (const auto &pair : other.privateLocalStates) {
+    this->privateLocalStates[pair.first] =
+        std::dynamic_pointer_cast<agents::ILocalStateOfAgent>(
+            pair.second->clone());
+  }
+  for (const auto &pair : other.lastPerceivedData) {
+    this->lastPerceivedData[pair.first] =
+        std::dynamic_pointer_cast<agents::IPerceivedData>(pair.second->clone());
+  }
+}
+
 AgentCategory AbstractAgent::getCategory() const { return this->category; }
 
 std::shared_ptr<agents::IGlobalState> AbstractAgent::getGlobalState() const {

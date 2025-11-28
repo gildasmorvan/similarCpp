@@ -6,6 +6,16 @@
 
 **SIMILAR** is a powerful agent-based modeling framework with a Python DSL backed by a high-performance C++ engine. **JamFree** is a traffic simulation framework built on SIMILAR, featuring microscopic and macroscopic models with real-time data integration.
 
+## ✨ Key Enhancements (vs Java SIMILAR)
+
+- 🚀 **10-50x Performance**: Multi-threaded C++ engine with FastMath optimizations
+- 🐍 **Python DSL**: Intuitive fluent API replacing verbose Java builders
+- 🌐 **Advanced Web UI**: Real-time visualization with interactive controls
+- 📦 **One-command Install**: `pip install similar2logo` includes everything
+- 🔧 **Cross-platform**: Native binaries for Windows, macOS, and Linux
+
+**[View all enhancements →](docs/ENHANCEMENTS.md)**
+
 ## 🚀 Quick Start
 
 ### Installation

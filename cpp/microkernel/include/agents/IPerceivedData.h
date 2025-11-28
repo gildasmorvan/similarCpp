@@ -1,6 +1,7 @@
 #ifndef IPERCEIVEDDATA_H
 #define IPERCEIVEDDATA_H
 
+#include <memory>
 #include "../LevelIdentifier.h"
 #include "../SimulationTimeStamp.h"
 

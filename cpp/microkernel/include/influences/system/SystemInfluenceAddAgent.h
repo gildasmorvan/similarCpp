@@ -3,6 +3,7 @@
 
 #include "../../agents/IAgent4Engine.h"
 #include "../SystemInfluence.h"
+#include <memory>
 #include <stdexcept>
 #include <string>
 

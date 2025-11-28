@@ -1,6 +1,7 @@
 #ifndef ILOCALSTATE_H
 #define ILOCALSTATE_H
 
+#include <memory>
 #include "LevelIdentifier.h"
 
 namespace fr {

@@ -1,6 +1,8 @@
 #ifndef IGLOBALSTATE_H
 #define IGLOBALSTATE_H
 
+#include <memory>
+
 namespace fr {
 namespace univ_artois {
 namespace lgi2a {

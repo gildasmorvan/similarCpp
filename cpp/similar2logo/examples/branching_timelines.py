@@ -6,7 +6,7 @@ and explore alternative futures without affecting the original simulation.
 """
 
 import sys
-sys.path.insert(0, '../build/similar2logo/python')
+sys.path.insert(0, '../../build/similar2logo/python')
 
 from _core import (
     MultiThreadedEngine,

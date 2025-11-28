@@ -3,6 +3,7 @@
 
 #include "../../agents/ILocalStateOfAgent4Engine.h"
 #include "../SystemInfluence.h"
+#include <memory>
 #include <stdexcept>
 
 namespace fr {

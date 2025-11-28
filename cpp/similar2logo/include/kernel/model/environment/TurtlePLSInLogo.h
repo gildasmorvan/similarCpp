@@ -3,6 +3,7 @@
 
 #include "../../tools/Point2D.h"
 #include "SituatedEntity.h"
+#include <memory>
 #include <string>
 
 namespace fr {

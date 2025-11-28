@@ -3,6 +3,7 @@
 
 #include "../../../../../microkernel/include/environment/IEnvironment4Engine.h"
 #include "LogoEnvPLS.h"
+#include <memory>
 
 namespace fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
     environment {

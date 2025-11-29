@@ -1241,8 +1241,12 @@ similar2logo/python/CMakeFiles/_core.dir/bindings_logo_cpp.cpp.o: \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../model/environment/TurtlePLSInLogo.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangePosition.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/ChangeSpeed.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/DropMark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../model/environment/Mark.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/EmitPheromone.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/../tools/Point2D.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/RemoveMark.h \
+  /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/RemoveMarks.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/influences/Stop.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/LogoSimulationModel.h \
   /Users/morvan/Antigravity/similar/cpp/similar2logo/python/../include/kernel/model/../agents/LogoAgent.h \

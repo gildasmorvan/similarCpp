@@ -10,10 +10,14 @@
 #include "kernel/influences/ChangeDirection.h"
 #include "kernel/influences/ChangePosition.h"
 #include "kernel/influences/ChangeSpeed.h"
+#include "kernel/influences/DropMark.h"
 #include "kernel/influences/EmitPheromone.h"
+#include "kernel/influences/RemoveMark.h"
+#include "kernel/influences/RemoveMarks.h"
 #include "kernel/influences/Stop.h"
 #include "kernel/model/LogoSimulationModel.h"
 #include "kernel/model/environment/LogoEnvPLS.h"
+#include "kernel/model/environment/Mark.h"
 #include "kernel/model/environment/TurtlePLSInLogo.h"
 #include "kernel/reaction/Reaction.h"
 
@@ -25,8 +29,8 @@ using namespace fr::univ_artois::lgi2a::similar::similar2logo::kernel;
 namespace mk = fr::univ_artois::lgi2a::similar::microkernel;
 
 PYBIND11_MODULE(_core, m) {
-  m.doc() =
-      "SIMILAR2Logo C++ Engine - High-performance multithreaded simulation";
+  m.doc() = "SIMILAR2Logo C++ Engine - High-performance multithreaded "
+            "simulation - UNIQUE_ID_12345";
 
   // ========== Microkernel Types ==========
   py::class_<
@@ -52,6 +56,28 @@ PYBIND11_MODULE(_core, m) {
         return "Point2D(x=" + std::to_string(p.x) +
                ", y=" + std::to_string(p.y) + ")";
       });
+
+  // ========== SimpleMark ==========
+  py::class_<::fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
+                 environment::SimpleMark,
+             std::shared_ptr<::fr::univ_artois::lgi2a::similar::similar2logo::
+                                 kernel::model::environment::SimpleMark>>(
+      m, "SimpleMark")
+      .def(py::init<const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                        kernel::tools::Point2D &,
+                    const std::string &>(),
+           py::arg("location"), py::arg("category") = "")
+      .def("get_location",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
+               environment::SimpleMark::getLocation)
+      .def("get_category",
+           &::fr::univ_artois::lgi2a::similar::similar2logo::kernel::model::
+               environment::SimpleMark::getCategory)
+      .def("get_content",
+           [](const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::
+                  model::environment::SimpleMark &mark) {
+             return mark.getContent();
+           });
 
   // ========== Logo Agent ==========
   py::class_<::fr::univ_artois::lgi2a::similar::similar2logo::kernel::agents::
@@ -182,7 +208,15 @@ PYBIND11_MODULE(_core, m) {
            py::arg("a"), py::arg("b"))
       .def("get_direction",
            &similar2logo::kernel::environment::Environment::get_direction,
-           py::arg("from"), py::arg("to"));
+           py::arg("from"), py::arg("to"))
+      .def("get_marks",
+           &similar2logo::kernel::environment::Environment::get_marks)
+      .def("add_mark",
+           &similar2logo::kernel::environment::Environment::add_mark,
+           py::arg("x"), py::arg("y"), py::arg("mark"))
+      .def("remove_mark",
+           &similar2logo::kernel::environment::Environment::remove_mark,
+           py::arg("x"), py::arg("y"), py::arg("mark"));
 
   // ========== TurtlePLS ==========
   py::class_<model::environment::TurtlePLSInLogo,
@@ -271,6 +305,38 @@ PYBIND11_MODULE(_core, m) {
                     const std::string &, double>(),
            py::arg("time_lower"), py::arg("time_upper"), py::arg("location"),
            py::arg("pheromone_id"), py::arg("value"));
+
+  py::class_<similar2logo::kernel::influences::DropMark,
+             mk::influences::RegularInfluence,
+             std::shared_ptr<similar2logo::kernel::influences::DropMark>>(
+      influences_module, "DropMark")
+      .def(py::init<const mk::SimulationTimeStamp &,
+                    const mk::SimulationTimeStamp &,
+                    std::shared_ptr<model::environment::SimpleMark>>(),
+           py::arg("time_lower"), py::arg("time_upper"), py::arg("mark"))
+      .def("getMark", &similar2logo::kernel::influences::DropMark::getMark);
+
+  py::class_<similar2logo::kernel::influences::RemoveMark,
+             mk::influences::RegularInfluence,
+             std::shared_ptr<similar2logo::kernel::influences::RemoveMark>>(
+      influences_module, "RemoveMark")
+      .def(py::init<const mk::SimulationTimeStamp &,
+                    const mk::SimulationTimeStamp &,
+                    std::shared_ptr<model::environment::SimpleMark>>(),
+           py::arg("time_lower"), py::arg("time_upper"), py::arg("mark"))
+      .def("getMark", &similar2logo::kernel::influences::RemoveMark::getMark);
+
+  py::class_<similar2logo::kernel::influences::RemoveMarks,
+             mk::influences::RegularInfluence,
+             std::shared_ptr<similar2logo::kernel::influences::RemoveMarks>>(
+      influences_module, "RemoveMarks")
+      .def(py::init<const mk::SimulationTimeStamp &,
+                    const mk::SimulationTimeStamp &,
+                    const std::unordered_set<
+                        std::shared_ptr<model::environment::SimpleMark>> &>(),
+           py::arg("time_lower"), py::arg("time_upper"), py::arg("marks"))
+      .def("getMarks",
+           &similar2logo::kernel::influences::RemoveMarks::getMarks);
 
   // ========== Reaction (New) ==========
   auto reaction_module = m.def_submodule("reaction", "Reaction module");

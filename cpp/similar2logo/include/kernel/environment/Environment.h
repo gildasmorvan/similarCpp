@@ -23,9 +23,10 @@ public:
 
   // pheromone handling ---------------------------------------------------
   model::environment::Pheromone &add_pheromone(const ::std::string &identifier,
-                           double diffusion_coef = 0.0,
-                           double evaporation_coef = 0.0,
-                           double default_value = 0.0, double min_value = 0.0);
+                                               double diffusion_coef = 0.0,
+                                               double evaporation_coef = 0.0,
+                                               double default_value = 0.0,
+                                               double min_value = 0.0);
   void set_pheromone(double x, double y, const ::std::string &identifier,
                      double value);
   double get_pheromone_value(double x, double y,
@@ -39,10 +40,17 @@ public:
   void remove_mark(int x, int y,
                    ::std::shared_ptr<model::environment::SimpleMark> mark);
 
+  const ::std::vector<::std::vector<::std::unordered_set<
+      ::std::shared_ptr<model::environment::SimpleMark>>>> &
+  get_marks() const {
+    return m_marks;
+  }
+
   // turtle access ------------------------------------------------------
   const ::std::vector<::std::shared_ptr<model::environment::TurtlePLSInLogo>> &
   get_turtles() const;
-  void add_turtle(::std::shared_ptr<model::environment::TurtlePLSInLogo> turtle);
+  void
+  add_turtle(::std::shared_ptr<model::environment::TurtlePLSInLogo> turtle);
   void
   remove_turtle(::std::shared_ptr<model::environment::TurtlePLSInLogo> turtle);
 
@@ -56,13 +64,19 @@ public:
       int old_y, int new_x, int new_y);
 
   // random helpers ------------------------------------------------------
-  ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D random_position() const;
+  ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D
+  random_position() const;
   double random_heading() const;
 
   // geometry ------------------------------------------------------------
-  double get_distance(const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D &a, const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D &b) const;
-  double get_direction(const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D &from,
-                       const ::fr::univ_artois::lgi2a::similar::similar2logo::kernel::tools::Point2D &to) const;
+  double get_distance(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                          kernel::tools::Point2D &a,
+                      const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                          kernel::tools::Point2D &b) const;
+  double get_direction(const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                           kernel::tools::Point2D &from,
+                       const ::fr::univ_artois::lgi2a::similar::similar2logo::
+                           kernel::tools::Point2D &to) const;
 
   // public getters ------------------------------------------------------
   int width() const { return m_width; }
@@ -74,7 +88,8 @@ private:
   bool m_toroidal;
   ::std::unordered_map<::std::string, ::std::vector<::std::vector<double>>>
       m_pheromone_grids;
-  ::std::unordered_map<::std::string, model::environment::Pheromone> m_pheromones;
+  ::std::unordered_map<::std::string, model::environment::Pheromone>
+      m_pheromones;
 
   // marks grid: marks[x][y] = set of marks at that location
   ::std::vector<::std::vector<
@@ -82,11 +97,12 @@ private:
       m_marks;
 
   // turtles list
-  ::std::vector<::std::shared_ptr<model::environment::TurtlePLSInLogo>> m_turtles;
+  ::std::vector<::std::shared_ptr<model::environment::TurtlePLSInLogo>>
+      m_turtles;
 
   // Spatial index: turtles_in_patches[x][y] = set of turtles at that patch
-  ::std::vector<::std::vector<
-      ::std::unordered_set<::std::shared_ptr<model::environment::TurtlePLSInLogo>>>>
+  ::std::vector<::std::vector<::std::unordered_set<
+      ::std::shared_ptr<model::environment::TurtlePLSInLogo>>>>
       m_turtles_in_patches;
 
   // Empty set for out-of-bounds queries

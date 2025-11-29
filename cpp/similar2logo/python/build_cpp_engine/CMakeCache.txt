@@ -220,10 +220,10 @@ CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-PYTHON_EXECUTABLE:UNINITIALIZED=/Users/morvan/Antigravity/similar/.venv/bin/python3
+PYTHON_EXECUTABLE:UNINITIALIZED=/Users/morvan/Antigravity/similar/venv/bin/python3
 
 //No help, variable specified on the command line.
-pybind11_DIR:UNINITIALIZED=/Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/share/cmake/pybind11
+pybind11_DIR:UNINITIALIZED=/Users/morvan/Antigravity/similar/venv/lib/python3.14/site-packages/pybind11/share/cmake/pybind11
 
 //Value Computed by CMake
 similar2logo_cpp_bindings_BINARY_DIR:STATIC=/Users/morvan/Antigravity/similar/cpp/similar2logo/python/build_cpp_engine
@@ -414,5 +414,5 @@ _Python3_LIBRARY_RELEASE:INTERNAL=/opt/homebrew/opt/python@3.14/Frameworks/Pytho
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=/Users/morvan/Antigravity/similar/.venv/lib/python3.14/site-packages/pybind11/include;/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14
+pybind11_INCLUDE_DIRS:INTERNAL=/Users/morvan/Antigravity/similar/venv/lib/python3.14/site-packages/pybind11/include;/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14/include/python3.14
 

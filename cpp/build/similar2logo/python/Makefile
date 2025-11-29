@@ -295,6 +295,30 @@ __/src/kernel/influences/ChangeSpeed.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/ChangeSpeed.cpp.s
 .PHONY : __/src/kernel/influences/ChangeSpeed.cpp.s
 
+__/src/kernel/influences/DropMark.o: __/src/kernel/influences/DropMark.cpp.o
+.PHONY : __/src/kernel/influences/DropMark.o
+
+# target to build an object file
+__/src/kernel/influences/DropMark.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/DropMark.cpp.o
+.PHONY : __/src/kernel/influences/DropMark.cpp.o
+
+__/src/kernel/influences/DropMark.i: __/src/kernel/influences/DropMark.cpp.i
+.PHONY : __/src/kernel/influences/DropMark.i
+
+# target to preprocess a source file
+__/src/kernel/influences/DropMark.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/DropMark.cpp.i
+.PHONY : __/src/kernel/influences/DropMark.cpp.i
+
+__/src/kernel/influences/DropMark.s: __/src/kernel/influences/DropMark.cpp.s
+.PHONY : __/src/kernel/influences/DropMark.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/DropMark.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/DropMark.cpp.s
+.PHONY : __/src/kernel/influences/DropMark.cpp.s
+
 __/src/kernel/influences/EmitPheromone.o: __/src/kernel/influences/EmitPheromone.cpp.o
 .PHONY : __/src/kernel/influences/EmitPheromone.o
 
@@ -318,6 +342,54 @@ __/src/kernel/influences/EmitPheromone.s: __/src/kernel/influences/EmitPheromone
 __/src/kernel/influences/EmitPheromone.cpp.s:
 	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/EmitPheromone.cpp.s
 .PHONY : __/src/kernel/influences/EmitPheromone.cpp.s
+
+__/src/kernel/influences/RemoveMark.o: __/src/kernel/influences/RemoveMark.cpp.o
+.PHONY : __/src/kernel/influences/RemoveMark.o
+
+# target to build an object file
+__/src/kernel/influences/RemoveMark.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/RemoveMark.cpp.o
+.PHONY : __/src/kernel/influences/RemoveMark.cpp.o
+
+__/src/kernel/influences/RemoveMark.i: __/src/kernel/influences/RemoveMark.cpp.i
+.PHONY : __/src/kernel/influences/RemoveMark.i
+
+# target to preprocess a source file
+__/src/kernel/influences/RemoveMark.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/RemoveMark.cpp.i
+.PHONY : __/src/kernel/influences/RemoveMark.cpp.i
+
+__/src/kernel/influences/RemoveMark.s: __/src/kernel/influences/RemoveMark.cpp.s
+.PHONY : __/src/kernel/influences/RemoveMark.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/RemoveMark.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/RemoveMark.cpp.s
+.PHONY : __/src/kernel/influences/RemoveMark.cpp.s
+
+__/src/kernel/influences/RemoveMarks.o: __/src/kernel/influences/RemoveMarks.cpp.o
+.PHONY : __/src/kernel/influences/RemoveMarks.o
+
+# target to build an object file
+__/src/kernel/influences/RemoveMarks.cpp.o:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/RemoveMarks.cpp.o
+.PHONY : __/src/kernel/influences/RemoveMarks.cpp.o
+
+__/src/kernel/influences/RemoveMarks.i: __/src/kernel/influences/RemoveMarks.cpp.i
+.PHONY : __/src/kernel/influences/RemoveMarks.i
+
+# target to preprocess a source file
+__/src/kernel/influences/RemoveMarks.cpp.i:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/RemoveMarks.cpp.i
+.PHONY : __/src/kernel/influences/RemoveMarks.cpp.i
+
+__/src/kernel/influences/RemoveMarks.s: __/src/kernel/influences/RemoveMarks.cpp.s
+.PHONY : __/src/kernel/influences/RemoveMarks.s
+
+# target to generate assembly for a file
+__/src/kernel/influences/RemoveMarks.cpp.s:
+	cd /Users/morvan/Antigravity/similar/cpp/build && $(MAKE) $(MAKESILENT) -f similar2logo/python/CMakeFiles/_core.dir/build.make similar2logo/python/CMakeFiles/_core.dir/__/src/kernel/influences/RemoveMarks.cpp.s
+.PHONY : __/src/kernel/influences/RemoveMarks.cpp.s
 
 __/src/kernel/influences/Stop.o: __/src/kernel/influences/Stop.cpp.o
 .PHONY : __/src/kernel/influences/Stop.o
@@ -467,9 +539,18 @@ help:
 	@echo "... __/src/kernel/influences/ChangeSpeed.o"
 	@echo "... __/src/kernel/influences/ChangeSpeed.i"
 	@echo "... __/src/kernel/influences/ChangeSpeed.s"
+	@echo "... __/src/kernel/influences/DropMark.o"
+	@echo "... __/src/kernel/influences/DropMark.i"
+	@echo "... __/src/kernel/influences/DropMark.s"
 	@echo "... __/src/kernel/influences/EmitPheromone.o"
 	@echo "... __/src/kernel/influences/EmitPheromone.i"
 	@echo "... __/src/kernel/influences/EmitPheromone.s"
+	@echo "... __/src/kernel/influences/RemoveMark.o"
+	@echo "... __/src/kernel/influences/RemoveMark.i"
+	@echo "... __/src/kernel/influences/RemoveMark.s"
+	@echo "... __/src/kernel/influences/RemoveMarks.o"
+	@echo "... __/src/kernel/influences/RemoveMarks.i"
+	@echo "... __/src/kernel/influences/RemoveMarks.s"
 	@echo "... __/src/kernel/influences/Stop.o"
 	@echo "... __/src/kernel/influences/Stop.i"
 	@echo "... __/src/kernel/influences/Stop.s"

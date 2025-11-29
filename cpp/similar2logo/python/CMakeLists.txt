@@ -28,6 +28,9 @@ set(LOGO_CPP_SOURCES
     ../src/kernel/influences/ChangeSpeed.cpp
     ../src/kernel/influences/Stop.cpp
     ../src/kernel/influences/EmitPheromone.cpp
+    ../src/kernel/influences/DropMark.cpp
+    ../src/kernel/influences/RemoveMark.cpp
+    ../src/kernel/influences/RemoveMarks.cpp
 )
 
 # Link with microkernel and extendedkernel libraries
